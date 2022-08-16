@@ -1,6 +1,7 @@
 import sys
 from pathlib import Path
 
+
 # Launch into the Docker container before attempting imports that are only installed there. (If Docker isn't installed, we assume the current venv already contains the necessary packages.)
 wd = (Path(__file__).parents[1]).resolve()
 sys.path.extend([str(wd / "docker"), str(wd / "tests")])
@@ -34,6 +35,7 @@ from bookserver.crud import create_initial_courses_users
 from bookserver.db import init_models, term_models
 from bookserver.config import settings
 from runestone.pretext.chapter_pop import manifest_data_to_db
+from runestone.server.utils import _build_runestone_book, _build_ptx_book
 
 
 class Config(object):
@@ -124,6 +126,7 @@ def _initdb(config):
     eng = create_engine(config.dburl)
     eng.execute("""insert into auth_group (role) values ('instructor')""")
     eng.execute("""insert into auth_group (role) values ('editor')""")
+    eng.execute("""insert into auth_group (role) values ('author')""")
 
 
 #
@@ -351,18 +354,19 @@ def addcourse(
 
 
 @cli.command()
-@click.option(
-    "--course", help="The name of a course that should already exist in the DB"
-)
 @click.option("--clone", default=None, help="clone the given repo before building")
 @click.option("--ptx", is_flag=True, help="Build a PreTeXt book")
 @click.option(
     "--gen", is_flag=True, help="Build PreTeXt generated assets (a one time thing)"
 )
 @click.option("--manifest", default="runestone-manifest.xml", help="Manifest file")
+@click.argument("course", nargs=1)
 @pass_config
-def build(config, course, clone, ptx, gen, manifest):
-    """Build the book for an existing course"""
+def build(config, clone, ptx, gen, manifest, course):
+    """
+    rsmanage build [options] COURSE
+    Build the book for an existing course
+    """
     os.chdir(findProjectRoot())  # change to a known location
     eng = create_engine(config.dburl)
     res = eng.execute(
@@ -393,191 +397,10 @@ def build(config, course, clone, ptx, gen, manifest):
     click.echo("Switching to book dir {}".format(course))
     os.chdir(course)
     if ptx:
-        if not os.path.exists("project.ptx"):
-            click.echo("PreTeXt books need a project.ptx file")
-            sys.exit(1)
-        else:
-            main_file = check_project_ptx()
-            tree = ET.parse(main_file)
-            root = tree.getroot()
-            ElementInclude.include(
-                root, base_url=main_file
-            )  # include all xi:include parts
-            if gen:
-                res = subprocess.call("pretext generate web")
-                if res != 0:
-                    click.echo("Failed to build")
-            # build the book
-            res = subprocess.call("pretext build runestone", shell=True)
-            if res != 0:
-                click.echo("Building failed")
-                sys.exit(1)
-            # process the manifest
-            click.echo("processing manifest...")
-            el = root.find("./docinfo/document-id")
-            if el is not None:
-                cname = el.text
-                if cname != course:
-                    click.echo(
-                        f"Error course: {course} does not match document-id: {cname}"
-                    )
-                    sys.exit(1)
-            else:
-                click.echo("Missing document-id please add to <docinfo>")
-                sys.exit(1)
-            mpath = Path(os.getcwd(), "published", cname, manifest)
-            if os.path.exists(mpath):
-                manifest_data_to_db(cname, mpath)
-            else:
-                raise IOError(
-                    f"You must provide a valid path to a manifest file: {mpath} does not exist."
-                )
-
-            # Fetch and copy the runestone components release as advertised by the manifest
-            # - Use wget to get all the js files and put them in _static
-            click.echo("populating with the latest runestone files")
-            populate_static(config, mpath, course)
-            # update the library page
-            click.echo("updating library...")
-            update_library(config, mpath, course)
+        _build_ptx_book(config, gen, manifest, course)
 
     else:
-        try:
-            if os.path.exists("pavement.py"):
-                sys.path.insert(0, os.getcwd())
-                from pavement import options, dest, project_name
-            else:
-                click.echo(
-                    "I can't find a pavement.py file in {} you need that to build".format(
-                        os.getcwd()
-                    )
-                )
-                exit(1)
-        except ImportError as e:
-            click.echo("You do not appear to have a good pavement.py file.")
-            print(e)
-            exit(1)
-
-        if project_name != course:
-            click.echo(
-                "Error: {} and {} do not match.  Your course name needs to match the project_name in pavement.py".format(
-                    course, project_name
-                )
-            )
-            exit(1)
-
-        res = subprocess.call("runestone build --all", shell=True)
-        if res != 0:
-            click.echo(
-                "building the book failed, check the log for errors and try again"
-            )
-            exit(1)
-        click.echo("Build succeedeed... Now deploying to published")
-        if dest != "./published":
-            click.echo(
-                "Incorrect deployment directory.  dest should be ./published in pavement.py"
-            )
-            exit(1)
-
-        res = subprocess.call("runestone deploy", shell=True)
-        if res == 0:
-            click.echo("Success! Book deployed")
-        else:
-            click.echo("Deploy failed, check the log to see what went wrong.")
-
-
-import pdb
-
-
-def check_project_ptx():
-    tree = ET.parse("project.ptx")
-    targ = tree.find(".//target[@name='runestone']")
-    if not targ:
-        click.echo("No runestone target in project.ptx - please add one")
-        sys.exit(1)
-    else:
-        dest = targ.find("./output-dir")
-        if "published" not in dest.text:
-            click.echo("destination for build must be in published/<document-id>")
-            sys.exit(1)
-        main = targ.find("./source")
-        if main is not None:
-            return main.text
-        else:
-            click.echo("No main source file specified")
-            sys.exit(1)
-
-
-def extract_docinfo(tree, string, attr=None):
-    el = tree.find(f"./{string}")
-    if attr is not None and el is not None:
-        print(f"{el.attrib[attr]=}")
-        return el.attrib[attr].strip()
-
-    if el is not None:
-        # using method="text" will strip the outer tag as well as any html tags in the value
-        return ET.tostring(el, encoding="unicode", method="text").strip()
-    return ""
-
-
-def update_library(config: Config, mpath, course):
-    tree = ET.parse(mpath)
-    docinfo = tree.find("./library-metadata")
-    eng = create_engine(config.dburl)
-    title = extract_docinfo(docinfo, "title")
-    subtitle = extract_docinfo(docinfo, "subtitle")
-    description = extract_docinfo(docinfo, "blurb")
-    shelf = extract_docinfo(docinfo, "shelf")
-    click.echo(f"{title} : {subtitle}")
-    res = eng.execute(f"select * from library where basecourse = '{course}'")
-    if res.rowcount == 0:
-        eng.execute(
-            f"""insert into library 
-        (title, subtitle, description, shelf_section, basecourse ) 
-        values('{title}', '{subtitle}', '{description}', '{shelf}', '{course}') """
-        )
-    else:
-        eng.execute(
-            f"""update library set
-            title = '{title}',
-            subtitle = '{subtitle}',
-            description = '{description}',
-            shelf = '{shelf}'
-        where basecourse = '{course}'
-        """
-        )
-
-
-def populate_static(config: Config, mpath: Path, course: str):
-
-    # <runestone-services version="6.2.1"/>
-    sdir = mpath.parent / "_static"
-    current_version = ""
-    if (sdir / "webpack_static_imports.xml").exists():
-        tree = ET.parse(sdir / "webpack_static_imports.xml")
-        current_version = tree.find("./version").text
-    else:
-        sdir.mkdir(mode=775, exist_ok=True)
-    tree = ET.parse(mpath)
-    el = tree.find("./runestone-services[@version]")
-    version = el.attrib["version"].strip()
-    # Do not download if the versions already match.
-    if version != current_version:
-        click.echo(f"Fetching {version} files to {sdir} ")
-        for f in os.listdir(sdir):
-            try:
-                os.remove(sdir / f)
-            except:
-                click.echo(f"ERROR - could not delete {f}")
-        # call wget non-verbose, recursive, no parents, no hostname, no directoy copy files to sdir
-        # trailing slash is important or otherwise you will end up with everything below runestone
-        subprocess.call(
-            f"""wget -nv -r -np -nH -nd -P {sdir} https://runestone.academy/cdn/runestone/{version}/
-    """,
-            shell=True,
-        )
-    else:
-        click.echo(f"_static files already up to date for {version}")
+        _build_runestone_book(course)
 
 
 #
@@ -1251,6 +1074,101 @@ def peergroups(course):
             click.echo(x)
     else:
         click.echo(f"No Peer Groups found for {course}")
+
+
+def is_author(config, userid):
+    engine = create_engine(config.dburl)
+    ed = engine.execute(
+        """select id from auth_group where auth_group.role = 'author'"""
+    ).first()
+
+    row = engine.execute(
+        f"""select * from auth_membership where user_id = {userid} and group_id = {ed.id}"""
+    ).first()
+
+    if row:
+        return True
+    else:
+        return False
+
+
+@cli.command()
+@click.option("--book", help="document-id or basecourse")
+@click.option("--author", help="username")
+@click.option("--github", help="url of book on github", default="")
+@pass_config
+def addbookauthor(config, book, author, github):
+    book = book or click.prompt("document-id or basecourse ")
+    author = author or click.prompt("username of author ")
+    engine = create_engine(config.dburl)
+    a_row = engine.execute(
+        f"""select * from auth_user where username = '{author}'"""
+    ).first()
+    if not a_row:
+        click.echo(f"Error - author {author} does not exist")
+        sys.exit(-1)
+    res = engine.execute(
+        f"""select * from courses where course_name = '{book}' and base_course='{book}'"""
+    ).first()
+    if res:
+        click.echo(f"Warning - Book {book} already exists in courses table")
+    # Create an entry in courses (course_name, term_start_date, institution, base_course, login_required, allow_pairs, student_price, downloads_enabled, courselevel, newserver)
+    if not res:
+        res = engine.execute(
+            f"""insert into courses
+            (course_name, base_course, python3, term_start_date, login_required, institution, courselevel, downloads_enabled, allow_pairs, new_server)
+                values ('{book}',
+                '{book}',
+                'T',
+                '2022-01-01',
+                'F',
+                'Runestone',
+                '',
+                'F',
+                'F',
+                'T')
+                """
+        )
+    else:
+        # Try to deduce the github url from the working directory
+        if not github:
+            github = f"https://github.com/RunestoneInteractive/{book}.git"
+
+    # Create an entry in book (document_id, github_url)
+    try:
+        res = engine.execute(
+            f"""insert into book
+                (document_id, github_url)
+                values ( '{book}', '{github}' )
+            """
+        )
+    except Exception as e:
+        click.echo(f"Book already exists in book table {e}")
+    # create an entry in book_author (author, book)
+    try:
+        res = engine.execute(
+            f"""insert into book_author
+                (author, book)
+                values ( '{author}', '{book}' )
+            """
+        )
+    except:
+        click.echo(f"{author} is already an author for {book}")
+
+    # create an entry in auth_membership (group_id, user_id)
+    auth_row = engine.execute(
+        """select * from auth_group where role = 'author'"""
+    ).first()
+    auth_group_id = auth_row[0]
+
+    if not is_author(config, a_row.id):
+        res = engine.execute(
+            f"""
+            insert into auth_membership
+            (group_id, user_id)
+            values ({auth_group_id}, {a_row[0]})
+            """
+        )
 
 
 if __name__ == "__main__":

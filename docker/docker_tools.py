@@ -67,7 +67,7 @@ from textwrap import dedent
 # Local application bootstrap
 # ---------------------------
 # Everything after this depends on Unix utilities. We can't use ``is_win`` because we don't know if ``ci_utils`` is available.
-if sys.platform == "win32x":
+if sys.platform == "win32":
     sys.exit("ERROR: You must run this program in WSL/VirtualBox/VMWare/etc.")
 
 # See if we're root.
@@ -95,7 +95,7 @@ def check_install(
             # Only run with ``sudo`` if we're not root.
             ([] if is_root else ["sudo"])
             + [
-                "apt-get",
+                "apt",
                 "install",
                 "-y",
                 "--no-install-recommends",
@@ -178,6 +178,17 @@ try:
     )
 except ImportError:
     print("Note: this must be an initial install; additional commands missing.")
+
+
+# Global variables
+# ================
+# Update the following versions regularly.
+CHROMEDRIVER_VERSION = "103.0.5060.53"
+WEB2PY_VERSION = "2.21.1"
+XC16_VERSION = "xc16-v1.70-full-install-linux64-installer.run"
+MPLABX_VERSION = "MPLABX-v6.00-linux-installer.tar"
+# These are sometimes not the same base name (depends on the MPLABX release).
+MPLABX_SH_NAME = "MPLABX-v6.00-linux-installer.sh"
 
 
 # CLI
@@ -266,7 +277,7 @@ def init(
         xqt("git --version")
     except Exception as e:
         print(f"Unable to run git: {e} Installing...")
-        xqt("sudo apt-get install -y --no-install-recommends git")
+        xqt("sudo apt install -y --no-install-recommends git")
     # Are we inside the Runestone repo?
     if not (wd / "nginx").is_dir():
         change_dir = True
@@ -299,7 +310,7 @@ def init(
                 "sudo dscl . append /Groups/www-data GroupMembership $USER",
             )
         else:
-            xqt('sudo usermod -a -G www-data "$USER"')
+            xqt('sudo usermod -a -G www-data $USER')
         did_group_add = True
 
     # Provide server-related CLIs. While installing this sooner would be great, we can't assume that the prereqs (the downloaded repo) are available.
@@ -511,7 +522,8 @@ def _build_phase_0(
                 # Set the base dedent; this defines column 0. The following section of the file should be indented by 2 tabs.
                         # Set up for VNC.
                         environment:
-                            DISPLAY: ${DISPLAY}
+                            # I don't know how to correctly forward X11 traffic (see notes on VNC), so ignore the X11 ``DISPLAY`` outside the container.
+                            DISPLAY: ":0"
                         ports:
                             # For VNC.
                             -   "5900:5900"
@@ -528,6 +540,7 @@ def _build_phase_0(
                             -   ../BookServer/:/srv/BookServer
                             # To make Chrome happy.
                             -   /dev/shm:/dev/shm
+                            -   /run/dbus/system_bus_socket:/run/dbus/system_bus_socket
                 """
             )
             if build_config.is_dev()
@@ -634,13 +647,13 @@ def _build_phase_1(
 
     # Set up apt correctly; include Postgres repo.
     xqt(
-        "apt-get update",
-        "apt-get install -y --no-install-recommends eatmydata lsb-release",
+        "apt update",
+        "apt install -y --no-install-recommends eatmydata lsb-release",
         """echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" | tee  /etc/apt/sources.list.d/pgdg.list""",
         "wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -",
-        "apt-get update",
+        "apt update",
     )
-    apt_install = "eatmydata apt-get install -y --no-install-recommends"
+    apt_install = "eatmydata apt install -y --no-install-recommends"
     # This uses apt; run it after apt is set up.
     check_install_curl()
 
@@ -686,7 +699,7 @@ def _build_phase_1(
         "nano less ",
     )
 
-    # Build runguard and set up jobe users. Needed by `../modules/scheduled_builder.py`.
+    # Build runguard and set up Jobe users. Needed by BookServer's ``internal/scheduled_builder.py```.
     xqt("mkdir /var/www/jobe")
     chdir("/var/www/jobe")
     xqt(
@@ -705,13 +718,13 @@ def _build_phase_1(
             # Tests use `html5validator <https://github.com/svenkreiss/html5validator>`_, which requires the JDK.
             f"{apt_install} openjdk-11-jre-headless git xvfb x11-utils {browser} lsof emacs-nox",
             # Install Chromedriver. Based on https://tecadmin.net/setup-selenium-with-chromedriver-on-debian/.
-            "wget --no-verbose https://chromedriver.storage.googleapis.com/96.0.4664.18/chromedriver_linux64.zip",
+            f"wget --no-verbose https://chromedriver.storage.googleapis.com/{CHROMEDRIVER_VERSION}/chromedriver_linux64.zip",
             "unzip chromedriver_linux64.zip",
             "rm chromedriver_linux64.zip",
             "mv chromedriver /usr/bin/chromedriver",
             "chown root:root /usr/bin/chromedriver",
             "chmod +x /usr/bin/chromedriver",
-            # Provide VNC access. TODO: just pass the correct DISPLAY value and ports and use X11 locally, but how? Notes on my failures:
+            # Provide VNC access. TODO: just pass the correct DISPLAY value and ports and use X11 locally, but how? Here's the `best info <http://wiki.ros.org/docker/Tutorials/GUI>`_ I've found. Notes on my failures:
             #
             # - Including ``network_mode: host`` in `../docker-compose.yml` works. However, this breaks everything else (port mapping, links, etc.). It suggests that the correct networking setup would make this work.
             # - Passing ``volume: - /tmp/.X11-unix:/tmp/.X11-unix`` has no effect (on a Ubuntu 20.03.4 LTS host). Per the previous point, it seems that X11 is using TCP as its transport.
@@ -724,29 +737,26 @@ def _build_phase_1(
 
     if pic24:
         # When changing the xc16 version, update the string below **and** the path added at the end of this block.
-        xc16_ver = "xc16-v1.70-full-install-linux64-installer.run"
-        mplabx_ver = "MPLABX-v6.00-linux-installer.tar"
-        mplabx_sh = "MPLABX-v6.00-linux-installer.sh"
         xqt(
             # Install the xc16 compiler.
-            f"eatmydata wget --no-verbose https://ww1.microchip.com/downloads/en/DeviceDoc/{xc16_ver}",
-            f"chmod a+x {xc16_ver}",
+            f"eatmydata wget --no-verbose https://ww1.microchip.com/downloads/en/DeviceDoc/{XC16_VERSION}",
+            f"chmod a+x {XC16_VERSION}",
             # The installer complains if the netserver name isn't specified. This option isn't documented in the ``--help``. So, supply junk, and it seems to work.
-            f"eatmydata ./{xc16_ver} --mode unattended --netservername foo",
-            f"rm {xc16_ver}",
+            f"eatmydata ./{XC16_VERSION} --mode unattended --netservername foo",
+            f"rm {XC16_VERSION}",
             # MPLAB X install
             #
             # Needed to run sim30: per https://unix.stackexchange.com/questions/486806/steam-missing-32-bit-libraries-libx11-6, enable 32-bit libs.
             "eatmydata dpkg --add-architecture i386",
-            "eatmydata apt-get update",
-            "eatmydata apt-get install -y lib32stdc++6 libc6:i386",
+            "eatmydata apt update",
+            "eatmydata apt install -y lib32stdc++6 libc6:i386",
             # Then download and install MPLAB X.
-            f'eatmydata wget --no-verbose "https://ww1.microchip.com/downloads/en/DeviceDoc/{mplabx_ver}"',
-            f'eatmydata tar -xf "{mplabx_ver}"',
-            f'rm "{mplabx_ver}"',
+            f'eatmydata wget --no-verbose "https://ww1.microchip.com/downloads/en/DeviceDoc/{MPLABX_VERSION}"',
+            f'eatmydata tar -xf "{MPLABX_VERSION}"',
+            f'rm "{MPLABX_VERSION}"',
             # Install just the IDE and the 16-bit tools. This program checks to see if this is being run by root by looking at the ``USER`` env var, which Docker doesn't set. Fake it out.
-            f'USER=root eatmydata "./{mplabx_sh}" -- --mode unattended --ipe 0 --8bitmcu 0 --32bitmcu 0 --othermcu 0',
-            f'rm "{mplabx_sh}"',
+            f'USER=root eatmydata "./{MPLABX_SH_NAME}" -- --mode unattended --ipe 0 --8bitmcu 0 --32bitmcu 0 --othermcu 0',
+            f'rm "{MPLABX_SH_NAME}"',
         )
         # Add the path to the xc16 tools. Note that ``/root/.bashrc`` doesn't get sourced when Docker starts up; therefore, the `../Dockerfile` invokes bash when running the startup script.
         with open("/root/.bashrc", "a", encoding="utf-8") as f:
@@ -779,7 +789,7 @@ def _build_phase_1(
     )
     w2p_parent = Path(env.WEB2PY_PATH).parent
     xqt(
-        "eatmydata wget --no-verbose https://mdipierro.pythonanywhere.com/examples/static/2.21.1/web2py_src.zip",
+        f"eatmydata wget --no-verbose https://mdipierro.pythonanywhere.com/examples/static/{WEB2PY_VERSION}/web2py_src.zip",
         "eatmydata unzip -q web2py_src.zip",
         "rm -f web2py_src.zip",
         cwd=w2p_parent,
@@ -802,17 +812,25 @@ def _build_phase_1(
         # Set up nginx (partially -- more in step 3 below).
         "rm /etc/nginx/sites-enabled/default",
         "ln -sf $RUNESTONE_PATH/docker/nginx/sites-available/runestone /etc/nginx/sites-enabled/runestone",
-        # Send nginx logs to stdout/stderr, so they'll show up in Docker logs.
-        "ln -sf /dev/stdout /var/log/nginx/access.log",
-        "ln -sf /dev/stderr /var/log/nginx/error.log",
+        # Send celery, gunicorn, and nginx logs to Docker's stdout/stderr, so they'll show up in Docker logs even after restarting the servers. (Linking to ``/dev/stdout`` and ``/dev/stderr`` means that on restart, these links point not to Docker, but to the console which invoked the restart). See a `related issue on Github <https://github.com/moby/moby/issues/19616#issuecomment-174355979>`_.
+        "ln -sf /proc/1/fd/1 /var/log/nginx/access.log",
+        "ln -sf /proc/1/fd/2 /var/log/nginx/error.log",
+        "mkdir -p /var/log/celery",
+        "ln -sf /proc/1/fd/1 /var/log/celery/access.log",
+        "ln -sf /proc/1/fd/2 /var/log/celery/error.log",
+        "mkdir -p /var/log/gunicorn",
+        "ln -sf /proc/1/fd/1 /var/log/gunicorn/access.log",
+        "ln -sf /proc/1/fd/2 /var/log/gunicorn/error.log",
         # Set up web2py routing.
         "cp $RUNESTONE_PATH/docker/routes.py $WEB2PY_PATH",
         # ``sphinxcontrib.paverutils.run_sphinx`` lacks venv support -- it doesn't use ``sys.executable``, so it doesn't find ``sphinx-build`` in the system path when executing ``/srv/venv/bin/runestone`` directly, instead of activating the venv first (where it does work). As a huge, ugly hack, symlink it to make it available in the system path.
         "ln -sf $RUNESTONE_PATH/.venv/bin/sphinx-build /usr/local/bin",
         # Deal with a different subdirectory layout inside the container (mandated by web2py) and outside the container by adding these symlinks.
-        "ln -sf /srv/BookServer $WEB2PY_PATH/applications/BookServer",
+        "ln -sf $BOOK_SERVER_PATH $WEB2PY_PATH/applications/BookServer",
+        # We can't use ``$BOOK_SERVER_PATH`` here, since we need ``/srv/bookserver-dev`` in lowercase, not CamelCase.
         "ln -sf /srv/bookserver-dev $WEB2PY_PATH/applications/bookserver-dev",
         "ln -sf /srv/RunestoneComponents $WEB2PY_PATH/applications/RunestoneComponents",
+        "ln -sf /srv/runestone-dev $WEB2PY_PATH/applications/runestone-dev",
     )
 
     # Record info about this build. We can't provide ``git`` info, since the repo isn't available (the ``${RUNSTONE_PATH}.git`` directory is hidden, so it's not present at this time). Likewise, volumes aren't mapped, so ``git`` info for the Runestone Components and BookServer isn't available.
@@ -822,11 +840,11 @@ def _build_phase_1(
 
     xqt(
         # Do any final updates.
-        "eatmydata sudo apt-get -y update",
-        "eatmydata sudo apt-get -y upgrade",
+        "eatmydata sudo apt -y update",
+        "eatmydata sudo apt -y upgrade",
         # Clean up after install.
-        "eatmydata sudo apt-get -y autoclean",
-        "eatmydata sudo apt-get -y autoremove",
+        "eatmydata sudo apt -y autoclean",
+        "eatmydata sudo apt -y autoremove",
         "rm -rf /tmp/* /var/tmp/*",
     )
 
@@ -862,12 +880,11 @@ def _build_phase_2_core(
     # Misc setup
     # ^^^^^^^^^^
     if build_config.is_dev():
-        # Start up everything needed for vnc access. Handle the case of no ``DISPLAY`` available or empty.
-        x_display = env.DISPLAY or ":0"
+        # Since I don't know how to forard the X11 ``$DISPLAY`` correctly (see notes on VNC access), run a virtual frame buffer in the container and provide access via VNC. TODO: only do this if the provided ``$DISPLAY`` is not set.
         xqt(
             # Sometimes, previous runs leave this file behind, which causes Xvfb to output ``Fatal server error: Server is already active for display 0. If this server is no longer running, remove /tmp/.X0-lock and start again.``
-            f"rm -f /tmp/.X{x_display.split(':', 1)[1]}-lock",
-            f"Xvfb {x_display} &",
+            f"rm -f /tmp/.X{env.DISPLAY.split(':', 1)[1]}-lock",
+            "Xvfb &",
             # Wait a bit for Xvfb to start up before running the following X applications.
             "sleep 1",
             "x11vnc -forever &",
@@ -978,7 +995,7 @@ def _build_phase_2_core(
         )
 
     print("Checking the State of Database and Migration Info")
-    p = xqt(f"psql {effective_dburl} -c '\d'", capture_output=True, text=True)
+    p = xqt(f"psql {effective_dburl} -c '\\d'", capture_output=True, text=True)
     if p.stderr == "Did not find any relations.\n":
         # Remove any existing web2py migration data, since this is out of date and confuses web2py (an empty db, but migration files claiming it's populated). TODO: rsmanage should do this eventually; it doesn't right now.
         xqt("rm -f $RUNESTONE_PATH/databases/*")

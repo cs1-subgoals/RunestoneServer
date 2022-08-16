@@ -286,6 +286,20 @@ def is_editor(userid):
         return False
 
 
+def is_author(userid):
+    ed = db(db.auth_group.role == "author").select(db.auth_group.id).first()
+    row = (
+        db((db.auth_membership.user_id == userid) & (db.auth_membership.group_id == ed))
+        .select()
+        .first()
+    )
+
+    if row:
+        return True
+    else:
+        return False
+
+
 class IS_COURSE_ID:
     """used to validate that a course name entered (e.g. devcourse) corresponds to a
     valid course ID (i.e. db.courses.id)"""
@@ -666,6 +680,10 @@ def _create_access_token(data: dict, expires=None, scopes=None) -> bytes:
         response.cookies["access_token"] = encoded_jwt
         response.cookies["access_token"]["expires"] = 24 * 3600 * 30
         response.cookies["access_token"]["path"] = "/"
+        if "LOAD_BALANCER_HOST" in os.environ:
+            response.cookies["access_token"]["domain"] = os.environ[
+                "LOAD_BALANCER_HOST"
+            ]
 
     # decode here decodes the byte str to a normal str not the token
     return encoded_jwt

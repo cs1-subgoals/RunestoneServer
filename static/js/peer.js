@@ -55,7 +55,11 @@ function connect(event) {
                             if (typeof currAnswer === "undefined") {
                                 messarea.innerHTML = `<h3>You have not answered the question</h3><p>You will not be able to participate in any discussion unless you answer the question.</p>`;
                             } else {
-                                messarea.innerHTML = `<h3>Please Give an explanation for your answer</h3><p>Then discuss your answer with your group members</p>`;
+                                if (getVoteNum() < 2) {
+                                    messarea.innerHTML = `<h3>Please Give an explanation for your answer</h3><p>Then discuss your answer with your group members</p>`;
+                                } else {
+                                    messarea.innerHTML = `<h3>Voting for this question is complete</h3>`;
+                                }
                             }
                             if (!eBookConfig.isInstructor) {
                                 window.mcList[
@@ -93,7 +97,8 @@ function connect(event) {
                     }
                     messarea = document.getElementById("imessage");
                     messarea.innerHTML = `<h3>Time to make your 2nd vote</h3>`;
-                    $("[type=radio]").prop("checked", false);
+                    $(".runestone [type=radio]").prop("checked", false);
+                    $(".runestone [type=checkbox]").prop("checked", false);
                     break;
                 case "enableNext":
                     // This moves the student to the next question in the assignment
@@ -134,6 +139,16 @@ function connect(event) {
         ws.onclose = function () {}; // disable onclose handler first
         ws.close();
     };
+}
+
+function getVoteNum() {
+    if (typeof voteNum !== "undefined") {
+        return voteNum;
+    } else if (typeof studentVoteCount !== "undefined") {
+        return studentVoteCount;
+    } else {
+        throw "Both voteNum and studentVoteCount are undefined";
+    }
 }
 
 function answerToString(currAnswer) {
@@ -382,7 +397,8 @@ async function showPeerEnableVote2() {
     let nextStep = document.getElementById("nextStep");
     nextStep.innerHTML =
         "Please Answer the question again.  Even if you do not wish to change your answer.  After answering click the button to go on to the next question.";
-    $("[type=radio]").prop("checked", false);
+    $(".runestone [type=radio]").prop("checked", false);
+    $(".runestone [type=checkbox]").prop("checked", false);
 }
 
 $(function () {

@@ -84,14 +84,14 @@ def _start_servers(dev: bool) -> None:
     if bs_config == "development":
         dev = True
 
-    # sudo doesn't pass root's env vars; provide only the env vars Celery needs when invoking it.
+    # ``sudo`` doesn't pass root's env vars; provide only the env vars Celery needs when invoking it.
     xqt(
         'sudo -u www-data env "PATH=$PATH" "REDIS_URI=$REDIS_URI" '
-        "poetry run celery --app=scheduled_builder worker --pool=threads "
+        "poetry run celery --app=bookserver.internal.scheduled_builder worker --pool=threads "
         "--concurrency=3 --loglevel=info "
-        # This redirect ensures output ends up in the Docker log even if the servers are restarted. Sending to ``/dev/stdout`` only works at initial startup, but doesn't redirect after the servers are restarted. For more discussion, see `Github <https://github.com/moby/moby/issues/19616#issuecomment-174355979>`_.
-        "--logfile=/proc/1/fd/1 &",
-        cwd=f"{env.RUNESTONE_PATH}/modules",
+        # Celery runs as the ``www-data`` user, so it doesn't have access to the root-owned log files (which are symbolic links to files owned by root -- changing permission doesn't work). Therefore, redirect output (as root) to make this work.
+        "> /var/log/celery/access.log 2> /var/log/celery/error.log &",
+        cwd=env.RUNESTONE_PATH,
     )
 
     xqt(
@@ -100,9 +100,9 @@ def _start_servers(dev: bool) -> None:
         "--error_path /tmp "
         "--gconfig $RUNESTONE_PATH/docker/gunicorn_config/fastapi_config.py "
         # This much match the address in `./nginx/sites-available/runestone.template`.
-        f"--bind unix:/run/fastapi.sock {'--reload ' if dev else ''}"
-        # See previous comment on redirecting output to ``/dev/stdout`` even after server restarts.
-        + "2>&1 > /proc/1/fd/1 &",
+        f"--bind unix:/run/fastapi.sock {'--reload ' if dev else ''} "
+        # If logging to a file, then Gunicorn tries to append to it (open the file with a mode of "a+"). This fails if the underlying "file" is actually ``stdout`` or ``stderr`` with the error ``io.UnsupportedOperation: File or stream is not seekable.``. So, redirect these instead.
+        "> /var/log/gunicorn/access.log 2> /var/log/gunicorn/error.log &",
         "service nginx start",
         "poetry run gunicorn -D --config $RUNESTONE_PATH/docker/gunicorn_config/web2py_config.py &",
         cwd=f"{env.RUNESTONE_PATH}/docker/gunicorn_config",
@@ -151,9 +151,9 @@ def restart_servers(dev):
     """
     Restart the web servers and celery.
     """
-    _stop_servers(dev)
+    _stop_servers()
     sleep(2)
-    _start_servers()
+    _start_servers(dev)
 
 
 # ``reloadbks``
@@ -180,7 +180,7 @@ def reloadbks() -> None:
     "--rc/--no-rc", default=False, help="Run/skip tests on the Runestone components."
 )
 @click.option(
-    "--rs/--no-rs", default=True, help="Run/skip tests on the Runestone server."
+    "--rs/--no-rs", default=False, help="Run/skip tests on the Runestone server."
 )
 # Allow users to pass args directly to the underlying ``pytest`` command -- see the `click docs <https://click.palletsprojects.com/en/8.0.x/arguments/#option-like-arguments>`_.
 @click.argument("passthrough", nargs=-1, type=click.UNPROCESSED)
@@ -194,14 +194,14 @@ def test(bks: bool, rc: bool, rs: bool, passthrough: Tuple) -> None:
     ensure_in_docker()
     if not bks and not rc and not rs:
         sys.exit(
-            "ERROR: No tests selected to run. Pass any combination of --rs, --rs,\n"
+            "ERROR: No tests selected to run. Pass any combination of --rc, --rs,\n"
             "and/or --bks."
         )
     _stop_servers()
     pytest = "$RUNESTONE_PATH/.venv/bin/pytest"
     passthrough_args = " ".join(passthrough)
     if bks:
-        xqt(f"{pytest} -v {passthrough_args}", cwd="/srv/BookServer")
+        xqt(f"{pytest} -v {passthrough_args}", cwd=env.BOOK_SERVER_PATH)
     if rc:
         xqt(f"{pytest} -v {passthrough_args}", cwd="/srv/RunestoneComponents")
     if rs:

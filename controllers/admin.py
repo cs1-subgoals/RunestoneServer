@@ -887,6 +887,8 @@ def removeinstructor():
         return json.dumps(removed)
 
 
+# This function is used from the web admin page to add TA's or co-instructors to the course.
+# It is not used by the rsmanage command.
 @auth.requires(
     lambda: verifyInstructorStatus(auth.user.course_id, auth.user),
     requires_login=True,
@@ -931,6 +933,9 @@ def deletecourse():
             students.update(course_id=bcid)
             uset = db(db.user_courses.course_id == courseid)
             uset.delete()
+            # remove the rows from useinfo
+            infoset = db(db.useinfo.course_id == course_name)
+            infoset.delete()
             db(db.courses.id == courseid).delete()
             try:
                 session.clear()
@@ -1656,6 +1661,8 @@ def get_assignment_release_states():
         return json.dumps({})
 
 
+# Called to assemble the list of questions for the assignment builder
+#
 def _get_toc_and_questions():
     # return a dictionary with a nested dictionary representing everything the
     # picker will need in the instructor's assignment authoring tab
