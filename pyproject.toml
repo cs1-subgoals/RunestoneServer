@@ -17,7 +17,7 @@
 # ================
 [tool.poetry]
 name = "runestone_poetry_project"
-version = "6.1.0"
+version = "6.0.6"
 description = "A web2py-based server for the Runestone e-book system."
 authors = ["Brad Miller <bonelake@mac.com>", "Bryan A. Jones <bjones AT ece DOT msstate DOT edu"]
 license = "MIT"
@@ -56,11 +56,10 @@ Sphinx = "> 4.1.0"
 sphinxcontrib-paverutils = ">= 1.17"
 SQLAlchemy = ">= 1.0.14"
 pyjwt = "== 2.0.1"
-
+pretext = "^1.0.0"
 
 # Development dependencies
 # ========================
-pretextbook = "^0.7.8"
 [tool.poetry.dev-dependencies]
 black = "~= 22.0"
 bookserver = { path = "../BookServer", develop = true }
