@@ -88,9 +88,9 @@ def update_library(book):
     if res.rowcount == 0:
         eng.execute(
             """insert into library 
-        (title, subtitle, description, shelf_section, basecourse, is_visible, main_page ) 
+        (title, subtitle, description, shelf_section, basecourse, build_system, is_visible, main_page ) 
         values('{title}', '{subtitle}', '{description}', '{shelf_section}', 
-        '{basecourse}', '{is_visible}', '{main_page}') """.format(
+        '{basecourse}', '{build_system}', '{is_visible}', '{main_page}') """.format(
                 **book_info
             )
         )
@@ -110,6 +110,7 @@ def update_library(book):
     return True
 
 
+print("Warning -- this script will leave __pycache__ in every book folder")
 os.chdir(cwd)
 for path in cwd.iterdir():
     if path.is_dir():
