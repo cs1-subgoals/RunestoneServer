@@ -940,8 +940,10 @@ function TA_search() {
         var text = $("#TA_search").val();
         if (name.includes(text.toUpperCase())) {
             elements[i].style.display = "block";
+            elements[i].disabled = false;
         } else {
             elements[i].style.display = "none";
+            elements[i].disabled = true;
         }
     }
 }
@@ -1907,6 +1909,12 @@ async function renderRunestoneComponent(componentSrc, whereDiv, moreOpts) {
     }
 
     let componentKind = $($(`#${whereDiv} [data-component]`)[0]).data("component");
+    // webwork problems do not have a data-component attribute so we have to try to figure it out.
+    //
+    if (! componentKind && 
+        (componentSrc.indexOf("handleWW") >= 0) || (componentSrc.indexOf("webwork") >= 0)) {
+        componentKind = "webwork";
+    }
     // Import all the js needed for this component before rendering
     await runestoneComponents.runestone_import(componentKind);
     let opt = {};
