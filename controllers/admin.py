@@ -22,6 +22,7 @@ from random import randint
 
 # Third Party library
 # -------------------
+import boto3, botocore  # for the S3 API
 from dateutil.parser import parse
 from rs_grading import _get_assignment, send_lti_grades
 from runestone import cmap
@@ -46,6 +47,7 @@ AUTOGRADE_POSSIBLE_VALUES = dict(
     external=[],
     fillintheblank=ALL_AUTOGRADE_OPTIONS,
     khanex=ALL_AUTOGRADE_OPTIONS,
+    hparsons=ALL_AUTOGRADE_OPTIONS,
     lp_build=ALL_AUTOGRADE_OPTIONS,
     mchoice=ALL_AUTOGRADE_OPTIONS + ["peer", "peer_chat"],
     page=["interact"],
@@ -68,6 +70,7 @@ AUTOGRADEABLE = set(
         "fillintheblank",
         "khanex",
         "mchoice",
+        "hparsons",
         "parsonsprob",
         "quizly",
         "selectquestion",
@@ -85,6 +88,7 @@ WHICH_TO_GRADE_POSSIBLE_VALUES = dict(
     dragndrop=ALL_WHICH_OPTIONS,
     external=[],
     fillintheblank=ALL_WHICH_OPTIONS,
+    hparsons=ALL_WHICH_OPTIONS,
     khanex=ALL_WHICH_OPTIONS,
     lp_build=ALL_WHICH_OPTIONS,
     mchoice=ALL_WHICH_OPTIONS + ["all_answer"],
@@ -132,9 +136,9 @@ def assignments():
         assigndict[row.id] = row.name
 
     tags = []
-    tag_query = db(db.tags).select()
-    for tag in tag_query:
-        tags.append(tag.tag_name)
+    # tag_query = db(db.tags).select()
+    # for tag in tag_query:
+    #     tags.append(tag.tag_name)
 
     course = get_course_row(db.courses.ALL)
     base_course = course.base_course
@@ -171,13 +175,16 @@ def practice():
     course_start_date = course.term_start_date
 
     start_date = course_start_date + datetime.timedelta(days=13)
-    end_date = ""
+    end_date = start_date + datetime.timedelta(weeks=12)  # provide a reasonable default
     max_practice_days = 50
     max_practice_questions = 500
     day_points = 2
     question_points = 0.2
     questions_to_complete_day = 10
     flashcard_creation_method = 0
+    # 0 is self paced - when a student marks a page complete
+    # 1 is removed - it was for when a reading assignment deadline passes but was not implemented
+    # 2 is manually as checked by the instructor
     graded = 1
     spacing = 0
     interleaving = 0
@@ -192,14 +199,20 @@ def practice():
     error_graded = 0
 
     already_exists = 0
-    any_practice_settings = db(db.course_practice.auth_user_id == auth.user.id)
+    any_practice_settings = db(
+        (db.course_practice.auth_user_id == auth.user.id)
+        | (db.course_practice.course_name == course.course_name)
+    )
+
     practice_settings = any_practice_settings(
         db.course_practice.course_name == course.course_name
     )
     # If the instructor has created practice for other courses, don't randomize spacing and interleaving for the new
     # course.
     if not any_practice_settings.isempty():
-        any_practice_settings = any_practice_settings.select().first()
+        any_practice_settings = any_practice_settings.select(
+            orderby=~db.course_practice.id
+        ).first()
         spacing = any_practice_settings.spacing
         interleaving = any_practice_settings.interleaving
 
@@ -207,10 +220,18 @@ def practice():
         #  If not, stick with the defaults.
         if (
             not practice_settings.isempty()
-            and practice_settings.select().first().end_date is not None
-            and practice_settings.select().first().end_date != ""
+            and practice_settings.select(orderby=~db.course_practice.id)
+            .first()
+            .end_date
+            is not None
+            and practice_settings.select(orderby=~db.course_practice.id)
+            .first()
+            .end_date
+            != ""
         ):
-            practice_setting = practice_settings.select().first()
+            practice_setting = practice_settings.select(
+                orderby=~db.course_practice.id
+            ).first()
             start_date = practice_setting.start_date
             end_date = practice_setting.end_date
             max_practice_days = practice_setting.max_practice_days
@@ -228,7 +249,7 @@ def practice():
             spacing = 1
         if randint(0, 1) == 1:
             interleaving = 1
-    if practice_settings.isempty():
+    if practice_settings.isempty():  # If there are no settings for THIS course
         db.course_practice.insert(
             auth_user_id=auth.user.id,
             course_name=course.course_name,
@@ -1113,8 +1134,15 @@ def questionBank():
     query_clauses = []
 
     # should we search the question by term?
+    term_list = []
     if request.vars.term:
         term_list = [x.strip() for x in request.vars.term.split()]
+
+    # this will not be perfect but is an ok start.
+    if request.vars["language"] != "python" and request.vars["language"] != "any":
+        term_list.append(f':language: {request.vars["language"]}')
+
+    if term_list:
         query_clauses.append(db.questions.question.contains(term_list, all=True))
 
     if request.vars["chapter"]:
@@ -1591,7 +1619,38 @@ def htmlsrc():
         htmlsrc and htmlsrc[0:2] == "\\x"
     ):  # Workaround Python3/Python2  SQLAlchemy/DAL incompatibility with text columns
         htmlsrc = htmlsrc.decode("hex")
-    return json.dumps(htmlsrc)
+
+    result = {"htmlsrc": htmlsrc}
+    logger.debug("htmlsrc = {htmlsrc}")
+    if "data-attachment" in htmlsrc:
+        # get the URL for the attachment, but we need the course, the user and the divid
+        session = boto3.session.Session()
+        client = session.client(
+            "s3",
+            config=botocore.config.Config(s3={"addressing_style": "virtual"}),
+            region_name=settings.region,
+            endpoint_url="https://nyc3.digitaloceanspaces.com",
+            aws_access_key_id=settings.spaces_key,
+            aws_secret_access_key=settings.spaces_secret,
+        )
+
+        prepath = f"{auth.user.course_name}/{acid}/{studentId}"
+        logger.debug(f"checking path {prepath}")
+        response = client.list_objects(Bucket=settings.bucket, Prefix=prepath)
+        logger.debug(f"response = {response}")
+        if response and "Contents" in response:
+            obj = response["Contents"][0]
+            logger.debug("key = {obj['Key']}")
+            url = client.generate_presigned_url(
+                ClientMethod="get_object",
+                Params={"Bucket": settings.bucket, "Key": obj["Key"]},
+                ExpiresIn=300,
+            )
+
+        else:
+            url = ""
+        result["attach_url"] = url
+    return json.dumps(result)
 
 
 @auth.requires(

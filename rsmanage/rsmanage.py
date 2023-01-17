@@ -400,7 +400,7 @@ def build(config, clone, ptx, gen, manifest, course):
         res = _build_ptx_book(config, gen, manifest, course)
 
     else:
-        res = _build_runestone_book(course)
+        res = _build_runestone_book(config, course)
 
     if res:
         click.echo("Build Succeeded")
@@ -830,8 +830,8 @@ def studentinfo(config, student):
 
     res = eng.execute(
         f"""
-        select auth_user.id, first_name, last_name, email, courses.course_name, courses.id 
-        from auth_user join user_courses ON user_courses.user_id = auth_user.id 
+        select auth_user.id, first_name, last_name, email, courses.course_name, courses.id
+        from auth_user join user_courses ON user_courses.user_id = auth_user.id
         join courses on courses.id = user_courses.course_id where username = '{student}'"""
     )
     print(f"res = {res}")
@@ -1139,17 +1139,18 @@ def addbookauthor(config, book, author, github):
         if not github:
             github = f"https://github.com/RunestoneInteractive/{book}.git"
 
-    # Create an entry in book (document_id, github_url)
+    # create an entry in book_author (author, book)
     try:
         res = engine.execute(
-            f"""insert into book
-                (document_id, github_url)
-                values ( '{book}', '{github}' )
+            f"""
+            insert into library
+            (title, basecourse)
+            values ( 'Temporary title for {book}', '{book}' )
             """
         )
     except Exception as e:
-        click.echo(f"Book already exists in book table {e}")
-    # create an entry in book_author (author, book)
+        click.echo(f"Warning Book already exists in library {e}")
+
     try:
         res = engine.execute(
             f"""insert into book_author
@@ -1157,8 +1158,8 @@ def addbookauthor(config, book, author, github):
                 values ( '{author}', '{book}' )
             """
         )
-    except:
-        click.echo(f"{author} is already an author for {book}")
+    except Exception as e:
+        click.echo(f"Warning setting book,author pair failed {e}")
 
     # create an entry in auth_membership (group_id, user_id)
     auth_row = engine.execute(

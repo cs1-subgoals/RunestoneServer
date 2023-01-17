@@ -21,11 +21,18 @@ def user():
     if not request.args(0):
         redirect(URL("default", "user/login"))
 
+    library_list = []
     if "register" in request.args(0):
         # If we can't pre-populate, just set it to blank.
         # This will force the user to choose a valid course name
         db.auth_user.course_id.default = ""
-
+        library_list = db.executesql(
+            """select basecourse, title
+               from library
+               where for_classes = 'T' and is_visible = 'T'
+               order by shelf_section, basecourse""",
+            as_dict=True,
+        )
         # Otherwise, use the referer URL to try to pre-populate
         ref = request.env.http_referer
         if ref:
@@ -85,7 +92,7 @@ def user():
         TypeError,
     ):  # not all auth methods actually have a submit button (e.g. user/not_authorized)
         pass
-    return dict(form=form)
+    return dict(form=form, library=library_list)
 
 
 # Can use db.auth_user._after_insert.append(make_section_entries)
@@ -286,6 +293,10 @@ def about():
 
 
 def ack():
+    return dict()
+
+
+def start():
     return dict()
 
 
@@ -594,6 +605,10 @@ def wisp():
     return dict(wisp={})
 
 
+def ads():
+    return dict(wisp={})
+
+
 def ct_addendum():
     return dict(private={})
 
@@ -644,3 +659,22 @@ def delete():
         auth.logout()  # logout user and redirect to home page
     else:
         redirect(URL("default", "user/profile"))
+
+
+@auth.requires_login()
+def enroll():
+    logger.debug(f"Request to login for {request.vars.course_name}")
+    course = db(db.courses.course_name == request.vars.course_name).select().first()
+    # is the user already registered for this course?
+    res = db(db.user_courses.course_id == course.id).select().first()
+    if res:
+        session.flash = f"You are already registered for {request.vars.course_name}"
+        redirect(URL("default", "courses"))
+
+    db.user_courses.insert(user_id=auth.user.id, course_id=course.id)
+    db(db.auth_user.id == auth.user.id).update(course_id=course.id, active="T")
+    db(db.auth_user.id == auth.user.id).update(course_name=request.vars.course_name)
+    auth.user.update(course_name=request.course_name)
+    auth.user.update(course_id=course.id)
+
+    redirect(URL("default", "donate"))

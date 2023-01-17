@@ -101,6 +101,13 @@ function connect(event) {
                             studentVoteCount = 2;
                             console.log("WARNING: resetting studentVoteCount to 2");
                         }
+                        // set a timer to check if the student hasn't voted in 10 seconds
+                        // give them a warning.
+                        setTimeout(() => {
+                            if (studentVoteCount > 1 && !vote2done) {
+                                alert("You must vote twice! Even if want to keep your answer the same.")
+                            }
+                        }, 10000)
                     }
                     messarea = document.getElementById("imessage");
                     messarea.innerHTML = `<h3>Time to make your 2nd vote</h3>`;
@@ -109,6 +116,8 @@ function connect(event) {
                     break;
                 case "enableNext":
                     // This moves the student to the next question in the assignment
+                    // first disable the handler to prevent leaving the page.
+                    $(window).off("beforeunload");
                     let nextForm = document.getElementById("nextqform");
                     nextForm.submit();
                     break;
@@ -314,6 +323,15 @@ function enableNext() {
         broadcast: true,
         course_name: eBookConfig.course,
     };
+    if (typeof voteNum !== "undefined" && voteNum < 2) {
+        logPeerEvent({
+            sid: eBookConfig.username,
+            div_id: currentQuestion,
+            event: "peer",
+            act: "stop_question",
+            course: eBookConfig.course,
+        });
+    }
     publishMessage(mess);
     return true;
 }
@@ -401,7 +419,9 @@ async function showPeerEnableVote2() {
     // iterate over responses
     let res = "";
     for (let response in spec.responses) {
-        res += `User ${response} answered ${answerToString(spec.responses[response])} <br />`;
+        res += `User ${response} answered ${answerToString(
+            spec.responses[response]
+        )} <br />`;
     }
     //peerNameEl.innerHTML = `User ${spec.user} answered ${answerToString(spec.answer)}`;
     peerNameEl.innerHTML = res;
@@ -412,6 +432,14 @@ async function showPeerEnableVote2() {
         "Please Answer the question again.  Even if you do not wish to change your answer.  After answering click the button to go on to the next question.";
     $(".runestone [type=radio]").prop("checked", false);
     $(".runestone [type=checkbox]").prop("checked", false);
+    studentVoteCount += 1;
+    studentSubmittedVote2 = false;
+    let checkme = document.querySelector(".runestone button");
+    if (checkme.innerHTML === "Check Me") {
+        checkme.addEventListener("click", function (event) {
+            studentSubmittedVote2 = true;
+        });
+    }
 }
 
 $(function () {

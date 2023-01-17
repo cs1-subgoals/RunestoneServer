@@ -31,6 +31,42 @@ function gradeIndividualItem() {
 
     $(rightSideDiv)[0].style.visibility = "visible";
     rightSideDiv.html(""); //empty it out
+    rightSideDiv.html(`<div id='filterqs'
+    style="
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;">
+    <select id="filterSelect">
+        <option value="nofilter">Show All</option>
+        <option value="filterto0">Show questions with a score of 0 or None</option>
+        <option value="filterto1">Show questions with a non-zero score</option>
+    </select>
+    `)
+    let rsd = document.querySelector("#filterSelect");
+    rsd.addEventListener('change',
+    function () {
+        let gPanels = document.querySelectorAll(".loading");
+        for (let panel of gPanels) {
+            let v = panel.querySelector("#gradingform").querySelector("#input-grade").value;
+            if (rsd.value == "filterto0") {
+                if (v == 0 || v == "") {
+                    panel.style.display = "block";
+                } else {
+                    panel.style.display = "none";
+                }
+            } else if (rsd.value == "filterto1") {
+                if (v > 0) {
+                    panel.style.display = "block";
+                } else {
+                    panel.style.display = "none";
+                }
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    });
+
     //Not sure if questions or students should be the outer loop
     var mg = false;
     if (questions.length * sstudents.length > 1) {
@@ -328,7 +364,8 @@ function createGradingPanel(element, acid, studentId, multiGrader) {
         }
     }
     $.getJSON("/runestone/admin/htmlsrc", data, async function (result) {
-        var htmlsrc = result;
+        var htmlsrc = result.htmlsrc;
+        const attachURL = result.attach_url;
         var enforceDeadline = $("#enforceDeadline").is(":checked");
         var dl = showDeadline();
         await renderRunestoneComponent(htmlsrc, elementID + ">#questiondisplay", {
@@ -340,6 +377,7 @@ function createGradingPanel(element, acid, studentId, multiGrader) {
             tzoff: new Date().getTimezoneOffset() / 60,
             multiGrader: multiGrader,
             gradingContainer: elementID,
+            attachURL: attachURL,
         });
     });
 
@@ -1433,7 +1471,7 @@ function assignmentInfo() {
             $("#nopause").val(assignmentData.nopause);
             $("#nofeedback").val(assignmentData.nofeedback);
             $("#assign_is_peer").val(assignmentData.is_peer);
-            $("#peer_async_visible").val(assignmentData.peer_async_visible);            
+            $("#peer_async_visible").val(assignmentData.peer_async_visible);
             if (assignmentData.visible === true) {
                 $("#assign_visible").prop("checked", true);
             } else {
@@ -1789,6 +1827,8 @@ function create_question(formdata) {
 }
 
 // Given a question ID, preview it.
+// This is NOT the function used to generate the grading panel on the grades page
+// this is used in other places.
 function preview_question_id(question_id, preview_div, sid, gradeit) {
     if (arguments.length == 1) {
         preview_div = "component-preview";
@@ -1796,7 +1836,8 @@ function preview_question_id(question_id, preview_div, sid, gradeit) {
     // Request the preview HTML from the server.
     $.getJSON("/runestone/admin/htmlsrc", {
         acid: question_id,
-    }).done(function (html_src) {
+    }).done(function (jsonData) {
+        html_src = jsonData.htmlsrc
         // Render it.
         data = { acid: question_id };
         if (sid) {
@@ -1897,6 +1938,11 @@ async function renderRunestoneComponent(componentSrc, whereDiv, moreOpts) {
     if (typeof moreOpts === "undefined") {
         moreOpts = {};
     }
+    var author = null;
+    if ("author" in moreOpts) {
+        author = moreOpts.author;
+        delete moreOpts.author;
+    }
     patt = /..\/_images/g;
     componentSrc = componentSrc.replace(
         patt,
@@ -1911,7 +1957,7 @@ async function renderRunestoneComponent(componentSrc, whereDiv, moreOpts) {
     let componentKind = $($(`#${whereDiv} [data-component]`)[0]).data("component");
     // webwork problems do not have a data-component attribute so we have to try to figure it out.
     //
-    if (! componentKind && 
+    if (! componentKind &&
         (componentSrc.indexOf("handleWW") >= 0) || (componentSrc.indexOf("webwork") >= 0)) {
         componentKind = "webwork";
     }
@@ -1935,7 +1981,7 @@ async function renderRunestoneComponent(componentSrc, whereDiv, moreOpts) {
     }
 
     if (typeof component_factory === "undefined") {
-        alert("Error:  Missing the component factory!  Clear you browser cache.");
+        alert("Error:  Missing the component factory!  Clear your browser cache.");
     } else {
         if (!component_factory[componentKind] && !jQuery(`#${whereDiv}`).html()) {
             jQuery(`#${whereDiv}`).html(
@@ -1963,6 +2009,11 @@ async function renderRunestoneComponent(componentSrc, whereDiv, moreOpts) {
                 "orig_divid",
                 opt.acid || moreOpts.acid || opt.orig.id
             ); // save the original divid
+            if (author) {
+                let authorInfo = document.createElement("p");
+                authorInfo.innerHTML = `Written by: ${author}`
+                $(`#${whereDiv}`).append(authorInfo);
+            }
             let editButton = document.createElement("button");
             let constrainbc = document.getElementById("qbankform").constrainbc.checked;
             $(editButton).text("Edit Question");
@@ -2021,7 +2072,7 @@ async function renderRunestoneComponent(componentSrc, whereDiv, moreOpts) {
         }
         // $(`#${whereDiv}`).css("background-color", "white");
     }
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    MathJax.typeset([document.querySelector(`#${whereDiv}`)])
 }
 
 // Called by the "Search" button in the "Search question bank" panel.
@@ -2038,6 +2089,7 @@ function questionBank(form) {
     var cbc = form.constrainbc.checked;
     var obj = new XMLHttpRequest();
     var url = "/runestone/admin/questionBank";
+    var qlanguage = form.language.value;
     var data = {
         variable: "variable",
         chapter: chapter,
@@ -2049,6 +2101,7 @@ function questionBank(form) {
         term: term,
         competency: competency,
         isprim: isprim,
+        language: qlanguage,
     };
     jQuery.post(url, data, function (resp, textStatus, whatever) {
         if (resp == "Error") {
@@ -2135,6 +2188,7 @@ function getQuestionInfo() {
 
         await renderRunestoneComponent(data.htmlsrc, "component-preview", {
             acid: question_name,
+            author: data.author,
         });
 
         var q_author = document.getElementById("q_author");
