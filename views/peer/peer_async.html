@@ -5,7 +5,7 @@
 
 <script>
     eBookConfig.peer = true;
-    eBookConfig.peerMOde = "async";
+    eBookConfig.peerMode = "async";
 </script>
 
 <h2>Peer Instruction Question (After Class)</h2>
@@ -34,7 +34,7 @@
             Please provide an explanation for why you answered
             <span id="current_answer">__</span>
         </p>
-        <textarea id="messageText" rows="2" cols="40"> </textarea> <br />
+        <textarea id="messageText" rows="6" cols="80"> </textarea> <br />
         <button type="button" onclick="showPeerEnableVote2()">Submit</button>
         <div>
             <h4>A discussion for you to consider</h4>
@@ -51,7 +51,7 @@
     <form action="/peer/peer_async">
         <input type="hidden" name="assignment_id" value="{{=assignment_id}}" />
         <input type="hidden" name="question_num" value="{{=nextQnum}}" />
-        <button type="submit" onclick="return checkVoteCount()">Next Question</button>
+        <button type="submit" onclick="return checkVoteCount()" style="float: right; margin-bottom: 20px;">Next Question</button>
     </form>
 </div>
 {{ pass }}
