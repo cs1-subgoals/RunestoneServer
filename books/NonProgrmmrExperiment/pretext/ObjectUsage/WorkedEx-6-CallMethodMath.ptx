@@ -1,0 +1,91 @@
+<section xml:id="object-usage_worked-example-call-a-method-of-math" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Call a method of Math</title>
+    <xi:include href='./subgoals-call-method.ptx' /><!--
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-useobj-we1-call-math" youtube="layMMLu3PtU" width="auto"/>
+    </subsection> -->
+    <subsection>
+        <title>Problem Statement</title>
+        <p>Write the Java code to calculate and store the area of a circle, where the radius is an input from the user.</p>
+    </subsection>
+    <subsection>
+        <p>You can reference section 3.8 to remind yourself how to declare and instantiate a Scanner object to read input from the user. Here is what the code should look like:</p>
+        <program language="java"><input>
+Scanner input = new Scanner(System.in);
+System.out.println("Please enter the radius");  // prompt the user for input
+double radius = input.nextDouble();            
+        </input></program>
+    </subsection>
+    <subsection>
+        <title>SG1: Classify method as static method or instance method</title>
+        <p>First, we need to determine what method we need to call.</p>
+        <figure align="">
+            <image source="ObjectUsage/Figures/Call-method-math-pow.png" alt="API docs for Math pow method"/>
+        </figure>
+        <p>The formula for calculating the area of a circle is &#x03C0;*radius<sup>2</sup>. Looking at the documentation for the Math class, we see the <c>pow()</c> method which will raise a number to a power. You can also see the keyword <c>static</c> in the documentation for this method, so the method is a static method.</p>
+        <p>Because we are calling a static method, we do not need an instance. We will call the method using the class name (Math).</p>
+        <p>If want to call an instance method, we need to identify the instance which will call the method. In this example we have already created a Scanner instance which is named <c>input</c>.</p>
+    </subsection>
+    <subsection>
+        <title>Write (instance / class) dot method name and ( )</title>
+        <p>Here is the method call:</p>
+        <p><c>Math.pow( );</c></p>
+    </subsection>
+    <subsection>
+        <title>Determine whether parameter(s) are appropriate</title>
+        <p>In the documentation, we see that two parameters are required. The first argument is the base and the second argument is the exponent. In our problem, we want to square the value of the radius. So the first argument will be the <c>radius</c> variable and the second will be the value 2.</p>
+        <p>Let's look at the data types of the parameters - both are of type <c>double</c>. Our <c>radius</c> variable was declared of type <c>double</c>, so that value is compatible as the declared parameter data type. The value 2 is an <c>integer</c>, but is compatible with the data type <c>double</c>, as an <c>integer</c> value can be assigned to a <c>double</c> variable. (Remember, you can look back to the assignment subgoals to determine the validity of this assignment.)</p>
+        <p>So the code for this method call looks like:</p>
+        <program language="java"><input>
+Math.pow(radius, 2);
+        </input></program>
+    </subsection>
+    <subsection>
+        <title>Determine what the method will return and where it will be stored</title>
+        <p>According to the API documentation, the <c>pow</c> method returns a <c>double</c>, so we need a <c>double</c> type variable to store the value.</p>
+        <program language="java"><input>
+double result = [value of Pi] * Math.pow(radius, 2);
+        </input></program>
+        <p>Some common constant values are defined in the Java language and Pi is one of these. It happens to be declared in the Math class:</p>
+        <figure align="">
+            <image source="ObjectUsage/Figures/MathClassConstants.png"/>
+        </figure>
+        <p>To reference this value, you access the value in the same manner we do the methods, by using the class name:</p>
+        <program language="java"><input>
+Math.PI;
+        </input></program>
+    </subsection>
+    <subsection>
+        <title>Evaluate right hand side (RHS) of assignment. Value is dependent on method’s purpose</title>
+        <p>In the solution for this example, both the <c>pow</c> method and <c>Math.PI</c> return double values. A double multiplied by a double is a double which is then assigned to our declared double variable result.</p>
+        <p>Here's the complete solution to the problem:</p>
+        <program language="java"><input>
+Scanner input = new Scanner(System.in);
+System.out.println("Please enter the radius");  // prompt the user for input
+double radius = input.nextDouble();
+double result = Math.PI * Math.pow(radius, 2);            
+        </input></program>
+        <p>Note that using members of the Math class does not require an import statement as that class is already included with any Java program.</p>
+    </subsection>
+    <program xml:id="ac-objectuse-we6" interactive="activecode" language="java">
+        <input>
+import java.util.Scanner;
+public class main{
+   public static void main(String args[]){
+    
+   }
+}
+        </input>
+    </program>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="object-usage_objuse-we6-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

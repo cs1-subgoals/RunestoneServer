@@ -1,0 +1,129 @@
+<section xml:id="arrays_worked-example-arrays-instantiate-and-alter" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Arrays - Instantiate and Alter</title>
+    <xi:include href='./subgoals-arrays.ptx' />
+    <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+        <video xml:id="video-arrays-we1" youtube="WqQSlxGUQxY"/>
+        <p>Problem:</p>
+        <p>Given the initialized array:</p>
+        <program language="java">
+            <input>
+int [] alpha;
+            </input>
+        </program>
+        <p>Evaluate these statements and determine the value of all variables. If any error occurs, give the reason.</p>
+        <program language="java">
+            <input>
+alpha = new int[5];
+alpha[4] = 22;
+alpha[0] = 10;
+alpha[1] = alpha[4] - alpha[0];
+alpha[2] = alpha[1] - alpha[0];
+alpha[3] = alpha[alpha[2] - 1];
+alpha[4] = alpha[alpha[3]];
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG1: Set up array from 0 to size-1</title>
+        <program language="java">
+            <input>
+alpha = new int[5];
+            </input>
+        </program>
+        <figure align="">
+            <image source="Arrays/Figures/we1-init.png" alt="Arrays"/>
+        </figure>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <c>alpha</c> is declared as an array of ints</p>
+                </li>
+                <li>
+                    <p>This statement allocates 5 slots for integers (first line are indexes, second line are values/content):</p>
+                </li>
+                <li>
+                    <p>Notice that the largest index is 4 (size of 5 minus 1).</p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection>
+        <title>SG2: Evaluate data type of statements against array</title>
+        <program language="java">
+            <input>
+alpha[4] = 22;
+alpha[0] = 10;
+alpha[1] = alpha[4] - alpha[0];
+alpha[2] = alpha[1] - alpha[0];
+alpha[3] = alpha[alpha[2] - 1];
+alpha[4] = alpha[alpha[3]];
+            </input>
+        </program>
+        <p>
+            <ul>
+                <li>
+                    <p>Each of these statements only involve integers.</p>
+                </li>
+                <li>
+                    <p>Notice that for every [ ] in the statements the result will be an integer because we have an integer array.</p>
+                </li>
+                <li>
+                    <p>All of the array indexes on the left hand side of the assignment statements are within the bounds of the array (0 &#8211; 4).</p>
+                </li>
+                <li>
+                    <p>We can see that some of the index values on the right hand side of the array are within bounds, but we will need to evaluate them all to see if all are valid.</p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace statements, updating slots as you go</title>
+        <p>We will evaluate the first two statements:</p>
+        <program language="java">
+            <input>
+alpha[4] = 22;
+alpha[0] = 10;
+            </input>
+        </program>
+        <p>The resulting array is:</p>
+        <figure align="">
+            <image source="Arrays/Figures/we1-trace-1-2.png" alt="Arrays"/>
+        </figure>
+        <p>The next statement is:</p>
+        <program language="java">
+            <input>
+alpha[1] = alpha[4] - alpha[0];
+            </input>
+        </program>
+        <figure align="">
+            <image source="Arrays/Figures/we1-trace-3.png" alt="Arrays"/>
+        </figure>
+        <p>Next:</p>
+        <program language="java">
+            <input>
+alpha[2] = alpha[1] - alpha[0];
+            </input>
+        </program>
+        <figure align="">
+            <image source="Arrays/Figures/we1-trace-4.png" alt="Arrays"/>
+        </figure>
+        <p>For the next statement, <c>alpha[3] = alpha[alpha[2] - 1];</c>, first determine the value of alpha[2] which is 2.
+                Then look at  alpha[2 - 1] which is alpha[1], or 12</p>
+        <figure align="">
+            <image source="Arrays/Figures/we1-trace-5.png" alt="Arrays"/>
+        </figure>
+        <p>Finally, there is a problem with the last statement: <c>alpha[4] = alpha[alpha[3]];</c> First determine the value of alpha[3] which is 12.
+                When we try to get alpha[12], it is out of bounds, and an <c>IndexOutOfBounds</c> exception occurs with this statement.</p>
+    </subsection>
+    <subsection>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="arrays_arrays-we1-p1" />
+            </li>
+        </ul></p>
+    </subsection>
+</section>
+

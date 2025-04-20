@@ -1,0 +1,77 @@
+<section xml:id="write-selection_worked-example-write-switch-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Write Switch Statements</title>
+        <xi:include href='./subgoals-write-selection.ptx' />
+        <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-selection-we9-writeifstatements" youtube="x8U5Por8uo0" width="auto"/>
+    </subsection>
+
+    <subsection>
+        <title>Problem Statement</title>
+        <p>Write the Java selection statements to solve the following specifications:</p>
+        <blockquote>
+            <p>Write the statements to print out the name of the month equivalent to the value stored in the integer variable month.</p>
+        </blockquote>
+    </subsection>
+
+        <subsection>
+            <title>SG1: Determine variable / expression for mutually exclusive ranges</title>
+            <p>In this case there are 12 different months. Each value is represented by a unique value (1 to 12).  So a switch statement will work. We want to base it off of the integer variable month.</p>
+        </subsection>
+        <subsection>
+            <title>SG2: Write switch statement based on variable / expression</title>
+            <program language="java"><input>
+switch (month)
+{
+
+
+}
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG3: Each range is a &#8216;case&#8217;</title>
+            <program language="java"><input>
+switch (month)
+{
+   case 1: System.out.println("January");
+   case 2: System.out.println("February");
+   case 3: System.out.println("March");
+   case 4: System.out.println("April");
+   case 5: System.out.println("May");
+   case 6: System.out.println("June");
+   case 7: System.out.println("July");
+   case 8: System.out.println("August");
+   case 9: System.out.println("September");
+   case 10: System.out.println("October");
+   case 11: System.out.println("November");
+   case 12: System.out.println("December");
+}
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG4: Include break statements and default case if needed</title>
+            <p>We only want 1 month to print, without falling through to the next case, so every case needs a break.</p>
+            <program language="java"><input>
+switch (month)
+{
+   case 1: System.out.println("January"); break;
+   case 2: System.out.println("February"); break;
+   case 3: System.out.println("March"); break;
+   case 4: System.out.println("April"); break;
+   case 5: System.out.println("May"); break;
+   case 6: System.out.println("June"); break;
+   case 7: System.out.println("July"); break;
+   case 8: System.out.println("August"); break;
+   case 9: System.out.println("September"); break;
+   case 10: System.out.println("October"); break;
+   case 11: System.out.println("November"); break;
+   case 12: System.out.println("December"); break;
+   default: System.out.println("Invalid value of month.");
+}
+</input></program>
+        </subsection>
+        <conclusion>
+        </conclusion>
+    </section>
+

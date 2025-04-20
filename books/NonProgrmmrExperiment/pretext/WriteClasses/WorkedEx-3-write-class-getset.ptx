@@ -1,0 +1,127 @@
+<section xml:id="write-classes_worked-example-writing-classes-getters-and-setters" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Writing Classes - Getters and Setters</title>
+    <xi:include href='./subgoals-write-classes.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-writeclass-we3" youtube="jgoMJs0RWQM"/>
+    <p>Problem: We will be writing a class to represent an instance of time, like a specific time in the day.</p>
+    <p>Now write the appropriate accessors (getters) and mutators (setters).</p>
+    </subsection>
+    <subsection>
+        <title>SG7: Create 1 accessor and 1 mutator behaviors per attribute</title>
+        <p>There are 3 instance attributes, so we will need 3 getters and 3 setters</p>
+        <p>7A. Accessors</p>
+        <blockquote>
+            <p>
+                <ol marker="a">
+                    <li>
+                        <p>Name is get_&lt;attr_name&gt;</p>
+                    </li>
+                    <li>
+                        <p>Public</p>
+                    </li>
+                    <li>
+                        <p>Return type same data type as attribute</p>
+                    </li>
+                    <li>
+                        <p>No parameters</p>
+                    </li>
+                    <li>
+                        <p>Logic - return value</p>
+                    </li>
+                </ol>
+            </p>
+        </blockquote>
+        <program language="java">
+            <input>
+public int getHr() {
+       return hour;
+}
+
+public int getMin() {
+   return minute;
+}
+
+public int getSec() {
+   return second;
+}
+            </input>
+        </program>
+        <p>7B. Mutators</p>
+        <blockquote>
+            <p>
+                <ol marker="a">
+                    <li>
+                        <p>Name is set_&lt;attr_name&gt;</p>
+                    </li>
+                    <li>
+                        <p>Public</p>
+                    </li>
+                    <li>
+                        <p>Return type is void</p>
+                    </li>
+                    <li>
+                        <p>Parameter is same data type as attribute</p>
+                    </li>
+                    <li>
+                        <p>Logic validates input parameter and sets attribute value</p>
+                    </li>
+                </ol>
+            </p>
+        </blockquote>
+        <program language="java">
+            <input>
+public void setHr(int hr) {
+   if (hr &gt;=0 &amp;&amp; hr &lt;= 23)
+      hour = hr;
+}
+
+public void setMin(int min) {
+   if (min &gt;= 0 &amp;&amp; min &lt;= 59)
+      minute = min;
+}
+
+public void setSec(int sec) {
+   if (sec &gt;= 0 &amp;&amp; sec &lt;= 59)
+      second = sec;
+}
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+    <p>After writing getters and setters, this is a good time to review the structure of the class and refactor the overloaded constructor(s) to eliminate duplicate validation logic.</p>
+    <figure align="">
+        <image source="WriteClasses/Figures/WC3-Slide10.PNG" alt="UML"/>
+    </figure>
+    <program language="java">
+        <input>
+public TimeType (int hr, int min, int sec) {
+   setHr(hr);
+   setMin(min);
+   setSec(sec);
+}
+        </input>
+    </program>
+    <p>After working on the class definition, it is a good practice to test with a main driver program.</p>
+    <program language="java">
+        <input>
+public static void main (String [] args) {
+   TimeType now = new TimeType();
+   now.setHr(14);
+   now.setMin(30);
+   now.setSec(45);
+}
+        </input>
+    </program>
+</subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="write-classes_wrclasses-we3-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

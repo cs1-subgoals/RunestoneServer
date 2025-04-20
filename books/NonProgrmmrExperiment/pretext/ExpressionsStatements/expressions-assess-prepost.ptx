@@ -1,0 +1,203 @@
+<section xml:id="expressions-statements_assessment-pre-post-operators" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Assessment: Pre/Post Operators</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+<exercises time-limit="10" pause="no">
+        <TimedNode line="19" runestone_options="{'nofeedback': None, 'subchapter': 'expressions-assess-prepost', 'chapter': 'ExpressionsStatements', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-expr-prepost', 'qnumber': '', 'question_marker': '1.9.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/ExpressionsStatements/expressions-assess-prepost.rst">
+
+        <exercise>
+            <statement>
+    <p>Q1: Given the following, what value is stored in variable alpha?</p>
+    <program language="java"><input>
+int a = 0;
+int b = 1;
+int c = 2;
+int d = 3;
+int alpha;
+alpha = ++a + b--;
+</input></program>
+<p> <var/> </p>
+</statement>
+    <setup>
+        <var>
+            <condition string="2">
+                <feedback>
+                    <p>Correct</p>
+                </feedback>
+            </condition>
+            <condition string='.*'>
+                <feedback>
+                    <p>Incorrect</p>
+                </feedback>
+            </condition>
+        </var>
+    </setup>
+</exercise>
+        <exercise>
+            <statement>
+    <p>Q2: Given the following, what value is stored in variable beta?</p>
+    <program language="java"><input>
+int a = 0;
+int b = 1;
+int c = 2;
+int d = 3;
+int alpha;
+int beta;
+alpha = c-- * ++b;
+beta = alpha - d++ + b * a;
+</input></program>
+    <p> <var/> </p>
+</statement>
+    <setup>
+        <var>
+            <condition string="1">
+                <feedback>
+                    <p>Correct</p>
+                </feedback>
+            </condition>
+            <condition string='.*'>
+                <feedback>
+                    <p>Incorrect</p>
+                </feedback>
+            </condition>
+        </var>
+    </setup>
+</exercise>
+        <exercise>
+            <statement>
+    <p>Q3: Given the following, what value is stored in variable gamma?</p>
+    <program language="java"><input>
+int a = 0;
+int b = 1;
+int c = 2;
+int gamma;
+gamma = ++a + ++b + c--;        
+    </input></program>
+    <p> <var/> </p>
+</statement>
+    <setup>
+        <var>
+            <condition string="5">
+                <feedback>
+                    <p>Correct</p>
+                </feedback>
+            </condition>
+            <condition string='.*'>
+                <feedback>
+                    <p>Incorrect</p>
+                </feedback>
+            </condition>
+        </var>
+    </setup></exercise>
+    <exercise xml:id="assess-exp-pp-4">
+        <statement>
+
+            <p>Q4: Given the following, what value is stored in variable delta?</p>
+            <program language="java"><input>
+int a = 0;
+int b = 1;
+int c = 2; 
+int d = 3; 
+int delta;
+delta = d / --c - a % ++b;
+        </input></program>
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>3</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>2</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>1</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-exp-pp-5">
+        <statement>
+
+            <p>Q5: Which of the following are syntactically valid ways to increment the value of <c>eta</c> by one? Select all that apply.</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>eta++;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>eta + 1;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>++eta;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>eta += 1;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>eta = eta + 1;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        </TimedNode>
+</exercises>
+    </section>
+

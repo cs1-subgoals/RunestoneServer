@@ -1,0 +1,209 @@
+<section xml:id="write-exp-statements-relational-practice" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Writing Relational Expressions</title>
+    <subsection>
+        <p>To correctly write selection statements, you must write the conditional expressions correctly. To do this, you generally need to translate the requirements, written in English, to a correct boolean expression. Below are practice questions for this skill.</p>
+    </subsection>
+    <transition/>
+    <subsection>
+<exercises>
+        <exercise xml:id="m-WrSelect-WE1-P1-1">
+            <statement>
+
+                <p>Q1: Which of the following is the correct Java expression that is equivalent to the English expression &#8220;weight is greater than 100&#8221;?</p>
+
+            </statement>
+            <choices>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>weight &gt; 100</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>weight&lt;100</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>weight &gt;= 100</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>weight &gt;&gt; 100</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-WrSelect-WE1-P1-2">
+            <statement>
+
+                <p>Q2: Which of the following is the correct Java expression that is equivalent to the English expression &#8220;a not equal to 0&#8221;?</p>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>a NOT EQUAL 0</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>a NOT= 0</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>a != 0</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>a !== 0</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-WrSelect-WE1-P1-3">
+            <statement>
+
+                <p>Q3: Which of the following is the correct Java expression that is equivalent to the English expression &#8220;apple and orange are not the same&#8221;?</p>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>"apple" != "orange"</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>apple != orange</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>NOT ("apple.equals("orange"))</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>apple !== orange</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-WrSelect-WE1-P1-4">
+            <statement>
+
+                <p>Q4: Which of the following is the correct Java expression that is equivalent to the English expression &#8220;not done&#8221;?</p>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>NOT done</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>!= done</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>!done</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>done = false</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-writeselect-we1-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+public static void main(String args[]){
+
+}
+}
+        </input>
+    </program>
+</section>
+

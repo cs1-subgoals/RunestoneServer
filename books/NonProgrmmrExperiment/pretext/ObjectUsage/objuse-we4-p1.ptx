@@ -1,0 +1,39 @@
+<section xml:id="object-usage_objuse-we4-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>ObjUse-WE4-P1</title>
+        <xi:include href='./subgoals-call-method.ptx' />
+        <subsection>
+<exercises>
+<exercise xml:id="ca-ObjUse-WE4-P1-11">
+    <statement><p>Q11: Click on the method calls of Scanner objects in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">Scanner </area> <area correct="no">input </area> = <area correct="no">new Scanner(System.in); </area></cline>
+<cline><area correct="no">System.out </area>.<area correct="no">print("Enter Your Full Name: ") </area>;</cline>
+<cline><area correct="no">String </area> <area correct="no">fullName </area> = <area correct="no">input </area><area correct="yes">.nextLine() </area>;</cline>
+<cline><area correct="no">System.out </area>.<area correct="no">print("Enter Your Course Name: ") </area>;</cline>
+<cline><area correct="no">String </area> <area correct="no">courseName </area> = <area correct="no">input </area><area correct="yes">.nextLine() </area>;</cline>
+</areas></exercise>
+        <exercise>
+            <statement>
+    <p>Q12: What data type is returned by calling <c>nextLine</c> for an instance of Scanner? (Reading the code for the previous question may provide a hint for this one!) </p><p><var/></p></statement><setup><var><condition string="^\s*String\s*$"><feedback><p>Correct</p></feedback></condition><condition string="^\s*x\s*$"><feedback><p>Incorrect</p></feedback></condition></var></setup></exercise>
+    <exercise xml:id="parsons-ObjUse-WE4-P1-13" indent="show" language="python"><statement>
+            <p>Q13: Put these lines of code in the proper order to read in a decimal then an integer, in that order.</p>
+</statement>
+<blocks><block order="1">
+<cline>Scanner input = new Scanner (System.in);</cline>
+<cline>double x = input.nextDouble();</cline>
+<cline>int y = input.nextInt();</cline>
+</block></blocks></exercise>        
+</exercises>
+</subsection>
+
+    <program xml:id="ac-objuse-we4-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

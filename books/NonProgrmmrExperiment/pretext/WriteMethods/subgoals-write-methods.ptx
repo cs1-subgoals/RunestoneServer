@@ -1,0 +1,25 @@
+<introduction>
+    <title>Subgoals for Writing Methods</title>
+    <p><ol marker="1">
+        <li>
+            <p>Define method header based on problem</p>
+        </li>
+        <li>
+            <p>Define return statement at the end</p>
+        </li>
+        <li>
+            <p>Define method body/logic</p>
+            <p><ol marker="a">
+                <li>
+                    <p>Determine types of logic (expression, selection, loop, etc.)</p>
+                </li>
+                <li>
+                    <p>Define internal variables</p>
+                </li>
+                <li>
+                    <p>Write statements</p>
+                </li>
+            </ol></p>
+        </li>
+    </ol></p>
+</introduction>

@@ -1,0 +1,138 @@
+<section xml:id="expressions-statements_expressions-we4-p2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Expressions-WE4-P2</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p><term>Given</term></p>
+            <program language="java"><input>
+                int alpha = 2;
+                int beta = 1;
+                int delta = 3;
+                int eta, gamma;
+                double omega = 2.5;
+                double theta = -1.3;
+                double kappa = 3.0;
+                double lambda, rho;
+                
+</input></program>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q27: lambda = alpha / kappa + delta;</p><p>What is the value of lambda? Round to 4 decimal points.</p><p><var/></p></statement><setup><var>
+        <condition string="3.6667"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition></var></setup></exercise>
+    <exercise xml:id="m-Expr-WE4-P2-28">
+        <statement>
+
+            <p>Q28: eta = alpha * beta + (omega &#8211; theta) * kappa;</p>
+            <p>Why is this statement invalid?</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>cannot assign a double to an int variable</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>eta does not have a value</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>eta is a constant</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>cannot assign an int to a double variable</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+            <p><term>Given</term></p>
+            <program language="java"><input>
+int r = 8;
+double volume;
+</input></program>
+
+    <exercise xml:id="m-Expr-WE4-P2-29">
+        <statement>
+
+            <p>Q29: If the formula to calculate the volume of a sphere is {V = 4/3*pi*r^3}, Which statement will calculate the volume of a sphere most accurately?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>volume = 4 / 3 * 3.14 * r * r * r;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>volume = 4 / 3 * 3.14159 * r * r * r;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>volume = 4.0 / 3 * 3.14 * r * r * r;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>An accurate result is not possible with these data types.</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+</exercises>
+        </subsection>
+
+    <program xml:id="ac-express-we4-p2" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

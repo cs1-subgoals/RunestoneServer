@@ -1,0 +1,145 @@
+<section xml:id="expressions-statements_worked-example-declaration-and-initialization" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Declaration and Initialization</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p>You can watch this video or read through the content below it.</p>
+
+        <video xml:id="video-express-we1-declareinit" youtube="CfEte11PMO0" width="auto"/>
+                <p>Evaluate these statements. If invalid, give the reason. If valid, what are the values of the variables?</p>
+            <program language="java"><input>
+int alpha, beta, gamma;
+double omega, theta, lambda;
+alpha = 42;
+beta = 1;
+omega = 2.5;
+theta = 4;
+gamma = 0.0;
+            </input></program>
+        </subsection>
+        <subsection>
+            <title>SG1: Determine resultant data type of expression</title>
+            <p><ul>
+                <li>
+                    <p>The code block can be broken into 2 kinds of statements. The first two lines are the <em>declaration</em> statements, followed by additional assignments.</p>
+                </li>
+            </ul></p>
+            <program language="java"><input>
+int alpha, beta, gamma;
+double omega, theta, lambda;
+</input></program>
+            <p><ul>
+                <li>
+                    <p>In the first line, alpha, beta, and gamma are all declared as <c>int</c> type variables.</p>
+                </li>
+                <li>
+                    <p>Similarly, in the second line, omega, theta, and lambda are declared as <c>double</c> type variables.</p>
+                </li>
+                <li>
+                    <p>Integers are whole numbers and doubles contain a decimal point and may contain fractional values.</p>
+                </li>
+            </ul></p>
+            <program language="java"><input>
+alpha = 42;
+beta = 1;
+omega = 2.5;
+theta = 4;
+gamma = 0.0;
+</input></program>
+            <p><ul>
+                <li>
+                    <p><c>alpha = 42;</c> the value on the RHS of the assignment statement is 42 which is a literal integer (whole number) value.</p>
+                </li>
+                <li>
+                    <p><c>beta = 1;</c> the value on the RHS of the assignment statement is 1 which is a literal integer (whole number) value.</p>
+                </li>
+                <li>
+                    <p><c>omega = 2.5;</c>  the value on the RHS of the assignment statement is 2.5 which is a literal double (fractional number) value.</p>
+                </li>
+                <li>
+                    <p><c>theta = 4;</c> the value on the RHS of the assignment statement is 4 which is a literal integer (whole number) value.</p>
+                </li>
+                <li>
+                    <p><c>gamma = 0.0;</c> the value on the RHS of the assignment statement is 0.0 which is a literal double (fractional number) value.</p>
+                </li>
+                <li>
+                    <p>What about lambda? What is it&#8217;s value? Because there is no assignment to the variable, its content is considered &#8220;unknown&#8221; or &#8220;garbage,&#8221; and it must be assigned before you could use lambda in another expression. In the Java specification, certain values like array contents, class variables, and instance variables are given default values like 0 or 0.0, but in our example, lambda and the others are all local variables which must be given values before their use. Some compilers, for simplicity, will give local variables the same default initializations, but it would be unwise to rely on this behavior that does not match the Java specification.</p>
+                </li>
+            </ul></p>
+        </subsection>
+        <subsection>
+            <title>SG2: Update variable for pre-increment or pre-decrement operators based on side effect</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>SG3: Evaluate arithmetic expression according to operator precedence</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>SG4: Is the Left Hand Side (LHS) of the assignment statement a variable? Check the data type of the value on right hand side (RHS) against data type of LHS variable.</title>
+            <p><ul>
+                <li>
+                    <p><c>alpha = 42;</c>  alpha has been declared as an integer and the data type of the expression on the RHS is an integer, so the value 42 can be copied into the alpha variable (the statement is valid).  alpha now has the value 42.</p>
+                </li>
+                <li>
+                    <p><c>beta = 1;</c> beta has been declared as an integer and the data type of the expression on the RHS is an integer, so the value 1 can be copied into the beta variable (the statement is valid).  beta now has the value 1.</p>
+                </li>
+                <li>
+                    <p><c>omega = 2.5;</c>  omega has been declared as a double and the data type of the expression on the RHS is a double, so the value 2.5 can be copied into the omega variable (the statement is valid).  omega now has the value 2.5.</p>
+                </li>
+                <li>
+                    <p><c>theta = 4;</c>  theta has been declared as a double and the data type of the expression on the RHS is an integer. We can convert an integer into a decimal by simply adding “.0” to the value. The numeric value of any integer is not changed when converted to a decimal. The process of the computer adding the .0 to an int to convert it into a double is known as promotion, and is done automatically. This statement is valid.  theta now has the value 4.0.</p>
+                </li>
+                <li>
+                    <p><c>gamma = 0.0;</c>  gamma has been declared as an int and the data type of the expression on the RHS is a double. A double cannot be assigned to an integer variable and there is no automatic process to convert it. This results in a compilation error (incompatible types). If you copy the original code block into the runnable ActiveCode box, you can see the exact compilation error.</p>
+                </li>
+                <li>
+                    <p>What about lambda? What is its value? Because there is no assignment to the variable, its content is considered &#8220;unknown&#8221; or &#8220;garbage,&#8221; and it must be assigned before you could use lambda in another expression. In the Java specification, certain values like array contents, class variables, and instance variables are given default values like 0 or 0.0, but in our example, lambda and the others are all local variables which must be given values before their use. Some compilers, for simplicity, will give local variables the same default initializations, but it would be unwise to rely on this behavior that does not match the Java specification.</p>
+                </li>
+            </ul></p>
+        </subsection>
+        <subsection>
+            <title>SG5: Update variable for post-increment or post-decrement operators based on side effect</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+            <answer>
+                <p>Answer:
+                    alpha is 42, beta is 1, omega is 2.5, theta is 4.0, lambda is unknown; Since we cannot assign a double to the int variable gamma, we have a compilation error on the final line.</p>
+            </answer>
+        </subsection>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p>Look at this code:</p>
+            <program language="java"><input>
+                int delta; //declaration
+                delta = 15; //initialization
+                int epsilon = 26; //both declaration and initialization
+                </input></program>
+                <p>
+                    <ul>
+                        <li>
+                            <p>
+                                The first line declares an integer variable (delta). The second line then copies the literal value 15 (an integer) to the variable delta. The first assignment to a variable is known as initialization.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                These two lines (declaration and initialization) can be combined into a single statement, as seen on the third line involving epsilon. 
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                This is true for any data type, not just integers.  All the normal rules of assignment apply to the initialization step.
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we1-p1" />
+                </li>
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we1-p2" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

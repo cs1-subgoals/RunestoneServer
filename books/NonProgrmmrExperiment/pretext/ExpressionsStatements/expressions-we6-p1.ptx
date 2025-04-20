@@ -1,0 +1,92 @@
+<section xml:id="expressions-statements_expressions-we6-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Expressions-WE6-P1</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p><term>Given</term></p>
+            <program language="java"><input>
+int alpha = 2;
+int beta = 1;
+int delta = 3;
+int eta;
+int gamma;
+
+double omega = 2.5;
+double theta = -1.3;
+double kappa = 3.0;
+double lambda;
+double rho;
+</input></program>
+<statement>
+    <p>Each question does NOT build off of previous questions. Assume that all variables are redeclared with their original values before each question.</p>
+</statement>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q34: <c>rho = alpha / kappa + --beta;</c> </p><p>What is the value of beta after execution?</p><p><var/></p></statement><setup><var><condition string="0"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q35: <c>rho = alpha / kappa + --beta;</c> </p><p>What is the value of rho? Round to 4 decimal points.</p><p><var/></p></statement><setup><var><condition string="0.6667"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q36: <c>eta = ++alpha * --delta</c> </p><p>What is the value of delta after execution?</p><p><var/></p></statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q37: <c>eta = ++alpha * --delta</c> </p><p>What is the value of alpha after execution?</p><p><var/></p></statement><setup><var><condition string="3"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q38: <c>eta = ++alpha * --delta</c> </p><p>What is the value of eta?</p><p><var/></p></statement><setup><var><condition string="6"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q39: <c>gamma = alpha / --delta + ++beta;</c> </p><p>What is the value of delta after execution?</p><p><var/></p></statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q40: <c>gamma = alpha / --delta + ++beta;</c> </p><p>What is the value of beta after execution?</p><p><var/></p></statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q41: <c>gamma = alpha / --delta + ++beta;</c> </p><p>What is the value of gamma after execution?</p><p><var/></p></statement><setup><var><condition string="3"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-express-we6-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

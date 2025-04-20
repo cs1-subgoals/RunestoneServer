@@ -1,0 +1,33 @@
+<section xml:id="xml_subgoals">
+        <title>SUBGOALS</title>
+        <p><ul>
+            <li>
+                <p>Each Section has a Subgoals which lists out a series of steps that has to be performed to acheive a goal in the section. The Worked examples are there for to help understand the subgoals and are followed by a practice problem.</p>
+            </li>
+        </ul></p>
+        <subsection xml:id="xml_how-to-use-this-interactive-textbook">
+            <title>How to use this Interactive Textbook</title>
+            <p><ul>
+                <li>
+                    <p>Go through the subgoals given intially</p>
+                </li>
+                <li>
+                    <p>Understand the subgoals</p>
+                </li>
+                <li>
+                    <p>Go through the worked examples</p>
+                </li>
+                <li>
+                    <p>Use the active code areas to test sample code</p>
+                </li>
+                <li>
+                    <p>Solve the practice problems and enter the answers</p>
+                </li>
+            </ul></p>
+        </subsection>
+        <subsection xml:id="xml_proceed-to-the-table-of-contents">
+            <title>Proceed to the <url href="toc.html" visual="toc.html">Table of Contents</url></title>
+            [COMPOUND]
+        </subsection>
+    </section>
+

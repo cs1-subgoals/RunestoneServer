@@ -1,0 +1,122 @@
+<section xml:id="write-loops_worked-example-writing-loops-Part2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Writing Loops Part 2</title>
+        <xi:include href='./subgoals-write-loops.ptx' />
+        <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-writeloops-we1" youtube="7amm8wa0MiQ" width="auto"/>
+        <p>Problem: Write a loop that will prompt the user to continue to enter numbers until a sentinel value of -1 is entered and prints out the maximum value that was entered.</p>
+        </subsection>
+        <subsection>
+            <title>SG1:  Determine purpose of loop</title>
+            <p>Generally, while-loops are a good choice for sentinel loops.</p>
+        </subsection>
+        <subsection>
+            <title>SG2: Define and initialize variables</title>
+            <p>We will need variables to store the most recent input value, as well as the maximum value so far.</p>
+            <p>We will also need a Scanner to accept user input, as well as a priming read.</p>
+            <program language="java"><input>
+Scanner get = new Scanner(System.in);
+int value;
+int maxSoFar;
+System.out.println("Enter a value, enter -1 to end");
+value = get.nextInt();
+while (                )
+{
+
+}
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG3: Define termination condition invert to continuation condition</title>
+            <p>
+                We want to stop reading values when the sentinel value of -1 is read. So the termination condition is:
+                <c>value == -1</c>
+            </p>>
+        </subsection>
+        <subsection>
+            <title>SG4a: Update condition (LCV) to reach termination</title>
+            <p> To invert that condition to become a continuation condition looks like: </p>
+            <program language="java"><input>
+Scanner get = new Scanner(System.in);
+int value;
+int maxSoFar;
+System.out.println("Enter a value, enter -1 to end");
+value = get.nextInt();
+
+while ( value != -1  )
+{
+   System.out.println("Enter a value, enter -1 to end");
+   value = get.nextInt();
+}
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG4: Write loop body</title>
+            <p>
+                Finding the maximum value is a common algorithm. The basic pieces of the algorithm are:
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        Initialize a variable to hold the first value
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If the next value is larger than the value stored, then store the new value as the maximum
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Continue until all values have been processed
+                    </p>
+                </li>
+            </ol>
+            <p>
+                In the following code, notice the new variable declaration maxSoFar to hold the maximum value. It is initialized to the sentinel value since we know all valid values entered must be larger than the sentinel value.
+                Inside the loop, we compare the newest value read to the value in maxSoFar and the larger value is stored.
+                Notice the if statement after the loop which accounts for the fact that no valid values may have been entered.
+
+            </p>
+            <program language="java"><input>
+Scanner get = new Scanner(System.in);
+int value;
+int maxSoFar = -1;
+System.out.println("Enter a value, enter -1 to end");
+value = get.nextInt();
+
+while ( value != -1  )
+{
+    if (value &gt; maxSoFar)
+        maxSoFar = value;
+    System.out.println("Enter a value, enter -1 to end");
+    value = get.nextInt();
+}
+if (maxSoFar &gt; -1)
+    System.out.println("The maximum is " + maxSoFar);
+else
+    System.out.println("No values entered");
+</input></program>
+</subsection>       
+        
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="write-loops_writeloops-we1-p1" />
+                </li>
+            </ul></p>
+        </conclusion>
+
+        <program xml:id="ac-writeloops-WorkedExample-Write-Loops" interactive="activecode" language="java">
+            <input>
+public class main{
+    public static void main(String args[]){
+    
+    }
+}
+            </input>
+        </program>
+    </section>
+

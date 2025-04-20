@@ -1,0 +1,105 @@
+<section xml:id="expressions-statements_expressions-we5-p2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Expressions-WE5-P2</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p>
+                <term>Given</term>
+            </p>
+            <program language="java"><input>
+int alpha = 2;
+int beta = 1;
+int delta = 3;
+int eta;
+int gamma;
+
+double omega = 2.5;
+double theta = -1.3;
+double kappa = 3.0;
+double lambda;
+double rho;
+</input></program>
+<exercises>
+            <exercise xml:id="m-Expr-WE5-P2-32">
+                <statement>
+
+                    <p>Q32: delta += omega;</p>
+                    <p>Why is this statement invalid?</p>
+
+                </statement>
+                <choices>
+
+                    <choice correct="yes">
+                        <statement>
+                            <p>cannot assign a double to an int variable</p>
+                        </statement>
+                        <feedback>
+                            <p/>
+                        </feedback>
+                    </choice>
+
+                    <choice>
+                        <statement>
+                            <p><c>+=</c> is an invalid operator</p>
+                        </statement>
+                        <feedback>
+                            <p/>
+                        </feedback>
+                    </choice>
+
+                    <choice>
+                        <statement>
+                            <p><c>delta</c> cannot be reassigned</p>
+                        </statement>
+                        <feedback>
+                            <p/>
+                        </feedback>
+                    </choice>
+
+                    <choice>
+                        <statement>
+                            <p>cannot assign an int to a double variable</p>
+                        </statement>
+                        <feedback>
+                            <p/>
+                        </feedback>
+                    </choice>
+                </choices>
+
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Q33: alpha *= beta + delta;
+                    </p>
+                    <p>What is the value of alpha?</p>
+                    <p><var/></p>
+                </statement>
+                <setup>
+                    <var>
+                        <condition string="8">
+                            <feedback>
+                                <p>Correct</p>
+                            </feedback>
+                        </condition>
+                        <condition string='.*'>
+                            <feedback>
+                                <p>Incorrect</p>
+                            </feedback>
+                        </condition>
+                    </var>
+                </setup>
+            </exercise>
+</exercises>
+        </subsection>
+
+        <program xml:id="ac-express-we5-p2" interactive="activecode" language="java">
+            <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+            </input>
+        </program>
+    </section>
+

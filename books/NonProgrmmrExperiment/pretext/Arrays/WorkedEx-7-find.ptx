@@ -1,0 +1,105 @@
+<section xml:id="arrays_worked-example-arrays-find-value" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Arrays - Find Value</title>
+    <xi:include href='./subgoals-arrays.ptx' />
+    <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+        <video xml:id="video-arrays-we7" youtube="ub2YiBhuLqI"/>
+        <p>Problem: Assume that the integer array <c>alpha</c> has been properly declared and is full of data values, and that the variable <c>target</c> is an int with a value in it. Evaluate these statements and determine the value of <c>loc</c>. If any error occurs, give the reason.</p>
+        <program language="java">
+            <input>
+int loc = -1;
+boolean found = false;
+for (int i = 0; i &lt; alpha.length &amp;&amp; !found; i++) {
+    if (alpha[i] == target)   {
+    loc = i;  found = true;
+    }
+}
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG1: Set up array from 0 to size-1</title>
+        <figure align="">
+            <image source="Arrays/Figures/we4-init.png" alt="Instantiated Array"/>
+        </figure>
+        <p>
+            <ul>
+                <li>
+                    <p>alpha is an array of ints and has values, but we don&#8217;t know what those values are</p>
+                </li>
+                <li>
+                    <p>however, we can still diagram a representation of this array</p>
+                </li>
+                <li>
+                    <p>notice that the largest index is size - 1</p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection>
+        <title>SG2: Evaluate data type of statements against array</title>
+        <p>References to the array are in the loop and selection statements:</p>
+        <program language="java">
+            <input>
+for (int i = 0; i &lt; alpha.length &amp;&amp; !found; i++) {
+   if (alpha[i] == target)        {
+      loc = i;  found = true;
+   }
+}
+            </input>
+        </program>
+        <p>
+            <ul>
+                <li>
+                    <p>This loop has index i go from 0 to size - 1 (&lt;length) by increments of 1.</p>
+                </li>
+                <li>
+                    <p>Then the value at alpha[i] is compared to the int value of target.</p>
+                </li>
+                <li>
+                    <p>If the value at alpha[i] is equal to target, then the value i is copied into loc.</p>
+                </li>
+                <li>
+                    <p>All indexes into the array are valid, and all assignments are valid.</p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace statements, updating slots as you go</title>
+        <p>Let us trace with a sample array and assume the value of <c>target</c> is 15.</p>
+        <figure align="">
+            <image source="Arrays/Figures/we4-sample.png" alt="Sample Array"/>
+        </figure>
+        <p>The first statement, <c>int loc = -1;</c> gives <c>loc</c> a value that is not a valid index for any array.</p>
+        <p>Then a for-loop is used to traverse the array and compare each element to <c>target</c>. The chart below uses one line to represent the memory and comparisons during each iteration of the loop, starting when i has a value of zero.</p>
+        <figure align="">
+            <image source="Arrays/Figures/we7-trace.png" alt="Trace searching for target"/>
+        </figure>
+        <p>When we find the target value in the array, we store the index (location) of where it is in the array.</p>
+        <p>Some questions to consider:</p>
+        <p>
+            <ol marker="1">
+                <li>
+                    <p>What would happen if the <c>target</c> value is not in the array? Then the selection statement is never true, and <c>loc</c> is never changed from its initial value of -1.</p>
+                </li>
+                <li>
+                    <p>Why is -1 a good initial value for <c>loc</c>? It is not a valid index for any array. You or another programmer using this algorithm could check the value of  <c>loc</c> to make a decision (selection!) for how the program will behave when the <c>target</c> value is found or not found at a valid array index.</p>
+                </li>
+                <li>
+                    <p>What would happen if there were 2 occurrences of the target value in the array? The loop does not end when the <c>target</c> value is found, so additional occurences would overwrite the value of <c>loc</c> with the <term>last</term> occurence.</p>
+                </li>
+            </ol>
+        </p>
+        <p>The more general answer to the original question is: &#8220;<c>loc</c> contains the index of the last occurrence of <c>target</c> in the array <c>alpha</c> or -1 if <c>target</c> is not in the array.&#8221;</p>
+    </subsection>
+    <subsection>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="arrays_arrays-we7-p1" />
+            </li>
+        </ul></p>
+    </subsection>
+</section>
+

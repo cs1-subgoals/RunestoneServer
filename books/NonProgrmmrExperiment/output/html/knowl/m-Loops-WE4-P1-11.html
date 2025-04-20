@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="m-Loops-WE4-P1-11" data-multipleanswers="false">
+<div class="para" id="p-2312">Q11: What is the output of the following loop if the user input is: 10, 20, 30, 35, 40, -1</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">System.out.println("Enter a negative score to signal the end of the input.");
+int total = 0, count = 0;
+int score;
+System.out.println("Score: ");
+Scanner get = new Scanner(System.in);
+score= get.nextInt();
+while (score &gt;= 0) {
+   count++;
+   total += score;
+   System.out.print("Score: ");
+   score = get.nextInt();
+}
+System.out.println( (total * 1.0) / count);
+</code></pre></div>
+<li data-component="answer" id="m-Loops-WE4-P1-11_opt_a" data-correct=""><div class="para" id="p-2313">27.0</div></li>
+<li data-component="feedback" id="m-Loops-WE4-P1-11_opt_a"><div class="para" id="p-2314"></div></li>
+<li data-component="answer" id="m-Loops-WE4-P1-11_opt_b"><div class="para" id="p-2315">27</div></li>
+<li data-component="feedback" id="m-Loops-WE4-P1-11_opt_b"><div class="para" id="p-2316"></div></li>
+<li data-component="answer" id="m-Loops-WE4-P1-11_opt_c"><div class="para" id="p-2317">22.5</div></li>
+<li data-component="feedback" id="m-Loops-WE4-P1-11_opt_c"><div class="para" id="p-2318"></div></li>
+<li data-component="answer" id="m-Loops-WE4-P1-11_opt_d"><div class="para" id="p-2319">22</div></li>
+<li data-component="feedback" id="m-Loops-WE4-P1-11_opt_d"><div class="para" id="p-2320"></div></li>
+<li data-component="answer" id="m-Loops-WE4-P1-11_opt_e"><div class="para" id="p-2321">Compilation error</div></li>
+<li data-component="feedback" id="m-Loops-WE4-P1-11_opt_e"><div class="para" id="p-2322"></div></li>
+</ul></div></div></article><span class="incontext"><a href="loops_loops-we4-p1.html#m-Loops-WE4-P1-11" class="internal">in-context</a></span>
+</body>
+</html>

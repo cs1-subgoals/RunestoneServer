@@ -1,0 +1,136 @@
+<section xml:id="arrays_arrays-we3-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Arrays-WE3-P1</title>
+        <xi:include href='./subgoals-arrays.ptx' />
+        <subsection>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q31: Assume the following given declarations:</p><program language="java"><input>
+int [] beta = {12, 24, 36, 48, 60};
+</input></program><p>Evaluate these statements:</p><program language="java"><input>
+beta[1] = beta[3] - beta[1] + 6;
+beta[3] = beta[beta[4] % beta[0]];
+beta[2] = beta[beta[4]/beta[0]-1];
+</input></program><p>Give the contents of array <c>beta</c> after the execution of the above statements:</p>
+<p>beta[0] = <var/></p>
+<p>beta[1] = <var/></p>
+<p>beta[2] = <var/></p>
+<p>beta[3] = <var/></p>
+<p>beta[4] = <var/></p></statement>
+    <setup>
+        <var>
+            <condition string="12">
+                <feedback><p>Correct.</p></feedback>
+            </condition>
+            <condition string=".*">
+                <feedback><p>Incorrect.</p></feedback>
+            </condition>
+        </var>
+        <var>
+            <condition string="30">
+                <feedback><p>Correct.</p></feedback>
+            </condition>
+            <condition string=".*">
+                <feedback><p>Incorrect.</p></feedback>
+            </condition>
+        </var>
+        <var>
+            <condition string="60">
+                <feedback><p>Correct.</p></feedback>
+            </condition>
+            <condition string=".*">
+                <feedback><p>Incorrect.</p></feedback>
+            </condition>
+        </var>
+        <var>
+            <condition string="12">
+                <feedback><p>Correct.</p></feedback>
+            </condition>
+            <condition string=".*">
+                <feedback><p>Incorrect.</p></feedback>
+            </condition>
+        </var>
+        <var>
+            <condition string="60">
+                <feedback><p>Correct.</p></feedback>
+            </condition>
+            <condition string=".*">
+                <feedback><p>Incorrect.</p></feedback>
+            </condition>
+        </var>
+    </setup>
+</exercise>
+<p>For questions 32-36, give the contents of alpha after the execution of these statements.</p>
+            <program language="java"><input>
+int [] alpha = {2, 4, 6, 8, 10};
+for (int i = 8; i &gt;= 0; i-=2)
+   alpha[i/2] = i/2 + 1;
+</input></program>
+
+        <exercise>
+            <statement>
+    <p>Q32: Enter the values of <c>alpha</c> in the blanks. The value of <c>alpha[0]</c> is <var/>.</p></statement>
+    <setup>
+        <var>
+            <condition string="1">
+                <feedback><p>Correct.</p></feedback>
+            </condition>
+            <condition string=".*">
+                <feedback><p>Incorrect.</p></feedback>
+            </condition>
+        </var>
+    </setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q33: Enter the values of <c>alpha</c> in the blanks. The value of <c>alpha[1]</c> is <var/>.</p></statement>
+    <setup><var>
+        <condition string="2">
+            <feedback><p>Correct.</p></feedback>
+        </condition>
+        <condition string=".*">
+            <feedback><p>Incorrect.</p></feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q34: Enter the values of <c>alpha</c> in the blanks. The value of <c>alpha[2]</c> is <var/>.</p></statement>
+    <setup><var>
+        <condition string="3"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*">
+            <feedback><p>Incorrect.</p></feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q35: Enter the values of <c>alpha</c> in the blanks. The value of <c>alpha[3]</c> is <var/>.</p></statement>
+    <setup><var>
+        <condition string="4">
+            <feedback><p>Correct.</p></feedback>
+        </condition>
+        <condition string=".*">
+            <feedback><p>Incorrect.</p></feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q36: Enter the values of <c>alpha</c> in the blanks. The value of <c>alpha[4]</c> is <var/>.</p></statement>
+    <setup><var>
+        <condition string="5"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*">
+            <feedback><p>Incorrect.</p></feedback>
+        </condition>
+    </var></setup></exercise>        
+    </exercises>
+    </subsection>
+
+    <program xml:id="ac-Arrays-WE3-P1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

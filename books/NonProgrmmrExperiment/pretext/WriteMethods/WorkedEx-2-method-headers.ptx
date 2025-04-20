@@ -1,0 +1,56 @@
+<section xml:id="write-methods_worked-example-writing-method-headers-2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Writing Method Headers 2</title>
+    <xi:include href='./subgoals-write-methods.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it. The practice problem starts at 1:42.</p>
+
+    <video xml:id="video-methods-we2" youtube="wsJULUgeg6k"/>
+    <p>Problem: Write a public method header that would work for this call:</p>
+    <program language="java">
+        <input>
+int  wobble;
+wobble = obj.happy (7, "hello", "bye");
+        </input>
+    </program>
+    <transition/>
+    <p>A full method header contains:</p>
+    <blockquote>
+        <p>
+            <ul>
+                <li>
+                    <p>access modifier,</p>
+                </li>
+                <li>
+                    <p>return type,</p>
+                </li>
+                <li>
+                    <p>method name, and</p>
+                </li>
+                <li>
+                    <p>full parameter list (data type parameter_name)</p>
+                </li>
+            </ul>
+        </p>
+    </blockquote>
+    <figure align="">
+        <image source="WriteMethods/Figures/we2-code-highlight2.png" alt="Write a public method"/>
+    </figure>
+    <program language="java">
+        <input>
+public int happy (int a, String b, String c) {}
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="write-methods_wrmethods-we2-p1" />
+            </li>
+            <!-- <li>
+                <xref text="title" ref="write-methods_wrmethods-we2-p2" />
+            </li> -->
+        </ul></p>
+    </subsection>
+</section>
+

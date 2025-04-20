@@ -1,0 +1,78 @@
+<section xml:id="expressions-statements_worked-example-basic-knowledge" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Basic Knowledge</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p>You can watch this video or read through the content below it.</p>
+            <video xml:id="video-express-we2-arithmetic" youtube="SJf6RNH1Bbo" width="auto"/>
+                    <p>Given the following code snippet, evaluate the final statement (the last line). If invalid, give the reason. If valid, what value is assigned to the variable? Note any possible side effects.</p>
+                <program language="java"><input>
+                    int alpha = 2;
+                    int beta = 1;
+                    int delta = 3;
+                    int eta, gamma;
+                    double omega = 2.5;
+                    double theta = -1.3;
+                    double kappa = 3.0;
+                    double lambda, rho;
+                    
+                    lambda = alpha + delta;
+            </input></program>
+        </subsection>
+        <subsection>
+            <title>SG1 : Determine resultant data type of expression</title>
+            <p>The <em>expression</em> is the right-hand-side (RHS) of the statement: <c>alpha + delta</c>.
+                In the first two lines, these variables were declared to be <c>int</c> type.
+                Their sum will also be an <c>int</c> value.</p>
+        </subsection>
+        <subsection>
+            <title>SG2: Update variable for pre-increment or pre-decrement operators (side effect)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>SG3: Evaluate arithmetic expression according to operator precedence</title>
+            <p>In the declarations, alpha was initialized with a value of 2,
+                and delta was initialized with a value of 3.</p>
+            <p>The RHS of the statement is <c>alpha + delta</c>,
+                so we replace those variable names with their actual values <c>2 + 3</c>,
+                which results in a sum of <c>5</c>.</p>
+        </subsection>
+        <subsection>
+            <title>SG4: Is the Left Hand Side (LHS) of the assignment statement a variable? Check the data type of the value on right hand side (RHS) against data type of LHS variable.</title>
+            <p>The LHS is a variable of type <c>double</c>, and the RHS is type <c>int</c>.
+                This is valid, as Java automatically <em>promotes</em> an <c>int</c> value when we assign it to a <c>double</c>.</p>
+        </subsection>
+        <subsection>
+            <title>SG5: Update variable for post-increment or post-decrement operators (side effect)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>Questions to check understanding</title>
+            <program language="java"><input>
+                int alpha = 2;
+                int delta = 3;
+                double lambda, rho;
+                lambda = alpha + delta;
+            </input></program>
+
+            <p>Q1) In line 4 above, is the LHS of the statement a variable? What data type?</p>
+            <p>Q2) What is the resulting data type after evaluating the RHS of line 4?</p>
+            <p>Q3) Can the data type of the RHS result be assigned to the LHS variable in line 4?</p>
+            <answer>
+                <p>Q1-Answer) Yes, lambda is declared as a double</p>
+                <p>Q2-Answer) On the RHS, alpha + delta is evaluated as int + int which is int</p>
+                <p>Q3-Answer) Yes, an int can be assigned to a double (automatic promotion by adding .0)</p>
+            </answer>
+        </subsection>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we2-p1" />
+                </li>
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we2-p2" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

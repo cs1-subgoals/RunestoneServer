@@ -1,0 +1,14 @@
+<introduction>
+    <title>Subgoals for Evaluating Selection Statements</title>
+    <p><ol marker="1">
+        <li>
+            <p>Diagram which statements go together</p>
+        </li>
+        <li>
+            <p>For if statement, determine whether expression is true or false</p>
+        </li>
+        <li>
+            <p>If true &#8211; follow true branch, if false &#8211; follow else branch or do nothing if no else branch</p>
+        </li>
+    </ol></p>
+</introduction>

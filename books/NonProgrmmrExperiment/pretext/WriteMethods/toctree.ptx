@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Writing Methods</title>
+        <xi:include href='./WorkedEx-1-method-headers.ptx' />
+        <xi:include href='./methods-we1-p1.ptx' />
+        <!-- <xi:include href='./methods-we1-p2.ptx' /> -->
+        <xi:include href='./WorkedEx-2-method-headers.ptx' />
+        <xi:include href='./methods-we2-p1.ptx' />
+        <!-- <xi:include href='./methods-we2-p2.ptx' /> -->
+        <xi:include href='./WorkedEx-3-methods.ptx' />
+        <xi:include href='./methods-we3-p1.ptx' />
+        <xi:include href='./methods-assess1.ptx' />
+    </chapter>

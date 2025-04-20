@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Selection</title>
+        <xi:include href='./WorkedEx-1-IfStatements.ptx' />
+        <xi:include href='./select-we1-p1.ptx' />
+        <xi:include href='./WorkedEx-2-IfElseStatements.ptx' />
+        <xi:include href='./select-we2-p1.ptx' />
+        <xi:include href='./WorkedEx-3-SequentialIf.ptx' />
+        <xi:include href='./select-we3-p1.ptx' />
+        <xi:include href='./WorkedEx-4-SequentialIfElse.ptx' />
+        <xi:include href='./select-we4-p1.ptx' />
+        <xi:include href='./select-assess-seqif.ptx' />
+        <xi:include href='./WorkedEx-5-NestedIf.ptx' />
+        <xi:include href='./select-we5-p1.ptx' />
+        <xi:include href='./WorkedEx-6-NestedIfElse.ptx' />
+        <xi:include href='./select-we6-p1.ptx' />
+        <xi:include href='./select-assess-nestedif.ptx' />
+    </chapter>

@@ -1,0 +1,4 @@
+<section xml:id="write-exp-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Writing Expression Statements</title>
+    <xi:include href='./subgoals-write-exp-statements.ptx' />
+</section>

@@ -1,0 +1,36 @@
+<introduction>
+    <title>Subgoals for Calling a Method</title>
+    <p><ol marker="1">
+        <li>
+            <p>Classify method as <c>static</c> method or <c>instance</c> method</p>
+            <p><ol marker="a">
+                <li>
+                    <p>If <c>static</c>, use the class name</p>
+                </li>
+                <li>
+                    <p>If <c>instance</c>, must have or create an instance</p>
+                </li>
+            </ol></p>
+        </li>
+        <li>
+            <p>Write (instance / class) dot method name and ( )</p>
+        </li>
+        <li>
+            <p>Determine whether parameter(s) are appropriate</p>
+            <p><ol marker="a">
+                <li>
+                    <p>Number of parameters passed must match method declaration</p>
+                </li>
+                <li>
+                    <p>Data types of parameters passed must be compatible with method declaration</p>
+                </li>
+            </ol></p>
+        </li>
+        <li>
+            <p>Determine what the method will return and where it will be stored</p>
+        </li>
+        <li>
+            <p>Evaluate right hand side of assignment. Value is dependent on method&#8217;s purpose</p>
+        </li>
+    </ol></p>
+</introduction>

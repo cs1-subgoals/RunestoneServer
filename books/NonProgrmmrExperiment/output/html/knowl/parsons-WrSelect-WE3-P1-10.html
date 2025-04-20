@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3<span class="period">.</span></span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="parsons-WrSelect-WE3-P1-10">
+<div class="parsons_question parsons-text"><div class="para" id="p-2105">Q10: Put the code in the right order to create a program that will generate an integer between 65 and 122 inclusive and then convert that code to a character through a cast. The program should then print the character value and print “Vowel” or “Consonant” depending on the character value. If the character is not a letter (between a and z or A and Z), then an error message should be printed. Vowels are considered to be {a, e, i, o, u}.</div></div>
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="java" data-noindent="true">impot java.util.*;
+public class main {
+   public static void main(String[] args) {
+---
+      Random r = new Random();
+      int value = r.nextInt(57) + 65;
+      char ch = (char)value;
+      System.out.println(ch);
+---
+      if (('a' &lt;= ch&amp;&amp; &lt;= 'z') || ('A' &lt;= ch&amp;&amp; ch &lt;= 'Z')) {
+---
+         if (ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E'
+               || ch == 'i' || ch == 'I' || ch == 'o' || ch == 'O'
+               || ch == 'u' || ch == 'U')
+---
+            System.out.println("Vowel");
+---
+         else
+            System.out.println("Consonant");
+---
+      }
+---
+      else
+         System.out.println("Error");
+---
+   }
+}</pre>
+</div></div></div></article><span class="incontext"><a href="write-selection_writeselection-we2-p1.html#parsons-WrSelect-WE3-P1-10" class="internal">in-context</a></span>
+</body>
+</html>

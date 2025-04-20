@@ -1,0 +1,59 @@
+<section xml:id="expressions-statements_expressions-we3-p2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Expressions-WE3-P2</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p><term>Given</term></p>
+            <program language="java"><input>
+                int alpha = 2;
+                int beta = 1;
+                int delta = 4;
+                int eta, gamma;
+                double omega = 2.5;
+                double theta = -1.3;
+                double kappa = 3.0;
+                double lambda, rho;
+                
+</input></program>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q21: lambda = beta * theta; </p><p>What is the value of lambda?</p><p><var/></p></statement><setup><var><condition string="-1.3"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q22: eta = alpha * beta; </p><p>What is the value of eta?</p><p><var/></p></statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q23: alpha = beta + delta; </p><p>What is the value of alpha?</p><p><var/></p></statement><setup><var><condition string="4"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q24: beta = beta * alpha; </p><p>What is the value of beta?</p><p><var/></p></statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-express-we3-p2" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

@@ -1,0 +1,102 @@
+<section xml:id="write-selection_writeselection-we1-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>WriteSelection-WE1-P1</title>
+        <xi:include href='./subgoals-write-selection.ptx' />
+        <subsection>
+<exercises>
+<exercise xml:id="parsons-WrSelect-WE2-P1-5" indent="show" language="java"><statement>
+            <p>Q5: Put the code in the right order to create a program that will generate an integer value between 0 and 25, print the value, and if the value is greater than 18, print a message saying &#8220;This is an overload&#8221;; otherwise print a message saying &#8220;Not an overload&#8221;.</p>
+</statement>
+<blocks><block order="7">
+<cline>import java.util.*;</cline>
+<cline>public class main {</cline>
+<cline>   public static void main(String[] args) {</cline>
+</block><block order="2">
+<cline>      Random r = new Random();</cline>
+<cline>      int x = r.nextInt(26);</cline>
+<cline>      System.out.println(x);</cline>
+</block><block order="5">
+<cline>      if (x &gt; 18)</cline>
+</block><block order="4">
+<cline>         System.out.println("This is an overload.");</cline>
+</block><block order="3">
+<cline>      else</cline>
+</block><block order="6">
+<cline>         System.out.println("Not an overload.");</cline>
+</block><block order="1">
+<cline>   }</cline>
+<cline>}</cline>
+</block></blocks></exercise><exercise xml:id="parsons-WrSelect-WE2-P1-6" indent="show" language="java"><statement>
+            <p>Q6: Put the code in the right order to create a program that will generate an integer value between 3 and 7, print the value, and if the value is equal to 5 then set the character variable classType equal to &#8216;G&#8217;, and print a message saying &#8220;graduate student&#8221;; otherwise set classType equal to &#8216;U&#8217; and print a message saying &#8220;undergraduate&#8221;.</p>
+</statement>
+<blocks><block order="4">
+<cline>import java.util.*;</cline>
+<cline>public class main {</cline>
+<cline>   public static void main(String[] args){</cline>
+</block><block order="7">
+<cline>      Random r = new Random();</cline>
+<cline>      char classType = 'x';</cline>
+<cline>      int x = 3 + r.nextInt(5);</cline>
+<cline>      System.out.println(x);</cline>
+</block><block order="3">
+<cline>      if (x == 5) {</cline>
+</block><block order="1">
+<cline>         classType = 'G';</cline>
+<cline>         System.out.println("graduate student");</cline>
+</block><block order="2">
+<cline>      }</cline>
+<cline>      else {</cline>
+</block><block order="6">
+<cline>         classType = 'U';</cline>
+<cline>         System.out.println("undergraduate student");</cline>
+<cline>      }</cline>
+</block><block order="5">
+<cline>   }</cline>
+<cline>}</cline>
+</block></blocks></exercise><exercise xml:id="parsons-WrSelect-WE2-P1-7" indent="show" language="java"><statement>
+            <p>Q7: Put the code in the right order to create a program that will generate the value for a year (1500 to 3000 inclusive) and print the value. Then it will print <em>true</em> if the year is a leap year, otherwise the program prints <em>false</em>. A leap year is a multiple of 4, with one exception: if the year is a multiple of 100 but <em>not</em> 400, then it is <em>not</em> a leap year. For example, the year 1900 was not a leap year, but the year 2000 was indeed a leap year.</p>
+</statement>
+<blocks><block order="8">
+<cline>import java.util.*;</cline>
+<cline>public class main {</cline>
+<cline>   public static void main(String[] args){</cline>
+</block><block order="6">
+<cline>      Random r = new Random();</cline>
+<cline>      int x = 1500 + r.nextInt(1501);</cline>
+<cline>      boolean result = false;</cline>
+</block><block order="4">
+<cline>      System.out.println(x);</cline>
+</block><block order="2">
+<cline>      if (x % 4 == 0)</cline>
+</block><block order="1">
+<cline>         if (x % 100 == 0)</cline>
+</block><block order="3">
+<cline>            if (x % 400 == 0)</cline>
+<cline>               result = true;</cline>
+<cline>            else</cline>
+<cline>               result = false;</cline>
+</block><block order="9">
+<cline>         else</cline>
+<cline>            result = true;</cline>
+</block><block order="5">
+<cline>      else</cline>
+<cline>         result = false;</cline>
+</block><block order="10">
+<cline>      System.out.println(result);</cline>
+</block><block order="7">
+<cline>   }</cline>
+<cline>}</cline>
+</block></blocks></exercise>        
+</exercises>
+</subsection>
+
+    <program xml:id="ac-writeselect-we2-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

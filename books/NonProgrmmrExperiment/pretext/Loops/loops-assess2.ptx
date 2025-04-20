@@ -1,0 +1,341 @@
+<section xml:id="loops_assessment-nested-loops" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Assessment: Nested Loops</title>
+    <xi:include href='./subgoals-loops.ptx' />
+<exercises time-limit="10" pause="no">
+    <TimedNode line="26" runestone_options="{'nofeedback': None, 'subchapter': 'loops-assess2', 'chapter': 'Loops', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-loops-2', 'qnumber': '', 'question_marker': '5.8.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/Loops/loops-assess2.rst">
+
+        <exercise xml:id="assess-loops-2-1">
+            <statement>
+
+                <p>Q1: What is printed as a result of executing the following code segment?</p>
+                <program language="java">
+                    <input>
+int count = 0;
+for (int x = 0; x &lt; 4; x++) {
+   for (int y = x; y &lt; 4; y++)
+      count++;
+}
+System.out.println(count);
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>4</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>8</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>10</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>16</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>20</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-loops-2-2">
+            <statement>
+
+                <p>Q2: What is the minimum number of times &#8220;Hello&#8221; can be printed?</p>
+                <program language="java">
+                    <input>
+int k = // a random number such that 1 &lt;= k &lt;= n ;
+for (int p = 2; p &lt;= k; p++) {
+   for (int r = 1; r &lt; k; r++)
+      System.out.println("Hello");
+}
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>0</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>1</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>2</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>n - 1</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>n - 2</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-loops-2-3">
+            <statement>
+
+                <p>Q3: What is printed as a result of executing the following code segment?</p>
+                <program language="java">
+                    <input>
+for (int r = 3; r &gt; 0; r--) {
+   int c;
+   for (c = 1; c &lt; r; c++)
+      System.out.print("-");
+   for (c = r; c &lt;= 3; c++)
+      System.out.print("*");
+   System.out.println();
+}
+                    </input>
+                </program>
+                <figure align="">
+                    <image source="Loops/Figures/assess-loops-2-q3.png" width="100%" alt="answers for Q3"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>See diagram for answer A</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer B</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer C</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer D</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer E</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-loops-2-4">
+            <statement>
+
+                <p>Q4: What is printed as a result of executing the following code segment?</p>
+                <program language="java">
+                    <input>
+for (int outer = 0; outer &lt; 4; outer++) {
+   for (int inner = 0; inner &lt;= outer; inner++)
+      System.out.print(outer + "  ");
+}
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>0  1  2  3</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>0  0  1  0  1  2</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>0  1  2  2  3  3  3</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>0  1  1  2  2  2  3  3  3  3</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>0  0  1  0  1  2  0  1  2  3</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-loops-2-5">
+            <statement>
+
+                <p>Q5: What is printed as a result of executing the following code segment?</p>
+                <program language="java">
+                    <input>
+int s = 0;
+for (int outer = 1; outer &lt;= 10; outer++) {
+   for (int inner = outer; inner &lt;= 10; inner++)
+      s++;
+}
+System.out.println(s);
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>20</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>45</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>55</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>100</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>385</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+    </TimedNode>
+</exercises>
+</section>
+

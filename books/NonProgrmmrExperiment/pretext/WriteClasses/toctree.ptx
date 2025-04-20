@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Writing Classes</title>
+        <xi:include href='./WorkedEx-1-write-class-attributes.ptx' />
+        <xi:include href='./classes-we1-p1.ptx' />
+        <xi:include href='./WorkedEx-2-write-class-construct.ptx' />
+        <xi:include href='./classes-we2-p1.ptx' />
+        <xi:include href='./classes-we2-p2.ptx' />
+        <xi:include href='./WorkedEx-3-write-class-getset.ptx' />
+        <xi:include href='./classes-we3-p1.ptx' />
+        <xi:include href='./wrclasses-assess1.ptx' />
+        <xi:include href='./WorkedEx-4-write-class-other.ptx' />
+        <xi:include href='./classes-we4-p1.ptx' />
+        <xi:include href='./classes-we4-p2.ptx' />
+        <xi:include href='./wrclasses-assess2.ptx' />
+    </chapter>

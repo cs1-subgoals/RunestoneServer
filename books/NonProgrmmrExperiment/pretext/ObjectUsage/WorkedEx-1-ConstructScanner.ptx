@@ -1,0 +1,66 @@
+<section xml:id="object-usage_worked-example-create-instance-of-scanner" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Create Instance of Scanner</title>
+    <xi:include href='./subgoals-object-use.ptx' />
+    <subsection>
+    
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-useobj-we1-create-scanner" youtube="OO4RipynfRo" width="auto"/>
+    <p>The following Java code declares and instantiates a variable that will be used to read input from the user.</p>
+    </subsection>
+    <subsection>
+        <title>SG1: Declare variable of appropriate class datatype.</title>
+        <p>In the code block below, the variable name <c>sysinScanner</c> was selected to better describe what we are going to do with this Scanner, which will become more clear in SG3.</p>
+        <program language="java">
+            <input>
+Scanner sysinScanner;
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG2: Assign to variable: &#160;keyword new, followed by class name, followed by ().</title>
+        <program language="java">
+            <input>
+sysinScanner = new Scanner();
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG3: Determine whether parameter(s) are appropriate (API)</title>
+        <p>The figure below shows the Java documentation, so we can determine what parameter(s) we need. Most of the ways to construct a Scanner require exactly 1 parameter, an object that represents the source of input data. We&#8217;ll use the standard system input from the console <c>System.in</c>.
+        </p>
+        <figure align="">
+            <image source="ObjectUsage/Figures/Create-Instance-Scanner.png" alt="API docs for Scanner constructor"/>
+        </figure>
+    
+    <statement><p>So the final code looks like this:</p></statement>
+
+    <program language="java">
+        <input>
+            Scanner sysinScanner;
+            SysinScanner = new Scanner(System.in);
+        </input>
+    </program>
+
+    <statement><p>Library classes are pre-written classes available for use in your programs. When using these library classes, you often will need to add an import statement to your program to ensure that the program has access to the library class. Notice in the ActiveCode box below, we have added the appropriate import statement for using the Scanner class.</p></statement>
+
+    <program xml:id="ac-objectuse-we1" interactive="activecode" language="java">
+        <input>
+import java.util.Scanner;
+public class main{
+   public static void main(String args[]){
+   }
+}
+        </input>
+    </program>
+    </subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="object-usage_objuse-we1-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

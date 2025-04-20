@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="parsons-Loops-WE5-P1-14">
+<div class="parsons_question parsons-text"><div class="para" id="p-2371">Q14: Put the code in the right order to create a program that will prompt a user to enter an integer which is NOT a negative multiple of 5. If the user enters a negative multiple of 5, the program should ask for another value.</div></div>
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="python" data-noindent="true">import java.util.*;
+public class main{
+  public static void main(String[] args){
+---
+    //declare variables
+    int value;
+    Scanner get = new Scanner(System.in);
+---
+    //prompt for and read input
+    System.out.print("Enter a value. ");
+    value = get.nextInt();
+---
+    //loop until valid value is entered
+    for (int j = 0; value&lt;0 &amp;&amp; value % 5 == 0; j++) {
+---
+      System.out.print("Invalid. Enter another value. ");
+      value = get.nextInt();
+---
+    }
+    System.out.println("Valid value entered " + value);
+---
+  }
+}</pre>
+</div></div></div></article><span class="incontext"><a href="loops_loops-we5-p1.html#parsons-Loops-WE5-P1-14" class="internal">in-context</a></span>
+</body>
+</html>

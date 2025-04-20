@@ -1,0 +1,275 @@
+<section xml:id="arrays_assessment-arrays-2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Assessment: Arrays 2</title>
+    <xi:include href='./subgoals-arrays.ptx' />
+<exercises time-limit="10" pause="no">
+    <TimedNode line="24" runestone_options="{'nofeedback': None, 'subchapter': 'arrays-assess2', 'chapter': 'Arrays', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-arrays-2', 'qnumber': '', 'question_marker': '9.8.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/Arrays/arrays-assess2.rst">
+
+        <exercise xml:id="assess-arrays-2-1">
+            <statement>
+
+                <p>Q1: The following code segments are supposed to find the maximum value in an array of integers. Assuming that the array <c>arr</c> has been declared and contains valid integer values, which of the following code segments will correctly assign the maximum value in the array to the variable <c>max</c>?
+                </p>
+                <figure align="">
+                    <image source="Arrays/Figures/assess-arrays-2-q1.png" width="50%" alt="answers for Q1"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>I only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>II only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>II and III</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>I, II, and III</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-arrays-2-2">
+            <statement>
+
+                <p>Q2: The following code is intended to store the largest value in the integer array arr in the variable maxVal. Which of the following best describes the conditions under which the code will not work as intended?</p>
+                <program language="java">
+                    <input>
+int maxVal = 0;
+for (int val : arr) {
+   if (val &gt; maxVal)
+      maxVal = val;
+}
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>The largest value in arr occurs only once and is in arr[0].</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>The largest value in arr occurs only once and is in arr[arr.length-1].</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>The largest value in arr is negative.</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>The largest value in arr is 0.</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>The largest value in arr occurs more than once.</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-arrays-2-3">
+            <statement>
+
+                <p>Q3: The following code is intended to store the sum of all the values in the integer array <c>arr</c> in the variable <c>total</c>. Which of the following code segments can be used to replace <c>/* missing code */</c> so that the code works as intended?</p>
+                <program language="java">
+                    <input>
+int total = 0;
+/* missing code */
+System.out.println(total);
+                    </input>
+                </program>
+                <figure align="">
+                    <image source="Arrays/Figures/assess-arrays-2-q3.png" width="50%" alt="answers for Q3"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>I only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>II only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>I and III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>II and III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-arrays-2-4">
+            <statement>
+
+                <p>Q4: Assuming that <c>nums</c> has been declared and initialized as an array of integer values, which of the following best describes what this code does?</p>
+                <program language="java">
+                    <input>
+int index = 0;
+int count = 0;
+int m = -1;
+for (int outer = 0; outer &lt; nums.length; outer++) {
+   count = 0;
+   for (int inner = outer + 1; inner &lt; nums.length; inner++) {
+      if (nums[outer] == nums[inner])
+         count++;
+   }
+   if (count &gt; m) {
+      index = outer;
+      m = count;
+   }
+} // end outer for
+System.out.println(index);
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>Prints the maximum value that occurs in the array nums</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>Prints the index of the maximum value that occurs in the array nums</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>Prints the number of times that the maximum value occurs in the array nums</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>Prints the value that occurs most often in the array nums</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>Prints the index of the value that occurs the most often in the array nums</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+    </TimedNode>
+</exercises>
+</section>
+

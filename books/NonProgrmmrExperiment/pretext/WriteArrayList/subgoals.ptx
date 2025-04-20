@@ -1,0 +1,4 @@
+<section xml:id="write-array-lists" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Writing Array Lists</title>
+    <xi:include href='./subgoals-write-array-list.ptx' />
+</section>

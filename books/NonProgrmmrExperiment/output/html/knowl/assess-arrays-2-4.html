@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4<span class="period">.</span></span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="assess-arrays-2-4" data-multipleanswers="false">
+<div class="para" id="p-4846">Q4: Assuming that <code class="code-inline tex2jax_ignore">nums</code> has been declared and initialized as an array of integer values, which of the following best describes what this code does?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">int index = 0;
+int count = 0;
+int m = -1;
+for (int outer = 0; outer &lt; nums.length; outer++) {
+   count = 0;
+   for (int inner = outer + 1; inner &lt; nums.length; inner++) {
+      if (nums[outer] == nums[inner])
+         count++;
+   }
+   if (count &gt; m) {
+      index = outer;
+      m = count;
+   }
+} // end outer for
+System.out.println(index);
+</code></pre></div>
+<li data-component="answer" id="assess-arrays-2-4_opt_a"><div class="para" id="p-4847">Prints the maximum value that occurs in the array nums</div></li>
+<li data-component="feedback" id="assess-arrays-2-4_opt_a"><div class="para" id="p-4848"></div></li>
+<li data-component="answer" id="assess-arrays-2-4_opt_b"><div class="para" id="p-4849">Prints the index of the maximum value that occurs in the array nums</div></li>
+<li data-component="feedback" id="assess-arrays-2-4_opt_b"><div class="para" id="p-4850"></div></li>
+<li data-component="answer" id="assess-arrays-2-4_opt_c"><div class="para" id="p-4851">Prints the number of times that the maximum value occurs in the array nums</div></li>
+<li data-component="feedback" id="assess-arrays-2-4_opt_c"><div class="para" id="p-4852"></div></li>
+<li data-component="answer" id="assess-arrays-2-4_opt_d"><div class="para" id="p-4853">Prints the value that occurs most often in the array nums</div></li>
+<li data-component="feedback" id="assess-arrays-2-4_opt_d"><div class="para" id="p-4854"></div></li>
+<li data-component="answer" id="assess-arrays-2-4_opt_e" data-correct=""><div class="para" id="p-4855">Prints the index of the value that occurs the most often in the array nums</div></li>
+<li data-component="feedback" id="assess-arrays-2-4_opt_e"><div class="para" id="p-4856"></div></li>
+</ul></div></div></article><span class="incontext"><a href="arrays_assessment-arrays-2.html#assess-arrays-2-4" class="internal">in-context</a></span>
+</body>
+</html>

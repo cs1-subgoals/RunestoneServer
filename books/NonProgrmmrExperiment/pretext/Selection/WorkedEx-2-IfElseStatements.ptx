@@ -1,0 +1,56 @@
+<section xml:id="selection_worked-example-if-else-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: If-Else Statements</title>
+        <xi:include href='./subgoals-selection.ptx' />
+        <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-selection-we2-ifelsestatements" youtube="_dSQqtLfVpg" width="auto"/>
+            <p>Given the following declarations:</p>
+        <program language="java"><input>
+int alpha = 2;
+int delta = 3;
+int eta = 0;
+int gamma = 0;
+</input></program>
+        <p>Evaluate these statements and determine the value of all variables used.</p>
+        <program language="java"><input>
+if (alpha &gt; delta)
+    eta = alpha + 2;
+else
+    gamma = alpha + 5;
+</input></program>
+</subsection>
+        <subsection>
+            <title>SG1: Diagram which statements go together.</title>
+            <p>If no { } are present, then by default all if and else branches have only a single statement:</p>
+            <program language="java"><input>
+if (alpha &gt; delta)
+   eta = alpha +2;
+else
+   gamma = alpha + 5;
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG2: For if statement, determine whether true or false</title>
+            <p>First we evaluate (alpha &gt; delta):</p>
+            <p><c>(2 &gt; 3)</c> is FALSE</p>
+        </subsection>
+        <subsection>
+            <title>SG3: If true, follow true branch. If false, follow else branch (OR do nothing if there is no else branch).</title>
+            <p>The condition is FALSE so we execute the else branch:</p>
+            <p>gamma = alpha + 5</p>
+            <p>= 2 + 5      = 7</p>
+        </subsection>
+        <answer>
+            <p>Answer: <c>alpha</c> = 2, <c>delta</c> = 3, <c>eta</c> = 0, <c>gamma</c> = 7</p>
+        </answer>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="selection_selection-we2-p1" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

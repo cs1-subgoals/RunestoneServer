@@ -1,0 +1,54 @@
+<section xml:id="arrays_arrays-we2-p3" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Arrays-WE2-P3</title>
+        <xi:include href='./subgoals-arrays.ptx' />
+        <subsection>
+            <p>Assume the following given declarations:</p>
+            <program language="java"><input>
+int [] gamma;
+</input></program>
+            <p>Give the contents of <c>gamma</c> after the execution of these statements.</p>
+            <program language="java"><input>
+gamma = new int[6];
+gamma[0] = 50;
+for (int i = 1; i &lt; 6; i++)
+    gamma[i] = gamma[i-1] - 5;
+</input></program>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q20: The value of <c>gamma[0]</c> is <var/>. </p></statement><setup><var><condition string="50"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q21: The value of <c>gamma[1]</c> is <var/>. </p></statement><setup><var><condition string="45"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q22: The value of <c>gamma[2]</c> is <var/>. </p></statement><setup><var><condition string="40"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q23: The value of <c>gamma[3]</c> is <var/>. </p></statement><setup><var><condition string="35"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q24: The value of <c>gamma[4]</c> is <var/>. </p></statement><setup><var><condition string="30"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q25: The value of <c>gamma[5]</c> is <var/>. </p></statement><setup><var><condition string="25"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>        
+    </exercises>
+    </subsection>
+
+    <program xml:id="ac-Arrays-WE2-P3" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

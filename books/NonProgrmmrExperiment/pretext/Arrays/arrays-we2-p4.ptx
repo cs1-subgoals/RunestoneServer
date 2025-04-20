@@ -1,0 +1,49 @@
+<section xml:id="arrays_arrays-we2-p4" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Arrays-WE2-P4</title>
+        <xi:include href='./subgoals-arrays.ptx' />
+        <subsection>
+            <p>Assume the following given declarations:</p>
+            <program language="java"><input>
+int [] alpha;
+</input></program>
+            <p>Give the contents of alpha after the execution of these statements.</p>
+            <program language="java"><input>
+alpha = new int[5];
+for (int i = 0; i &lt; 5; i++)
+   alpha[i] = i + 1;
+</input></program>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q26: The value of <c>alpha[0]</c> is <var/>. </p></statement><setup><var><condition string="1"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q27: The value of <c>alpha[1]</c> is <var/>. </p></statement><setup><var><condition string="2"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q28: The value of <c>alpha[2]</c> is <var/>. </p></statement><setup><var><condition string="3"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q29: The value of <c>alpha[3]</c> is <var/>. </p></statement><setup><var><condition string="4"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q30: The value of <c>alpha[4]</c> is <var/>. </p></statement><setup><var><condition string="5"><feedback><p>Correct.</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>        
+    </exercises>
+    </subsection>
+
+    <program xml:id="ac-Arrays-WE2-P4" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

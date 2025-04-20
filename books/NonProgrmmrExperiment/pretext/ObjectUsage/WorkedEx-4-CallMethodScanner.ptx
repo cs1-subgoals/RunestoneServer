@@ -1,0 +1,80 @@
+<section xml:id="object-usage_worked-example-call-a-method-of-scanner" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Call a method of Scanner</title>
+    <xi:include href='./subgoals-call-method.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-useobj-we1-call-scanner" youtube="TU9-qpxwP90" width="auto"/>
+    </subsection>
+    <subsection>
+        <title>Problem Statement</title>
+        <p>Given the following declaration and instantiation of a Scanner object to read input from the user, write the code to read in a double and store it in the variable <c>value</c>.</p>
+        <program language="java">
+            <input>
+Scanner input = new Scanner(System.in);
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG1: Classify method as static method or instance method</title>
+        <p>First we need to determine what method we need to call. In looking at the documentation for the Scanner class, we see the <c>nextDouble()</c> method which will read in a double value. Note that there is no keyword <c>static</c> in the documentation for this method, so we can assume that it is an instance method.
+        Because we want to call an instance method, we need to identify the instance which will call the method. In this example we have already created a Scanner instance which is named <c>input</c>.
+        </p>
+        <figure align="">
+            <image source="ObjectUsage/Figures/Call-Method-nextDouble.png" alt="API docs for Scanner nextDouble method"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: Write (instance / class) dot method name and ( )</title>
+        <p>Here is the method call with the instance:</p>
+        <program language="java">
+            <input>
+input.nextDouble()
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG3: Determine whether parameter(s) are appropriate</title>
+        <p>No parameters required (look at the API again to verify this). When you are just learning to program, you won't know any of these APIs and may have to look things up frequently. As you progress you will find that you will automatically begin to memorize the most frequently used methods, however, it is never inappropriate to look things up to be verified.</p>
+    </subsection>
+    <subsection>
+        <title>SG4: Determine what the method will return and where it will be stored</title>
+        <p>According to the API documentation, the <c>nextDouble</c> method returns a double. Our code can choose to store the returned double value or ignore it, in which case the value will be lost. For this example we are asked to store the value read in from the user to a variable named <c>value</c>.
+            Because we do not yet have a double variable declared, we need to declare that variable. The final code looks like:
+            </p>
+        <program language="java">
+            <input>
+double value = input.nextDouble();
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG5: Evaluate right hand side (RHS) of assignment. Value is dependent on method&#8217;s purpose</title>
+        <p>The <c>nextDouble</c> method reads the next value from the input stream and attempts to convert it into a decimal value and returns a double. So the RHS is a double and the LHS is a double variable, so the assignment statement is valid.</p>
+        <program language="java">
+            <input>
+double value = input.nextDouble();
+            </input>
+        </program>
+    
+
+    <program xml:id="ac-objectuse-we4" interactive="activecode" language="java">
+        <input>
+public class main{
+    import java.util.Scanner;
+   public static void main(String args[]){
+   }
+}
+        </input>
+    </program>
+    </subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="object-usage_objuse-we4-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

@@ -1,0 +1,469 @@
+<section xml:id="selection_assessment-nested-if-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Assessment: Nested If-Statements</title>
+        <xi:include href='./subgoals-selection.ptx' />
+<exercises time-limit="25" pause="no">
+        <TimedNode line="19" runestone_options="{'nofeedback': None, 'subchapter': 'select-assess-seqif', 'chapter': 'Selection', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-select-seqif', 'qnumber': '', 'question_marker': '3.5.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/Selection/select-assess-seqif.rst">
+
+    <exercise xml:id="assess-select-nestedif-1">
+        <statement>
+
+            <p>Q1: Following this code what is the value of <c>delta</c>?</p>
+            <program language="java"><input>
+                int alpha = 5, beta = 2, gamma = 3, delta = 0, eta = 0;
+                if (alpha > beta)
+                {
+                    if (beta > gamma)
+                    {
+                      delta = 10;
+                    }
+                    else
+                    {
+                      delta = 20;
+                    }
+                }
+                else
+                {
+                    if (gamma > beta)
+                    {
+                      delta = 30;
+                    }
+                    else
+                    {
+                      delta = 40;
+                    }
+                }
+                
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>10</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>20</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>30</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>40</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-select-nestedif-2">
+        <statement>
+
+            <p>Q2: Following this code, what is the value of <c>eta</c>?</p>
+            <program language="java"><input>
+                int alpha = 5, beta = 2, gamma = 3, delta = 0, eta = 0;
+                if (alpha > beta)
+                {
+                    if ((beta * gamma) &lt;= alpha)
+                    {
+                      eta = 50;
+                    }
+                    else
+                    {
+                      eta = 60;
+                    }
+                }
+                else
+                {
+                    if (delta > beta)
+                    {
+                      eta = 70;
+                    }
+                    else
+                    {
+                      eta = 80;
+                    }
+                }
+                
+                
+</input></program>
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>50</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>60</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>70</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>80</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+
+    <exercise xml:id="assess-select-nestedif-3">
+        <statement>
+
+            <p>Q3: Following this code, what is the value of <c>delta</c>?</p>
+            <program language="java"><input>
+                int alpha = 5, beta = 2, gamma = 3, delta = 0, eta = 0;
+                if (alpha > gamma)
+                {
+                    if (gamma > beta)
+                    {
+                      delta += 1;
+                    }
+                    if (gamma > alpha)
+                    {
+                      delta += 2;
+                    }
+                }
+                if ((beta + gamma) >= alpha)
+                {
+                    if ((alpha - beta) > gamma)
+                    {
+                      delta += 3;
+                    }
+                    else
+                    {
+                      delta += 4;
+                    }
+                }
+                
+</input></program>
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>1</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>3</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>4</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>5</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>6</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+
+    <exercise xml:id="assess-select-nestedif-4">
+        <statement>
+
+            <p>Q4: Following this code, what is the value of <c>delta</c> and <c>eta</c>?</p>
+            <program language="java"><input>
+                int alpha = 5, beta = 2, gamma = 3, delta = 0, eta = 0;
+                if ((alpha > beta) &amp;&amp; (alpha > gamma))
+                {
+                    if (alpha > delta)
+                    {
+                      delta += 1;
+                      eta += 2;
+                    }
+                    if (beta > delta)
+                    {
+                      delta += 1;
+                      eta += 2;
+                    }
+                }
+                if ((beta &lt; gamma) &amp;&amp; (beta &lt;= delta))
+                {
+                    if (eta > gamma)
+                    {
+                      delta += 2;
+                      eta += 3;
+                    }
+                    else
+                    {
+                      delta += 3;
+                      eta += 4;
+                    }
+                }
+                
+                
+</input></program>
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>delta = 1, eta = 2</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>delta = 2, eta = 4</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>delta = 4, eta = 7</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>delta = 5, eta = 8</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>delta = 6, eta = 9</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-select-nestedif-5">
+        <statement>
+
+            <p>Q5: Variables <c>a</c>, <c>b</c>, and <c>c</c> are all declared as characters. If <c>a='A', b='B', c='C';</c> What is printed?</p>
+            <program language="java"><input>
+                if (a &lt; b) {
+                    if (a &lt; c) {
+                      System.out.println("a is smallest");
+                    }
+                    else {
+                      System.out.println("c is smallest");
+                    }
+                }
+                else if (b &lt; c) {
+                    System.out.println("b is smallest");
+                }
+                else
+                    System.out.println("clueless");
+                
+                
+</input></program>
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>a is smallest</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>b is smallest</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>c is smallest</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>clueless</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-select-nestedif-6">
+        <statement>
+
+            <p>Q6: Variables <c>a</c>, <c>b</c>, and <c>c</c> are all declared as characters. If <c>a='C', b='B', c='A';</c> What is printed?</p>
+            <program language="java"><input>
+                if (a &lt; b) {
+                    if (a &lt; c) {
+                      System.out.println("a is smallest");
+                    }
+                    else {
+                      System.out.println("c is smallest");
+                    }
+                }
+                else if (b &lt; c) {
+                    System.out.println("b is smallest");
+                }
+                else
+                    System.out.println("clueless");
+                
+                
+</input></program>
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>a is smallest</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>b is smallest</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>c is smallest</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>clueless</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+</choices>
+
+    </exercise>
+        </TimedNode>
+</exercises>
+    </section>
+

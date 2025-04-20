@@ -1,0 +1,175 @@
+<section xml:id="write-classes_wrclasses-we2-p2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>WrClasses-WE2-P2</title>
+        <xi:include href='./subgoals-write-classes.ptx' />
+        <subsection>
+<exercises>
+            <exercise xml:id="ca-Classes-WE2-P1-13">
+                <statement>
+                    <p>Q13: Click on all the attributes of the class (4 of them).</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">public class Book {</area></cline>
+                    <cline>    <area correct="yes">private String title;</area></cline>
+                    <cline>    <area correct="yes">private String author;</area></cline>
+                    <cline>    <area correct="yes">private String publisher;</area></cline>
+                    <cline>    <area correct="yes">private int copyrightDate;</area></cline>
+                    <cline>    <area correct="no">public Book() {</area></cline>
+                    <cline>        <area correct="no">title = "";</area></cline>
+                    <cline>        <area correct="no">author = "";</area></cline>
+                    <cline>        <area correct="no">publisher = "";</area></cline>
+                    <cline>        <area correct="no">copyrightDate = -1;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    <area correct="no">public Book(String t, String a, String p, int c) {</area></cline>
+                    <cline>        <area correct="no">title = t;</area></cline>
+                    <cline>        <area correct="no">author = a;</area></cline>
+                    <cline>        <area correct="no">publisher = p;</area></cline>
+                    <cline>        <area correct="no">copyrightDate = c;</area></cline>
+                    <cline>    }</cline>
+                    <cline>}</cline>
+                </areas>
+            </exercise>
+            <exercise xml:id="ca-Classes-WE2-P1-14">
+                <statement>
+                    <p>Q14: Click on the header of the default constructor (1).</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">public class Book {</area></cline>
+                        <cline>    <area correct="no">private String title;</area></cline>
+                        <cline>    <area correct="no">private String author;</area></cline>
+                        <cline>    <area correct="no">private String publisher;</area></cline>
+                        <cline>    <area correct="no">private int copyrightDate;</area></cline>
+                        <cline>    <area correct="yes">public Book() {</area></cline>
+                        <cline>        <area correct="no">title = "";</area></cline>
+                        <cline>        <area correct="no">author = "";</area></cline>
+                        <cline>        <area correct="no">publisher = "";</area></cline>
+                        <cline>        <area correct="no">copyrightDate = -1;</area></cline>
+                        <cline>    }</cline>
+                        <cline/>
+                        <cline>    <area correct="no">public Book(String t, String a, String p, int c) {</area></cline>
+                        <cline>        <area correct="no">title = t;</area></cline>
+                        <cline>        <area correct="no">author = a;</area></cline>
+                        <cline>        <area correct="no">publisher = p;</area></cline>
+                        <cline>        <area correct="no">copyrightDate = c;</area></cline>
+                        <cline>    }</cline>
+                        <cline>}</cline>
+                    </areas>
+            </exercise>
+            <exercise xml:id="ca-Classes-WE2-P1-15">
+                <statement>
+                    <p>Q15: Click on the header of the overloaded constructor (1).</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">public class Book {</area></cline>
+                        <cline>    <area correct="no">private String title;</area></cline>
+                        <cline>    <area correct="no">private String author;</area></cline>
+                        <cline>    <area correct="no">private String publisher;</area></cline>
+                        <cline>    <area correct="no">private int copyrightDate;</area></cline>
+                        <cline>    <area correct="no">public Book() {</area></cline>
+                        <cline>        <area correct="no">title = "";</area></cline>
+                        <cline>        <area correct="no">author = "";</area></cline>
+                        <cline>        <area correct="no">publisher = "";</area></cline>
+                        <cline>        <area correct="no">copyrightDate = -1;</area></cline>
+                        <cline>    }</cline>
+                        <cline/>
+                        <cline>    <area correct="yes">public Book(String t, String a, String p, int c) {</area></cline>
+                        <cline>        <area correct="no">title = t;</area></cline>
+                        <cline>        <area correct="no">author = a;</area></cline>
+                        <cline>        <area correct="no">publisher = p;</area></cline>
+                        <cline>        <area correct="no">copyrightDate = c;</area></cline>
+                        <cline>    }</cline>
+                        <cline>}</cline>
+                </areas>
+            </exercise>
+            <exercise xml:id="ca-Classes-WE2-P1-16">
+                <statement>
+                    <p>Q16: Click on the overloaded constructor parameters (4).</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">public class Book {</area></cline>
+                    <cline>    <area correct="no">private String title;</area></cline>
+                        <cline>    <area correct="no">private String author;</area></cline>
+                        <cline>    <area correct="no">private String publisher;</area></cline>
+                        <cline>    <area correct="no">private int copyrightDate;</area></cline>
+                        <cline>    <area correct="no">public Book() {</area></cline>
+                        <cline>        <area correct="no">title = "";</area></cline>
+                        <cline>        <area correct="no">author = "";</area></cline>
+                        <cline>        <area correct="no">publisher = "";</area></cline>
+                        <cline>        <area correct="no">copyrightDate = -1;</area></cline>
+                        <cline>    }</cline>
+                        <cline/>
+                    <cline><area correct="no">public Book</area>:(<area correct="yes">String t</area>, <area correct="yes">String a</area>, <area correct="yes">String p</area>, <area correct="yes">int c</area>) {</cline>
+                    <cline>        <area correct="no">title = t;</area></cline>
+                        <cline>        <area correct="no">author = a;</area></cline>
+                        <cline>        <area correct="no">publisher = p;</area></cline>
+                        <cline>        <area correct="no">copyrightDate = c;</area></cline>
+                        <cline>    }</cline>
+                        <cline>}</cline>
+                </areas>
+            </exercise>
+            <exercise xml:id="ca-Classes-WE2-P1-17">
+                <statement>
+                    <p>Q17: Click on the line where the copyrightDate attribute is initialized in the default constructor (1).</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">public class Book {</area></cline>
+                        <cline>    <area correct="no">private String title;</area></cline>
+                        <cline>    <area correct="no">private String author;</area></cline>
+                        <cline>    <area correct="no">private String publisher;</area></cline>
+                        <cline>    <area correct="no">private int copyrightDate;</area></cline>
+                        <cline>    <area correct="no">public Book() {</area></cline>
+                        <cline>        <area correct="no">title = "";</area></cline>
+                        <cline>        <area correct="no">author = "";</area></cline>
+                        <cline>        <area correct="no">publisher = "";</area></cline>
+                        <cline>        <area correct="yes">copyrightDate = -1;</area></cline>
+                        <cline>    }</cline>
+                        <cline/>
+                        <cline>    <area correct="no">public Book(String t, String a, String p, int c) {</area></cline>
+                        <cline>        <area correct="no">title = t;</area></cline>
+                        <cline>        <area correct="no">author = a;</area></cline>
+                        <cline>        <area correct="no">publisher = p;</area></cline>
+                        <cline>        <area correct="no">copyrightDate = c;</area></cline>
+                        <cline>    }</cline>
+                        <cline>}</cline>
+                </areas>
+            </exercise>
+            <exercise xml:id="ca-Classes-WE2-P1-18">
+                <statement>
+                    <p>Q18: Click on the line where the author attribute is initialized in the overloaded constructor (1).</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">public class Book {</area></cline>
+                        <cline>    <area correct="no">private String title;</area></cline>
+                        <cline>    <area correct="no">private String author;</area></cline>
+                        <cline>    <area correct="no">private String publisher;</area></cline>
+                        <cline>    <area correct="no">private int copyrightDate;</area></cline>
+                        <cline>    <area correct="no">public Book() {</area></cline>
+                        <cline>        <area correct="no">title = "";</area></cline>
+                        <cline>        <area correct="no">author = "";</area></cline>
+                        <cline>        <area correct="no">publisher = "";</area></cline>
+                        <cline>        <area correct="no">copyrightDate = -1;</area></cline>
+                        <cline>    }</cline>
+                        <cline/>
+                        <cline>    <area correct="no">public Book(String t, String a, String p, int c) {</area></cline>
+                        <cline>        <area correct="no">title = t;</area></cline>
+                        <cline>        <area correct="yes">author = a;</area></cline>
+                        <cline>        <area correct="no">publisher = p;</area></cline>
+                        <cline>        <area correct="no">copyrightDate = c;</area></cline>
+                        <cline>    }</cline>
+                        <cline>}</cline>
+                </areas>
+            </exercise>
+</exercises>
+        </subsection>
+
+        <program xml:id="ac-classes-we2-p2" interactive="activecode" language="java">
+            <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+            </input>
+        </program>
+    </section>
+

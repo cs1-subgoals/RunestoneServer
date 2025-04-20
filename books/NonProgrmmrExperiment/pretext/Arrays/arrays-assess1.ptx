@@ -1,0 +1,210 @@
+<section xml:id="arrays_assessment-arrays-1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Assessment: Arrays 1</title>
+    <xi:include href='./subgoals-arrays.ptx' />
+<exercises time-limit="10" pause="no">
+    <TimedNode line="24" runestone_options="{'nofeedback': None, 'subchapter': 'arrays-assess1', 'chapter': 'Arrays', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-arrays-1', 'qnumber': '', 'question_marker': '9.4.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/Arrays/arrays-assess1.rst">
+
+        <exercise xml:id="assess-arrays-1-1">
+            <statement>
+
+                <p>Q1: Assuming that the following declaration has been made, which of the following code segments correctly interchanges the value of <c>arr[0]</c> and <c>arr[5]</c>?
+                </p>
+                <program language="java">
+                    <input>
+int [] arr = new int[10];
+                    </input>
+                </program>
+                <figure align="">
+                    <image source="Arrays/Figures/assess-arrays-1-q1.png" width="50%" alt="answers for Q1"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer A</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer B</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer C</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>See diagram for answer D</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer E</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-arrays-1-2">
+            <statement>
+
+                <p>Q2: Consider the following code that is intended to print <c>true</c> if all the elements in array <c>arr</c> are even numbers; otherwise it should print <c>false</c>. You may assume that <c>arr</c> has been declared and contains valid integer values.</p>
+                <program language="java">
+                    <input>
+boolean isEven = /* expression */ ;
+for (int k = 0; k &lt; arr.length; k++) {
+   /* loop body */
+}
+if (isEven)
+   System.out.println("TRUE");
+else
+   System.out.println("FALSE");
+                    </input>
+                </program>
+                <p>Which of the following replacements for <c>/* expression */</c> and <c>/* loop body */</c> should be used so that the code works as intended?</p>
+                <figure align="">
+                    <image source="Arrays/Figures/assess-arrays-1-q2.png" width="50%" alt="answers for Q2"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer A</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer B</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>See diagram for answer C</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer D</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer E</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-arrays-1-3">
+            <statement>
+
+                <p>Q3: Considering the following code, what are the values in numbers after execution?</p>
+                <program language="java">
+                    <input>
+int [] numbers = {17, 34, 21, 42, 15, 69, 48, 25, 39};
+int x = 3;
+for (int k = 1; k &lt; numbers.length; k = k + x)
+   numbers[k] = numbers[k-1] + x;
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>{17, 20, 21, 42, 45, 69, 48, 51, 39}</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>{17, 20, 23, 26, 29, 32, 35, 38, 41}</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>{17, 37, 21, 42, 18, 69, 48, 28, 39}</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>{20, 23, 21, 42, 45, 69, 51, 54, 39}</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>{20, 34, 21, 45, 15, 69, 51, 25, 39}</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+    </TimedNode>
+</exercises>
+</section>
+

@@ -1,0 +1,98 @@
+<section xml:id="selection_worked-example-nested-if-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Nested If Statements</title>
+    <xi:include href='./subgoals-selection.ptx' />
+    <subsection>    
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-selection-we5-nestifstatements" youtube="SsbjgW1U6Gk" width="auto"/>
+    <p>Given the following declarations:</p>
+    <program language="java">
+        <input>
+int alpha = 2;
+int delta = 3;
+int eta = 0;
+int gamma = 0;
+
+double omega = 2.5;
+double theta = -1.3;
+double kappa = 3.0;
+double rho = 0.0;
+        </input>
+    </program>
+    <p>Evaluate these statements and determine the value of all variables used.</p>
+    <program language="java">
+        <input>
+if (omega &lt; kappa)
+{
+    if (alpha &lt; delta)
+        eta = 5;
+    if (alpha &lt; eta)
+        gamma = 4;
+}
+rho = -1.0;
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>SG1: Diagram which statements go together.</title>
+        <p>In this diagram, the first thing to note is the parent/outer if-statement highlighted in blue.</p>
+        <p>Inside the true branch of the parent/outer if-statement, there are two sequential if-statements.</p>
+        <p>The final single statement is highlighted in green, and it is not part of the nested if-statements, so it will always be executed.</p>
+        <figure align="">
+            <image source="Selection/Figures/we5-nest-if-both.png" width="50%" alt="Nested-If Diagram"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: For if statement, determine whether true or false</title>
+        <p>Because there are 2 sequential if-statements, we start with the first one, and then repeat SG2 and SG3 for the other.</p>
+        <p>First we evaluate (omega &lt; kappa):</p>
+        <p>
+            <c>(2.5 &lt; 3.0)</c> is TRUE</p>
+    </subsection>
+    <subsection>
+        <title>SG3: If true, follow true branch. If false, follow else branch (OR do nothing if there is no else branch).</title>
+        <p>The true branch contains two sequential if-statements, so we must repeat the SG2 and SG3 for each of them.</p>
+        <figure align="">
+            <image source="Selection/Figures/we5-nest-if-inner.png" width="50%" alt="nested if true branch"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: For if statement, determine whether true or false</title>
+        <p>Start with the first if-statement in the inner sequence.</p>
+        <p>First we evaluate (alpha &lt; delta):</p>
+        <p>
+            <c>(2 &lt; 3)</c> is TRUE</p>
+    </subsection>
+    <subsection>
+        <title>SG3: If true, follow true branch. If false, follow else branch (OR do nothing if there is no else branch).</title>
+        <p>The condition is TRUE so we follow the true branch.</p>
+        <p>eta = 5;</p>
+    </subsection>
+    <subsection>
+        <title>SG2: For if statement, determine whether true or false</title>
+        <p>Now we do the second if-statement in the inner sequence.</p>
+        <p>First we evaluate (alpha &lt; eta):</p>
+        <p>
+            <c>(2 &lt; 5)</c> is TRUE</p>
+    </subsection>
+    <subsection>
+        <title>SG3: If true, follow true branch. If false, follow else branch (OR do nothing if there is no else branch).</title>
+        <p>The condition is TRUE so we follow the true branch.</p>
+        <p>gamma = 4;</p>
+        <p>Next, the final sequential statement after the entire selection structure is always executed:</p>
+        <p>rho = -1.0;</p>
+    </subsection>
+    <answer>
+        <p><c>omega</c> = 2.5, <c>kappa</c> = 3.0, <c>alpha</c> = 2, <c>delta</c> = 3,
+            <c>eta</c> = 5, <c>gamma</c> = 4, <c>rho</c> = -1.0</p>
+        </answer>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="selection_selection-we5-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

@@ -1,0 +1,185 @@
+<section xml:id="selection_selection-we6-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Selection-WE6-P1</title>
+        <xi:include href='./subgoals-selection.ptx' />
+        <subsection>
+<exercises>
+            <exercise xml:id="ca-Select-WE6-P1-16">
+                <statement>
+                    <p>Q16: Click on the if-statement that must be TRUE in order to execute the line <c>e = 3;</c> in the following code.</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">if (x &gt; y)</area></cline>
+                    <cline>{</cline>
+                    <cline>    <area correct="no">if (a &gt; b)</area></cline>
+                    <cline>        e = 1;</cline>
+                    <cline>    <area correct="no">else</area></cline>
+                    <cline>        e = 2;</cline>
+                    <cline>}</cline>
+                    <cline><area correct="no">else</area></cline>
+                    <cline>    <area correct="yes">if (a &lt; b)</area></cline>
+                    <cline>        e = 3;</cline>
+                    <cline>    <area correct="no">else</area></cline>
+                    <cline>        e = 4;</cline>
+                </areas>
+            </exercise>
+            <exercise xml:id="ca-Select-WE6-P1-17">
+                <statement>
+                    <p>Q17: Click on the if-statement that must be FALSE in order to execute the line <c>e = 2;</c> in the following code.</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">if (x &gt; y)</area></cline>
+                    <cline>{</cline>
+                    <cline>    <area correct="yes">if (a &gt; b)</area></cline>
+                    <cline>        e = 1;</cline>
+                    <cline>    <area correct="no">else</area></cline>
+                    <cline>        e = 2;</cline>
+                    <cline>}</cline>
+                    <cline><area correct="no">else</area></cline>
+                    <cline>    <area correct="no">if (a &lt; b)</area></cline>
+                    <cline>        e = 3;</cline>
+                    <cline>    <area correct="no">else</area></cline>
+                    <cline>        e = 4;</cline>
+                </areas>
+            </exercise>
+            <p>Use this given setup for each of the questions below.</p>
+            <program language="java"><input>
+int alpha = 2, beta = 1, delta = 3, eta = 0, gamma = 0;
+double omega = 2.5, theta = -1.3, kappa = 3.0, lambda = 0.0, rho = 0.0;
+</input></program>
+
+            <exercise xml:id="fb-WE6-P1-18">
+                <statement>
+                    <p>Q18: After executing the following code, the value in variable <c>eta</c> is <var/>.
+                </p>
+<program language="java"><input>
+if (omega &gt; kappa)
+{
+    if (alpha &gt; delta)
+        eta = 5;
+    else
+        eta = 4;
+}
+else
+    if (alpha &lt; delta)
+        eta = 3;
+    else
+        eta = 2;
+</input></program>
+            </statement>
+            <setup>
+                <var>
+                    <condition string="3">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string=".*">
+                        <feedback>
+                            <p>Incorrect.</p>
+                        </feedback>
+                    </condition>
+                </var>
+            </setup>
+        </exercise>
+        <exercise xml:id="fb-WE6-P1-19">
+            <statement>
+                <p>Q19: After executing the following code, the value in variable <c>a</c> is <var/>
+ and the value in variable <c>b</c> is <var/>.
+        </p>
+<program language="java"><input>
+int a = -5;
+int b = 5;
+if (a &lt; 0)
+    if (b &gt; 0)
+        a = b;
+else
+    a = b + 10;
+    b = b + 3;
+</input></program>
+    </statement>
+    <setup>
+        <var>
+            <condition string="5">
+                <feedback>
+                    <p>Correct</p>
+                </feedback>
+            </condition>
+            <condition string=".*">
+                <feedback>
+                    <p>Incorrect.</p>
+                </feedback>
+            </condition>
+        </var>
+        <var>
+            <condition string="8">
+                <feedback>
+                    <p>Correct</p>
+                </feedback>
+            </condition>
+            <condition string=".*">
+                <feedback>
+                    <p>Incorrect.</p>
+                </feedback>
+            </condition>
+        </var>
+    </setup>
+</exercise>
+<exercise xml:id="fb-WE6-P1-20">
+    <statement>
+        <p>Q20: After executing the following code, the value in variable <c>x</c> is <var/>
+ and the value in variable <c>y</c> is <var/>.
+</p>
+<program language="java"><input>
+int x = -8;
+int y = 10;
+if (x &lt; 0)
+{
+    if (y &lt; 0)
+    x = y;
+}
+else
+    x = y + 10;
+    y = x + y;
+</input></program>
+</statement>
+<setup>
+<var>
+    <condition string="-8">
+        <feedback>
+            <p>Correct</p>
+        </feedback>
+    </condition>
+    <condition string=".*">
+        <feedback>
+            <p>Incorrect.</p>
+        </feedback>
+    </condition>
+</var>
+<var>
+    <condition string="2">
+        <feedback>
+            <p>Correct</p>
+        </feedback>
+    </condition>
+    <condition string=".*">
+        <feedback>
+            <p>Incorrect.</p>
+        </feedback>
+    </condition>
+</var>
+</setup>
+</exercise>
+</exercises>
+</subsection>
+
+<program xml:id="ac-select-we6-p1" interactive="activecode" language="java">
+<input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+</input>
+</program>
+</section>
+

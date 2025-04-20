@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="parsons-Arrays-WE6-P1-40">
+<div class="parsons_question parsons-text"><div class="para" id="p-4805">Q40: Put the following code in order to create a program that will declare and instantiate an array of 20 random values between 1 and 100 and then calculate and print the average of the first 10 numbers.</div></div>
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="python" data-noindent="true">import java.util.*;
+public class main{
+   public static void main (String[] args) {
+---
+      Random r = new Random();
+      int [] arr = new int[20];
+---
+      for (int i = 0; i&lt;20; i++) {
+         arr[i] = r.nextInt(100) + 1;
+         System.out.println("arr["+i+"] is " + arr[i]);
+      }
+---
+      int sum = 0;
+---
+      for (int i = 0; i&lt;10; i++) {
+---
+         sum += arr[i];
+---
+      }
+---
+      System.out.println("Avg of first 10 is " + sum/10.0);
+---
+   }
+}</pre>
+</div></div></div></article><span class="incontext"><a href="arrays_arrays-we6-p1.html#parsons-Arrays-WE6-P1-40" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<section xml:id="expressions-statements_worked-example-prefix-and-postfix-operators" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Prefix and Postfix Operators</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-express-we7-postfix" youtube="din-zJLHzHk" width="auto"/>
+            <p>Given the following code snippet, evaluate the final statement (the last line). If invalid, give the reason. If valid, what value is assigned to the variable? Note any possible side effects.</p>
+        <program language="java"><input>
+int alpha = 2;
+int beta = 1;
+int delta = 3;
+int eta;
+int gamma;
+
+double omega = 2.5;
+double theta = -1.3;
+double kappa = 3.0;
+double lambda;
+double rho;
+
+lambda = ++beta / delta-- * alpha;
+</input></program>
+</subsection>
+        <subsection>
+            <title>SG1 : Determine resultant data type of expression</title>
+            <p>The <em>expression</em> is the right-hand-side (RHS) of the statement: <c>++beta / delta-- * alpha</c>. At the beginning of the snippet, all of these variables were declared as <c>int</c> type, so all of the operations will also result in <c>int</c> values.</p>
+        </subsection>
+        <subsection>
+            <title>SG2: Update variables for any pre-increment or pre-decrement operators (side effects)</title>
+            <p>In this example, we see one pre-increment with <c>++beta</c> so we increment beta before we evalute the rest of the expression. The initial value of beta was 1, so a side-effect of this statement is to assign beta the new incremented value of 2.</p>
+        </subsection>
+        <subsection>
+            <title>SG3: Evaluate arithmetic expression according to operator precedence</title>
+            <p><ul>
+                <li>
+                    <p>The RHS may be easiest to conceptualize algebraically, by replacing the variables right away with their current values : <c>2 / 3 * 2</c>. (Remember, beta had a pre-increment so its value has already been increased by 1. Note that the access to the variable delta is its original value.)</p>
+                </li>
+                <li>
+                    <p>In the order of operations, division and multiplication have the same <em>precedence</em>, so we evaluate them left to right. First, 2/3 is 0 (Remember, integer division truncates the quotient by discarding any fractional value). Thus the arithmetic expression is  0 * 2 which is a value of 0.</p>
+                </li>
+            </ul></p>
+        </subsection>
+        <subsection>
+            <title>SG4: Is the Left Hand Side (LHS) of the assignment statement a variable? Check the data type of the value on right hand side (RHS) against data type of LHS variable.</title>
+            <p>The LHS is a variable of type <c>double</c>, and the RHS is type <c>int</c>. This is valid, as the result of the expression will be <em>promoted</em> to a double.</p>
+        </subsection>
+        <subsection>
+            <title>SG5: Update variable for post-increment or post-decrement operators (side effect)</title>
+            <p>In this example we see one post-decrement with delta—so we decrement delta after we evaluate the rest of the expression. The initial value of delta was 3, so a side-effect of this statement is to assign the value 2 to delta.</p>
+        </subsection>
+        <subsection>
+            <title>Questions to check and extend understanding</title>
+            <p>Q1) What are the final values of <c>alpha</c>, <c>beta</c>, <c>delta</c> and <c>lambda</c>?</p>
+            <p>Q2) <program language="java"><input>
+                int x = 5;
+                int y = x--;
+                int z = ++x;
+            </input></program>
+                Do y and z have the same value? Why or why not?</p>
+            <answer>
+                <p>Q1-Answer) alpha is 2; beta is 2; delta is 2; lambda is 0.0;</p>
+                <p>Q2-Answer) They are the same. <c>y</c> is initialized before the <c>--</c> operator is applied to x, so it is set to 5 before <c>x</c> is set to 4. <c>z</c> is initialized after the <c>++</c> operator is applied, so it is set to <c>x</c> after <c>x</c> is set to 5.</p>
+                </answer>
+        </subsection>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we7-p1" />
+                </li>
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we7-p2" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

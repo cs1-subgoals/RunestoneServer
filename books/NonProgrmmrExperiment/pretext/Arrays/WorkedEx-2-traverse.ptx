@@ -1,0 +1,101 @@
+<section xml:id="arrays_worked-example-arrays-traverse" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Arrays - Traverse</title>
+    <xi:include href='./subgoals-arrays.ptx' />
+    <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+        <video xml:id="video-arrays-we2" youtube="exvUM3o3pyM"/>
+        <p>Problem:</p>
+        <p>Given the initialized array:</p>
+        <program language="java">
+            <input>
+int [] alpha;
+            </input>
+        </program>
+        <p>Evaluate these statements and determine the value of all variables. If any error occurs, give the reason.</p>
+        <program language="java">
+            <input>
+alpha = new int[10];
+for (int i = 0; i &lt; 10; i++)
+alpha[i] = i * 1;
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG1: Set up array from 0 to size-1</title>
+        <program language="java">
+            <input>
+alpha = new int[10];
+            </input>
+        </program>
+        <figure align="">
+            <image source="Arrays/Figures/we2-init.png" alt="Instantiated Array"/>
+        </figure>
+        <p>
+            <ul>
+                <li>
+                    <p>alpha is declared as an array of int</p>
+                </li>
+                <li>
+                    <p>This statement allocates 10 slots for integers (first line are values, second line are indexes)</p>
+                </li>
+                <li>
+                    <p>Notice that the largest index is 9 (size of 10 minus 1).</p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection>
+        <title>SG2: Evaluate data type of statements against array</title>
+        <program language="java">
+            <input>
+for (int i = 0; i &lt; 10; i++)
+   alpha[i] = i * 1;
+            </input>
+        </program>
+        <p>
+            <ul>
+                <li>
+                    <p>This loop has index i go from 0 to 9 (&lt; 10) by increments of 1.</p>
+                </li>
+                <li>
+                    <p>Then the value i * 10 is placed into the position alpha[i].</p>
+                </li>
+                <li>
+                    <p>All of the array indexes are within the bounds of the array (0 &#8211; 9) and all values being assigned (10-90) are valid integers and can be stored in an integer array.</p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace statements, updating slots as you go</title>
+        <p>We will evaluate the first two statements:</p>
+        <program language="java">
+            <input>
+for (int i = 0; i &lt; 10; i++)
+   alpha[i] = i * 1;
+            </input>
+        </program>
+        <p>The resulting array is:</p>
+        <figure align="">
+            <image source="Arrays/Figures/we2-result.png" alt="Filled Array"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="arrays_arrays-we2-p1" />
+            </li>
+            <li>
+                <xref text="title" ref="arrays_arrays-we2-p2" />
+            </li>
+            <li>
+                <xref text="title" ref="arrays_arrays-we2-p3" />
+            </li>
+            <li>
+                <xref text="title" ref="arrays_arrays-we2-p4" />
+            </li>
+        </ul></p>
+    </subsection>
+</section>
+

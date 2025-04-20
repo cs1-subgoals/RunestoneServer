@@ -1,0 +1,269 @@
+<section xml:id="object-usage_assessment-construct-a-scanner" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Assessment: Construct A Scanner</title>
+        <xi:include href='./subgoals-object-use.ptx' />
+<exercises time-limit="10" pause="no">
+        <TimedNode line="23" runestone_options="{'nofeedback': None, 'subchapter': 'objuse-assess-newscanner', 'chapter': 'ObjectUsage', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-objuse-newscanner', 'qnumber': '', 'question_marker': '2.4.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/ObjectUsage/objuse-assess-newscanner.rst">
+
+    <exercise xml:id="assess-objuse-newscanner-1">
+        <statement>
+
+            <p>Q1: Fill in the blanks for the following code, if the purpose of the code is to create a new Scanner instance called <c>input</c>.</p>
+            <program> <input>
+________  ________ = ________  ________  (________)
+   A         B          C         D          E
+            </input></program>
+            <p>Fill in blank A.</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Scanner</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>input</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>new</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>System.in</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-objuse-newscanner-2">
+        <statement>
+
+            <p>Q2: Fill in the blanks for the following code, if the purpose of the code is to create a new Scanner instance called <c>input</c>.</p>
+            <program> <input>
+________  ________ = ________  ________  (________)
+   A         B          C         D          E
+            </input></program>
+            <p>Fill in blank B.</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Scanner</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>input</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>new</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>System.in</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-objuse-newscanner-3">
+        <statement>
+
+            <p>Q3: Fill in the blanks for the following code, if the purpose of the code is to create a new Scanner instance called <c>input</c>.</p>
+            <program> <input>
+________  ________ = ________  ________  (________)
+   A         B          C         D          E
+            </input></program>
+            <p>Fill in blank C.</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Scanner</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>input</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>new</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>System.in</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-objuse-newscanner-4">
+        <statement>
+
+            <p>Q4: Fill in the blanks for the following code, if the purpose of the code is to create a new Scanner instance called <c>input</c>.</p>
+            <program> <input>
+________  ________ = ________  ________  (________)
+   A         B          C         D          E
+            </input></program>
+            <p>Fill in blank D.</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Scanner</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>input</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>new</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>System.in</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-objuse-newscanner-5">
+        <statement>
+
+            <p>Q5: Fill in the blanks for the following code, if the purpose of the code is to create a new Scanner instance called <c>input</c>.</p>
+            <program> <input>
+________  ________ = ________  ________  (________)
+   A         B          C         D          E
+            </input></program>
+            <p>Fill in blank E.</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Scanner</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>input</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>new</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>System.in</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        </TimedNode>
+</exercises>
+    </section>
+

@@ -1,0 +1,228 @@
+<section xml:id="loops_loops-we6-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Loops-WE6-P1</title>
+    <xi:include href='./subgoals-loops.ptx' />
+    <subsection>
+<exercises>
+        <exercise xml:id="m-Loops-WE6-P1-15">
+            <statement>
+
+                <p>Q15: What is the output of the following loop?</p>
+                <program language="java">
+                    <input>
+for (int m = 0; m &lt; 4; m++)
+{
+   for (int n = 5; n &gt;= 0; n--)
+   {
+      System.out.print("#");
+   }
+   System.out.println();
+}
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>5 lines of ###</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>3 lines of #####</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>4 lines of ######</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>5 lines of ####</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>Compilation error</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Loops-WE6-P1-16">
+            <statement>
+
+                <p>Q16: What is the output of the following loop?</p>
+                <program language="java">
+                    <input>
+for (int m = 0; m &lt; 4; m++)
+{
+   for (int n = 0; n &lt;= m; n++)
+   {
+      System.out.print("$");
+   }
+   System.out.println();
+}
+                    </input>
+                </program>
+                <figure align="">
+                    <image source="Loops/Figures/LoopsQ16.png" width="100%" alt="answer choices A through E"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>See diagram for answer A</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer B</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer C</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer D</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer E</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Loops-WE6-P1-17">
+            <statement>
+
+                <p>Q17: What is the output of the following loop?</p>
+                <program language="java">
+                    <input>
+for (int m = 1; m &lt; 5; m++)
+{
+   for (int n = 1; n &lt;= m; n++)
+   {
+      System.out.print(" ");
+   }
+   System.out.println("$");
+}
+                    </input>
+                </program>
+                <figure align="">
+                    <image source="Loops/Figures/LoopsQ17.png" width="100%" alt="answer choices A through E"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>See diagram for answer A</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer B</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer C</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer D</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer E</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-loops-we6-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+</section>
+

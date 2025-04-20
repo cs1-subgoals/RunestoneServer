@@ -1,0 +1,94 @@
+<section xml:id="expressions-statements_worked-example-compound-operators" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Compound Operators</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p>You can watch this video or read through the content below it.</p>
+
+            <video xml:id="video-express-we5-compoundops" youtube="rimZZa3Y08U" width="auto"/>
+            <p>Given the following code snippet, evaluate the final statement (the last line). If invalid, give the reason. If valid, what value is assigned to the variable? Note any possible side effects.</p>
+            <program language="java"><input>
+int alpha = 2;
+int beta = 5;
+int delta = 7;
+int eta;
+int gamma = 5;
+
+double omega = 2.5;
+double theta = -1.3;
+double kappa = 3.0;
+double lambda;
+double rho;
+
+gamma += delta / alpha + beta % alpha;
+            </input></program>
+        </subsection>
+        <subsection>
+            <title>SG1 : Determine resultant data type of expression</title>
+            <p><ul>
+                <li>
+                    <p>The <em>expression</em> is usually the right-hand-side (RHS) of the statement, but compound assignment operators are a special shorthand than includes the compounded operation with the left-hand-side (LHS). A simple example is <c>gamma += 1;</c>, which is shorthand for <c>gamma = gamma + 1;</c></p>
+                </li>
+                <li>
+                    <p>In the code given above, the RHS expression is <c>delta / alpha + beta % alpha</c>. This means that the value <c>gamma + delta / alpha + beta % alpha</c> will be assigned to <c>gamma</c>.</p>
+                </li>
+                <li>
+                    <p>At the beginning of the snippet, all of these variables were declared as <c>int</c> type, so all of the operations will also result in <c>int</c> values.</p>
+                </li>
+            </ul></p>
+        </subsection>
+        <subsection>
+            <title>SG2: Update variable for pre-increment or pre-decrement operators (side effect)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>SG3: Evaluate arithmetic expression according to operator precedence</title>
+            <p><ul>
+                <li>
+                    <p>The expression may be easiest to conceptualize algebraically, by replacing the variables right away with their initialized values from the declarations above: <c>5 + 7 / 2 + 5 % 2</c>.</p>
+                </li>
+                <li>
+                    <p>Division and modulus both have higher <em>precedence</em> than addition, so we evaluate them first, resulting in a new expression of <c>5 + 3 + 1</c>.</p>
+                </li>
+                <li>
+                    <p>In the division operation, both variables are of type <c>int</c>, so the result is also an <c>int</c> value. Any fractional piece of the quotient is truncated (thrown away). As an example, <c>5 / 3</c> yields the value <c>1</c>.</p>
+                </li>
+                <li>
+                    <p>Also remember, the mod % operation returns the <em>remainder</em> after integer division.</p>
+                </li>
+                <li>
+                    <p>Finally, we evaluate the additions left-to-right, 5+3 is 8, and 8+1 is 9.</p>
+                </li>
+            </ul></p>
+        </subsection>
+        <subsection>
+            <title>SG4: Is the Left Hand Side (LHS) of the assignment statement a variable? Check the data type of the value on right hand side (RHS) against data type of LHS variable.</title>
+            <p>The LHS of the assignment is a variable of type <c>int</c>, and the expression result is type <c>int</c>. This is valid.</p>
+        </subsection>
+        <subsection>
+            <title>SG5: Update variable for post-increment or post-decrement operators (side effect)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>Questions to check understanding</title>
+            <p>Q1) Is the left-hand-side (LHS) of the statement a variable? What type?</p>
+            <p>Q2) What is the resulting type after evaluating the right-hand-side (RHS)?</p>
+            <p>Q3) Can the type of the RHS result be assigned to the LHS variable?</p>
+            <answer>
+                <p>Q1-Answer) Yes, gamma is declared as an int</p>
+                <p>Q2-Answer) On the RHS, all of the values are int, so the result is also int</p>
+                <p>Q3-Answer) Yes, an int can be assigned to an int</p>
+            </answer>
+        </subsection>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we5-p1" />
+                </li>
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we5-p2" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

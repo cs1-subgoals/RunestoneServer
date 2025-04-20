@@ -1,0 +1,47 @@
+<section xml:id="object-usage_objuse-we5-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>ObjUse-WE5-P1</title>
+        <xi:include href='./subgoals-call-method.ptx' />
+        <subsection>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q14: What number goes in the blank so that a random value between 0 and 5 will be generated?</p>
+    <program language="java">
+        <input>
+Random random = new Random();
+int die = random.nextInt(_______);                                                     
+        </input>
+    </program>
+    <p><var/></p>
+</statement>
+    <setup><var><condition string="6">
+    <feedback><p>Correct</p></feedback></condition><condition string=".*"><feedback><p>Incorrect</p></feedback></condition></var></setup></exercise>
+<exercise xml:id="ca-ObjUse-WE5-P1-15">
+    <statement><p>Q15: Click on the method calls of the Random instance in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">Random</area> <area correct="no">rand</area> = <area correct="no">new Random()</area>;</cline>
+<cline><area correct="no">int</area> <area correct="no">flippedCoin</area> = <area correct="no">rand</area><area correct="yes">.nextInt(2)</area>;</cline>
+<cline><area correct="no">int</area> <area correct="no">playingCard</area> = <area correct="no">rand</area><area correct="yes">.nextInt(52)</area>;</cline>
+</areas></exercise>
+<exercise xml:id="ca-ObjUse-WE5-P1-16">
+    <statement><p>Q16: Click on the parameters passed to method calls of the Random instance in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">Random</area> <area correct="no">rand</area> = <area correct="no">new Random()</area>;</cline>
+<cline><area correct="no">int</area> <area correct="no">flippedCoin</area> = <area correct="no">rand</area><area correct="no">.nextInt</area>(<area correct="yes">2</area>);</cline>
+<cline><area correct="no">int</area> <area correct="no">playingCard</area> = <area correct="no">rand</area><area correct="no">.nextInt</area>(<area correct="yes">52</area>);</cline>
+</areas></exercise>        
+</exercises>
+</subsection>
+
+    <program xml:id="ac-objuse-we5-p1" interactive="activecode" language="java">
+        <input>
+import java.util.Random;
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

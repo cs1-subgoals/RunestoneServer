@@ -1,0 +1,74 @@
+<section xml:id="loops_worked-example-for-loops-sentinel" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: For Loops - Sentinel</title>
+    <xi:include href='./subgoals-loops.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-loops-we5" youtube="bMgx54K0hZg" width="auto"/>
+    <p>Problem: Given the following code, what is the output if the user enters the values:  10, 15, 20, 25, 30, 35, -1?</p>
+    <program language="java">
+        <input>
+System.out.println("Enter up to 5 scores, or negative to end input.");
+int gdScores = 0;
+int score;
+System.out.print ("Score: ");
+Scanner get = new Scanner(System.in);
+score = get.nextInt();
+for (int m = 0; m &lt; 5 &amp;&amp; score &gt;= 0; m++)
+{
+     if (score &gt;= 20)
+        gdScores++;
+     System.out.print ("Score: ");
+     score = get.nextInt();
+}
+System.out.println("Number of good scores: " + gdScores);
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>SG1:  Diagram which statements go together.</title>
+        <figure align="">
+            <image source="Loops/Figures/ForSentinel.png" width="100%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: Define and initialize variables</title>
+        <p>
+            <term>Start:</term>
+        </p>
+        <program language="java">
+            <input>
+score = 10, m = 0, gdScores = 0
+            </input>
+        </program>
+        <p>
+            <term>End:</term>
+        </p>
+        <program language="java">
+            <input>
+score &lt; 0 OR
+m &gt;= 5
+            </input>
+        </program>
+        <figure align="">
+            <image source="Loops/Figures/ForSentinel.png" width="100%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace the loop</title>
+        <figure align="">
+            <image source="Loops/Figures/WL2ASlide6.png" width="35%" alt="Counter"/>
+        </figure>
+        <p>Number of good scores: 3</p>
+    </subsection>
+    
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="loops_loops-we5-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

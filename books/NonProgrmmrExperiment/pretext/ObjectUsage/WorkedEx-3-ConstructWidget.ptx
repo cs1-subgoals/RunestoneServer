@@ -1,0 +1,65 @@
+<section xml:id="object-usage_worked-example-create-instance-of-widget" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Create Instance of Widget</title>
+    <xi:include href='./subgoals-object-use.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-useobj-we1-create-widget" youtube="Ub0V9qOaKjY" width="auto"/>
+    </subsection>
+    <subsection>
+        <title>Programmer-Defined Classes</title>
+        <p>
+            <c>Widget</c> is a made-up class for this lesson. As you become proficient in Java, you will write your own classes, as well. Luckily, the developers who defined the Widget class provided the following constructor documentation.</p>
+        <figure align="">
+            <image source="ObjectUsage/Figures/Create-instance-widget.png" alt="API docs for Widget constructor"/>
+        </figure>
+        <p>Unfortunately, because we do not have an implementation of the Widget class, the ActiveCode block below will not work with the Widget class. When you get to the end of this lesson, try to use the subgoals to reconstruct your work from the previous lesson on the Random object, without looking.</p>
+    </subsection>
+    <p>The following Java code declares and instantiates a variable that will represent a Widget.</p>
+    <subsection>
+        <title>SG1: Declare variable of appropriate class datatype.</title>
+        <program language="java">
+            <input>
+Widget alpha;
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG2: Assign to variable: &#160;keyword new, followed by class name, followed by ().</title>
+        <program language="java">
+            <input>
+alpha = new Widget();
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG3: Determine whether parameter(s) are appropriate (API)</title>
+        <p>In the photo of the documentation above, we can specify any <c>int</c> value for how many items we want in the widget object.</p>
+        <program language="java">
+            <input>
+alpha = new Widget(42);
+            </input>
+        </program>
+    
+    <answer>
+        <p>So the final code looks like this:</p>
+        <program language="java">
+            <input>
+Widget alpha;
+alpha = new Widget();
+alpha = new Widget(42);
+            </input>
+        </program>
+    </answer>
+
+    </subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="object-usage_objuse-we3-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

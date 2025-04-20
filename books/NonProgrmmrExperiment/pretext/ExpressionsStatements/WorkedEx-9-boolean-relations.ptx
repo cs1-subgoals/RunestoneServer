@@ -1,0 +1,62 @@
+<section xml:id="expressions-statements_worked-example-boolean-relations" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Boolean Relations</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+        <p>Given the following code snippet, evaluate the final statement (the last line). If invalid, give the reason. If valid, what value is assigned to the variable?</p>
+        <program language="java"><input>
+int alpha = 42;
+int beta = 1;
+int gamma = 5;
+boolean result;
+
+result = !(beta &lt;= gamma) &amp;&amp; gamma &lt;= alpha;
+</input></program>
+</subsection>
+        <subsection>
+            <title>SG1 : Determine resultant data type of expression</title>
+            <p>First, note that <c>alpha</c>, <c>beta</c>, and <c>gamma</c> are all integers.</p>
+            <p>The logical operators in Java are: </p>
+            <ul>
+                <li><p>&amp;&amp; - AND, if both operands are true the result is true, otherwise the result is false.</p></li>
+                <li><p>|| - OR, if both operands are false the result is false, otherwise the result is true.</p></li>
+                <li><p>! - NOT, the opposite logical value (For example, !true is false).</p></li>
+            </ul>
+            <p>In the final statement, the <c>&lt;=</c> operator is valid to compare primitive types, and produces boolean results, which are then used with the <c>!</c> and <c>&amp;&amp;</c> operators to produce one final boolean.</p>
+            <p>(You may wish to keep a precedence and associativity reference handy, until you have memorized the order of operations for boolean operators. In this example the relational operators are evaluated before the logical operators and the <c>!</c> is evaluated before the <c>&amp;&amp;</c>.)</p>
+        </subsection>
+        <subsection>
+            <title>SG2: Update variables for any pre-increment or pre-decrement operators (side effects)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>SG3: Evaluate arithmetic expression according to operator precedence</title>
+            <p>Substitute the values for the variables on the RHS and evaluate according to the order of operations.</p>
+            <p><c>!(beta &lt;= gamma) &amp;&amp; gamma &lt;= alpha</c></p>
+            <p><c>!(1 &lt;= 5) &amp;&amp; 5 &lt;= 42</c></p>
+            <p><c>!(true) &amp;&amp; true</c></p>
+            <p><c>false &amp;&amp; true</c></p>
+            <p><c>false</c></p>
+        </subsection>
+        <subsection>
+            <title>SG4: Is the Left Hand Side (LHS) of the assignment statement a variable? Check the data type of the value on right hand side (RHS) against data type of LHS variable.</title>
+            <p>The LHS is a variable of type <c>boolean</c>, and the RHS is type <c>boolean</c>. This is valid.</p>
+        </subsection>
+        <subsection>
+            <title>SG5: Update variable for post-increment or post-decrement operators (side effect)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+
+        <answer>
+            <p><c>result</c> is <c>true</c>.</p>
+        </answer>
+
+        </subsection>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we9-p1" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

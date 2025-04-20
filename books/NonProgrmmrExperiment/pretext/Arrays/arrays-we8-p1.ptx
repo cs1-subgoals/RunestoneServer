@@ -1,0 +1,206 @@
+<section xml:id="arrays_arrays-we8-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Arrays-WE8-P1</title>
+        <xi:include href='./subgoals-arrays.ptx' />
+        <subsection>
+<exercises>
+    <exercise xml:id="m-Arrays-WE8-P1-45">
+        <statement>
+
+            <p>Q45: What are the contents of array alpha after this code has been executed?</p>
+            <program language="java"><input>
+int [] alpha = {10, 20, 30, 40, 50, 60, 70};
+int start = alpha[alpha.length-1];
+for (int i = 1; i &lt; alpha.length; i++)  {
+   alpha[i] = alpha[i-1];
+}
+alpha[0] = start;
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>{20, 30, 40, 50, 60, 70, 10}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>{10, 20, 30, 40, 50, 60, 70}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>{10, 10, 20, 30, 40, 50, 60}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>{70, 10, 10, 10, 10, 10, 10}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>{10, 10, 10, 10, 10, 10, 10}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Arrays-WE8-P1-46">
+        <statement>
+
+            <p>Q46: What are the contents of array beta after this code has been executed?</p>
+            <program language="java"><input>
+int [] beta = {10, 20, 30, 40, 50, 60, 70};
+for (int i = 1; i &lt; beta.length; i++)  {
+   beta[i] = beta[i-1];
+}
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>{20, 30, 40, 50, 60, 70, 10}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>{10, 20, 30, 40, 50, 60, 70}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>{10, 10, 20, 30, 40, 50, 60}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>{70, 10, 20, 30, 40, 50, 60}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>{10, 10, 10, 10, 10, 10, 10}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Arrays-WE8-P1-47">
+        <statement>
+
+            <p>Q47: What are the contents of array gamma after this code has been executed?</p>
+            <program language="java"><input>
+int [] gamma = {10, 20, 30, 40, 50, 60, 70};
+for (int i = 0; i &lt; gamma.length; i++)  {
+   gamma[i] = gamma[i+1];
+}
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>{20, 30, 40, 50, 60, 70, 70}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>{20, 30, 40, 50, 60, 70, 10}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>{10, 20, 30, 40, 50, 60, 70}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>{10, 10, 20, 30, 40, 50, 60}</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>IndexOutOfBounds Exception</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+</exercises>
+        </subsection>
+
+    <program xml:id="ac-Arrays-WE8-P1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

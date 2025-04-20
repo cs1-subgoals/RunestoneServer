@@ -1,0 +1,48 @@
+<section xml:id="arrays_arrays-we2-p2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Arrays-WE2-P2</title>
+        <xi:include href='./subgoals-arrays.ptx' />
+        <subsection>
+            <p>Assume the following given declarations:</p>
+            <program language="java"><input>
+int [] beta;
+</input></program>
+            <p>Give the contents of <c>beta</c> after the execution of these statements.</p>
+            <program language="java"><input>
+beta = new int[6];
+beta[0] = 50;
+for (int i = 1; i &lt; 6; i++)
+     beta[i] = beta[i-1];
+</input></program>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q14: The value of <c>beta[0]</c> is <var/>. </p></statement><setup><var><condition string="50"><feedback><p>Correct.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q15: The value of <c>beta[1]</c> is <var/>. </p></statement><setup><var><condition string="50"><feedback><p>Correct.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q16: The value of <c>beta[2]</c> is <var/>. </p></statement><setup><var><condition string="50"><feedback><p>Correct.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q17: The value of <c>beta[3]</c> is <var/>. </p></statement><setup><var><condition string="50"><feedback><p>Correct.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q18: The value of <c>beta[4]</c> is <var/>. </p></statement><setup><var><condition string="50"><feedback><p>Correct.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q19: The value of <c>beta[5]</c> is <var/>. </p></statement><setup><var><condition string="50"><feedback><p>Correct.</p></feedback></condition><condition string=".*"><feedback><p>Incorrect. Try again</p></feedback></condition></var></setup></exercise>        
+    </exercises>
+    </subsection>
+
+    <program xml:id="ac-Arrays-WE2-P2" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

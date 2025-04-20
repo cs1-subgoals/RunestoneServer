@@ -1,0 +1,118 @@
+<section xml:id="arrays_arrays-we2-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Arrays-WE2-P1</title>
+        <xi:include href='./subgoals-arrays.ptx' />
+        <subsection>
+            <p>Assume the following given declarations:</p>
+            <program language="java"><input>
+int [] alpha;
+</input></program>
+            <p>Give the contents of <c>alpha</c> after the execution of these statements.</p>
+            <program language="java"><input>
+alpha = new int[10];
+for (int i = 0; i &lt; 10; i++)
+    alpha[i] = i * i;
+</input></program>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q4: Enter the values of <c>alpha</c> in the blanks. </p><p>The value of <c>alpha[0]</c> is <var/>.</p></statement><setup><var><condition string="0"><feedback><p>Correct.</p></feedback></condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q5: Enter the values of <c>alpha</c> in the blanks. </p><p>The value of <c>alpha[1]</c>  is <var/>.</p></statement><setup><var><condition string="1"><feedback><p>Correct.</p></feedback></condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q6: Enter the values of <c>alpha</c> in the blanks. </p><p>The value of <c>alpha[2]</c>  is <var/>.</p></statement><setup><var><condition string="4"><feedback><p>Correct.</p></feedback></condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>            <statement>
+    <p>Q7: Enter the values of <c>alpha</c> in the blanks. </p><p>The value of <c>alpha[3]</c>  is <var/>.</p></statement><setup><var><condition string="9"><feedback><p>Correct.</p></feedback></condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q8: Enter the values of <c>alpha</c> in the blanks. </p><p>The value of <c>alpha[4]</c>  is <var/>.</p></statement><setup><var><condition string="16"><feedback><p>Correct.</p></feedback></condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q9: Enter the values of <c>alpha</c> in the blanks. </p><p>The value of <c>alpha[5]</c>  is <var/>.</p></statement><setup><var><condition string="25"><feedback><p>Correct.</p></feedback></condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q10: Enter the values of <c>alpha</c> in the blanks. </p><p>The value of <c>alpha[6]</c>  is <var/>.</p></statement><setup><var><condition string="36"><feedback><p>Correct.</p></feedback></condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q11: Enter the values of <c>alpha</c> in the blanks. </p><p>The value of <c>alpha[7]</c>  is <var/>.</p></statement><setup><var><condition string="49"><feedback><p>Correct.</p></feedback></condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q12: Enter the values of <c>alpha</c> in the blanks. </p><p>The value of <c>alpha[8]</c>  is <var/>.</p></statement><setup><var><condition string="64"><feedback><p>Correct.</p></feedback></condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q13: Enter the values of <c>alpha</c> in the blanks. </p><p>The value of <c>alpha[9]</c>  is <var/>.</p></statement><setup><var><condition string="81"><feedback><p>Correct.</p></feedback></condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var></setup></exercise>        
+    </exercises>
+    </subsection>
+
+    <program xml:id="ac-Arrays-WE2-P1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

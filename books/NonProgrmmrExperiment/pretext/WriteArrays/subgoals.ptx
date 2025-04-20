@@ -1,0 +1,4 @@
+<section xml:id="write-arrays" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Writing Arrays</title>
+    <xi:include href='./subgoals-write-arrays.ptx' />
+</section>

@@ -1,0 +1,84 @@
+<section xml:id="write-selection_worked-example-write-selection-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Write Selection Statements</title>
+        <xi:include href='./subgoals-write-selection.ptx' />
+        <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-selection-we8-writeifstatements" youtube="SVokq-1KQwc" width="auto"/>
+            <p><c>Problem: Write the Java selection statements to solve the following specifications:</c></p>
+        <blockquote>
+            <p>If integer variable currentNumber is odd, change its value so that it is now 4 times currentNumber plus 1; otherwise change its value so that it is now half of currentNumber (rounded down when currentNumber is odd).</p>
+        </blockquote>
+    </subsection>
+        <subsection>
+            <title>SG1: Define how many mutually exclusive paths are needed</title>
+            <p>In this case, the problem says to do one action if variable is odd, and a different action otherwise.</p>
+            <p>The value in an integer variable can only be odd or even, so there are 2 mutually exclusive paths. An <c>if</c> statement is the best approach.</p>
+        </subsection>
+        <subsection>
+            <title>SG2: Order from most restrictive/selective group to least restrictive</title>
+            <p>In this example the order does not matter.</p>
+        </subsection>
+        <subsection>
+            <title>SG3: Write if statement with Boolean expression</title>
+            <p>To determine if the value in currentNumber is odd, we can check the remainder after dividing by 2 (using the modulus operator): <c>if (currentNumber % 2 == 1)</c></p>
+        </subsection>
+        <subsection>
+            <title>SG4: Follow with true bracket including action</title>
+            <p>In the true branch, change value of currentNumber to be 4 times its current value and add 1.</p>
+            <program language="java"><input>
+if (currentNumber % 2 == 1)
+{
+       currentNumber = currentNumber * 4 + 1;
+}
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG5 : Follow with else bracket</title>
+            <p>In the else branch, change value to half current value. Note that integer division automatically <em>truncates</em> i.e. rounds down.</p>
+            <program language="java"><input>
+if (currentNumber % 2 == 1)
+{
+       currentNumber = currentNumber * 4 + 1;
+}
+else
+{
+       currenNumber /= 2;
+}
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG6: Repeat until all groups and actions are accounted for</title>
+            <p>Not used &#8211; only two branches</p>
+        </subsection>
+        <subsection>
+            <title>Equivalent solution using the other ordering of the range/case groups.</title>
+            <program language="java"><input>
+if (currentNumber % 2 == 0)
+{
+   currentNumber /= 2;
+}
+else
+{
+   currentNumber = currentNumber * 4 + 1;
+}
+</input></program>
+        </subsection>
+
+        <program interactive="activecode" language="java"><input>
+public class main{
+    public static void main(String args[]){
+        
+    }
+}
+        </input></program>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="write-selection_writeselection-we1-p1" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Evaluate Arrays</title>
+        <xi:include href='./WorkedEx-1-instantiate-alter.ptx' />
+        <xi:include href='./arrays-we1-p1.ptx' />
+        <xi:include href='./WorkedEx-2-traverse.ptx' />
+        <xi:include href='./arrays-we2-p1.ptx' />
+        <xi:include href='./arrays-we2-p2.ptx' />
+        <xi:include href='./arrays-we2-p3.ptx' />
+        <xi:include href='./arrays-we2-p4.ptx' />
+        <xi:include href='./WorkedEx-3-initializer-reverse.ptx' />
+        <xi:include href='./arrays-we3-p1.ptx' />
+        <xi:include href='./arrays-assess1.ptx' />
+        <xi:include href='./WorkedEx-4-sum.ptx' />
+        <xi:include href='./arrays-we4-p1.ptx' />
+        <xi:include href='./WorkedEx-5-min.ptx' />
+        <xi:include href='./arrays-we5-p1.ptx' />
+        <xi:include href='./WorkedEx-6-avg.ptx' />
+        <xi:include href='./arrays-we6-p1.ptx' />
+        <xi:include href='./arrays-assess2.ptx' />
+        <xi:include href='./WorkedEx-7-find.ptx' />
+        <xi:include href='./arrays-we7-p1.ptx' />
+        <xi:include href='./WorkedEx-8-shift.ptx' />
+        <xi:include href='./arrays-we8-p1.ptx' />
+        <xi:include href='./WorkedEx-9-write-reverse.ptx' />
+        <xi:include href='./arrays-we9-p1.ptx' />
+        <xi:include href='./arrays-assess3.ptx' />
+    </chapter>

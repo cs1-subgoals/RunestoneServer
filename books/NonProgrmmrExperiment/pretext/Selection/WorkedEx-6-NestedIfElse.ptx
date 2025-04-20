@@ -1,0 +1,81 @@
+<section xml:id="selection_worked-example-nested-if-else-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Nested If-Else Statements</title>
+    <xi:include href='./subgoals-selection.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-selection-we6-nestifelsestatements" youtube="3UuYfOPMHwM" width="auto"/>
+    <p>Given the following declarations:</p>
+    <program language="java">
+        <input>
+int alpha = 2, delta = 3, eta = 0,
+
+double omega = 2.5, kappa = 3.0;
+        </input>
+    </program>
+    <p>Evaluate these statements and determine the value of all variables used.</p>
+    <program language="java">
+        <input>
+if (omega &gt; kappa)
+{
+    if (alpha &lt; delta)
+        eta = 5;
+    else
+        eta = 4;
+}
+else
+   if (alpha &gt; delta)
+      eta = 3;
+   else
+      eta = 2;
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>SG1: Diagram which statements go together.</title>
+        <p>In this diagram, the first thing to note is the parent/outer if-else statement highlighted in blue.</p>
+        <p>The true branch of the parent/outer statment contains an inner if-else.</p>
+        <p>Likewise, the else branch of the parent/outer statement contains an inner if-else.</p>
+        <figure align="">
+            <image source="Selection/Figures/we6-nest-ifelse.png" width="50%" alt="Nested If-Else Diagram"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: For if statement, determine whether true or false</title>
+        <p>Because there are 2 sequential if-statements, we start with the first one, and then repeat SG2 and SG3 for the other.</p>
+        <p>First we evaluate (omega &gt; kappa):</p>
+        <p>
+            <c>(2.5 &gt; 3.0)</c> is FALSE</p>
+    </subsection>
+    <subsection>
+        <title>SG3: If true, follow true branch. If false, follow else branch (OR do nothing if there is no else branch).</title>
+        <p>The else branch contains another if-else statement, so we must repeat the SG2 and SG3.</p>
+        <figure align="">
+            <image source="Selection/Figures/we6-nest-ifelse-inner.png" width="50%" alt="nested if true branch"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: For if statement, determine whether true or false</title>
+        <p>Start with the first if-statement in the inner sequence.</p>
+        <p>First we evaluate (alpha &gt; delta):</p>
+        <p>
+            <c>(2 &gt; 3)</c> is FALSE</p>
+    </subsection>
+    <subsection>
+        <title>SG3: If true, follow true branch. If false, follow else branch (OR do nothing if there is no else branch).</title>
+        <p>The condition is FALSE so we follow the else branch.</p>
+        <p>eta = 2;</p>
+    </subsection>
+    <answer>
+        <p><c>omega</c> = 2.5, <c>kappa</c> = 3.0, <c>alpha</c> = 2, <c>delta</c> = 3, <c>eta</c> = 2</p>
+    </answer>
+    <subsection>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="selection_selection-we6-p1" />
+            </li>
+        </ul></p>
+    </subsection>
+</section>
+

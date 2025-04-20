@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Writing Loops</title>
+        <xi:include href='./WorkedEx-1-write-loopsPart1.ptx' />
+        <xi:include href='./WorkedEx-1-write-loopsPart2.ptx' />
+        <xi:include href='./writeloops-we1-p1.ptx' />
+        <xi:include href='./wrloops-assess1.ptx' />
+    </chapter>

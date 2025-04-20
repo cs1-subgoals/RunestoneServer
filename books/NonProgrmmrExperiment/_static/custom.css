@@ -1,0 +1,20 @@
+/*
+   Container fix to use more screen real estate.
+   Also allows parsons problems to actually be side-by-side columns.
+*/
+.container{
+   min-width: 70%;
+}
+.container .section>*:not(.section):not(.ac_section){
+    max-width: 85%;
+}
+
+/*
+   Margin fix for paragraphs inside lists
+*/
+li > p{
+   margin: 0;
+}
+li > p + p{
+   margin-top: 8px;
+}

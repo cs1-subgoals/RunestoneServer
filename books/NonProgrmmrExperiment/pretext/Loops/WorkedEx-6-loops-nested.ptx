@@ -1,0 +1,125 @@
+<section xml:id="loops_worked-example-nested-loops" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Nested Loops</title>
+    <xi:include href='./subgoals-loops.ptx' />    
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-loops-we6" youtube="cf2tsEcK0x0" width="auto"/>
+    <p>Problem: Given the following code, what is the output?</p>
+    <program language="java">
+        <input>
+int i = 0, j = 0, m = 8, n = 5;
+while (i &lt; n)
+{
+  j = 0;
+  while (j &lt; m)
+  {
+        System.out.print("*");
+        j++;
+  }
+  System.out.println();
+  i++;
+}
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>SG1:  Diagram which statements go together.</title>
+        <figure align="">
+            <image source="Loops/Figures/we6-code-diagram.png" width="50%" alt="nested loops code diagram"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: Define and initialize variables</title>
+        <p>For now, we begin with the variables that control the outer loop.</p>
+        <p>
+            <term>Start:</term>
+        </p>
+        <program language="java">
+            <input>
+i = 0, n = 5
+            </input>
+        </program>
+        <p>
+            <term>End:</term>
+        </p>
+        <program language="java">
+            <input>
+i &gt;= 5
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace the loop</title>
+        <p>Think of an analog clock:</p>
+        <p>Second hand goes completely around before minute hand moves</p>
+        <p>Just like inner loop:</p>
+        <p>Inner loop must finish before outer loop increments once</p>
+        <figure align="">
+            <image source="Loops/Figures/AnalogClock.png" width="50%" alt="Clock"/>
+        </figure>
+        <p>Looking at ONLY the outer loop: &lt;NL&gt; is a new line</p>
+        <figure align="">
+            <image source="Loops/Figures/WL3Slide7.png" width="25%" alt="Counter"/>
+        </figure>
+        <p>
+            <c>Now Repeat for inner loop</c>
+        </p>
+    </subsection>
+    
+    <subsection>
+        <title>SG1:  Diagram which statements go together.</title>
+        <figure align="">
+            <image source="Loops/Figures/we6-code-diagram.png" width="50%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: Define and initialize variables</title>
+        <p>
+            <term>Start:</term>
+        </p>
+        <program language="java">
+            <input>
+j = 0, m = 8
+            </input>
+        </program>
+        <p>
+            <term>End:</term>
+        </p>
+        <program language="java">
+            <input>
+j &gt;= 8
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace the loop</title>
+        <p>Looking at Only the inner loop:</p>
+        <figure align="">
+            <image source="Loops/Figures/WL3Slide11.png" width="25%" alt="Counter"/>
+        </figure>
+        <p>For each iteration of the inner loop, a single star is added to the current output on the same line.
+            For each iteration of the outer loop, the current line is ended and a new line begins. The output looks like:</p>
+        <figure align="">
+            <image source="Loops/Figures/WL3Slide12.png" width="35%" alt="Counter"/>
+        </figure>
+        <p>Note that outer loop goes 5 times,</p>
+        <p>Inner loop goes 8 times (for each outer loop)</p>
+        <answer>
+            <figure align="">
+                <image source="Loops/Figures/WL3Slide15.png" width="25%" alt="Counter"/>
+            </figure>
+            <p>The final output will be 5 lines of 8 asterisks (*).</p>
+        </answer>
+    </subsection>
+    
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="loops_loops-we6-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

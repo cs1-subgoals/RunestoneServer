@@ -1,0 +1,255 @@
+<section xml:id="expressions-statements_expressions-we9-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Expressions-WE9-P1</title>
+    <xi:include href='./subgoals-expressions.ptx' />
+    <subsection>
+        <p>A truth tables shows all possible combinations of input values for a set of variables, and the corrsponding outputs.</p>
+        <p>The &#8220;Line #&#8221; column of the chart below corresponds to the following multiple choice questions. Complete this truth table by choosing &#8220;true&#8221; or &#8220;false&#8221; for each Line #.</p>
+        <figure align="">
+            <image source="ExpressionsStatements/Figures/truth-table.png" width="50%" alt="3 input truth table"/>
+        </figure>
+<exercises>
+        <exercise xml:id="m-Expr-WE9-P1-67">
+            <statement>
+
+                <p>Q67: Line #1</p>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>true</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>false</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Expr-WE9-P1-68">
+            <statement>
+
+                <p>Q68: Line #2</p>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>true</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>false</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Expr-WE9-P1-69">
+            <statement>
+
+                <p>Q69: Line #3</p>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>true</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>false</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Expr-WE9-P1-70">
+            <statement>
+
+                <p>Q70: Line #4</p>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>true</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>false</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Expr-WE9-P1-71">
+            <statement>
+
+                <p>Q71: Line #5</p>
+
+            </statement>
+            <choices>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>true</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>false</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Expr-WE9-P1-72">
+            <statement>
+
+                <p>Q72: Line #6</p>
+
+            </statement>
+            <choices>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>true</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>false</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Expr-WE9-P1-73">
+            <statement>
+
+                <p>Q73: Line #7</p>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>true</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>false</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Expr-WE9-P1-74">
+            <statement>
+
+                <p>Q74: Line #8</p>
+
+            </statement>
+            <choices>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>true</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>false</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-express-we9-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+</section>
+

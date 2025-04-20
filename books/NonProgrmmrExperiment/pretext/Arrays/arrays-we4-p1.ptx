@@ -1,0 +1,71 @@
+<section xml:id="arrays_arrays-we4-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Arrays-WE4-P1</title>
+        <xi:include href='./subgoals-arrays.ptx' />
+        <subsection>
+<exercises>
+            <exercise>
+                <statement>
+                    <p>Q37: Given the following code, what is the value in <c>sum</c> after execution? <var/>
+                        
+                    </p>
+                    <program language="java"><input>
+int [] alpha = {2, 4, 6, 8, 10, 12, 14};
+int sum = 0;
+for (int k = 0; k&lt;alpha.length; k+=2)
+    sum = sum + alpha[k];
+                        </input></program>
+                </statement>
+                <setup>
+                    <var>
+                        <condition string="32">
+                            <feedback>
+                                <p>Correct.</p>
+                            </feedback>
+                        </condition>
+                        <condition string=".*">
+                            <feedback><p>Incorrect.</p></feedback>
+                        </condition>
+                    </var>
+                </setup>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Q38: Given the following code, what is the value in <c>sum</c> after execution? <var/>
+                    </p>
+                    <program language="java"><input>
+int [] beta = new int [5];
+int sum = 0;
+for (int k = 0; k&lt;beta.length; k++)
+    beta[k] = 2 * k + 1;
+int x = 3;
+for (int k = 1; k&lt;beta.length; k++)
+    sum += beta[k];
+                        </input></program>
+                </statement>
+                <setup>
+                    <var>
+                        <condition string="24">
+                            <feedback>
+                                <p>Correct.</p>
+                            </feedback>
+                        </condition>
+                        <condition string=".*">
+                            <feedback><p>Incorrect.</p></feedback>
+                        </condition>
+                    </var>
+                </setup>
+            </exercise>
+</exercises>
+        </subsection>
+
+        <program xml:id="ac-Arrays-WE4-P1" interactive="activecode" language="java">
+            <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+            </input>
+        </program>
+    </section>
+

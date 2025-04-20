@@ -1,0 +1,67 @@
+<section xml:id="write-methods_worked-example-writing-methods" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Writing Methods</title>
+        <xi:include href='./subgoals-write-methods.ptx' />
+        <subsection>
+        <p>Problem: Write a public method that does not return anything but accepts as parameters 2 Strings and prints out the first parameter concatenated with any string content followed by the second parameter.</p>
+        </subsection>
+        <subsection>
+            <title>SG1: Define method header based on problem</title>
+            <program language="java"><input>
+public void cheerful (String a, String b)
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG2: Define return statement at the end</title>
+            <p>the <c>return;</c> statement is optional for void return type.</p>
+            <program language="java"><input>
+public void cheerful (String a, String b)
+{
+   return;
+}
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG3: Define method body/logic</title>
+            <p><ol marker="a">
+                <li>
+                    <p>Determine types of logic (expression, selection, loop, etc.)</p>
+                </li>
+                <li>
+                    <p>Define internal variables</p>
+                </li>
+                <li>
+                    <p>Write statements</p>
+                </li>
+            </ol></p>
+            <p>The instructions require us to concatenate a String expression for printing. One variable to store the message could be useful.</p>
+            
+            <answer>
+                <program language="java"><input>
+public void cheerful (String a, String b)
+{
+   String message = a + " is happy clap your hands, " + b;
+   System.out.println(messsage);
+   return;
+}
+                </input></program>
+            </answer>
+        </subsection>
+        <program xml:id="ac-methods-we3" interactive="activecode" language="java">
+            <input>
+    public class main{
+       public static void main(String args[]){
+    
+       }
+    }
+            </input>
+        </program>
+        <subsection>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="write-methods_wrmethods-we3-p1" />
+                </li>
+            </ul></p>
+        </subsection>
+    </section>
+

@@ -1,0 +1,22 @@
+<introduction>
+    <title>Subgoals for using objects (creating instances)</title>
+    <p><ol marker="1">
+        <li>
+            <p>Declare variable of appropriate class datatype.</p>
+        </li>
+        <li>
+            <p>Assign to variable: keyword new, followed by class name, followed by ().</p>
+        </li>
+        <li>
+            <p>Determine whether parameter(s) are appropriate (API)</p>
+            <p><ol marker="a">
+                <li>
+                    <p>Number of parameters</p>
+                </li>
+                <li>
+                    <p>Data types of the parameters</p>
+                </li>
+            </ol></p>
+        </li>
+    </ol></p>
+</introduction>

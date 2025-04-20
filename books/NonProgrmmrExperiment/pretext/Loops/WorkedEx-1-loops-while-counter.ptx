@@ -1,0 +1,90 @@
+<section xml:id="loops_worked-example-while-loops-counter" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: While Loops - Counter</title>
+    <xi:include href='./subgoals-loops.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-loops-we1" youtube="adoRks8Htfw" width="auto"/>
+    <p>Problem: Given the following code, what is the output?</p>
+    <program language="java">
+        <input>
+int counter = 0;
+int total = 0;
+
+while (counter &lt; 50)
+{
+    if (counter % 5 == 0)
+            total += counter;
+    counter++;
+ }
+
+ System.out.println(total);
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>SG1:  Diagram which statements go together.</title>
+        <figure align="">
+            <image source="Loops/Figures/WL1Counter.png" width="50%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: Define and initialize variables</title>
+        <p>
+            <term>Start:</term>
+        </p>
+        <program language="java">
+            <input>
+counter = 0;
+total = 0;
+            </input>
+        </program>
+        <p>
+            <term>End:</term>
+        </p>
+        <program language="java">
+            <input>
+counter &gt;= 50
+            </input>
+        </program>
+        <figure align="">
+            <image source="Loops/Figures/WL1Counter.png" width="50%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace the loop</title>
+        <figure align="">
+            <image source="Loops/Figures/WL1Counter.png" width="50%" alt="Counter"/>
+        </figure>
+        <p>System.out.println(total);</p>
+        <figure align="">
+            <image source="Loops/Figures/Slide6.png" width="80%" alt="Counter"/>
+        </figure>
+        <p>
+            <ol marker="A">
+                <li>
+                    <p>For every iteration of loop, write down values</p>
+                </li>
+            </ol>
+        </p>
+        <p>Counter increments by 1, but the value is only added to total when it is evenly divisible by 5.</p>
+        <figure align="">
+            <image source="Loops/Figures/WL1Whlie-Slide7.png" width="25%" alt="Counter"/>
+        </figure>
+        <figure align="">
+            <image source="Loops/Figures/WL1While-Slide8.png" width="25%" alt="Counter"/>
+        </figure>
+        <answer>
+            <p>Output is 225</p>
+        </answer>
+    </subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="loops_loops-we1-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

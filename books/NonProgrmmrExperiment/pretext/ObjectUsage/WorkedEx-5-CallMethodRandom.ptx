@@ -1,0 +1,89 @@
+<section xml:id="object-usage_worked-example-call-a-method-of-random" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Call a method of Random</title>
+    <xi:include href='./subgoals-call-method.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-useobj-we1-call-random" youtube="bVOEgYIRVEQ" width="auto"/>
+    </subsection>
+    <subsection>
+        <title>Problem Statement</title>
+        <p>Given the following declaration and instantiation of a Random object, write the code to generate a random integer between 0 and 99.</p>
+        <program language="java">
+            <input>
+Random rand = new Random();
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG1: Classify method as static method or instance method</title>
+        <p>We already have an instance of Random with the variable name <c>rand</c>.</p>
+        <p>First, check the API to find a method that does what we want.</p>
+        <figure align="">
+            <image source="ObjectUsage/Figures/Call-method-random.png" alt="API docs for Random nextInt method"/>
+        </figure>
+        <p>In looking at the documentation for the Random class, we see the <c>nextInt()</c> method does not contain the keyword <c>static</c>, so we can assume that it is an instance method. Because we want to call an instance method, we need to identify the instance which will call the method. In this example we have already created a Random instance which is named <c>rand</c>.</p>
+    </subsection>
+    <subsection>
+        <title>SG2: Write (instance / class) dot method name and ( )</title>
+        <p>Here is the method call with the instance:</p>
+        <program language="java">
+            <input>
+rand.nextInt()
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG3: Determine whether parameter(s) are appropriate</title>
+        <p>According to the API documentation, the <c>nextInt</c> method requires 1 parameter, the exclusive upper bound. If we want to generate random values between 0 to 99 (inclusive) then parameter will be 100.</p>
+        <program language="java">
+            <input>
+rand.nextInt(100)
+            </input>
+        </program>
+        <statement>
+            <p>To shift the starting value from 0 for the random number values, you simply add that value after generation of the random number.</p>
+            <p><c>rand.nextInt(100) + 100;</c></p>
+            <p>This will create values in the range from 100 to 199, since <c>rand.next(100)</c> yields values from 0 to 99.</p>
+        </statement>
+    </subsection>
+    <subsection>
+        <title>SG4: Determine what the method will return and where it will be stored</title>
+        <p>According to the API documentation, the <c>nextInt</c> method returns an integer, so we need an <c>int</c> type variable to store the value.</p>
+        <program language="java">
+            <input>
+int value = input.nextInt();
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG5: Evaluate right hand side (RHS) of assignment. Value is dependent on method&#8217;s purpose</title>
+        <p>The <c>nextInt</c> method generates an integer value and returns it. So the RHS is an integer and the LHS is an integer variable, so the assignment statement is valid.</p>
+        <program language="java">
+            <input>
+int value = input.nextInt();
+            </input>
+        </program>
+    
+
+    <program xml:id="ac-objectuse-we5" interactive="activecode" language="java">
+        <input>
+import java.util.Random;
+public class main{
+   public static void main(String args[]){
+    
+   }
+}
+        </input>
+    </program>
+    </subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="object-usage_objuse-we5-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

@@ -1,0 +1,216 @@
+<section xml:id="loops_loops-we2-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Loops-WE2-P1</title>
+        <xi:include href='./subgoals-loops.ptx' />
+        <subsection>
+<exercises>
+    <exercise xml:id="m-Loops-WE2-P1-6">
+        <statement>
+
+            <p>Q6: What is the value of <c>total</c> after the execution of the folowing code?</p>
+            <program language="java"><input>
+int total = 0;
+for (int x = 50; x &gt;= 0; x = x - 5) {
+   total += x;
+}
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>50</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>5</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>270</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>275</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Loops-WE2-P1-7">
+        <statement>
+
+            <p>Q7: What is the output of the following loop?</p>
+            <program language="java"><input>
+for (int y = 0; y &lt; 10; y++) {
+   System.out.print(y * y + " ");
+}
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>0 1 4 9 16 25 36 49 64 81</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>1 4 9 16 25 36 49 64 81</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>1 4 9 16 25 36 49 64</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>0 1 2 3 4 5 6 7 8 9 10</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>1 2 3 4 5 6 7 8 9 10</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Loops-WE2-P1-8">
+        <statement>
+
+            <p>Q8: What is the output of the following loop?</p>
+            <program language="java"><input>
+for (int y = 100; y &lt; 10; y--) {
+   System.out.println(y);
+}
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>100</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>10</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>100 90 80 70 60 50 40 30 20</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>100 90 80 70 60 50 40 30 20 10</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>no output produced</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+        <exercise>
+            <statement>
+    <p>Q9: What are the values of <c>a</c> and <c>b</c> after the folowing code executes?</p> <program language="java"><input>
+int a = 0, b = 0;
+for (int x = 1; x &lt;= 15; x++) {
+    if (x % 2 == 0)
+        a += x;
+    else
+        b += x;
+}
+System.out.println("a is " + a);
+System.out.println("b is " + b);
+        </input></program><p>The value of <c>a</c> is <var/> and the value of <c>b</c> is <var/>.</p></statement><setup><var><condition string="56"><feedback><p>Correct</p></feedback></condition><condition string="^\s*x\s*$"><feedback><p>Incorrect.</p></feedback></condition></var><var><condition string="64"><feedback><p>Correct</p></feedback></condition><condition string="^\s*x\s*$"><feedback><p>Incorrect.</p></feedback></condition></var></setup></exercise>        
+</exercises>
+</subsection>
+
+    <program xml:id="ac-loops-we2-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

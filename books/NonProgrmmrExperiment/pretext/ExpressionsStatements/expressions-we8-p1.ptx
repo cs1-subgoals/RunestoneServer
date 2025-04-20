@@ -1,0 +1,459 @@
+<section xml:id="expressions-statements_expressions-we8-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Expressions-WE8-P1</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p><term>Given</term></p>
+            <program language="java"><input>
+int  x = 4, y = 6;
+boolean result;
+</input></program>
+            <p>What is the value of <c>result</c> after each of the following?</p>
+<exercises>
+    <exercise xml:id="m-Expr-WE8-P1-52">
+        <statement>
+
+            <p>Q52: result  = x &lt; y;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-53">
+        <statement>
+
+            <p>Q53: result  = x + 2 &lt; y;</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-54">
+        <statement>
+
+            <p>Q54: result  = x != y;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-55">
+        <statement>
+
+            <p>Q55: result  = x + 3 &gt;= y;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-56">
+        <statement>
+
+            <p>Q56: result  = y == x;</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-57">
+        <statement>
+
+            <p>Q57: result  = y == x+2;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-58">
+        <statement>
+
+            <p>Q58: result  = 7 == 7;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-59">
+        <statement>
+
+            <p>Q59: result  = 13 &lt; 100;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-60">
+        <statement>
+
+            <p>Q60: result  = -17.32 != -17.32;</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-61">
+        <statement>
+
+            <p>Q61: result  = -3.0 == 0.0;</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-62">
+        <statement>
+
+            <p>Q62: result  = 13 &lt;= 100;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-63">
+        <statement>
+
+            <p>Q63: result  = -18 &lt; -15;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-64">
+        <statement>
+
+            <p>Q64: result  = 4.2  &gt; 3.7;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-65">
+        <statement>
+
+            <p>Q65: result  = 13 &lt;= 13;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE8-P1-66">
+        <statement>
+
+            <p>Q66: result  = 0.012 &gt; 0.013;</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+</exercises>
+        </subsection>
+
+    <program xml:id="ac-express-we8-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

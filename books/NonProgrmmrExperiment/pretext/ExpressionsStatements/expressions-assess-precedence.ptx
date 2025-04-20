@@ -1,0 +1,143 @@
+<section xml:id="expressions-statements_assessment-operation-precedence" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Assessment: Operation Precedence</title>
+    <xi:include href='./subgoals-expressions.ptx' />
+<exercises time-limit="10" pause="no">
+    <TimedNode line="19" runestone_options="{'nofeedback': None, 'subchapter': 'expressions-assess-precedence', 'chapter': 'ExpressionsStatements', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-expr-precedence', 'qnumber': '', 'question_marker': '1.5.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/ExpressionsStatements/expressions-assess-precedence.rst">
+
+    <exercise>
+        <statement>
+<p>Q1: Given the following, what value is stored in variable alpha?</p>
+<program language="java"><input>
+int alpha = 0;
+int x = 5;
+int y = 6;
+int z = 2;
+alpha = x + y * z - 1;
+</input></program>
+<p> <var/> </p>
+</statement>
+<setup>
+    <var>
+        <condition string="16">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+</setup>
+</exercise>
+    <exercise>
+        <statement>
+<p>Q2: Given the following, what value is stored in variable beta?</p>
+<program language="java"><input>
+int beta = 0;
+int x = 5;
+int y = 6;
+int z = 2;
+beta = (y + 3) * (x / 3) - z;
+</input></program>
+<p> <var/> </p>
+</statement>
+<setup>
+    <var>
+        <condition string="7">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+</setup>
+</exercise>
+    <exercise>
+        <statement>
+<p>Q3: Given the following, what value is stored in variable gamma?</p>
+<program language="java"><input>
+int x = 5;
+int y = 6;
+double gamma = 1.0;
+</input></program>
+<p> <var/> </p>
+</statement>
+<setup>
+    <var>
+        <condition string="1.0">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+</setup>
+</exercise>
+    <exercise>
+        <statement>
+<p>Q4: Given the following, what value is stored in variable delta?</p>
+<program language="java"><input>
+int delta = 0;
+int x = 5;
+int y = 6;
+int z = 2;
+delta = x % y * z % y;
+</input></program>
+<p> <var/> </p>
+</statement>
+<setup>
+    <var>
+        <condition string="4">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+</setup>
+</exercise>
+    <exercise>
+        <statement>
+<p>Q5: Given the following, do <c>iota</c> and <c>zeta</c> contain the same value?</p>
+<program language="java"><input>
+int eta = 5;
+int iota = (eta + 5) * (5 % eta + 2);
+int zeta = eta + 5 * (5 % eta + 2);
+</input></program>
+</statement>
+<choices>
+        <choice>
+            <statement>
+                <p>Yes</p>
+            </statement>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </choice>
+        <choice correct="yes">
+            <statement>
+                <p>No</p>
+            </statement>
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </choice>
+</choices>
+</exercise>        
+</TimedNode>
+</exercises>
+</section>

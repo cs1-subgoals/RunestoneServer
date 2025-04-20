@@ -1,0 +1,159 @@
+<section xml:id="selection_selection-we1-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Selection-WE1-P1</title>
+        <xi:include href='./subgoals-selection.ptx' />
+        <subsection>
+            <p>Each question below is independent, but they all use this given setup</p>
+            <program language="java"><input>
+int alpha = 2;
+int beta = 1;
+int delta = 3;
+int eta = 0;
+int gamma = 0;
+
+double omega = 2.5;
+double theta = -1.3;
+double kappa = 3.0;
+double lambda = 0.0;
+double rho = 0.0;
+</input></program>
+<exercises>
+            <exercise>
+                <statement>
+                    <p>Q1: What is the value of <c>rho</c> after executing the following code?</p>
+                        <program language="java"><input>
+if (theta &gt; omega)
+    rho = kappa + 2;
+                            </input></program>
+                    <p><var/>
+                    </p>
+                </statement>
+                <setup>
+                    <var>
+                        <condition string="0.0"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+                            <feedback>
+                                <p>Incorrect</p>
+                            </feedback>
+                        </condition>
+                    </var>
+                </setup>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Q2: What is the value of <c>eta</c> after executing the following code?
+                    </p>
+                    <program language="java"><input>
+if (beta &lt; alpha)
+    eta = 42;
+                        </input></program>
+                    <p><var/></p>
+                </statement>
+                <setup>
+                    <var>
+                        <condition string="42"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+                            <feedback>
+                                <p>Incorrect</p>
+                            </feedback>
+                        </condition>
+                    </var>
+                </setup>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Q3: After executing the following code, the value in variable <c>eta</c> is <var/>
+ and the value in variable <c>beta</c> is <var/>.</p>    
+<program language="java"><input>
+if (kappa &lt; delta)
+    eta = 42;
+    beta = 22;
+    </input></program>
+        </statement>
+        <setup>
+            <var>
+                <condition string="0">
+                    <feedback>
+                        <p>Correct</p>
+                    </feedback>
+                </condition>
+                <condition string=".*">
+                    <feedback>
+                        <p>Incorrect.</p>
+                    </feedback>
+                </condition>
+            </var>
+            <var>
+                <condition string="22">
+                    <feedback>
+                        <p>Correct</p>
+                    </feedback>
+                </condition>
+                <condition string=".*">
+                    <feedback>
+                        <p>Incorrect.</p>
+                    </feedback>
+                </condition>
+            </var>
+        </setup>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>Q4: After executing the following code, the value in variable <c>eta</c> is <var/>
+ and the value in variable <c>beta</c> is <var/>.</p>
+ <program language="java"><input>
+if (gamma &lt; kappa)
+{
+    beta = 22;
+}
+eta = 42;
+    </input></program>
+</statement>
+<setup>
+    <var>
+        <condition string="42">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string=".*">
+            <feedback>
+                <p>Incorrect.</p>
+            </feedback>
+        </condition>
+    </var>
+    <var>
+        <condition string="22">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string=".*">
+            <feedback>
+                <p>Incorrect.</p>
+            </feedback>
+        </condition>
+    </var>
+</setup>
+</exercise>
+<exercise xml:id="ca-Select-WE1-P1-5">
+<statement>
+    <p>Click on the statements belonging to the if-branch in the following code</p>
+</statement>
+<areas>
+<cline><area correct="no">if (kappa &lt; delta)</area></cline>
+<cline>    <area correct="yes">eta = 42;</area></cline>
+<cline><area correct="no">beta = 22;</area></cline>
+</areas>
+</exercise>
+</exercises>
+</subsection>
+
+<program xml:id="ac-select-we1-p1" interactive="activecode" language="java">
+<input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+</input>
+</program>
+</section>
+

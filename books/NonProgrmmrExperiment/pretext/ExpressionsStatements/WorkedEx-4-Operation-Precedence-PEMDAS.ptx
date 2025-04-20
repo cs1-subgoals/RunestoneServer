@@ -1,0 +1,88 @@
+<section xml:id="expressions-statements_worked-example-operation-precedence" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Operation Precedence</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p>You can watch this video or read through the content below it.</p>
+            <video xml:id="video-express-we4-precedence2" youtube="PbXqeRbOBXA" width="auto"/>
+                <p>Given the following code snippet, evaluate the final statement (the last line). If invalid, give the reason. If valid, what value is assigned to the variable? Note any possible side effects.</p>
+            <program language="java"><input>
+                int alpha = 2;
+                int beta = 1;
+                int delta = 3;
+                int eta, gamma;
+                double omega = 2.5;
+                double theta = -1.3;
+                double kappa = 3.0;
+                double lambda, rho;
+                
+                gamma = delta / (alpha + beta) % alpha;                
+    </input></program>
+        </subsection>
+        <subsection>
+            <title>SG1 : Determine resultant data type of expression</title>
+            <p>The <em>expression</em> is the right-hand-side (RHS) of the statement: <c>delta / (alpha + beta) % alpha</c>. At the beginning of the snippet, all of these variables were declared as <c>int</c> type, so all of the operations will also result in <c>int</c> values.</p>
+            <p>If the expression had included any <c>double</c> values, the operations dealing with any <c>double</c> values would <em>promote</em> any <c>int</c> value on the other side of the operator to a <c>double</c> value, and the result would be a <c>double</c>, but that is not the case here.</p>
+        </subsection>
+        <subsection>
+            <title>SG2: Update variable for pre-increment or pre-decrement operators (side effect)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>SG3: Evaluate arithmetic expression according to operator precedence</title>
+            <p><ul>
+                <li>
+                    <p>The RHS may be easiest to conceptualize algebraically, by replacing the variables right away with their initialized values from the declarations above: <c>3 / (2 + 1) % 2</c>.</p>
+                </li>
+                <li>
+                    <p>In the order of operations, parentheses have highest <em>precedence</em>, so we evaluate the addition within the parentheses first, resulting in a new expression: 3 / 3 % 2.</p>
+                </li>
+                <li>
+                    <p>Division and modulus have the same precedence, so we evaluate them left to right: 3 / 3 is 1,  then 1 % 2 is 1. (Remember, the mod % operation returns the <em>remainder</em> after integer division.)</p>
+                </li>
+            </ul></p>
+        </subsection>
+        <subsection>
+            <title>SG4: Is the Left Hand Side (LHS) of the assignment statement a variable? Check the data type of the value on right hand side (RHS) against data type of LHS variable.</title>
+            <p>The LHS is a variable of type <c>int</c>, and the RHS is type <c>int</c>. This is valid.</p>
+        </subsection>
+        <subsection>
+            <title>SG5: Update variable for post-increment or post-decrement operators (side effect)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>Questions to check understanding</title>
+            <program language="java"><input>
+                int alpha = 2;
+                int beta = 1;
+                int delta = 3;
+                int eta, gamma;
+                double omega = 2.5;
+                double theta = -1.3;
+                double kappa = 3.0;
+                double lambda, rho;
+
+                gamma = delta / (alpha + beta) % alpha;
+
+            </input></program>
+            <p>Q1) In line 5 above, is the LHS of the statement a variable? What data type?</p>
+            <p>Q2) What is the resulting data type after evaluating the RHS of line 5?</p>
+            <p>Q3) Can the data type of the RHS result be assigned to the LHS variable in line 5?</p>
+            <answer>
+                <p>Q1-Answer) Yes, gamma is declared as an int</p>
+                <p>Q2-Answer) On the RHS, all of the values are int, so the result is also int</p>
+                <p>Q3-Answer) Yes, an int can be assigned to an int</p>
+            </answer>
+        </subsection>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we4-p1" />
+                </li>
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we4-p2" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

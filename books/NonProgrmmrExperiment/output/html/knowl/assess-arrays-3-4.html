@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4<span class="period">.</span></span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="assess-arrays-3-4" data-multipleanswers="false">
+<div class="para" id="p-5066">Q4: Consider the following two methods that occur in the same class. What is printed as a result to the call <code class="code-inline tex2jax_ignore">start()</code>?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public void changeIt (int [] list, int num) {
+   list = new int[5];
+   num = 0;
+   for (int x = 0; x &lt; list.length; x++)
+      list[x] = 0;
+}
+
+public void start() {
+   int [] nums = {1, 2, 3, 4, 5};
+   int value = 6;
+   changeIt(nums, value);
+   for (int k = 0; k &lt; nums.length; k++)
+      System.out.print(nums[k] + " ");
+   System.out.print(value);
+}
+</code></pre></div>
+<li data-component="answer" id="assess-arrays-3-4_opt_a"><div class="para" id="p-5067">0  0  0  0  0  0</div></li>
+<li data-component="feedback" id="assess-arrays-3-4_opt_a"><div class="para" id="p-5068"></div></li>
+<li data-component="answer" id="assess-arrays-3-4_opt_b"><div class="para" id="p-5069">0  0  0  0  0  6</div></li>
+<li data-component="feedback" id="assess-arrays-3-4_opt_b"><div class="para" id="p-5070"></div></li>
+<li data-component="answer" id="assess-arrays-3-4_opt_c" data-correct=""><div class="para" id="p-5071">1  2  3  4  5  6</div></li>
+<li data-component="feedback" id="assess-arrays-3-4_opt_c"><div class="para" id="p-5072"></div></li>
+<li data-component="answer" id="assess-arrays-3-4_opt_d"><div class="para" id="p-5073">1  2  3  4  5  0</div></li>
+<li data-component="feedback" id="assess-arrays-3-4_opt_d"><div class="para" id="p-5074"></div></li>
+<li data-component="answer" id="assess-arrays-3-4_opt_e"><div class="para" id="p-5075">No output, an exception is thrown</div></li>
+<li data-component="feedback" id="assess-arrays-3-4_opt_e"><div class="para" id="p-5076"></div></li>
+</ul></div></div></article><span class="incontext"><a href="arrays_assessment-arrays-3.html#assess-arrays-3-4" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<section xml:id="selection_selection-we2-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Selection-WE2-P1</title>
+        <xi:include href='./subgoals-selection.ptx' />
+        <subsection>
+<exercises>
+
+    <exercise xml:id="m-Select-WE2-P1-6">
+        <statement>
+
+            <p>Q6: What is the output of the following code?</p>
+            <program language="java"><input>
+if (false)
+   System.out.println("it is true");
+else
+   System.out.println("it is false");
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>it is true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>it is false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>There is no output because a compiler error occurs</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>There is no output because an exception occurs</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Select-WE2-P1-7">
+        <statement>
+
+            <p>Q7: What is the output of the following code?</p>
+            <program language="java"><input>
+if (12 &lt; 12)
+   System.out.println("Never");
+else
+   System.out.println("Always");
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Never</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Always</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>There is no output because a compiler error occurs</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>There is no output because an exception occurs</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Select-WE2-P1-8">
+        <statement>
+
+            <p>Q8: What is the output of the following code?</p>
+            <program language="java"><input>
+double var1 = 15.0;
+double var2 = 25.12;
+if ((2 * var1) &gt;= var2)
+   System.out.println("O.K.");
+else
+   System.out.println("Not O.K.");
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>O.K.</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Not O.K.</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>There is no output because a compiler error occurs</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>There is no output because an exception occurs</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Select-WE2-P1-9">
+        <statement>
+
+            <p>Q9: What is the output of the following code?</p>
+            <program language="java"><input>
+int x = 0;
+if (x = 0)  /* look closely! */
+   System.out.println("0 is true");
+else
+   System.out.println("0 is false");
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>0 is true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>0 is false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>There is no output because a compiler error occurs</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>There is no output because an exception occurs</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+</exercises>
+        </subsection>
+
+    <program xml:id="ac-select-we2-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

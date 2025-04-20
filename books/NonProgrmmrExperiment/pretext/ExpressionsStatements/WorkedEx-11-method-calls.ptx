@@ -1,0 +1,63 @@
+<section xml:id="expressions-statements_worked-example-method-calls" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Method Calls</title>
+    <xi:include href='./subgoals-expressions.ptx' />    
+    <subsection>
+    <video xml:id="video-express-we10-methodcalls" youtube="U_iOdgEXAzI" width="auto"/>
+    <p>Given the following code snippet, evaluate the final statement (the last line). If invalid, give the reason. If valid, what value is assigned to the variable? Note any possible side effects.</p>
+    <program language="java">
+        <input>
+            int alpha = 2;
+            int beta = 1;
+            int delta = 3;
+            double rho;
+            
+            rho = beta + Math.pow(delta, alpha);            
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>SG1 : Determine resultant data type of expression</title>
+        <p>The <em>expression</em> is the right-hand-side (RHS) of the statement: <c>beta + Math.pow(delta, alpha)</c>. Despite beta, delta, and alpha all being defined as <c>int</c> variables, we must check the API documentation for Math.pow to see what it returns.</p>
+        <figure align="">
+            <image source="ExpressionsStatements/Figures/math-pow-api-doc.png" alt="Math.pow documentation online from Oracle"/>
+        </figure>
+        <p>In this official documentation, directly from Oracle, the left-hand column includes the return type, specified here as <c>double</c>.
+        </p>
+        <p>Since beta is an <c>int</c>, it will be promoted when it is added to the <c>double</c> value returned by Math.pow, and the final result is a <c>double</c> value.</p>
+    </subsection>
+    <subsection>
+        <title>SG2: Update variables for any pre-increment or pre-decrement operators (side effects)</title>
+        <p>NOT USED IN THIS EXAMPLE</p>
+    </subsection>
+    <subsection>
+        <title>SG3: Evaluate arithmetic expression according to operator precedence</title>
+        <p>To determine the result of the addition operator, we must first figure out the value returned from the method call to Math.pow().</p>
+        <p>So, we start with <c>Math.pow(3, 2)</c>, and we must again check the documentation to be sure we know which argument is which. The API doc says, &#8220;Returns the value of the first argument raised to the power of the second argument.&#8221; Thus, we use base 3 to the power of 2, which is 9. Since the API doc indicates a return type <c>double</c>, we should think of this value as 9.0.</p>
+        <p>Then we can add beta, so 1 + 9.0 gives us the final return value 10.0</p>
+    </subsection>
+    <subsection>
+        <title>SG4: If an assignment statement (=), is Left Hand Side (LHS) a variable? Check data type of value against data type of variable.</title>
+        <p>The LHS is a variable of type <c>double</c>, and the RHS is type <c>double</c>. This is valid.</p>
+        <p>If we had tried to assign the value of the RHS to an int variable, believing that all of the <c>int</c> operands would give us an <c>int</c> result, we would have had a compilation error for incompatible types. Ensuring compatible types is a common reason to check the API documentation for return types.</p>
+    </subsection>
+    <subsection>
+        <title>SG5: Update variable for post-increment or post-decrement operators (side effect)</title>
+        <p>NOT USED IN THIS EXAMPLE</p>
+        <answer>
+            <p><c>rho is 10.0;</c></p>
+        </answer>
+    </subsection>
+
+    <conclusion>
+        <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we11-p1" />
+                </li>
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we11-p2" />
+                </li>
+            </ul></p>
+    </conclusion>
+</section>
+

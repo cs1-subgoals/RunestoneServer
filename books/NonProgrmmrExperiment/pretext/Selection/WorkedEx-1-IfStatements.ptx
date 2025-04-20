@@ -1,0 +1,52 @@
+<section xml:id="selection_worked-example-if-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: If Statements</title>
+        <xi:include href='./subgoals-selection.ptx' />
+        <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-selection-we1-ifstatements" youtube="-EOskig9Llg" width="auto"/>
+            <p>Given the following declarations:</p>
+        <program language="java"><input>
+double omega = 2.5;
+double kappa = 3.0;
+double rho = 0.0;
+</input></program>
+        <p>Evaluate these statements and determine the value of all variables used.</p>
+        <program language="java"><input>
+if (kappa &gt; omega)
+   rho = kappa + 2;
+</input></program>
+</subsection>
+        <subsection>
+            <title>SG1: Diagram which statements go together.</title>
+            <p>If no { } are present, then by default all if and else branches have only a single statement:</p>
+            <program language="java"><input>
+if (kappa &gt; omega)
+   rho = kappa + 2;
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG2: For if statement, determine whether true or false</title>
+            <p>First we evaluate (kappa &gt; omega):</p>
+            <p><c>(3.0 &gt; 2.5)</c> is TRUE</p>
+        </subsection>
+        <subsection>
+            <title>SG3: If true, follow true branch. If false, follow else branch (OR do nothing if there is no else branch).</title>
+            <p>The condition is TRUE so we execute the true branch:</p>
+            <p>rho = kappa + 2</p>
+            <p>= 3.0 + 2</p>
+            <p>= 5.0</p>
+        </subsection>
+        <answer>
+            <p><c>omega</c> = 2.5, <c>kappa</c> = 3.0, <c>rho</c> = 5.0;</p>
+        </answer>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="selection_selection-we1-p1" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

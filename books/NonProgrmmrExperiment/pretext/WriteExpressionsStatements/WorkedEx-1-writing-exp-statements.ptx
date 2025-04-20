@@ -1,0 +1,53 @@
+<section xml:id="write-expressions-statements_worked-example-writing-expressions-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Writing Expression Statements</title>
+    <xi:include href='./subgoals-write-exp-statements.ptx' />
+<subsection>
+    <p>Given the following problem, write a Java code snippet that will store the result of the expression in the variable <c>isAffordable</c>:</p>
+    <p><em>We want to determine if the cost of a particular restaurant is considered affordable. We have calculated the approximate total for what we want to order, 
+        which comes to the amount $126.50. However, we need to remember to add on an additional 20% for the tip. If the total cost of the bill is no greater than 
+        $150, then the restaurant is considered affordable.</em>></p>
+</subsection>
+    <subsection>
+        <title>SG1: Determine expression that will yield variable</title>
+        <p>The <em>expression</em> is the right-hand-side (RHS) of an assignment statement, and for this problem we want the expression to determine whether or not the restaurant cost is affordable. To determine this we will need to mathematically calculate the total cost of the bill with the tip and then determine if it is no greater than the limit provided ($150).</p>
+    </subsection>
+    <subsection>
+        <title>SG2: Determine data type and name of variable and data type of expression</title>
+        <p>We are given the name of the variable, <c>isAffordable</c>. In this example, the result of the problem is to determine whether or not a particular restaurant is affordable or not – which is a yes or no (or true or false) answer.  Therefore, the data type of <c>isAffordable</c> must be boolean.</p>
+        <p><c>boolean isAffordable = /* expression goes here */;</c></p>
+    </subsection>
+    <subsection>
+        <title>SG3: Determine arithmetic equation with operators</title>
+        <p>To calculate the total cost of the restaurant bill, we need to add the estimated cost to the tip amount. To calculate the tip amount, we need to multiply the estimated cost by 20%. There are a couple of different ways to calculate this:</p>
+        <p><c>126.50 + 126.50 * 0.2   // adds the cost to 20% of the cost, which is the tip</c></p>
+        <p>Or...</p>
+        <p><c>126.50 * 1.2  // calculates the cost plus 20%</c></p>
+        <p>Note that there is usually more than one way to calculate something. You should choose the way which you understand. Generally doing fewer operations is more efficient, but understanding is more important than efficiency when learning.</p>
+        <p>Also notice that there are no <c>$</c> or <c>%</c> symbols in the expressions. These are mathematical symbols that help the human reader understand the numbers, but Java does not need them. (In fact, it will cause errors if you include them in Java expressions. <c>%</c> has its own meaning in Java - as a modulus operator!)</p>
+        <p>So now we have the part of the RHS of the assignment expression that calculates the total bill:</p>
+        <p><c>boolean isAffordable = 126.50 * 1.2  /* rest of expression */;</c></p>
+    </subsection>
+    <subsection>
+        <title>SG4: Determine expression components</title>
+        <p>We are now to the second part of the problem - determining if the total cost of the restaurant bill is affordable. The problem states that if the total cost of the bill is no greater than $150, then the restaurant is considered affordable.</p>
+        <p>We need to do a relational comparison of the total bill to the value $150:</p>
+        <p><c>boolean isAffordable = (126.50 * 1.2) &lt; 150;</c></p>
+        <p>Again note that there is no <c>$</c> in the expression. We have added ( ) around the calculation for the restaurant bill cost to make it clear that it is a calculation whose result is to be compared. While the ( ) are not needed for precedence (Java would automatically do the * before the &lt;) it helps to remind us that we were calculating something to be compared. If we had chosen the other mathematical expression for calculation, the ( ) are more helpful in clarifying the value to be calculated and compared:</p>
+        <p><c>boolean isAffordable = (126.50 + 126.50 * 0.2) &lt; 150;</c></p>
+    </subsection>
+    <subsection>
+        <title>SG5: Operators and operands must be compatible</title>
+        <p>Our final check is to make sure that the operators and operands are compatible. In our original solution we have two operators, <c>*</c> and <c>&lt;</c>.  For the multiplication, both operands are doubles so the result would be a double.  For the &lt; operator, the left operand (cost calculation) is a double and the right operand is an integer (150 is a whole number). We can compare a double to an integer using a relational operator and the result will be a boolean value. The result of the &lt; comparison is a boolean, which can be assigned to a boolean variable (<c>isAffordable</c>). So all operations are legal.</p>
+        <answer>
+            <p><c>boolean isAffordable = (126.50 * 1.2) &lt; 150;</c></p>
+        </answer>
+    </subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="write-expressions-statements_write-exp-statements-we1-p1" />
+                </li>
+            </ul></p>
+    </conclusion>
+</section>

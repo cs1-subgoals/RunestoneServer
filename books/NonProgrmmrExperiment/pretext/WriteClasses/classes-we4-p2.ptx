@@ -1,0 +1,604 @@
+<section xml:id="write-classes_wrclasses-we4-p2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>WrClasses-WE4-P2</title>
+        <xi:include href='./subgoals-write-classes.ptx' />
+        <subsection>
+<exercises>
+            <exercise xml:id="ca-Classes-WE4-P2-51">
+                <statement>
+                    <p>Q51: Identify all constructors.</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">/* Coins Class */</area></cline>
+                    <cline><area correct="no">public class Coins</area> {</cline>
+                    <cline>    <area correct="no">private int quarters;</area></cline>
+                    <cline>    <area correct="no">private int dimes;</area></cline>
+                    <cline>    <area correct="no">private int nickels;</area></cline>
+                    <cline>    <area correct="no">private int pennies;</area></cline>
+                    <cline/>
+                    <cline>    public <area correct="yes">Coins</area>(<area correct="no">int newQuarters, int newDimes, int newNickels, int newPennies</area>) {</cline>
+                    <cline>        setQuarters( newQuarters );</cline>
+                    <cline>        setDimes( newDimes );</cline>
+                    <cline>        setNickels( newNickels );</cline>
+                    <cline>        setPennies( newPennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public <area correct="yes">Coins</area>( ) {</cline>
+                    <cline>        setQuarters( 0 );</cline>
+                    <cline>        setDimes( 0 );</cline>
+                    <cline>        setNickels( 0 );</cline>
+                    <cline>        setPennies( 0 );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getQuarters</area>( ) {</cline>
+                    <cline>        <area correct="no">return quarters;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setQuarters</area>(<area correct="no">int newQuarters</area>) {</cline>
+                    <cline>        if ( newQuarters &gt;= 0 )</cline>
+                    <cline>            quarters = newQuarters;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of quarters cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>      }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getDimes</area>( )  {</cline>
+                    <cline>        <area correct="no">return dimes;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setDimes</area>(<area correct="no">int newDimes</area>) {</cline>
+                    <cline>        if ( newDimes &gt;= 0 )</cline>
+                    <cline>            dimes = newDimes;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of dimes cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getNickels</area>( ) {</cline>
+                    <cline>        <area correct="no">return nickels;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setNickels</area>(<area correct="no">int newNickels</area>) {</cline>
+                    <cline>        if ( newNickels &gt;= 0 )</cline>
+                    <cline>            nickels = newNickels;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of nickels cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getPennies</area>( ) {</cline>
+                    <cline>        <area correct="no">return pennies;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setPennies</area>(<area correct="no">int newPennies</area>) {</cline>
+                    <cline>        if ( newPennies &gt;= 0 )</cline>
+                    <cline>            pennies = newPennies;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of pennies cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public String toString( ) {</cline>
+                    <cline>        return( "quarters: " + quarters + "; dimes: " + dimes</cline>
+                    <cline>        + "; nickels: " + nickels + "; pennies:" + pennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public boolean equals( Coins c )  {</cline>
+                    <cline>        return ( quarters == c.quarters&amp;&amp; dimes == c.dimes</cline>
+                    <cline>        &amp;&amp; nickels == c.nickels&amp;&amp; pennies == c.pennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromQuarters( )  {</cline>
+                    <cline>        <area correct="no">return ( quarters * .25 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromDimes( )  {</cline>
+                    <cline>        <area correct="no">return ( dimes * .1 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromNickels( )  {</cline>
+                    <cline>        <area correct="no">return ( nickels * .05 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromPennies( ) {</cline>
+                    <cline>        <area correct="no">return ( pennies * .01 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public double <area correct="no">total</area>( ) {</cline>
+                    <cline>        return moneyFromQuarters +</cline>
+                    <cline>        moneyFromDimes +</cline>
+                    <cline>        moneyFromNickels +</cline>
+                    <cline>        moneyFromPennies;</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public double <area correct="no">convert</area>(<area correct="no">double rate</area>) {</cline>
+                    <cline>        <area correct="no">return total * rate;</area></cline>
+                    <cline>    }</cline>
+                    <cline>}</cline>
+                </areas>
+            </exercise>
+            <exercise xml:id="ca-Classes-WE4-P2-52">
+                <statement>
+                    <p>Q52: Identify all accessor/getter methods.</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">/* Coins Class */</area></cline>
+                    <cline><area correct="no">public class Coins</area> {</cline>
+                    <cline>    <area correct="no">private int quarters;</area></cline>
+                    <cline>    <area correct="no">private int dimes;</area></cline>
+                    <cline>    <area correct="no">private int nickels;</area></cline>
+                    <cline>    <area correct="no">private int pennies;</area></cline>
+                    <cline/>
+                    <cline>    public <area correct="no">Coins</area>(<area correct="no">int newQuarters, int newDimes, int newNickels, int newPennies</area>) {</cline>
+                    <cline>        setQuarters( newQuarters );</cline>
+                    <cline>        setDimes( newDimes );</cline>
+                    <cline>        setNickels( newNickels );</cline>
+                    <cline>        setPennies( newPennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public <area correct="no">Coins</area>( ) {</cline>
+                    <cline>        setQuarters( 0 );</cline>
+                    <cline>        setDimes( 0 );</cline>
+                    <cline>        setNickels( 0 );</cline>
+                    <cline>        setPennies( 0 );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="yes">getQuarters</area>( ) {</cline>
+                    <cline>        <area correct="no">return quarters;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setQuarters</area>(<area correct="no">int newQuarters</area>) {</cline>
+                    <cline>        if ( newQuarters &gt;= 0 )</cline>
+                    <cline>            quarters = newQuarters;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of quarters cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>      }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="yes">getDimes</area>( )  {</cline>
+                    <cline>        <area correct="no">return dimes;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setDimes</area>(<area correct="no">int newDimes</area>) {</cline>
+                    <cline>        if ( newDimes &gt;= 0 )</cline>
+                    <cline>            dimes = newDimes;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of dimes cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="yes">getNickels</area>( ) {</cline>
+                    <cline>        <area correct="no">return nickels;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setNickels</area>(<area correct="no">int newNickels</area>) {</cline>
+                    <cline>        if ( newNickels &gt;= 0 )</cline>
+                    <cline>            nickels = newNickels;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of nickels cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="yes">getPennies</area>( ) {</cline>
+                    <cline>        <area correct="no">return pennies;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setPennies</area>(<area correct="no">int newPennies</area>) {</cline>
+                    <cline>        if ( newPennies &gt;= 0 )</cline>
+                    <cline>            pennies = newPennies;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of pennies cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public String toString( ) {</cline>
+                    <cline>        return( "quarters: " + quarters + "; dimes: " + dimes</cline>
+                    <cline>        + "; nickels: " + nickels + "; pennies:" + pennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public boolean equals( Coins c )  {</cline>
+                    <cline>        return ( quarters == c.quarters&amp;&amp; dimes == c.dimes</cline>
+                    <cline>        &amp;&amp; nickels == c.nickels&amp;&amp; pennies == c.pennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromQuarters( )  {</cline>
+                    <cline>        <area correct="no">return ( quarters * .25 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromDimes( )  {</cline>
+                    <cline>        <area correct="no">return ( dimes * .1 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromNickels( )  {</cline>
+                    <cline>        <area correct="no">return ( nickels * .05 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromPennies( ) {</cline>
+                    <cline>        <area correct="no">return ( pennies * .01 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public double <area correct="no">total</area>( ) {</cline>
+                    <cline>        return moneyFromQuarters +</cline>
+                    <cline>        moneyFromDimes +</cline>
+                    <cline>        moneyFromNickels +</cline>
+                    <cline>        moneyFromPennies;</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public double <area correct="no">convert</area>(<area correct="no">double rate</area>) {</cline>
+                    <cline>        <area correct="no">return total * rate;</area></cline>
+                    <cline>    }</cline>
+                    <cline>}</cline>
+                </areas>
+            </exercise>
+            <exercise xml:id="ca-Classes-WE4-P2-53">
+                <statement>
+                    <p>Q53: Identify all mutator/setter methods.</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">/* Coins Class */</area></cline>
+                    <cline><area correct="no">public class Coins</area> {</cline>
+                    <cline>    <area correct="no">private int quarters;</area></cline>
+                    <cline>    <area correct="no">private int dimes;</area></cline>
+                    <cline>    <area correct="no">private int nickels;</area></cline>
+                    <cline>    <area correct="no">private int pennies;</area></cline>
+                    <cline/>
+                    <cline>    public <area correct="no">Coins</area>(<area correct="no">int newQuarters, int newDimes, int newNickels, int newPennies</area>) {</cline>
+                    <cline>        setQuarters( newQuarters );</cline>
+                    <cline>        setDimes( newDimes );</cline>
+                    <cline>        setNickels( newNickels );</cline>
+                    <cline>        setPennies( newPennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public <area correct="no">Coins</area>( ) {</cline>
+                    <cline>        setQuarters( 0 );</cline>
+                    <cline>        setDimes( 0 );</cline>
+                    <cline>        setNickels( 0 );</cline>
+                    <cline>        setPennies( 0 );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getQuarters</area>( ) {</cline>
+                    <cline>        <area correct="no">return quarters;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="yes">setQuarters</area>(<area correct="no">int newQuarters</area>) {</cline>
+                    <cline>        if ( newQuarters &gt;= 0 )</cline>
+                    <cline>            quarters = newQuarters;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of quarters cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>      }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getDimes</area>( )  {</cline>
+                    <cline>        <area correct="no">return dimes;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="yes">setDimes</area>(<area correct="no">int newDimes</area>) {</cline>
+                    <cline>        if ( newDimes &gt;= 0 )</cline>
+                    <cline>            dimes = newDimes;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of dimes cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getNickels</area>( ) {</cline>
+                    <cline>        <area correct="no">return nickels;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="yes">setNickels</area>(<area correct="no">int newNickels</area>) {</cline>
+                    <cline>        if ( newNickels &gt;= 0 )</cline>
+                    <cline>            nickels = newNickels;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of nickels cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getPennies</area>( ) {</cline>
+                    <cline>        <area correct="no">return pennies;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="yes">setPennies</area>(<area correct="no">int newPennies</area>) {</cline>
+                    <cline>        if ( newPennies &gt;= 0 )</cline>
+                    <cline>            pennies = newPennies;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of pennies cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public String toString( ) {</cline>
+                    <cline>        return( "quarters: " + quarters + "; dimes: " + dimes</cline>
+                    <cline>        + "; nickels: " + nickels + "; pennies:" + pennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public boolean equals( Coins c )  {</cline>
+                    <cline>        return ( quarters == c.quarters&amp;&amp; dimes == c.dimes</cline>
+                    <cline>        &amp;&amp; nickels == c.nickels&amp;&amp; pennies == c.pennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromQuarters( )  {</cline>
+                    <cline>        <area correct="no">return ( quarters * .25 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromDimes( )  {</cline>
+                    <cline>        <area correct="no">return ( dimes * .1 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromNickels( )  {</cline>
+                    <cline>        <area correct="no">return ( nickels * .05 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromPennies( ) {</cline>
+                    <cline>        <area correct="no">return ( pennies * .01 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public double <area correct="no">total</area>( ) {</cline>
+                    <cline>        return moneyFromQuarters +</cline>
+                    <cline>        moneyFromDimes +</cline>
+                    <cline>        moneyFromNickels +</cline>
+                    <cline>        moneyFromPennies;</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public double <area correct="no">convert</area>(<area correct="no">double rate</area>) {</cline>
+                    <cline>        <area correct="no">return total * rate;</area></cline>
+                    <cline>    }</cline>
+                    <cline>}</cline>
+                </areas>
+            </exercise>
+            <exercise xml:id="ca-Classes-WE4-P2-54">
+                <statement>
+                    <p>Q54: Identify the attributes.</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">/* Coins Class */</area></cline>
+                    <cline><area correct="no">public class Coins</area> {</cline>
+                    <cline>    <area correct="yes">private int quarters;</area></cline>
+                    <cline>    <area correct="yes">private int dimes;</area></cline>
+                    <cline>    <area correct="yes">private int nickels;</area></cline>
+                    <cline>    <area correct="yes">private int pennies;</area></cline>
+                    <cline/>
+                    <cline>    public <area correct="no">Coins</area>(<area correct="no">int newQuarters, int newDimes, int newNickels, int newPennies</area>) {</cline>
+                    <cline>        setQuarters( newQuarters );</cline>
+                    <cline>        setDimes( newDimes );</cline>
+                    <cline>        setNickels( newNickels );</cline>
+                    <cline>        setPennies( newPennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public <area correct="no">Coins</area>( ) {</cline>
+                    <cline>        setQuarters( 0 );</cline>
+                    <cline>        setDimes( 0 );</cline>
+                    <cline>        setNickels( 0 );</cline>
+                    <cline>        setPennies( 0 );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getQuarters</area>( ) {</cline>
+                    <cline>        <area correct="no">return quarters;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setQuarters</area>(<area correct="no">int newQuarters</area>) {</cline>
+                    <cline>        if ( newQuarters &gt;= 0 )</cline>
+                    <cline>            quarters = newQuarters;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of quarters cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>      }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getDimes</area>( )  {</cline>
+                    <cline>        <area correct="no">return dimes;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setDimes</area>(<area correct="no">int newDimes</area>) {</cline>
+                    <cline>        if ( newDimes &gt;= 0 )</cline>
+                    <cline>            dimes = newDimes;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of dimes cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getNickels</area>( ) {</cline>
+                    <cline>        <area correct="no">return nickels;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setNickels</area>(<area correct="no">int newNickels</area>) {</cline>
+                    <cline>        if ( newNickels &gt;= 0 )</cline>
+                    <cline>            nickels = newNickels;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of nickels cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getPennies</area>( ) {</cline>
+                    <cline>        <area correct="no">return pennies;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setPennies</area>(<area correct="no">int newPennies</area>) {</cline>
+                    <cline>        if ( newPennies &gt;= 0 )</cline>
+                    <cline>            pennies = newPennies;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of pennies cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public String toString( ) {</cline>
+                    <cline>        return( "quarters: " + quarters + "; dimes: " + dimes</cline>
+                    <cline>        + "; nickels: " + nickels + "; pennies:" + pennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public boolean equals( Coins c )  {</cline>
+                    <cline>        return ( quarters == c.quarters&amp;&amp; dimes == c.dimes</cline>
+                    <cline>        &amp;&amp; nickels == c.nickels&amp;&amp; pennies == c.pennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromQuarters( )  {</cline>
+                    <cline>        <area correct="no">return ( quarters * .25 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromDimes( )  {</cline>
+                    <cline>        <area correct="no">return ( dimes * .1 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromNickels( )  {</cline>
+                    <cline>        <area correct="no">return ( nickels * .05 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromPennies( ) {</cline>
+                    <cline>        <area correct="no">return ( pennies * .01 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public double <area correct="no">total</area>( ) {</cline>
+                    <cline>        return moneyFromQuarters +</cline>
+                    <cline>        moneyFromDimes +</cline>
+                    <cline>        moneyFromNickels +</cline>
+                    <cline>        moneyFromPennies;</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public double <area correct="no">convert</area>(<area correct="no">double rate</area>) {</cline>
+                    <cline>        <area correct="no">return total * rate;</area></cline>
+                    <cline>    }</cline>
+                    <cline>}</cline>
+                </areas>
+            </exercise>
+            <exercise xml:id="ca-Classes-WE4-P2-55">
+                <statement>
+                    <p>Q55: Identify the helper or auxiliary methods.</p>
+                </statement>
+                <areas>
+                    <cline><area correct="no">/* Coins Class */</area></cline>
+                    <cline><area correct="no">public class Coins</area> {</cline>
+                    <cline>    <area correct="no">private int quarters;</area></cline>
+                    <cline>    <area correct="no">private int dimes;</area></cline>
+                    <cline>    <area correct="no">private int nickels;</area></cline>
+                    <cline>    <area correct="no">private int pennies;</area></cline>
+                    <cline/>
+                    <cline>    public <area correct="no">Coins</area>(<area correct="no">int newQuarters, int newDimes, int newNickels, int newPennies</area>) {</cline>
+                    <cline>        setQuarters( newQuarters );</cline>
+                    <cline>        setDimes( newDimes );</cline>
+                    <cline>        setNickels( newNickels );</cline>
+                    <cline>        setPennies( newPennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public <area correct="no">Coins</area>( ) {</cline>
+                    <cline>        setQuarters( 0 );</cline>
+                    <cline>        setDimes( 0 );</cline>
+                    <cline>        setNickels( 0 );</cline>
+                    <cline>        setPennies( 0 );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getQuarters</area>( ) {</cline>
+                    <cline>        <area correct="no">return quarters;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setQuarters</area>(<area correct="no">int newQuarters</area>) {</cline>
+                    <cline>        if ( newQuarters &gt;= 0 )</cline>
+                    <cline>            quarters = newQuarters;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of quarters cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>      }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getDimes</area>( )  {</cline>
+                    <cline>        <area correct="no">return dimes;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setDimes</area>(<area correct="no">int newDimes</area>) {</cline>
+                    <cline>        if ( newDimes &gt;= 0 )</cline>
+                    <cline>            dimes = newDimes;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of dimes cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getNickels</area>( ) {</cline>
+                    <cline>        <area correct="no">return nickels;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setNickels</area>(<area correct="no">int newNickels</area>) {</cline>
+                    <cline>        if ( newNickels &gt;= 0 )</cline>
+                    <cline>            nickels = newNickels;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of nickels cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public int <area correct="no">getPennies</area>( ) {</cline>
+                    <cline>        <area correct="no">return pennies;</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public void <area correct="no">setPennies</area>(<area correct="no">int newPennies</area>) {</cline>
+                    <cline>        if ( newPennies &gt;= 0 )</cline>
+                    <cline>            pennies = newPennies;</cline>
+                    <cline>        else {</cline>
+                    <cline>            System.out.println( "The number of pennies cannot be negative." );</cline>
+                    <cline>            System.out.println( "Value not changed." );</cline>
+                    <cline>        }</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public String toString( ) {</cline>
+                    <cline>        return( "quarters: " + quarters + "; dimes: " + dimes</cline>
+                    <cline>        + "; nickels: " + nickels + "; pennies:" + pennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public boolean equals( Coins c )  {</cline>
+                    <cline>        return ( quarters == c.quarters&amp;&amp; dimes == c.dimes</cline>
+                    <cline>        &amp;&amp; nickels == c.nickels&amp;&amp; pennies == c.pennies );</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromQuarters( )  {</cline>
+                    <cline>        <area correct="no">return ( quarters * .25 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromDimes( )  {</cline>
+                    <cline>        <area correct="no">return ( dimes * .1 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromNickels( )  {</cline>
+                    <cline>        <area correct="no">return ( nickels * .05 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    private double moneyFromPennies( ) {</cline>
+                    <cline>        <area correct="no">return ( pennies * .01 );</area></cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public double <area correct="yes">total</area>( ) {</cline>
+                    <cline>        return moneyFromQuarters +</cline>
+                    <cline>        moneyFromDimes +</cline>
+                    <cline>        moneyFromNickels +</cline>
+                    <cline>        moneyFromPennies;</cline>
+                    <cline>    }</cline>
+                    <cline/>
+                    <cline>    public double <area correct="yes">convert</area>(<area correct="no">double rate</area>) {</cline>
+                    <cline>        <area correct="no">return total * rate;</area></cline>
+                    <cline>    }</cline>
+                    <cline>}</cline>
+                </areas>
+            </exercise>
+</exercises>
+        </subsection>
+
+        <program xml:id="ac-classes-we4-p2" interactive="activecode" language="java">
+            <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+            </input>
+        </program>
+    </section>
+

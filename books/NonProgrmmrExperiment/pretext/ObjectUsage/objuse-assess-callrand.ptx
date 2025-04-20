@@ -1,0 +1,281 @@
+<section xml:id="object-usage_assessment-call-a-method-of-random" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Assessment: Call a Method of Random</title>
+        <xi:include href='./subgoals-call-method.ptx' />
+<exercises time-limit="10" pause="no">
+        <TimedNode line="31" runestone_options="{'nofeedback': None, 'subchapter': 'objuse-assess-callrand', 'chapter': 'ObjectUsage', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-objuse-callrand', 'qnumber': '', 'question_marker': '2.8.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/ObjectUsage/objuse-assess-callrand.rst">
+
+    <exercise xml:id="assess-objuse-callrand-1">
+        <statement>
+            <p>Q1: Which of the following will correctly declare and instantiate a new variable to generate Random values?</p>
+        </statement>
+        <choices>
+
+            <choice>
+                <statement>
+                    <p>Random rand = rand();</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Random rand = rand(50);</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Random rand = new Random();</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Random rand = new Random(50);</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+        </choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-objuse-callrand-2">
+        <statement>
+
+            <p>Q2: Fill in the blanks for the following code to create a Random number between 1 and 50.</p>
+            <program language="java"><input>
+// assume you have declared and initialized variable rand to
+// be an instance of the Random class
+
+_______ result = rand._______ ( __________ ) + ___________ ;
+   D                     A           B              C             
+            </input></program>
+            <p>Fill in blank A.</p>
+        </statement>
+        <choices>
+            <choice>
+                <statement>
+                    <p>rand</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>nextInt</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>nextDouble</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>new</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>next</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+        </choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-objuse-callrand-3">
+        <statement>
+
+            <p>Q3: Fill in the blanks for the following code to create a Random number between 1 and 50.</p>
+            <program language="java"><input>
+// assume you have declared and initialized variable rand to
+// be an instance of the Random class
+
+_______ result = rand._______ ( __________ ) + ___________ ;
+   D                     A           B              C             
+            </input></program>
+            <p>Fill in blank B.</p>
+
+        </statement>
+
+        <choices>
+            <choice>
+                <statement>
+                    <p>nothing goes here</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>1</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>50</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>49</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+        </choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-objuse-callrand-4">
+        <statement>
+
+            <p>Q4: Fill in the blanks for the following code to create a Random number between 1 and 50.</p>
+            <program language="java"><input>
+// assume you have declared and initialized variable rand to
+// be an instance of the Random class
+                
+_______ result = rand._______ ( __________ ) + ___________ ;
+   D                     A           B              C             
+            </input></program>
+            <p>Fill in blank C.</p>
+
+        </statement>
+
+        <choices>
+            <choice>
+                <statement>
+                    <p>0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>1</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>50</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>49</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+        </choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-objuse-callrand-5">
+        <statement>
+
+            <p>Q5: Fill in the blanks for the following code to create a Random number between 1 and 50.</p>
+            <program language="java"><input>
+// assume you have declared and initialized variable rand to
+// be an instance of the Random class
+                
+_______ result = rand._______ ( __________ ) + ___________ ;
+   D                     A           B              C             
+            </input></program>
+            <p>Fill in blank D.</p>
+
+        </statement>
+
+        <choices>
+            <choice correct="yes">
+                <statement>
+                    <p>int</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>double</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Random</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>String</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+    </exercise>
+
+</TimedNode>
+</exercises>
+    </section>
+

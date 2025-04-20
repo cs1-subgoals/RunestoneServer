@@ -1,0 +1,338 @@
+<section xml:id="loops_assessment-while-and-for-loops" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Assessment: While and For Loops</title>
+        <xi:include href='./subgoals-loops.ptx' />
+<exercises time-limit="10" pause="no">
+        <TimedNode line="26" runestone_options="{'nofeedback': None, 'subchapter': 'loops-assess1', 'chapter': 'Loops', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-loops-1', 'qnumber': '', 'question_marker': '5.6.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/Loops/loops-assess1.rst">
+
+    <exercise xml:id="assess-loops-1-1">
+        <statement>
+
+            <p>Q1: What is printed as a result of executing the following code segment?</p>
+            <program language="java"><input>
+int k = 0;
+while (k &lt; 10) {
+   System.out.print((k % 3) + " ");
+   if ((k % 3) == 0)
+      k = k + 2;
+   else
+      k++;
+}
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>0 2 1 0 2</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>0 2 0 2 0 2</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>0 2 1 0 2 1 0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>0 2 0 2 0 2 0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>0 1 2 1 2 1 2</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-loops-1-2">
+        <statement>
+
+            <p>Q2: What are the first and last numbers printed by the following code segment?</p>
+            <program language="java"><input>
+int number = 15;
+while (number &lt; 28) {
+   System.out.println(number);
+   number++;
+}
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>First: 15; Last: 27</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>First: 15; Last: 28</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>First: 16; Last: 27</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>First: 16; Last: 28</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>First: 16; Last: 29</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-loops-1-3">
+        <statement>
+
+            <p>Q3: What is printed as a result of executing the following code segment?</p>
+            <program language="java"><input>
+int alpha = 24;
+int beta = 30;
+while (beta != 0) {
+   int rho = alpha % beta;
+   alpha = beta;
+   beta = rho;
+}
+System.out.println(alpha);
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>6</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>12</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>24</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>30</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-loops-1-4">
+        <statement>
+
+            <p>Q4: Considering the following code, which best describes what the code does?</p>
+            <program language="java"><input>
+int var = 0;
+int num = 50;
+for (int x = 1; x &lt;= num; x += 2) {
+   var = var + x;
+}
+System.out.println(var);
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Prints the value in num</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Prints the sum of all the integers between 1 and num, inclusive</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Prints the sum of all even integers between 1 and num, inclusive</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Prints the sum of all odd integers between 1 and num, inclusive</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Nothing is printed, it is an infinite loop</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-loops-1-5">
+        <statement>
+
+            <p>Q5: What is printed as a result of executing the following code segment?</p>
+            <program language="java"><input>
+int typeA = 0;
+int typeB = 0;
+int typeC = 0;
+for (int k = 1; k &lt;= 50; k++) {
+   if (k % 2 == 0 &amp;&amp; k % 5 == 0)
+      typeA++;
+   if (k % 2 == 0)
+      typeB++;
+   if (k % 5 == 0)
+      typeC++;
+}
+System.out.println("%d %d %d", typeA, typeB, typeC);
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>5 20 5</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>5 20 10</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>5 25 5</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>5 25 10</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>30 25 10</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        </TimedNode>
+</exercises>
+    </section>
+

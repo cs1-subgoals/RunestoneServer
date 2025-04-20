@@ -1,0 +1,602 @@
+<section xml:id="write-methods_wrmethods-we2-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Write-Methods-WE2-P1</title>
+        <xi:include href='./subgoals-write-methods.ptx' />
+        <subsection>
+            <p><term>GIVEN</term></p>
+            <p>For questions 23 through 27, fill in the blanks of the following code, which is a public method header that would work for this call:</p>
+            <program language="java"><input>
+String fob;
+fob = obj.journey(4.1, 6.6, 8);
+</input></program>
+            <program language="java"><input>
+_______ _______ journey (_______ one, _______ two, _______ three)
+   A       B                C            D            E
+{
+   /* logic */
+}
+</input></program>
+<exercises>
+    <exercise xml:id="m-Methods-WE2-P1-23">
+        <statement>
+
+            <p>Q23: Fill in Blank A.</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>public</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>private</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>String</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>void</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>nothing, empty</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Methods-WE2-P1-24">
+        <statement>
+
+            <p>Q24: Fill in Blank B.</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>public</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>String</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>double</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>int</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>void</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Methods-WE2-P1-25">
+        <statement>
+
+            <p>Q25: Fill in Blank C.</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>public</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>String</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>double</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>int</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>void</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Methods-WE2-P1-26">
+        <statement>
+
+            <p>Q26: Fill in Blank D.</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>public</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>String</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>double</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>int</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>void</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Methods-WE2-P1-27">
+        <statement>
+
+            <p>Q27: Fill in Blank E.</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>public</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>String</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>double</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>int</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>void</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+    <p><term>GIVEN</term></p>
+    <p>For questions 33 through 37, fill in the blanks of the following code, which is a private method header that would work for this call:</p>
+    <program language="java"><input>
+robertsDay(5, 7, 22);
+</input></program>
+    <program language="java"><input>
+_______ _______ robertsDay (_______ one, _______ two, _______ three)
+   A       B                   C            D            E
+{
+/* logic */
+}
+</input></program>
+<exercise xml:id="m-Methods-WE2-P2-33">
+<statement>
+
+    <p>Q33: Fill in Blank A.</p>
+
+</statement>
+<choices>
+
+    <choice>
+        <statement>
+            <p>public</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice correct="yes">
+        <statement>
+            <p>private</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>String</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>void</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>nothing, empty</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+</choices>
+
+</exercise>
+
+<exercise xml:id="m-Methods-WE2-P2-34">
+<statement>
+
+    <p>Q34: Fill in Blank B.</p>
+
+</statement>
+<choices>
+
+    <choice>
+        <statement>
+            <p>public</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>String</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>double</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>int</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice correct="yes">
+        <statement>
+            <p>void</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+</choices>
+
+</exercise>
+
+<exercise xml:id="m-Methods-WE2-P2-35">
+<statement>
+
+    <p>Q35: Fill in Blank C.</p>
+
+</statement>
+<choices>
+
+    <choice>
+        <statement>
+            <p>public</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>String</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>double</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice correct="yes">
+        <statement>
+            <p>int</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>void</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+</choices>
+
+</exercise>
+
+<exercise xml:id="m-Methods-WE2-P2-36">
+<statement>
+
+    <p>Q36: Fill in Blank D.</p>
+
+</statement>
+<choices>
+
+    <choice>
+        <statement>
+            <p>public</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>String</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>double</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice correct="yes">
+        <statement>
+            <p>int</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>void</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+</choices>
+
+</exercise>
+
+<exercise xml:id="m-Methods-WE2-P2-37">
+<statement>
+
+    <p>Q37: Fill in Blank E.</p>
+
+</statement>
+<choices>
+
+    <choice>
+        <statement>
+            <p>public</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>String</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>double</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice correct="yes">
+        <statement>
+            <p>int</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+
+    <choice>
+        <statement>
+            <p>void</p>
+        </statement>
+        <feedback>
+            <p/>
+        </feedback>
+    </choice>
+</choices>
+
+</exercise>
+</exercises>
+        </subsection>
+
+    <program xml:id="ac-methods-we2-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

@@ -1,0 +1,153 @@
+<section xml:id="write-exp-statements-assessment-relational-expressions" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Assessment: Relational Expressions</title>
+    <subsection>
+        <title>Write Relational Expressions</title>
+        <p>For each of the following, fill in the blank with the appropriate operator.</p>
+    </subsection>
+    <transition/>
+<exercises time-limit="10" pause="no">
+    <TimedNode line="15" runestone_options="{'nofeedback': None, 'subchapter': 'select-assess-relational', 'chapter': 'WriteSelection', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-select-relation', 'qnumber': '', 'question_marker': '4.2.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/WriteSelection/select-assess-relational.rst">
+
+        <exercise>
+            <statement>
+                <p>Q1: z is odd 
+                </p>
+                <p>
+                    <c>z % 2 </c><var/><c> 1</c>
+                </p>
+            </statement>
+            <setup>
+                <var>
+                    <condition string="==$">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string=".*">
+                        <feedback>
+                            <p>Incorrect</p>
+                        </feedback>
+                    </condition>
+                </var>
+            </setup>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Q2: z is not greater than y&#8217;s square root 
+                </p>
+                <p>
+                    <c>z </c><var/><c> Math.sqrt(y)</c>
+                </p>
+            </statement>
+            <setup>
+                <var>
+                    
+                    <condition string="&lt;=">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string=".*">
+                        <feedback>
+                            <p>Incorrect</p>
+                        </feedback>
+                    </condition>
+                </var>
+            </setup>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Q3: y is a multiple of z 
+                </p>
+                <p>
+                    <c>y % z </c><var/><c> 0</c>
+                </p>
+            </statement>
+            <setup>
+                <var>
+                    <condition string="==">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string=".*">
+                        <feedback>
+                            <p>Incorrect</p>
+                        </feedback>
+                    </condition>
+                </var>
+            </setup>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Q4: z is not zero 
+                </p>
+                <p>
+                    <c>z </c><var/><c> 0</c>
+                </p>
+            </statement>
+            <setup>
+                <var>
+                    <condition string="!=">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string=".*">
+                        <feedback>
+                            <p>Incorrect</p>
+                        </feedback>
+                    </condition>
+                </var>
+            </setup>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Q5: z is nonnegative 
+                </p>
+                <p>
+                    <c>z </c><var/><c> 0</c>
+                </p>
+            </statement>
+            <setup>
+                <var>
+                    <condition string="&gt;=$">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string=".*">
+                        <feedback>
+                            <p>Incorrect</p>
+                        </feedback>
+                    </condition>
+                </var>
+            </setup>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Q6: x is even 
+                </p>
+                <p>
+                    <c>x % 2 </c><var/><c> 1</c>
+                </p>
+            </statement>
+            <setup>
+                <var>
+                    <condition string="!=$">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string=".*">
+                        <feedback>
+                            <p>Incorrect</p>
+                        </feedback>
+                    </condition>
+                </var>
+            </setup>
+        </exercise>
+    </TimedNode>
+</exercises>
+</section>
+

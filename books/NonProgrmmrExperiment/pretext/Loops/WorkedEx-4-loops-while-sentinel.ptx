@@ -1,0 +1,76 @@
+<section xml:id="loops_worked-example-while-loops-sentinel" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: While Loops - Sentinel</title>
+    <xi:include href='./subgoals-loops.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-loops-we4" youtube="tQUClEiO7wc" width="auto"/>
+    <p>Problem: The following code counts the number of valid values that are entered and stops when an invalid input is entered. What is the output if the user enters the values:  10, 15, 20, 25, 30, 35, -1?</p>
+    <program language="java">
+        <input>
+System.out.println("Enter a negative score to signal the end of input.");
+int gdScores = 0;
+int score;
+System.out.print("Score: ");
+Scanner get = new Scanner(System.in);
+score = get.nextInt();
+while (score &gt;= 0)
+{
+     if (score &gt;= 20)
+         gdScores++;
+     System.out.print("Score: ");
+     score = get.nextInt();
+ }
+System.out.println("Number of good scores: " + gdScores);
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>SG1:  Diagram which statements go together.</title>
+        <figure align="">
+            <image source="Loops/Figures/WhileSentinel.png" width="100%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: Define and initialize variables</title>
+        <p>
+            <term>Start:</term>
+        </p>
+        <program language="java">
+            <input>
+score = 10;
+            </input>
+        </program>
+        <p>
+            <term>End:</term>
+        </p>
+        <program language="java">
+            <input>
+score &lt; 0
+            </input>
+        </program>
+        <figure align="">
+            <image source="Loops/Figures/WhileSentinel.png" width="100%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace the loop</title>
+        <figure align="">
+            <image source="Loops/Figures/WL2Slide6.png" width="35%" alt="Counter"/>
+        </figure>
+    </subsection>
+
+    <answer>
+        <p>Number of good scores: 4</p>
+    </answer>
+    
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="loops_loops-we4-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

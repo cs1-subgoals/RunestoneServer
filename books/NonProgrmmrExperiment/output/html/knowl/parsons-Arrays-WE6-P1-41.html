@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="parsons-Arrays-WE6-P1-41">
+<div class="parsons_question parsons-text"><div class="para" id="p-4806">Q41: Put the following code in order to create a program that will declare and instantiate an array of 20 random values between 1 and 100 and then calculate and print the average of the last n numbers.</div></div>
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="python" data-noindent="true">import java.util.*;
+public class main{
+   public static void main (String[] args) {
+---
+      Random r = new Random();
+      int [] arr = new int[20];
+---
+      for (int i = 0; i&lt;20; i++) {
+         arr[i] = r.nextInt(100) + 1;
+         System.out.println("arr["+i+"] is " + arr[i]);
+      }
+---
+      int sum = 0;
+---
+      for (int i = 20-n; i&lt;20; i++) {
+---
+         sum += arr[i];
+---
+      }
+---
+      if (n &gt; 0)
+---
+         System.out.println("Avg of last n is " + (sum * 1.0)/n);
+---
+      else
+---
+         System.out.println("No numbers to average.")
+---
+   }
+}</pre>
+</div></div></div></article><span class="incontext"><a href="arrays_arrays-we6-p1.html#parsons-Arrays-WE6-P1-41" class="internal">in-context</a></span>
+</body>
+</html>

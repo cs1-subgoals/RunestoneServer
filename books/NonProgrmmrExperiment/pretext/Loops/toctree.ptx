@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Evaluating Loops</title>
+        <xi:include href='./WorkedEx-1-loops-while-counter.ptx' />
+        <xi:include href='./loops-we1-p1.ptx' />
+        <xi:include href='./WorkedEx-2-loops-for-counter.ptx' />
+        <xi:include href='./loops-we2-p1.ptx' />
+        <xi:include href='./WorkedEx-3-loops-complexcond.ptx' />
+        <xi:include href='./WorkedEx-4-loops-while-sentinel.ptx' />
+        <xi:include href='./loops-we3-p1.ptx' />
+        <xi:include href='./loops-we4-p1.ptx' />
+        <xi:include href='./WorkedEx-5-loops-for-sentinel.ptx' />
+        <xi:include href='./loops-we5-p1.ptx' />
+        <xi:include href='./loops-assess1.ptx' />
+        <xi:include href='./WorkedEx-6-loops-nested.ptx' />
+        <xi:include href='./loops-we6-p1.ptx' />
+        <xi:include href='./loops-assess2.ptx' />
+    </chapter>

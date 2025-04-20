@@ -1,0 +1,74 @@
+<section xml:id="loops_worked-example-for-loops-counter" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: For Loops - Counter</title>
+    <xi:include href='./subgoals-loops.ptx' /> 
+    <subsection>   
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-loops-we2" youtube="8j6dUuJaVnU" width="auto"/>
+    <p>Problem: Given the following code, what is the output?</p>
+    <program language="java">
+        <input>
+total = 0;
+for (int x = 5; x &lt; 50; x++)
+{
+  if (x % 5 == 0)
+     total += x;
+}
+System.out.println(total);
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>SG1:  Diagram which statements go together.</title>
+        <figure align="">
+            <image source="Loops/Figures/WL1A-ForCounter.png" width="50%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: Define and initialize variables</title>
+        <p>
+            <term>Start:</term>
+        </p>
+        <program language="java">
+            <input>
+x = 5
+total = 0
+            </input>
+        </program>
+        <p>
+            <term>End:</term>
+        </p>
+        <program language="java">
+            <input>
+x &gt;= 50
+            </input>
+        </program>
+        <figure align="">
+            <image source="Loops/Figures/WL1A-ForCounter.png" width="50%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace the loop</title>
+        <figure align="">
+            <image source="Loops/Figures/WL1A-ForCounter.png" width="50%" alt="Counter"/>
+        </figure>
+        <figure align="">
+            <image source="Loops/Figures/WL1ASlide6.png" width="25%" alt="Counter"/>
+        </figure>
+        <p>X increments by 1, but the value is only added to total when it is evenly divisible by 5.</p>
+        <p>Notice that this example gives the equivalent <c>for</c> loop for the <c>while</c> loop in 6.1.</p>
+    
+        <answer>
+            <p>Output is 225</p>
+        </answer>
+    </subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="loops_loops-we2-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

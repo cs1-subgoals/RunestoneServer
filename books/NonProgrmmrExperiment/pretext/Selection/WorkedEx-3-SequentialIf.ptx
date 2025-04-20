@@ -1,0 +1,78 @@
+<section xml:id="selection_worked-example-sequential-if-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Sequential If Statements</title>
+    <xi:include href='./subgoals-selection.ptx' />
+    <subsection>    
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-selection-we3-seqifstatements" youtube="jZl08aXr34s" width="auto"/>
+    <p>Given the following declarations:</p>
+    <program language="java">
+        <input>
+int alpha = 2;
+int beta = 1;
+int delta = 3;
+int eta = 0;
+int gamma = 0;
+        </input>
+    </program>
+    <p>Evaluate these statements and determine the value of all variables used.</p>
+    <program language="java">
+        <input>
+if (alpha &gt; beta)
+   eta = alpha + 2;
+if (alpha &gt; delta)
+   gamma = alpha + 5;
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>SG1: Diagram which statements go together.</title>
+        <p>If no { } are present, then by default all if and else branches have only a single statement:</p>
+        <figure align="">
+            <image source="Selection/Figures/we3-seq-if-both.png" width="50%" alt="Sequential If Diagram of two separate if-statements"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: For if statement, determine whether true or false</title>
+        <p>Because there are 2 sequential if-statements, we start with the first one, and then repeat SG2 and SG3 for the other.</p>
+        <p>First we evaluate (alpha &gt; beta):</p>
+        <p>
+            <c>(2 &gt; 1)</c> is TRUE</p>
+    </subsection>
+    <subsection>
+        <title>SG3: If true, follow true branch. If false, follow else branch (OR do nothing if there is no else branch).</title>
+        <p>The condition is TRUE so we execute the true branch:</p>
+        <p>eta = alpha + 2</p>
+        <p>= 2 + 2</p>
+        <p>= 4</p>
+        <figure align="">
+            <image source="Selection/Figures/we3-seq-if-1.png" width="50%" alt="sequential if part 1"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: For if statement, determine whether true or false</title>
+        <p>Because there are 2 sequential if-statements, we need to repeat SG2 and SG3 for the second if-statement in the sequence.</p>
+        <p>First we evaluate (alpha &gt; delta):</p>
+        <p>
+            <c>(2 &gt; 3)</c> is FALSE</p>
+    </subsection>
+    <subsection>
+        <title>SG3: If true, follow true branch. If false, follow else branch (OR do nothing if there is no else branch).</title>
+        <p>The condition is FALSE and there is no else branch, so we do nothing.</p>
+        <figure align="">
+            <image source="Selection/Figures/we3-seq-if-2.png" width="50%" alt="sequential if part 2"/>
+        </figure>
+    </subsection>
+    <answer>
+        <p><c>alpha</c> = 2, <c>beta</c> = 1, <c>delta</c> = 3, <c>eta</c> = 4, <c>gamma</c> = 0</p>
+    </answer>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="selection_selection-we3-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

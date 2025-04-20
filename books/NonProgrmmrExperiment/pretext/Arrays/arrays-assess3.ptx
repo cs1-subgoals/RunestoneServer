@@ -1,0 +1,382 @@
+<section xml:id="arrays_assessment-arrays-3" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Assessment: Arrays 3</title>
+    <xi:include href='./subgoals-arrays.ptx' />
+<exercises time-limit="10" pause="no">
+    <TimedNode line="24" runestone_options="{'nofeedback': None, 'subchapter': 'arrays-assess3', 'chapter': 'Arrays', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-arrays-3', 'qnumber': '', 'question_marker': '9.12.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/Arrays/arrays-assess3.rst">
+
+        <exercise xml:id="assess-arrays-3-1">
+            <statement>
+
+                <p>Q1: Considering the following code segment, what is printed after execution?</p>
+                <program language="java">
+                    <input>
+String str = "abcdef";
+for (int k = 0; k &lt; str.length() - 1; k++)
+   System.out.print(str.substring(k, k+2));
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>abcdef</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>aabbccddeeff</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>abbccddeef</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>abcbcdcdedef</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>Nothing is printed because an IndexOutOfBoundedsException is thrown.</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-arrays-3-2">
+            <statement>
+
+                <p>Q2: The following method is intended to return the index of the first occurrence of the value <c>val</c> beyond the position <c>start</c> in the array <c>arr</c>.
+                </p>
+                <program language="java">
+                    <input>
+// returns index of first occurrence of val in arr after
+// position start;
+// returns arr.length if val is not found
+public int findNext (int [] arr, int val, int start) {
+   int pos = start + 1;
+   while ( /* condition */)
+      pos++;
+   return pos;
+}
+                    </input>
+                </program>
+                <p>For example, the execution of the following code segment should result in the value <c>4</c> being printed:</p>
+                <program language="java">
+                    <input>
+int [] arr = {11, 22, 100, 33, 100, 11, 44, 100};
+System.out.println(findNext(arr, 100, 2));
+                    </input>
+                </program>
+                <p>Which of the following expressions could be used to replace <c>/* condition */</c> so that <c>findNext</c> will work as intended?</p>
+
+            </statement>
+            <choices>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>(pos &lt; arr.length) &amp;&amp; (arr[pos] != val)</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>(arr[pos] != val) &amp;&amp; (pos&lt;arr.length)</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>(pos&lt;arr.length) || (arr[pos] != val)</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>(arr[pos] == val)&amp;&amp; (pos&lt;arr.length)</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>(pos&lt;arr.length) || (arr[pos] == val)</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-arrays-3-3">
+            <statement>
+
+                <p>Q3: The following method is intended to return a String formed by concatenating elements from the parameter <c>words</c>. The elements to be concatenated start with <c>startIndex</c> and continue through the last element of <c>words</c> and should appear in reverse order in the resulting string.</p>
+                <program language="java">
+                    <input>
+// Assume that words.length &gt; 0 and startIndex &gt;= 0
+public String concatWords (String [] words, int startIndex) {
+   String result = "";
+   /* missing code */
+   return result;
+}
+                    </input>
+                </program>
+                <p>For example, the execution of the following code segment should result in &#8220;CarHouseGorilla&#8221; being printed.</p>
+                <program language="java">
+                    <input>
+String [] things = {"Bear", "Apple", "Gorilla", "House", "Car"};
+System.out.println(concatWords(things, 2));
+                    </input>
+                </program>
+                <p>Which of the following code segments is a correct replacement for  <c>/* missing code */</c> so that the method will work as intended?</p>
+                <figure align="">
+                    <image source="Arrays/Figures/assess-arrays-3-q3.png" width="50%" alt="answers for Q3"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>I only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>II only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>I and II only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>II and III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-arrays-3-4">
+            <statement>
+
+                <p>Q4: Consider the following two methods that occur in the same class. What is printed as a result to the call <c>start()</c>?
+                </p>
+                <program language="java">
+                    <input>
+public void changeIt (int [] list, int num) {
+   list = new int[5];
+   num = 0;
+   for (int x = 0; x &lt; list.length; x++)
+      list[x] = 0;
+}
+
+public void start() {
+   int [] nums = {1, 2, 3, 4, 5};
+   int value = 6;
+   changeIt(nums, value);
+   for (int k = 0; k &lt; nums.length; k++)
+      System.out.print(nums[k] + " ");
+   System.out.print(value);
+}
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>0  0  0  0  0  0</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>0  0  0  0  0  6</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>1  2  3  4  5  6</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>1  2  3  4  5  0</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>No output, an exception is thrown</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-arrays-3-5">
+            <statement>
+
+                <p>Q5: Consider the following two methods that occur in the same class. What is printed as a result to the call <c>start()</c>?
+                </p>
+                <program language="java">
+                    <input>
+public void changeAgain (int [] arr, int val, String word) {
+   arr = new int[5];
+   val = 0;
+   word = word.substring(0,5);
+   for (int k = 0; k &lt; arr.length; k++)
+      arr[k] = 0;
+}
+
+public void start() {
+   int [] nums = {1, 2, 3, 4, 5};
+   int value = 6;
+   String name = "blackboard";
+   changeAgain(nums, value, name);
+   for (int x = 0; x &lt; nums.length; x++)
+      System.out.print(nums[x] + " ");
+   System.out.print(value + " ");
+   System.out.print(name);
+}
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>0  0  0  0  0  0 black</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>0  0  0  0  0  6 blackboard</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>1  2  3  4  5  6 black</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>1  2  3  4  5  0 black</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>1  2  3  4  5  6 blackboard</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+    </TimedNode>
+</exercises>
+</section>
+

@@ -1,0 +1,109 @@
+<section xml:id="arrays_arrays-we7-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Arrays-WE7-P1</title>
+        <xi:include href='./subgoals-arrays.ptx' />
+        <subsection>
+<exercises>
+            <exercise xml:id="parsons-Arrays-WE7-P1-42" indent="show" language="python">
+                <statement>
+                    <p>Q42: Put the following code in order to create a method that will find the last occurrence of a target value and return the index of where that value is located.</p>
+                </statement>
+                <blocks>
+                    <block order="3">
+                        <cline>public static int find (int [] arr, int target) {</cline>
+                    </block>
+                    <block order="4">
+                        <cline>   int loc = -1;</cline>
+                    </block>
+                    <block order="7">
+                        <cline>   for (int i = 0; i&lt;arr.length; i++) {</cline>
+                    </block>
+                    <block order="2">
+                        <cline>      if (arr[i] == target)</cline>
+                    </block>
+                    <block order="5">
+                        <cline>         loc = i;</cline>
+                    </block>
+                    <block order="6">
+                        <cline>   }</cline>
+                    </block>
+                    <block order="1">
+                        <cline>   return loc;</cline>
+                        <cline>}</cline>
+                    </block>
+                </blocks>
+            </exercise>
+            <exercise xml:id="parsons-Arrays-WE7-P1-43" indent="show" language="python">
+                <statement>
+                    <p>Q43: Put the following code in order to create a method that will find the first occurrence of a target value and return the index of where that value is located.</p>
+                </statement>
+                <blocks>
+                    <block order="4">
+                        <cline>public static int find (int [] arr, int target) {</cline>
+                    </block>
+                    <block order="5">
+                        <cline>   int loc = -1;</cline>
+                        <cline>   boolean found = false;</cline>
+                    </block>
+                    <block order="3">
+                        <cline>   for (int i = 0; i&lt;20&amp;&amp; !found; i++) {</cline>
+                    </block>
+                    <block order="1">
+                        <cline>      if (arr[i] == target) {</cline>
+                    </block>
+                    <block order="6">
+                        <cline>         loc = i;</cline>
+                        <cline>         found = true;</cline>
+                    </block>
+                    <block order="7">
+                        <cline>      }</cline>
+                        <cline>   }</cline>
+                    </block>
+                    <block order="2">
+                        <cline>   return loc;</cline>
+                        <cline>}</cline>
+                    </block>
+                </blocks>
+            </exercise>
+            <exercise xml:id="parsons-Arrays-WE7-P1-44" indent="show" language="python">
+                <statement>
+                    <p>Q44: Put the following code in order to create a method that will count the number of occurrences of a target value and return the count.</p>
+                </statement>
+                <blocks>
+                    <block order="1">
+                        <cline>public static int count (int [] arr, int target) {</cline>
+                    </block>
+                    <block order="6">
+                        <cline>   int num = 0;</cline>
+                    </block>
+                    <block order="4">
+                        <cline>   for (int i = 0; i&lt;arr.length; i++) {</cline>
+                    </block>
+                    <block order="7">
+                        <cline>      if (arr[i] == target)</cline>
+                    </block>
+                    <block order="3">
+                        <cline>         num++;</cline>
+                    </block>
+                    <block order="2">
+                        <cline>   }</cline>
+                    </block>
+                    <block order="5">
+                        <cline>   return num;</cline>
+                        <cline>}</cline>
+                    </block>
+                </blocks>
+            </exercise>
+</exercises>
+        </subsection>
+
+        <program xml:id="ac-Arrays-WE7-P1" interactive="activecode" language="java">
+            <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+            </input>
+        </program>
+    </section>
+

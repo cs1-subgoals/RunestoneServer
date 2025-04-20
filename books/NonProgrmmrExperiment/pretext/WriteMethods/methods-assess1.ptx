@@ -1,0 +1,113 @@
+<section xml:id="write-methods_assessment-writing-methods" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Assessment: Writing Methods</title>
+        <xi:include href='./subgoals-write-methods.ptx' />
+<exercises time-limit="15" pause="no">
+        <TimedNode line="23" runestone_options="{'nofeedback': None, 'subchapter': 'methods-assess1', 'chapter': 'WriteMethods', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-methods-1', 'qnumber': '', 'question_marker': '7.4.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/WriteMethods/methods-assess1.rst">
+
+        <exercise>
+            <statement>
+    <p>Q1: Fill in the blanks for a public method header that would work for this call: </p>
+        <program language="java"><input>
+int fob;
+fob = obj.trip(4.1, "alphabet", 8);
+                </input></program><program language="java"><input>
+_______ _______ trip (_______ one, _______ two, _______ three)
+   A       B             C            D            E
+{
+        /* logic */
+}
+                </input></program>
+                <p><line_block>
+                        <line>Blank A: <var/></line>
+                        <line>Blank B: <var/></line>
+                        <line>Blank C: <var/></line>
+                        <line>Blank D: <var/></line>
+                        <line>Blank E: <var/></line>
+                </line_block></p>
+                </statement><setup>
+                        <var><condition string="public"><feedback><p>Correct</p></feedback></condition>
+                                <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+                        <var><condition string="int"><feedback><p>Correct</p></feedback></condition>
+                                <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+                        <var><condition string="double"><feedback><p>Correct</p></feedback></condition>
+                                <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+                        <var><condition string="String"><feedback><p>Correct</p></feedback></condition>
+                                <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+                        <var><condition string="(int)|(double)"><feedback><p>Correct</p></feedback></condition> <!--Double check regex works-->
+                                <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+                                        </setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q2: Fill in the blanks for a public method header that would work for this call: </p>
+    <program language="java"><input>
+        obj.advance();
+        </input></program><program language="java"><input>
+_______ _______ advance () { /* logic */ }
+   A       B
+        </input></program>
+        <p><line_block><line>Blank A: <var/></line><line>Blank B: <var/></line></line_block></p>
+</statement>
+<setup>
+        <var><condition string="public"><feedback><p>Correct</p></feedback></condition>
+                <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+        <var><condition string="void"><feedback><p>Correct</p></feedback></condition>
+                <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+</setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q3: Fill in the blanks for a private method header that returns a String and accepts two integer parameters.</p>
+    <program language="java"><input>
+_______ _______ calculate (_______ one, _______ two)
+   A       B                  C            D
+{
+   /* logic */
+}
+        </input></program>
+        <p><line_block><line>Blank A: <var/></line>
+        <line>Blank B: <var/></line>
+        <line>Blank C: <var/></line>
+        <line>Blank D: <var/></line></line_block></p>
+</statement>
+<setup><var><condition string="private"><feedback><p>Correct</p></feedback></condition><condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+        <var><condition string="String"><feedback><p>Correct</p></feedback></condition><condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+        <var><condition string="int"><feedback><p>Correct</p></feedback></condition><condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+        <var><condition string="int"><feedback><p>Correct</p></feedback></condition><condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+</setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q4: Fill in the blanks for a private method header that returns nothing and takes no parameters.</p>
+    <program language="java"><input>
+_______ _______ nada () { /* logic */ }
+   A       B
+        </input></program>
+        <p><line_block><line>Blank A: <var/></line><line>Blank B: <var/></line></line_block></p>
+</statement>
+    <setup>
+        <var><condition string="private"><feedback><p>Correct</p></feedback></condition><condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+        <var><condition string="void"><feedback><p>Correct</p></feedback></condition><condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+</setup></exercise>
+<exercise indent="show" language="python"><statement>
+        <p>Q5: Put the code in the right order to create a program that returns a double, and accepts as parameters 3 integers, and calculates the average of the inputs. There is also a main program that calls the method twice with different values.</p>
+</statement>
+<blocks><block order="6">
+<cline>import java.util.*;</cline>
+<cline>public class main{</cline>
+<cline>   public static double avg (int one, int two, int three) {</cline>
+</block><block order="5">
+<cline>      int sum = one + two + three;</cline>
+</block><block order="3">
+<cline>      return sum / 3.0;</cline>
+<cline>   }</cline>
+</block><block order="4">
+<cline>   public static void main(String[] args){</cline>
+</block><block order="1">
+<cline>      System.out.println(avg(1, 2, 5));</cline>
+<cline>      System.out.println(avg(2, 4, 10));</cline>
+</block><block order="2">
+<cline>   }</cline>
+<cline>}</cline>
+</block></blocks></exercise> 
+</TimedNode>
+</exercises>
+    </section>
+

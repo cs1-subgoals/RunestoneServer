@@ -1,0 +1,70 @@
+<section xml:id="expressions-statements_worked-example-prefix-operators" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Prefix Operators</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p>You can watch this video or read through the content below it.</p>
+
+            <video xml:id="video-express-we6-prefix" youtube="ItvdfSv94MI" width="auto"/>
+            <p>Given the following code snippet, evaluate the final statement (the last line). If invalid, give the reason. If valid, what value is assigned to the variable? Note any possible side effects.</p>
+            <program language="java"><input>
+int alpha = 2;
+int beta = 1;
+int delta = 3;
+int eta;
+int gamma;
+
+eta = beta + delta % ++alpha;
+            </input></program>
+        </subsection>
+        <subsection>
+            <title>SG1 : Determine resultant data type of expression</title>
+            <p>The <em>expression</em> is the right-hand-side (RHS) of the statement: <c>beta + delta % ++alpha</c>. At the beginning of the snippet, all of these variables were declared as <c>int</c> type, so all of the operations will also result in <c>int</c> values.</p>
+        </subsection>
+        <subsection>
+            <title>SG2: Update variables for any pre-increment or pre-decrement operators (side effects)</title>
+            <p>The <c>++</c> and <c>--</c> syntax indicates pre- or post- <em>side effect assignments</em> upon variables within an expression. The expression <c>a + 1</c> does not alter the value of the variable <c>a</c>, however <c>a++</c> adds 1 to the value of 1 resulting in a new value of <c>a</c>.</p>
+            <p>An <em>increment</em> is an increase of 1, while a <em>decrement</em> is a decrease of 1. Generally, we only want to perform these operations on int values, but it is valid to perform them on double values.</p>
+            <p>It is important to note that the statement <c>++delta;</c> would be a valid line of Java code all on its own, adding 1 to the value of <c>delta</c> and assigning back into the <c>delta</c> variable. </p>
+            <p>In this example, <c>++alpha</c> is a pre-increment operation, so we increment alpha, and the new assigned value of alpha is 3 (it was initialized to 2).</p>
+        </subsection>
+        <subsection>
+            <title>SG3: Evaluate arithmetic expression according to operator precedence</title>
+            <p><ul>
+                <li>
+                    <p>The RHS may be easiest to conceptualize algebraically, by replacing the variables right away with their current values : <c>1 + 3 % 3</c>. (Remember, alpha had a pre-increment, so it is already 1 more than it was initialized.)</p>
+                </li>
+                <li>
+                    <p>In the order of operations, modulus has higher <em>precedence</em> than addition, so we evaluate the mod first: 3 % 3 is 0. (Remember, the mod % operation returns the <em>remainder</em> after integer division.)</p>
+                </li>
+                <li>
+                    <p>Finally, we evaluate the addition: 1 + 0 is 1.</p>
+                </li>
+            </ul></p>
+        </subsection>
+        <subsection>
+            <title>SG4: Is the Left Hand Side (LHS) of the assignment statement a variable? Check the data type of the value on right hand side (RHS) against data type of LHS variable.</title>
+            <p>The LHS is a variable of type <c>int</c>, and the RHS is type <c>int</c>. This is valid.</p>
+        </subsection>
+        <subsection>
+            <title>SG5: Update variable for post-increment or post-decrement operators (side effect)</title>
+            <p>It is wise to double-check whether the <c>++</c> or <c>--</c> were on the left or right of the variables, to be sure whether we perform a <em>pre</em> or <em>post</em> side effect assignment. In this case, the only increment was a <em>pre-increment</em>, so we do not need to peform any <em>post</em> side effect assignments.</p>
+        </subsection>
+        <subsection>
+            <title>Questions to check and extend understanding</title>
+            <p>Q1) What are the final values of <c>alpha</c>, <c>beta</c>, <c>delta</c> and <c>eta</c>?</p>
+            <p>Q2) The following is run: <c>eta = beta + delta % --alpha;</c>. What is the resulting value of eta?</p>
+            <answer>
+                <p>Q1-Answer) <c>alpha</c> is 3; <c>beta</c> is 1; <c>delta</c> is 3; <c>eta</c> is 1;</p>
+                <p>Q2-Answer) 2</p>
+            </answer>
+        </subsection>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we6-p1" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

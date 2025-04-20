@@ -1,0 +1,54 @@
+<section xml:id="write-methods_wrmethods-we3-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Write-Methods-WE3-P1</title>
+        <xi:include href='./subgoals-write-methods.ptx' />
+        <subsection>
+<exercises>
+<exercise xml:id="parsons-methods-WE3-P1-1" indent="show" language="python"><statement>
+            <p>Q46: Put the code in the right order to create a public method that returns a String and accepts an integer parameter and returns a flavor of ice cream. The method is called from main as follows:</p>
+            <p><c>System.out.println(flavors(1));</c></p>
+            <p><c>System.out.println(flavors(5));</c></p>
+</statement>
+<blocks><block order="3">
+<cline>public static String flavors (int one) {</cline>
+</block><block order="1">
+<cline>   String flavor;</cline>
+</block><block order="5">
+<cline>   if (one == 1)</cline>
+<cline>      flavor = "chocolate";</cline>
+</block><block order="6">
+<cline>   else if (one == 2)</cline>
+<cline>      flavor = "vanilla";</cline>
+</block><block order="2">
+<cline>   else</cline>
+<cline>      flavor = "strawberry";</cline>
+</block><block order="4">
+<cline>   return flavor;</cline>
+<cline>}</cline>
+</block></blocks></exercise><exercise xml:id="parsons-methods-WE3-P1-2" indent="show" language="python"><statement>
+            <p>Q47: Put the code in the right order to create a method that returns a String and accepts as parameters a double and a String, and concatenates the two values as a temperature along with its base scale. The method is called from main as follows:</p>
+            <p><c>System.out.println ( temps(32.5, "F"));</c></p>
+            <p><c>System.out.println ( temps(0.05, "C"));</c></p>
+</statement>
+<blocks><block order="3">
+<cline>public static String temps (double t, String base) {</cline>
+</block><block order="2">
+<cline>   String temp;</cline>
+</block><block order="4">
+<cline>   temp = "temperature is " + t + " " + base;</cline>
+</block><block order="1">
+<cline>   return temp;</cline>
+<cline>}</cline>
+</block></blocks></exercise>     
+</exercises>
+</subsection>
+
+    <program xml:id="ac-methods-we3-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>

@@ -1,0 +1,185 @@
+<section xml:id="expressions-statements_assessment-boolean-relational-operators" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Assessment: Boolean Relational Operators</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+<exercises time-limit="10" pause="no">
+        <TimedNode line="19" runestone_options="{'nofeedback': None, 'subchapter': 'expressions-assess-bool1', 'chapter': 'ExpressionsStatements', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-expr-bool1', 'qnumber': '', 'question_marker': '1.11.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/ExpressionsStatements/expressions-assess-bool1.rst">
+
+    <exercise xml:id="assess-exp-bool1-1">
+        <statement>
+
+            <p>Q1: Given the following, what value is stored in variable <c>answer</c>?</p>
+            <program language="java"><input>
+                int x = 5;
+                int y = 3;
+                int z = 1;                
+boolean answer;
+answer = x &lt;= z;
+</input></program>
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-exp-bool1-2">
+        <statement>
+            <p>Q2: Given the following, what value is stored in variable <c>answer</c>?</p>
+            <program language="java"><input>
+                int x = 5;
+                int y = 3;
+                int z = 1;                
+boolean answer;
+answer = y &gt;= z;
+        </input></program>
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-exp-bool1-3">
+        <statement>
+
+            <p>Q3: Given the following, what value is stored in variable <c>answer</c>?</p>
+            <program language="java"><input>
+                int x = 5;
+                int y = 3;
+                int z = 1;                
+boolean answer;
+answer = x &gt; z + y;
+            </input></program>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-exp-bool1-4">
+        <statement>
+
+            <p>Q4: Given the following, what value is stored in variable <c>answer</c>?</p>
+            <program language="java"><input>
+                int x = 5;
+                int y = 3;
+                int z = 1;                
+boolean answer;
+answer = z &lt; y - z;
+        </input></program>
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-exp-bool1-5">
+        <statement>
+
+            <p>Q5: Given the following, what value is stored in variable <c>answer</c>?</p>
+            <program language="java"><input>
+                int x = 5;
+                int y = 3;
+                int z = 1;                
+boolean answer;
+answer = ((x * y) + (x * z)) != ((z * x) + (y * x));
+        </input></program>
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>true</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>false</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+        </TimedNode>
+</exercises>
+    </section>
+

@@ -1,0 +1,236 @@
+<section xml:id="expressions-statements_assessment-swap" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Assessment: Swap</title>
+    <xi:include href='./subgoals-expressions.ptx' />
+<exercises time-limit="10" pause="no">
+    <TimedNode line="19" runestone_options="{'nofeedback': None, 'subchapter': 'expressions-assess-swap', 'chapter': 'ExpressionsStatements', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-expr-swap', 'qnumber': '', 'question_marker': '1.14.2.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/ExpressionsStatements/expressions-assess-swap.rst">
+
+        <exercise>
+            <statement>
+                <p>Q1: After executing the following code, the value in variable <c>a</c> is <var/>
+ and the value in variable <c>b</c> is <var/>.
+        </p>
+        <program language="java"><input>
+int a = 1;
+int b = 2;
+a = 3;
+        </input></program>
+    </statement>
+    <setup>
+        <var>
+            <condition string="3">
+                <feedback>
+                    <p>Correct</p>
+                </feedback>
+            </condition>
+            <condition string='.*'>
+                <feedback>
+                    <p>Incorrect</p>
+                </feedback>
+            </condition>
+        </var>
+        <var>
+            <condition string="2">
+                <feedback>
+                    <p>Correct</p>
+                </feedback>
+            </condition>
+            <condition string='.*'>
+                <feedback>
+                    <p>Incorrect</p>
+                </feedback>
+            </condition>
+        </var>
+    </setup>
+</exercise>
+<exercise>
+    <statement>
+        <p>Q2: After executing the following code, the value in variable <c>r</c> is <var/>
+ and the value in variable <c>s</c> is <var/>.
+</p>
+        <program language="java"><input>
+int r = 2;
+int s = 4;
+r = s;
+        </input></program>
+</statement>
+<setup>
+    <var>
+        <condition string="4">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+    <var>
+        <condition string="4">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+</setup>
+</exercise>
+<exercise>
+<statement>
+<p>Q3: After executing the following code, the value in variable <c>p</c> is <var/>
+ and the value in variable <c>q</c> is <var/>.
+</p>
+    <program language="java"><input>
+int p = 1;
+int q = 8;
+q = p;
+p = q;
+    </input></program>
+</statement>
+<setup>
+    <var>
+        <condition string="1">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+    <var>
+        <condition string="1">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+</setup>
+</exercise>
+<exercise>
+<statement>
+<p>Q4: After executing the following code, the value in variable <c>x</c> is <var/>, 
+    the value in variable <c>y</c> is <var/>,  and the value in variable <c>z</c> is <var/>.
+    <program language="java"><input>
+int x = 7;
+int y = 5;
+int z = 3;
+x = y;
+y = z;
+z = x;
+    </input></program>
+</p>
+</statement>
+<setup>
+    <var>
+        <condition string="5">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+    <var>
+        <condition string="3">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+    <var>
+        <condition string="5">
+            <feedback>
+                <p>Correct</p>
+            </feedback>
+        </condition>
+        <condition string='.*'>
+            <feedback>
+                <p>Incorrect</p>
+            </feedback>
+        </condition>
+    </var>
+</setup>
+</exercise>
+<exercise xml:id="assess-exp-swap-5">
+<statement>
+
+<p>Q5: Suppose there are four <c>integer</c> variables <c>a</c>,<c>b</c>,<c>c</c>, and <c>d</c> as depicted below. The code beside the diagram is intended to move the values in those variables one place <term>clockwise</term>, but two statements are missing. Choose the option that has the correct 2 statements.</p>
+<figure align="">
+<image source="ExpressionsStatements/Figures/swap-assess-diagram.png" width="100%" alt="4-variable swap"/>
+</figure>
+
+</statement>
+<choices>
+
+<choice>
+<statement>
+<p>d = temp; b = a;</p>
+</statement>
+<feedback>
+<p/>
+</feedback>
+</choice>
+
+<choice>
+<statement>
+<p>d = c; b = a;</p>
+</statement>
+<feedback>
+<p/>
+</feedback>
+</choice>
+
+<choice correct="yes">
+<statement>
+<p>d = c; b = temp;</p>
+</statement>
+<feedback>
+<p/>
+</feedback>
+</choice>
+
+<choice>
+<statement>
+<p>d = a; b = temp;</p>
+</statement>
+<feedback>
+<p/>
+</feedback>
+</choice>
+
+<choice>
+<statement>
+<p>d = a; b = c;</p>
+</statement>
+<feedback>
+<p/>
+</feedback>
+</choice>
+</choices>
+
+</exercise>
+</TimedNode>
+</exercises>
+</section>
+

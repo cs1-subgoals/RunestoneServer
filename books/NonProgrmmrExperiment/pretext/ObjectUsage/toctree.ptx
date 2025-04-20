@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Object Usage</title>
+        <xi:include href='./WorkedEx-1-ConstructScanner.ptx' />
+        <xi:include href='./objuse-we1-p1.ptx' />
+        <xi:include href='./WorkedEx-2-ConstructRandom.ptx' />
+        <xi:include href='./objuse-we2-p1.ptx' />
+        <xi:include href='./WorkedEx-3-ConstructWidget.ptx' />
+        <xi:include href='./objuse-we3-p1.ptx' />
+        <xi:include href='./objuse-assess-newscanner.ptx' />
+        <xi:include href='./WorkedEx-4-CallMethodScanner.ptx' />
+        <xi:include href='./objuse-we4-p1.ptx' />
+        <xi:include href='./WorkedEx-5-CallMethodRandom.ptx' />
+        <xi:include href='./objuse-we5-p1.ptx' />
+        <xi:include href='./WorkedEx-6-CallMethodMath.ptx' />
+        <xi:include href='./objuse-we6-p1.ptx' />
+        <xi:include href='./objuse-assess-callrand.ptx' />
+    </chapter>

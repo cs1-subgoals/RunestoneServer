@@ -1,0 +1,395 @@
+<section xml:id="write-classes_assessment-writing-classes-2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Assessment: Writing Classes 2</title>
+    <xi:include href='./subgoals-write-classes.ptx' />
+<exercises time-limit="10" pause="no">
+    <TimedNode line="79" runestone_options="{'nofeedback': None, 'subchapter': 'wrclasses-assess2', 'chapter': 'WriteClasses', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-wrclasses-2', 'qnumber': '', 'question_marker': '8.6.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/WriteClasses/wrclasses-assess2.rst">
+
+        <exercise xml:id="assess-wrclasses-2-1">
+            <statement>
+
+                <p>Q1: Consider the following method, which is intended to return <c>true</c> if at least one of the three strings <c>s1</c>,                    <c>s2</c>, or <c>s2</c> contains the substring <c>"art"</c>.  Otherwise, the method should return <c>false</c>.
+                </p>
+                <program language="java">
+                    <input>
+public boolean containsArt (String s1, String s2, String s3) {
+   String all = s1 + s2 + s3;
+   return (all.indexOf("art") != -1);
+}
+                    </input>
+                </program>
+                <p>Which of the following method calls demonstrates that the method does NOT work as intended?</p>
+
+            </statement>
+            <choices>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>containsArt("rattrap", "similar", "today")</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>containsArt("start", "article", "Bart")</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>containsArt("harm", "chortle", "crowbar")</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>containsArt("matriculate", "carat", "arbitrary")</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>containsArt("darkroom", "cartoon", "articulate")</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-wrclasses-2-2">
+            <statement>
+
+                <p>Q2: Considering the following class, which of the following methods can be added to the SomeMethods class without causing a compiler error?</p>
+                <program language="java">
+                    <input>
+public class SomeMethods {
+   public void one(int first) {
+      /* implementation not shown */ }
+
+   public void one(int first, int second) {
+      /* implementation not shown */ }
+
+   public void one(int first, String second) {
+      /* implementation not shown */ }
+} // end SomeMethods
+                    </input>
+                </program>
+                <p>
+                    <ol marker="I">
+                        <li>
+                            <p>public void one(int value) &#8230;</p>
+                        </li>
+                        <li>
+                            <p>public void one(String first, int second) &#8230;</p>
+                        </li>
+                        <li>
+                            <p>public void one(int first, int second, int third) &#8230;</p>
+                        </li>
+                    </ol>
+                </p>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>I only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>I and II only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>I and III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>II and III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>I, II and III</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-wrclasses-2-3">
+            <statement>
+
+                <p>Q3: Considering the following class declaration:</p>
+                <program language="java">
+                    <input>
+public class SomeClass {
+   private int num;
+
+   SomeClass (int n) {
+      num = n;
+   }
+
+   public void increment (int more) {
+      num = num + more;
+   }
+
+   public int getNum() {
+      return num;
+   }
+}
+                    </input>
+                </program>
+                <p>The following code segment appears in another class. What is the resulting output?</p>
+                <program language="java">
+                    <input>
+SomeClass one = new SomeClass(100);
+SomeClass two = new SomeClass(100);
+SomeClass three = one;
+
+one.increment(200);
+System.out.printf("d d d", one.getNum(), two.getNum(), three.getNum());
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>100 100 100</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>300 100 100</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>300 100 300</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>300 300 100</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>300 300 300</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-wrclasses-2-4">
+            <statement>
+
+                <p>Q4: Considering the following instance variables and incomplete method that are part of a class that represents an item. Method <c>updateAge</c> is used to update the variables based on the parameter <c>extraMonths</c> that represents the number of months to be added to the age.</p>
+                <!--code-block
+
+private int years;  // age of item
+private int months;  // age of item 0 <= months <= 11
+   // item can be 1 year 3 months old (or 15 months)
+
+public void updateAge (int extraMonths) { //extraMonths >= 0
+   /* body of updateAge */
+}
+
+Which of the following code segments could be used to replace ``/* body of updateAge */`` so that the method will work as intended?-->
+                <figure align="">
+                    <image source="WriteClasses/Figures/classes-assess2-q4.png" width="50%" alt="code segments"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>I only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>II only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>II and III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>I, II and III</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="assess-wrclasses-2-5">
+            <statement>
+
+                <p>Q5: Considering the following instance variables and method that appear in a class representing student information.</p>
+                <program language="java">
+                    <input>
+private int assignmentCompleted;
+private double testAverage;
+
+public boolean isPassing( ) {
+   /* body of isPassing */
+}
+                    </input>
+                </program>
+                <p>A student can pass a programming course if at least one of the following conditions is met:</p>
+                <p>
+                    <ul>
+                        <li>
+                            <p>The student has a test average that is greater than or equal to 90.</p>
+                        </li>
+                        <li>
+                            <p>The student has a test average that is greater than or equal to 75 and has at least 4 completed assignments.</p>
+                        </li>
+                    </ul>
+                </p>
+                <p>Which of the following code segments could be used to replace <c>/* body of isPassing */</c> so that the method will work as intended?</p>
+                <figure align="">
+                    <image source="WriteClasses/Figures/classes-assess2-q5.png" width="50%" alt="code segments"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>I only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>II only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>II and III only</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>I, II and III</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+    </TimedNode>
+</exercises>
+</section>
+

@@ -1,0 +1,352 @@
+<section xml:id="loops_loops-we1-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Loops-WE1-P1</title>
+    <xi:include href='./subgoals-loops.ptx' />
+    <subsection>
+<exercises>
+        <exercise xml:id="m-Loops-WE1-P1-1">
+            <statement>
+
+                <p>Q1: What is the output of the following loop?</p>
+                <program language="java">
+                    <input>
+int i = 0;
+while (i &lt; 3) {
+   System.out.println("hi");
+   i++;
+}
+                    </input>
+                </program>
+                <figure align="">
+                    <image source="Loops/Figures/LoopsQ1.png" width="80%" alt="A is hi; B is hi0 h1 h2 (multiline); C is hi hi hi (multiline); D is hi hi hi single line); E is hi hi hi hi (multiline)"/>
+                </figure>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer A</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer B</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>See diagram for answer C</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer D</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>See diagram for answer E</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Loops-WE1-P1-2">
+            <statement>
+
+                <p>Q2: What is the output of the following loop?</p>
+                <program language="java">
+                    <input>
+int i = 10;
+while (i &gt; 1) {
+   System.out.print(i + " ");
+   i--;
+}
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>10 9 8 7 6 5 4 3 2 1</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>9 8 7 6 5 4 3 2 1</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>9 8 7 6 5 4 3 2</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>10 9 8 7 6 5 4 3 2</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>compiler error</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Loops-WE1-P1-3">
+            <statement>
+
+                <p>Q3: What is the output of the following loop?</p>
+                <program language="java">
+                    <input>
+int i = 10;
+while (i &gt; 1) {
+   System.out.print(i + " ");
+   i++;
+}
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>10 11 12 13 14 15 16</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>10 9 8 7 6 5 4 3 2</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>10 9 8 7 6 5 4 3 2 1</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>1 2 3 4 5 6 7 8 9 10</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>infinite loop</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Loops-WE1-P1-4">
+            <statement>
+
+                <p>Q4: What is the output of the following loop?</p>
+                <program language="java">
+                    <input>
+int i = 0;
+int total = 0;
+while (i &lt;= 50) {
+   total += i;
+   i += 5;
+}
+System.out.println(i);
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>0 5 10 15 20 25 30 35 40 45 50</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>0 5 10 15 20 25 30 35 40 45</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>5 10 15 20 25 30 35 40 45 50</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>5 10 15 20 25 30 35 40 45</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>55</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+
+        <exercise xml:id="m-Loops-WE1-P1-5">
+            <statement>
+
+                <p>Q5: What is the value of <c>counter</c> after the execution of the folowing code?</p>
+                <program language="java">
+                    <input>
+int counter = 0;
+while (counter &gt; 100) {
+   if (counter % 2 == 1)
+      System.out.println(counter + " is odd.");
+   else
+      System.out.println(counter + " is even.");
+}
+counter++;
+System.out.println(counter);
+                    </input>
+                </program>
+
+            </statement>
+            <choices>
+
+                <choice>
+                    <statement>
+                        <p>0</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice correct="yes">
+                    <statement>
+                        <p>1</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>99</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>100</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+
+                <choice>
+                    <statement>
+                        <p>101</p>
+                    </statement>
+                    <feedback>
+                        <p/>
+                    </feedback>
+                </choice>
+            </choices>
+
+        </exercise>
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-loops-we1-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+</section>
+

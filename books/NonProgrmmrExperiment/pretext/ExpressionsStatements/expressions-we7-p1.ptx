@@ -1,0 +1,61 @@
+<section xml:id="expressions-statements_expressions-we7-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Expressions-WE7-P1</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p><term>Given</term></p>
+            <program language="java"><input>
+int alpha = 2;
+int beta = 1;
+int delta = 3;
+int eta;
+int gamma;
+
+double omega = 2.5;
+double theta = -1.3;
+double kappa = 3.0;
+double lambda;
+double rho;
+</input></program>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q42: <c>rho = ++delta / alpha-- * beta++;</c> </p><p>What is the value of delta after execution?</p><p><var/></p></statement><setup><var><condition string="4"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q43: <c>rho = ++delta / alpha-- * beta++;</c> </p><p>What is the value of alpha after execution?</p><p><var/></p></statement><setup><var><condition string="1"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q44: <c>rho = ++delta / alpha-- * beta++;</c> </p><p>What is the value of beta after execution?</p><p><var/></p></statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q45: <c>rho = ++delta / alpha-- * beta++;</c> </p><p>What is the value of rho after execution?</p><p><var/></p></statement><setup><var><condition string="2.0"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-express-we7-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

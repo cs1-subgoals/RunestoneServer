@@ -1,0 +1,51 @@
+<section xml:id="object-usage_objuse-we1-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>ObjUse-WE1-P1</title>
+        <xi:include href='./subgoals-object-use.ptx' />
+        <subsection>
+<exercises>
+<exercise xml:id="ca-ObjUse-WE1-P1-1">
+    <statement><p>Q1: Click on the variables (object references) in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">/* reads input from default - keyboard */</area></cline>
+<cline><area correct="no">Scanner</area> <area correct="yes">input</area> = <area correct="no">new Scanner(System.in);</area></cline>
+<cline><area correct="no">/* reads input from InFile stream */</area></cline>
+<cline><area correct="no">Scanner</area> <area correct="yes">foo</area> = <area correct="no">new Scanner(InFile);</area></cline>
+</areas></exercise>
+<exercise xml:id="ca-ObjUse-WE1-P1-2">
+    <statement><p>Q2: Click on the class names (but not constructors) in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">/* reads input from default - keyboard */</area></cline>
+<cline><area correct="yes">Scanner</area> <area correct="no">input</area> = <area correct="no">new Scanner(System.in);</area></cline>
+<cline><area correct="no">/* reads input from InFile stream */</area></cline>
+<cline><area correct="yes">Scanner</area> <area correct="no">foo</area> = <area correct="no">new Scanner(InFile);</area></cline>
+</areas></exercise>
+<exercise xml:id="ca-ObjUse-WE1-P1-3">
+    <statement><p>Q3: Click on the calls to the Scanner constructor in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">/* reads input from default - keyboard */</area></cline>
+<cline><area correct="no">Scanner</area> <area correct="no">input</area> = <area correct="yes">new Scanner(System.in);</area></cline>
+<cline><area correct="no">/* reads input from InFile stream */</area></cline>
+<cline><area correct="no">Scanner</area> <area correct="no">foo</area> = <area correct="yes">new Scanner(InFile);</area></cline>
+</areas></exercise>
+<exercise xml:id="ca-ObjUse-WE1-P1-4">
+    <statement><p>Q4: Click on the parameters which are passed to the Scanner constructor in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">/* reads input from default - keyboard */</area></cline>
+<cline><area correct="no">Scanner</area> <area correct="no">input</area> = <area correct="no">new Scanner</area>(<area correct="yes">System.in</area>);</cline>
+<cline><area correct="no">/* reads input from InFile stream */</area></cline>
+<cline><area correct="no">Scanner</area> <area correct="no">foo</area> = <area correct="no">new Scanner</area>(<area correct="yes">InFile</area>);</cline>
+</areas></exercise>        
+</exercises>
+</subsection>
+
+    <program xml:id="ac-objuse-we1-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

@@ -1,0 +1,168 @@
+<introduction>
+    <title>Subgoals for Writing a Class</title>
+    <p>
+        <ol marker="1">
+            <li>
+                <p>Name it</p>
+            </li>
+            <li>
+                <p>Differentiate class-level <c>static</c> vs. instance/object-level variables</p>
+            </li>
+            <li>
+                <p>Differentiate class-level <c>static</c> vs. instance/object behaviors/methods</p>
+            </li>
+            <li>
+                <p>Define instance variables (that you want to be interrelated)</p>
+                <p>
+                    <ol marker="a">
+                        <li>
+                            <p>Name</p>
+                        </li>
+                        <li>
+                            <p>Data Type</p>
+                        </li>
+                        <li>
+                            <p>private</p>
+                        </li>
+                    </ol>
+                </p>
+            </li>
+            <li>
+                <p>Define class variables <c>static</c> as needed</p>
+                <p>
+                    <ol marker="a">
+                        <li>
+                            <p>Name</p>
+                        </li>
+                        <li>
+                            <p>Data Type</p>
+                        </li>
+                        <li>
+                            <p>public / private / final</p>
+                        </li>
+                    </ol>
+                </p>
+            </li>
+            <li>
+                <p>Create constructor (behavior) that creates initial state of object</p>
+                <p>
+                    <ol marker="a">
+                        <li>
+                            <p>Overloaded constructor (with as many parameters)</p>
+                        </li>
+                        <li>
+                            <p>public</p>
+                        </li>
+                        <li>
+                            <p>Same name as class</p>
+                        </li>
+                        <li>
+                            <p>No return type</p>
+                        </li>
+                        <li>
+                            <p>Default - no parameters</p>
+                        </li>
+                        <li>
+                            <p>Logic - initialize all variables</p>
+                        </li>
+                        <li>
+                            <p>Repeat as needed, adding parameters</p>
+                        </li>
+                    </ol>
+                </p>
+            </li>
+            <li>
+                <p>Create 1 accessor and 1 mutator behaviors per attribute</p>
+                <p>
+                    <ol marker="A">
+                        <li>
+                            <p>Accessors</p>
+                            <p>
+                                <ol marker="a">
+                                    <li>
+                                        <p>Name is get_&lt;attr_name&gt;</p>
+                                    </li>
+                                    <li>
+                                        <p>Public</p>
+                                    </li>
+                                    <li>
+                                        <p>Return type same data type as attribute</p>
+                                    </li>
+                                    <li>
+                                        <p>No parameters</p>
+                                    </li>
+                                    <li>
+                                        <p>Logic - return value</p>
+                                    </li>
+                                </ol>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Mutators</p>
+                            <p>
+                                <ol marker="a">
+                                    <li>
+                                        <p>Name is set_&lt;attr_name&gt;</p>
+                                    </li>
+                                    <li>
+                                        <p>Public</p>
+                                    </li>
+                                    <li>
+                                        <p>Return type is void</p>
+                                    </li>
+                                    <li>
+                                        <p>Parameter is same data type as attribute</p>
+                                    </li>
+                                    <li>
+                                        <p>Logic validates input parameter and sets attribute value</p>
+                                    </li>
+                                </ol>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </li>
+            <li>
+                <p>Write toString method</p>
+                <p>
+                    <ol marker="a">
+                        <li>
+                            <p>public</p>
+                        </li>
+                        <li>
+                            <p>Returns String</p>
+                        </li>
+                        <li>
+                            <p>No parameters</p>
+                        </li>
+                        <li>
+                            <p>Logic - convert needed attributes to a format that can be printed</p>
+                        </li>
+                    </ol>
+                </p>
+            </li>
+            <li>
+                <p>Write equals method</p>
+                <p>
+                    <ol marker="a">
+                        <li>
+                            <p>public</p>
+                        </li>
+                        <li>
+                            <p>Returns boolean</p>
+                        </li>
+                        <li>
+                            <p>Parameter - instance of the class</p>
+                        </li>
+                        <li>
+                            <p>Logic - compare attributes for equity</p>
+                        </li>
+                    </ol>
+                </p>
+            </li>
+            <li>
+                <p>Create additional methods as needed</p>
+            </li>
+        </ol>
+    </p>
+</introduction>

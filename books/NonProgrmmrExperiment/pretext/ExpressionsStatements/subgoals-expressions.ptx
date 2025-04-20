@@ -1,0 +1,20 @@
+<introduction>
+    <title>Subgoals for evaluating an assignment statement</title>
+    <p><ol marker="1">
+        <li>
+            <p>Determine resultant data type of expression</p>
+        </li>
+        <li>
+            <p>Update variable for pre operators based on side effect</p>
+        </li>
+        <li>
+            <p>Solve arithmetic equation, operator precedence</p>
+        </li>
+        <li>
+            <p>Is the Left Hand Side (LHS) of the assignment statement a variable? Check the data type of the value on right hand side (RHS) against data type of LHS variable.</p>
+        </li>
+        <li>
+            <p>Update variable for post operators based on side effect</p>
+        </li>
+    </ol></p>
+</introduction>

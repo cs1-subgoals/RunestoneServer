@@ -1,0 +1,202 @@
+<section xml:id="write-loops_writeloops-we1-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>WriteLoops-WE1-P1</title>
+        <xi:include href='./subgoals-write-loops.ptx' />
+        <subsection>
+<exercises>
+            <exercise xml:id="parsons-WrLoops-WE1-P1-1" indent="show" language="python">
+                <statement>
+                    <p>Q1: Put the code in the right order to create a program that will calculate and print the sum of 10 natural numbers.</p>
+                </statement>
+                <blocks>
+                    <block order="5">
+                        <cline>public class main{</cline>
+                        <cline>   public static void main(String[] args){</cline>
+                    </block>
+                    <block order="3">
+                        <cline>      int sum = 0;</cline>
+                    </block>
+                    <block order="1">
+                        <cline>      for (int i = 0; i &lt;= 10; i++) {</cline>
+                    </block>
+                    <block order="6">
+                        <cline>         sum += i;</cline>
+                    </block>
+                    <block order="2">
+                        <cline>      }</cline>
+                        <cline>      System.out.println(sum);</cline>
+                    </block>
+                    <block order="4">
+                        <cline>   }</cline>
+                        <cline>}</cline>
+                    </block>
+                </blocks>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Q2: Fill in the blanks in the following code to create a program that will print the even numbers between 1 and 20. 
+                </p>
+                <program language="java"><input>
+public class main{
+    public static void main(String[] args){
+        for (int i = ___A___; i &lt;= ___B___; i++)
+            if (___C___ % ___D___ == ___E___)
+                System.out.println(i);
+    }
+}
+                    </input></program>
+                    <p>Blank A: <var/></p>
+                    <p>Blank B: <var/></p>
+                    <p>Blank C: <var/></p>
+                    <p>Blank D: <var/></p>
+                    <p>Blank E: <var/></p>
+            </statement>
+            <setup>
+                <var>
+                    <condition string="1">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string="^\s*x\s*$">
+                        <feedback>
+                            <p>Incorrect.</p>
+                        </feedback>
+                    </condition>
+                </var>
+                <var>
+                    <condition string="20">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string="^\s*x\s*$">
+                        <feedback>
+                            <p>Incorrect.</p>
+                        </feedback>
+                    </condition>
+                </var>
+                <var>
+                    <condition string="^\s*i\s*$">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string="^\s*x\s*$">
+                        <feedback>
+                            <p>Incorrect.</p>
+                        </feedback>
+                    </condition>
+                </var>
+                <var>
+                    <condition string="2">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string="^\s*x\s*$">
+                        <feedback>
+                            <p>Incorrect.</p>
+                        </feedback>
+                    </condition>
+                </var>
+                <var>
+                    <condition string="0">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string="^\s*x\s*$">
+                        <feedback>
+                            <p>Incorrect.</p>
+                        </feedback>
+                    </condition>
+                </var>
+            </setup>
+        </exercise>
+        <exercise xml:id="parsons-WrLoops-WE1-P1-3" indent="show" language="python">
+            <statement>
+                <p>Q3: Put the code in the right order to create a program that will generate an integer between 0 and 10,000 (inclusive), print the number, calculate and print the number of digits in the number.</p>
+            </statement>
+            <blocks>
+                <block order="4">
+                    <cline>import java.util.*;</cline>
+                    <cline>public class main{</cline>
+                    <cline>   public static void main(String[] args){</cline>
+                </block>
+                <block order="7">
+                    <cline>      Random r = new Random();</cline>
+                    <cline>      int x = r.nextInt(10001);</cline>
+                </block>
+                <block order="5">
+                    <cline>      int digits = 0;</cline>
+                    <cline>      int y = x;</cline>
+                </block>
+                <block order="6">
+                    <cline>      while (y &gt; 0) {</cline>
+                </block>
+                <block order="3">
+                    <cline>         digits++;</cline>
+                    <cline>         y = y/10;</cline>
+                </block>
+                <block order="2">
+                    <cline>      }</cline>
+                </block>
+                <block order="1">
+                    <cline>      System.out.println(x + " has " + digits + " digits.");</cline>
+                </block>
+                <block order="8">
+                    <cline>   }</cline>
+                    <cline>}</cline>
+                </block>
+            </blocks>
+        </exercise>
+        <exercise xml:id="parsons-WrLoops-WE1-P1-4" indent="show" language="python">
+            <statement>
+                <p>Q4: Put the code in the right order to create a program that will print out all Armstrong numbers between 1 and 500. If the sum of the cubes of each digit of the number is equal to the number itself, then the number is called an Armstrong number. For example, 153 = (1*1*1) + (5*5*5) + (3*3*3)</p>
+            </statement>
+            <blocks>
+                <block order="7">
+                    <cline>import java.util.*;</cline>
+                    <cline>public class main{</cline>
+                    <cline>   public static void main(String[] args){</cline>
+                </block>
+                <block order="3">
+                    <cline>      for (int i = 100; i &lt;= 500; i++) {</cline>
+                </block>
+                <block order="5">
+                    <cline>          int dig1 = i/100;</cline>
+                    <cline>          int dig2 = (i/10)%10;</cline>
+                    <cline>          int dig3 = i%10;</cline>
+                </block>
+                <block order="2">
+                    <cline>          int total = Math.pow(dig1,3) + Math.pow(dig2,3) + Math.pow(dig3,3);</cline>
+                </block>
+                <block order="8">
+                    <cline>          if (total == i)</cline>
+                </block>
+                <block order="1">
+                    <cline>              System.out.println(i + " Armstrong number.");</cline>
+                </block>
+                <block order="4">
+                    <cline>      } // end for</cline>
+                </block>
+                <block order="6">
+                    <cline>   }</cline>
+                    <cline>}</cline>
+                </block>
+            </blocks>
+        </exercise>
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-writeloops-we1-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+</section>
+

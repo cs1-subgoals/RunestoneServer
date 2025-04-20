@@ -1,0 +1,75 @@
+<section xml:id="write-classes_worked-example-writing-classes-constructors" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Writing Classes - Constructors</title>
+    <xi:include href='./subgoals-write-classes.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-writeclass-we2" youtube="NKIXVUJIKNI"/>
+    <p>Problem: We will be writing a class to represent an instance of time, like a specific time in the day.</p>
+    <p>The attributes have been declared, now write a default and overloaded constructor.</p>
+    </subsection>
+    <subsection>
+        <title>SG6: Create constructor (behavior) that creates initial state of object</title>
+        <p>6A, 6B, &amp; 6C: All constructors are public, with no return type, and named the same as the class.</p>
+        <p>6D: We will start with the default constructor, which has no parameters.</p>
+        <p>All together, the default constructor has a header/signature of:</p>
+        <program language="java">
+            <input>
+public TimeType() {
+
+}
+            </input>
+        </program>
+        <p>6E. Logic - initialize all variables</p>
+        <program language="java">
+            <input>
+public TimeType () {
+   hour = 0;
+   minute = 0;
+   second = 0;
+}
+            </input>
+        </program>
+        <p>6F. Repeat as needed, adding parameters</p>
+        <program language="java">
+            <input>
+public TimeType (int hr, int min, int sec) {
+
+   if (hr &gt;=0 &amp;&amp; hr &lt;= 23)
+      hour = hr;
+   if (min &gt;= 0 &amp;&amp; min &lt;= 59)
+      minute = min;
+   if (sec &gt;= 0 &amp;&amp; sec &lt;= 59)
+      second = sec;
+}
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+    <p>We are now able to construct TimeType objects from the main method in two ways</p>
+    <program language="java">
+        <input>
+public static void main (String [] args) {
+   TimeType midnight = new TimeType(); //call the default constructor
+   TimeType noon = new TimeType(12, 0, 0); //call an overloaded constructor
+}
+        </input>
+    </program>
+    <p>Update the UML Diagram</p>
+    <figure align="">
+        <image source="WriteClasses/Figures/WC2-Slide4.PNG" alt="UML Diagram"/>
+    </figure>
+</subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="write-classes_wrclasses-we2-p1" />
+            </li>
+            <li>
+                <xref text="title" ref="write-classes_wrclasses-we2-p2" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

@@ -1,0 +1,57 @@
+<section xml:id="loops_loops-we5-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Loops-WE5-P1</title>
+        <xi:include href='./subgoals-loops.ptx' />
+        <subsection>
+<exercises>
+            <exercise xml:id="parsons-Loops-WE5-P1-14" indent="show" language="python">
+                <statement>
+                    <p>Q14: Put the code in the right order to create a program that will prompt a user to enter an integer which is NOT a negative multiple of 5. If the user enters a negative multiple of 5, the program should ask for another value.</p>
+                </statement>
+                <blocks>
+                    <block order="2">
+                        <cline>import java.util.*;</cline>
+                        <cline>public class main{</cline>
+                        <cline>  public static void main(String[] args){</cline>
+                    </block>
+                    <block order="5">
+                        <cline>    //declare variables</cline>
+                        <cline>    int value;</cline>
+                        <cline>    Scanner get = new Scanner(System.in);</cline>
+                    </block>
+                    <block order="7">
+                        <cline>    //prompt for and read input</cline>
+                        <cline>    System.out.print("Enter a value. ");</cline>
+                        <cline>    value = get.nextInt();</cline>
+                    </block>
+                    <block order="6">
+                        <cline>    //loop until valid value is entered</cline>
+                        <cline>    for (int j = 0; value&lt;0 &amp;&amp; value % 5 == 0; j++) {</cline>
+                    </block>
+                    <block order="1">
+                        <cline>      System.out.print("Invalid. Enter another value. ");</cline>
+                        <cline>      value = get.nextInt();</cline>
+                    </block>
+                    <block order="4">
+                        <cline>    }</cline>
+                        <cline>    System.out.println("Valid value entered " + value);</cline>
+                    </block>
+                    <block order="3">
+                        <cline>  }</cline>
+                        <cline>}</cline>
+                    </block>
+                </blocks>
+            </exercise>
+</exercises>
+        </subsection>
+
+        <program xml:id="ac-loops-we5-p1" interactive="activecode" language="java">
+            <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+            </input>
+        </program>
+    </section>
+

@@ -1,0 +1,4 @@
+/home/subgoals/web2py/applications/runestone/books/NonProgrmmrExperiment/pretext/toc.ptx:5:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
+/home/subgoals/web2py/applications/runestone/books/NonProgrmmrExperiment/pretext/toc.ptx:6:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element include there
+/home/subgoals/web2py/applications/runestone/books/NonProgrmmrExperiment/pretext/toc.ptx:4:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content
+/home/subgoals/web2py/applications/runestone/books/NonProgrmmrExperiment/pretext/toc.ptx:2:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element docinfo, got pretext

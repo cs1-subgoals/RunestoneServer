@@ -1,0 +1,43 @@
+<introduction>
+    <title>Subgoals for Writing Selection Statements</title>
+    <p>
+        <term>If Statement</term>
+    </p>
+    <p><ol marker="1">
+        <li>
+            <p>Define how many mutually exclusive paths are needed</p>
+        </li>
+        <li>
+            <p>Order from most restrictive/selective group to least restrictive</p>
+        </li>
+        <li>
+            <p>Write if statement with Boolean expression</p>
+        </li>
+        <li>
+            <p>Follow with true bracket including action</p>
+        </li>
+        <li>
+            <p>Follow with else bracket</p>
+        </li>
+        <li>
+            <p>Repeat until all groups and actions are accounted for</p>
+        </li>
+    </ol></p>
+    <p>
+        <term>OR Switch Statement</term>
+    </p>
+    <p><ol marker="1">
+        <li>
+            <p>Determine variable / expression for mutually exclusive ranges</p>
+        </li>
+        <li>
+            <p>Write switch statement based on variable / expression</p>
+        </li>
+        <li>
+            <p>Each range is a &#8216;case&#8217;</p>
+        </li>
+        <li>
+            <p>Include break statements and default case if needed</p>
+        </li>
+    </ol></p>
+</introduction>

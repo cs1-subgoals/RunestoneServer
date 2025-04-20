@@ -1,0 +1,38 @@
+<section xml:id="expressions-statements_worked-example-swap" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Swap</title>
+    <xi:include href='./subgoals-expressions.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-express-we9-swap" youtube="tp2DFQAd83g" width="auto"/>
+    <p>Consider these declarations.</p>
+    <program language="java">
+        <input>
+int x,y,z;
+x = 7;
+y = 13;
+        </input>
+    </program>
+    <p>Now consider this code for swapping the values of x and y. Note the need for a third variable to hold the value of x so that it is not lost when assigning the value of y into x.</p>
+    <program language="java">
+        <input>
+z = x;
+x = y;
+y = z;
+        </input>
+    </program>
+    <p>The diagram below shows the changes in memory after executing each of the six lines of code.</p>
+    <figure align="">
+        <image source="ExpressionsStatements/Figures/swap-trace.png" width="75%" alt="Swap Trace in Memory"/>
+    </figure>
+</subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we10-p1" />
+                </li>
+            </ul></p>
+    </conclusion>
+</section>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Write Expression Statements</title>
+        <xi:include href='./WorkedEx-1-writing-exp-statements.ptx' />
+        <xi:include href='./write-exp-statements-we1-p1.ptx' />
+        <xi:include href='./write-exp-statements-relational-practice.ptx' />
+        <xi:include href='./write-exp-statements-assess-relational.ptx' />
+    </chapter>

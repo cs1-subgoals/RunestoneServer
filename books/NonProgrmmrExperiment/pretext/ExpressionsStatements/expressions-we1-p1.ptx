@@ -1,0 +1,169 @@
+<section xml:id="expressions-statements_expressions-we1-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Expressions-WE1-P1</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p><term>Given</term></p>
+            <program language="java"><input>
+int alpha, beta, gamma;
+double omega, theta, lambda;
+beta = 1;
+omega = 2.5;
+</input></program>
+<exercises>
+    <exercise xml:id="m-Expr-WE1-P1-1">
+        <statement>
+
+            <p>Q1: alpha = beta;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>valid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>invalid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE1-P1-2">
+        <statement>
+
+            <p>Q2: alpha = omega;</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>valid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>invalid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE1-P1-3">
+        <statement>
+
+            <p>Q3: theta = 22;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>valid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>invalid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE1-P1-4">
+        <statement>
+
+            <p>Q4: omega = gamma;</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>valid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>invalid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE1-P1-5">
+        <statement>
+
+            <p>Q5: theta = lambda;</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>valid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>invalid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+</exercises>
+        </subsection>
+    <program xml:id="ac-express-we1-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+    public static void main(String args[]){
+    
+    }
+}
+        </input>
+    </program>
+    </section>
+

@@ -1,0 +1,38 @@
+<section xml:id="expressions-statements_expressions-we10-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Expressions-WE10-P1</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p><term>Given</term></p>
+            <program language="java"><input>
+int x,y,z;
+int x = 42;
+int y = 11;
+int z = 5;
+x = z;
+y = x;
+z = y;
+</input></program>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q75: What is the final value of x? </p><p><var/></p></statement><setup><var><condition string="5"><feedback><p>Correct</p></feedback></condition><condition string=".*"><feedback><p>Incorrect</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q76: What is the final value of y? </p><p><var/></p></statement><setup><var><condition string="5"><feedback><p>Correct</p></feedback></condition><condition string=".*"><feedback><p>Incorrect</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q77: What is the final value of z? </p><p><var/></p></statement><setup><var><condition string="5"><feedback><p>Correct</p></feedback></condition><condition string=".*"><feedback><p>Incorrect</p></feedback></condition></var></setup></exercise>
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-express-we10-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

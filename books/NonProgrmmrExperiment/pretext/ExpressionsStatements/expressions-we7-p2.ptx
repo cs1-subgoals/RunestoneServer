@@ -1,0 +1,75 @@
+<section xml:id="expressions-statements_expressions-we7-p2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Expressions-WE7-P2</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p><term>Given</term></p>
+            <program language="java"><input>
+                int alpha = 2;
+                int beta = 1;
+                int delta = 3;
+                int eta;
+                int gamma;
+                
+                double omega = 2.5;
+                double theta = -1.3;
+                double kappa = 3.0;
+                double lambda;
+                double rho;
+</input></program>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q46: <c>gamma = delta + ++beta / alpha--;</c> </p><p>What is the value of alpha after execution? The next three questions are about this line being executed once.</p><p><var/></p></statement><setup><var><condition string="1"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q47: <c>gamma = delta + ++beta / alpha--;</c> </p><p>What is the value of beta after execution?</p><p><var/></p></statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q48: <c>gamma = delta + ++beta / alpha--;</c> </p><p>What is the value of gamma after execution?</p><p><var/></p></statement><setup><var><condition string="4"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q49: <c>eta = alpha + ++beta / delta--;</c> </p><p>What is the value of beta after execution? This is a new expression to be evaluated, and exists separately from previous questions.</p><p><var/></p></statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q50: <c>eta = alpha + ++beta / delta--;</c> </p><p>What is the value of delta after execution? This is a new expression to be evaluated, and exists separately from previous questions.</p><p><var/></p></statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q51: <c>eta = alpha + ++beta / delta--;</c> </p><p>What is the value of gamma after execution? This is a new expression to be evaluated, and exists separately from previous questions.</p><p><var/></p></statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+        <feedback>
+            <p>Incorrect</p>
+        </feedback>
+    </condition></var></setup></exercise>
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-express-we7-p2" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

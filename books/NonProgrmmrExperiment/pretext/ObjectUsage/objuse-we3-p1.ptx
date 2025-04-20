@@ -1,0 +1,58 @@
+<section xml:id="object-usage_objuse-we3-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>ObjUse-WE3-P1</title>
+    <xi:include href='./subgoals-object-use.ptx' />
+    <subsection>
+        <figure align="">
+            <image source="ObjectUsage/Figures/Create-instance-widget.png" width="90%" alt="API docs for Widget constructor"/>
+        </figure>
+<exercises>
+        <exercise>
+            <statement>
+                <p>Q9: Given this code, how many items are in <c>mine</c>?
+                </p><p><c>Widget mine = new Widget();</c></p>
+                <p><var/></p>
+            </statement>
+            <setup>
+                <var>
+                    <condition string="0">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string=".*"><feedback><p>Incorrect</p></feedback></condition>
+                </var>
+            </setup>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Q10: Given this code, how many items are in <c>yours</c>?
+                </p><p><c>Widget yours = new Widget(7);</c></p>
+                <p><var/></p>
+            </statement>
+            <setup>
+                <var>
+                    <condition string="7">
+                        <feedback>
+                            <p>Correct</p>
+                        </feedback>
+                    </condition>
+                    <condition string=".*"><feedback><p>Incorrect</p></feedback></condition>
+                </var>
+            </setup>
+        </exercise>
+</exercises>
+    </subsection>
+
+<p>Because we do not have an implementation of the <c>Widget</c> class, there is no <c>import</c> statement in the ActiveCode box below, and you will not be able to execute the above code.</p>
+
+    <program xml:id="ac-objuse-we3-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+</section>
+

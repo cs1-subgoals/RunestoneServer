@@ -1,0 +1,92 @@
+<section xml:id="expressions-statements_worked-example-assigning-booleans" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Assigning Booleans</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-express-we8-boolean" youtube="9U-tgWkWieA" width="auto"/>
+            <p>Given the following code snippet, evaluate the final statement (the last line). If invalid, give the reason. If valid, what value is assigned to the variable? Note any possible side effects.</p>
+        <program language="java"><input>
+int alpha = 42;
+int beta = 1;
+int gamma = 5;
+boolean result;
+            
+result = beta &lt;= alpha;
+            
+</input></program>
+</subsection>
+        <subsection>
+            <title>SG1 : Determine resultant data type of expression</title>
+            <p>The <em>expression</em> is the right-hand-side (RHS) of the statement: <c>beta &lt;= alpha</c>. The operator is one of the boolean relational operators, so the result will be <term>boolean</term>.</p>
+            <p>The statement above would be an acceptable, complete response for this subgoal. However, for the sake of thoroughness, here is some more information about working with different data types and boolean operators.</p>
+            <p>The relational operators are:</p>
+            <p><ul>
+                <li>
+                    <p><c>&lt;=</c> Less than or equal (i.e. &#8220;at most&#8221;)</p>
+                </li>
+                <li>
+                    <p><c>&gt;=</c> Greater than or equal (i.e. &#8220;at least&#8221;)</p>
+                </li>
+                <li>
+                    <p><c>&lt;</c> Strictly less than</p>
+                </li>
+                <li>
+                    <p><c>&gt;</c> Strictly greater than</p>
+                </li>
+                <li>
+                    <p><c>==</c> Equal</p>
+                </li>
+                <li>
+                    <p><c>!=</c> Not equal</p>
+                </li>
+            </ul></p>
+            <p>There are a few important details to note about using these operators.</p>
+            <p><ul>
+                <li>
+                    <p>They all work as you might expect for <c>int</c> values. The bulk of your first lessons in boolean operators will involve only integer values.</p>
+                </li>
+                <li>
+                    <p>Be careful with equality for <c>float</c> or <c>double</c> values. Because of how these values are stored in memory, computed values may be slighty different than expected, and it is a good practice to use a range of acceptable values for comparing equality. This behavior of floating-point values, as well as the methods to program against it, is a bit beyond the scope of this lesson. If you run into this problem try searching for &#8220;comparing doubles in java&#8221; on the web.</p>
+                </li>
+                <li>
+                    <p>Using equality operators <c>==</c> or <c>!=</c> on objects (such as Strings) only compares the memory reference; that is, two objects are only &#8220;equal&#8221; according to this operator if they are in fact the same object. If you wish to compare the values of object properties, the class definition must implement the <c>.equals()</c> method.</p>
+                </li>
+                <li>
+                    <p>Often, the notion of an object being &#8220;less than&#8221; or &#8220;greater than&#8221; another is nonsensical. However, sometimes we do wish to sort or rank objects by one of their properties (e.g. <c>Car</c> objects by their <c>price</c> property). In such cases, Java provides the Comparable and Comparator interfaces, but those are quite beyond the scope of this lesson.</p>
+                </li>
+            </ul></p>
+        </subsection>
+        <subsection>
+            <title>SG2: Update variables for any pre-increment or pre-decrement operators (side effects)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>SG3: Evaluate arithmetic expression according to operator precedence</title>
+            <p>The RHS may be easiest to conceptualize as an algebraic inequality, by replacing the variables right away with their current values : <c>1 &lt;= 42</c>. Logically, this is a true statement, so the returned value is boolean <c>true</c>.</p>
+        </subsection>
+        <subsection>
+            <title>SG4: Is the Left Hand Side (LHS) of the assignment statement a variable? Check the data type of the value on right hand side (RHS) against data type of LHS variable.</title>
+            <p>The LHS is a variable of type <c>boolean</c>, and the RHS is type <c>boolean</c>. This is valid.</p>
+            <p>If you have experience in other programming languages, you may have seen boolean true and false values interchanged with 1 and 0 integer values, or even compared with non-numeric values in a logical expression. This is NOT the case in Java. In Java, <c>true</c> and <c>false</c> are the only values that may be stored in a variable declared as a <c>boolean</c>.</p>
+            <p>Be careful not to confuse the meanings of false, null, 0, empty, and undefined. All these have specific meanings in programming and in Java.</p>
+        </subsection>
+        <subsection>
+            <title>SG5: Update variable for post-increment or post-decrement operators (side effect)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+
+<answer>
+    <p><c>result</c> is <c>true</c>.</p>
+</answer>
+
+        </subsection>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we8-p1" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

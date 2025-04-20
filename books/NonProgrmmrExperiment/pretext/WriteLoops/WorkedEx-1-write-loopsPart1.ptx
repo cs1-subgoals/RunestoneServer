@@ -1,0 +1,87 @@
+<section xml:id="write-loops_worked-example-writing-loopsPart1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Writing Loops Part 1</title>
+        <xi:include href='./subgoals-write-loops.ptx' />
+        <subsection>
+        <p>You can watch this video or read through the content below it. For this specific problem skip to 3:10 in the video.</p>
+
+    <video xml:id="video-writeloops-we1Part1" youtube="7amm8wa0MiQ" width="auto"/>
+        
+        <p>Problem: Write a loop that will add up 1 + 1/2 + 1/4 + 1/8 + 1/16 + &#8230; + 1/1024</p>
+        <transition/>
+        </subsection>
+        <subsection>
+            <title>SG1:  Determine purpose of loop</title>
+            <p>Because we know the number of iterations, we <em>could</em> choose a for-loop, but for this exercise we will go with the general purpose while-loop.</p>
+        </subsection>
+        <subsection>
+            <title>SG2: Define and initialize variables</title>
+            <program language="java"><input>
+double sum = 0;
+double term = 1.0;
+while (        )
+{
+
+}
+System.out.println(sum);
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG3: Define termination condition invert to continuation condition</title>
+            <p>
+                The denominators are increasing powers of 2. The first denominator, if you think of 1 as 1/1, is 2 raised to the power of 0. 
+                The final denominator, 1024, is 2 raised to the power of 10, so we will iterate from zero to ten. 
+                We know we need to iterate 10 times, from the variable i starting a 0 and it should end when i is 11.
+                To convert (i >= 11) to a termination condition, it becomes (i &lt;= 10) so the code is: 
+            </p> 
+            
+            <program language="java"><input>
+double sum = 0;
+double term = 1.0;
+int i = 0;
+while ( i &lt;= 10 )
+{
+
+}
+System.out.println(sum);
+</input></program>
+        </subsection>
+        <subsection>
+            <title>SG4: Write loop body</title>
+            <program language="java"><input>
+double sum = 0;
+double term = 1.0;
+int i = 0;
+
+while ( i &lt;= 10 )
+{
+   sum = sum + term;
+   term = 0.5 * term; //same as divide term in half
+   i++;
+}
+System.out.println(sum);
+</input></program>
+<p>
+    Here is the equivalent for loop approach to solve this problem: 
+</p>
+<program language="java"><input>
+    double sum = 0;
+    double term = 1.0;
+    for (int i = 0; i &lt;= 10; i++) {
+        sum =  sum + term;
+        term = 0.5 * term;
+    }
+    System.out.println(sum);
+    
+</input></program>
+
+        </subsection>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="write-loops_writeloops-we1-p1" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

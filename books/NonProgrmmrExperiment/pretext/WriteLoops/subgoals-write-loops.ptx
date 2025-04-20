@@ -1,0 +1,32 @@
+<introduction>
+    <title>Subgoals for Writing a Loop</title>
+    <p><ol marker="1">
+        <li>
+            <p>Determine purpose of loop</p>
+            <p><ol marker="a">
+                <li>
+                    <p>Pick a loop structure (while, for, do_while)</p>
+                </li>
+            </ol></p>
+        </li>
+        <li>
+            <p>Define and initialize variables</p>
+        </li>
+        <li>
+            <p>Determine termination condition</p>
+            <p><ol marker="a">
+                <li>
+                    <p>Invert termination condition to continuation condition</p>
+                </li>
+            </ol></p>
+        </li>
+        <li>
+            <p>Write loop body</p>
+            <p><ol marker="a">
+                <li>
+                    <p>Update loop control variable to reach termination</p>
+                </li>
+            </ol></p>
+        </li>
+    </ol></p>
+</introduction>

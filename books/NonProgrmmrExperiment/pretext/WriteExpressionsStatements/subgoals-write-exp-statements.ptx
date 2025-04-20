@@ -1,0 +1,28 @@
+<introduction>
+    <title>Subgoals for Writing Expression Statements</title>
+    <p>
+        <ol marker="1">
+            <li>
+                <p>Determine expression that will yield variable</p>
+            </li>
+            <li>
+                <p>Determine data type and name of variable and data type of expression</p>
+            </li>
+            <li>
+                <p>
+                    Determine arithmetic equation with operators
+                </p>
+            </li>
+            <li>
+                <p>
+                    Determine expression components
+                </p>
+            </li>
+            <li>
+                <p>
+                    Operators and operands must be compatible
+                </p>
+            </li>
+        </ol>
+    </p>
+</introduction>

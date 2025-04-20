@@ -1,0 +1,52 @@
+<section xml:id="object-usage_objuse-we2-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>ObjUse-WE2-P1</title>
+        <xi:include href='./subgoals-object-use.ptx' />
+        <subsection>
+<exercises>
+<exercise xml:id="ca-ObjUse-WE2-P1-5">
+    <statement><p>Q5: Click on the variables (object references) in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">/* creates new random object with default seed */</area></cline>
+<cline><area correct="no">Random</area> <area correct="yes">rand</area> = <area correct="no">new Random();</area></cline>
+<cline><area correct="no">/* creates new random object with seed parameter */</area></cline>
+<cline><area correct="no">Random</area> <area correct="yes">rand2</area> = <area correct="no">new Random(1234567890);</area></cline>
+</areas></exercise>
+<exercise xml:id="ca-ObjUse-WE2-P1-6">
+    <statement><p>Q6: Click on the class names (but not constructors) in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">/* creates new random object with default seed */</area></cline>
+<cline><area correct="yes">Random</area> <area correct="no">rand</area> = <area correct="no">new Random();</area></cline>
+<cline><area correct="no">/* creates new random object with seed parameter */</area></cline>
+<cline><area correct="yes">Random</area> <area correct="no">rand2</area> = <area correct="no">new Random(1234567890);</area></cline>
+</areas></exercise>
+<exercise xml:id="ca-ObjUse-WE2-P1-7">
+    <statement><p>Q7: Click on the calls to the Random constructor in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">/* creates new random object with default seed */</area></cline>
+<cline><area correct="no">Random</area> <area correct="no">rand</area> = <area correct="yes">new Random();</area></cline>
+<cline><area correct="no">/* creates new random object with seed parameter */</area></cline>
+<cline><area correct="no">Random</area> <area correct="no">rand2</area> = <area correct="yes">new Random(1234567890);</area></cline>
+</areas></exercise>
+<exercise xml:id="ca-ObjUse-WE2-P1-8">
+    <statement><p>Q8: Click on the parameters which are passed to the Random constructor in the following code</p></statement>
+<areas language="java">
+<cline><area correct="no">/* creates new random object with default seed */</area></cline>
+<cline><area correct="no">Random</area> <area correct="no">rand</area> = <area correct="no">new Random();</area></cline>
+<cline><area correct="no">/* creates new random object with seed parameter */</area></cline>
+<cline><area correct="no">Random</area> <area correct="no">rand2</area> = <area correct="no">new Random</area>(<area correct="yes">1234567890</area>);</cline>
+</areas></exercise>        
+</exercises>
+</subsection>
+
+    <program xml:id="ac-objuse-we2-p1" interactive="activecode" language="java">
+        <input>
+   import java.util.Random;
+   public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

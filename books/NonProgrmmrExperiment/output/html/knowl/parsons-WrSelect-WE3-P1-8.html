@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="parsons-WrSelect-WE3-P1-8">
+<div class="parsons_question parsons-text"><div class="para" id="p-2103">Q8: Put the code in the right order to create a program that will generate a value 0 to 1500 inclusive, assign a value to double variable <code class="code-inline tex2jax_ignore">cost</code> depending on the value of integer variable <code class="code-inline tex2jax_ignore">distance</code> as shown in the table above, and then print both values.</div></div>
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="java" data-noindent="true">impot java.util.*;
+public class main {
+   public static void main(String[] args) {
+---
+      Random r = new Random();
+      int distance = r.nextInt(1501);
+      double cost = 0.0;
+---
+      if (distance &lt;= 100)
+---
+         cost = 5;
+---
+      else if (distance &lt;= 500)
+---
+         cost = 8;
+---
+      else if (distance&lt;1000)
+---
+         cost = 10;
+---
+      else
+---
+         cost = 12;
+---
+      System.out.println("Distance: " + distance + "; Cost: $" + cost);
+---
+   }
+}</pre>
+</div></div></div></article><span class="incontext"><a href="write-selection_writeselection-we2-p1.html#parsons-WrSelect-WE3-P1-8" class="internal">in-context</a></span>
+</body>
+</html>

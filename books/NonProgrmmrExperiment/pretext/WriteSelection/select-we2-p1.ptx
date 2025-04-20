@@ -1,0 +1,202 @@
+<section xml:id="write-selection_writeselection-we2-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>WriteSelection-WE2-P1</title>
+        <xi:include href='./subgoals-write-selection.ptx' />
+        <subsection>
+            <p>Table for Q8</p>
+            <table><tabular>
+                
+                    
+                    
+                    
+                        <row header="yes">
+                            <cell>
+                                Distance
+                            </cell>
+                            <cell>
+                                Cost
+                            </cell>
+                        </row>
+                    
+                    
+                        <row>
+                            <cell>
+                                0 through 100
+                            </cell>
+                            <cell>
+                                5.00
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                More than 100 but not more than 500
+                            </cell>
+                            <cell>
+                                8.00
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                More than 500 but less than 1,000
+                            </cell>
+                            <cell>
+                                10.00
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                1,000 or more
+                            </cell>
+                            <cell>
+                                12.00
+                            </cell>
+                        </row>
+                    
+                
+            </tabular></table>
+<exercises>
+            <exercise xml:id="parsons-WrSelect-WE3-P1-8" indent="show" language="java">
+                <statement>
+                    <p>Q8: Put the code in the right order to create a program that will generate a value 0 to 1500 inclusive, assign a value to double variable <c>cost</c> depending on the value of integer variable <c>distance</c> as shown in the table above, and then print both values.</p>
+                </statement>
+                <blocks>
+                    <block order="6">
+                        <cline>impot java.util.*;</cline>
+                        <cline>public class main {</cline>
+                        <cline>   public static void main(String[] args) {</cline>
+                    </block>
+                    <block order="3">
+                        <cline>      Random r = new Random();</cline>
+                        <cline>      int distance = r.nextInt(1501);</cline>
+                        <cline>      double cost = 0.0;</cline>
+                    </block>
+                    <block order="12">
+                        <cline>      if (distance &lt;= 100)</cline>
+                    </block>
+                    <block order="7">
+                        <cline>         cost = 5;</cline>
+                    </block>
+                    <block order="1">
+                        <cline>      else if (distance &lt;= 500)</cline>
+                    </block>
+                    <block order="8">
+                        <cline>         cost = 8;</cline>
+                    </block>
+                    <block order="2">
+                        <cline>      else if (distance&lt;1000)</cline>
+                    </block>
+                    <block order="10">
+                        <cline>         cost = 10;</cline>
+                    </block>
+                    <block order="9">
+                        <cline>      else</cline>
+                    </block>
+                    <block order="11">
+                        <cline>         cost = 12;</cline>
+                    </block>
+                    <block order="4">
+                        <cline>      System.out.println("Distance: " + distance + "; Cost: $" + cost);</cline>
+                    </block>
+                    <block order="5">
+                        <cline>   }</cline>
+                        <cline>}</cline>
+                    </block>
+                </blocks>
+            </exercise>
+            <exercise xml:id="parsons-WrSelect-WE3-P1-9" indent="show" language="java">
+                <statement>
+                    <p>Q9: Put the code in the right order to create a program that will generate an integer between 1 and 7, print the value, and display the name of the weekday where 1 is Sunday and 7 is Saturday.</p>
+                </statement>
+                <blocks>
+                    <block order="1">
+                        <cline>impot java.util.*;</cline>
+                        <cline>public class main {</cline>
+                        <cline>   public static void main(String[] args) {</cline>
+                    </block>
+                    <block order="7">
+                        <cline>      Random r = new Random();</cline>
+                        <cline>      int x = 1 + r.nextInt(7);</cline>
+                        <cline>      String result = "";</cline>
+                        <cline>      System.out.println(x);</cline>
+                    </block>
+                    <block order="2">
+                        <cline>      switch (x) {</cline>
+                    </block>
+                    <block order="6">
+                        <cline>         case 1: result = "Sunday"; break;</cline>
+                        <cline>         case 2: result = "Monday"; break;</cline>
+                        <cline>         case 3: result = "Tuesday"; break;</cline>
+                        <cline>         case 4: result = "Wednesday"; break;</cline>
+                        <cline>         case 5: result = "Thursday"; break;</cline>
+                        <cline>         case 6: result = "Friday"; break;</cline>
+                        <cline>         case 7: result = "Saturday"; break;</cline>
+                    </block>
+                    <block order="5">
+                        <cline>      }</cline>
+                    </block>
+                    <block order="4">
+                        <cline>      System.out.println(result);</cline>
+                    </block>
+                    <block order="3">
+                        <cline>   }</cline>
+                        <cline>}</cline>
+                    </block>
+                </blocks>
+            </exercise>
+            <exercise xml:id="parsons-WrSelect-WE3-P1-10" indent="show" language="java">
+                <statement>
+                    <p>Q10: Put the code in the right order to create a program that will generate an integer between 65 and 122 inclusive and then convert that code to a character through a cast. The program should then print the character value and print &#8220;Vowel&#8221; or &#8220;Consonant&#8221; depending on the character value. If the character is not a letter (between a and z or A and Z), then an error message should be printed. Vowels are considered to be {a, e, i, o, u}.</p>
+                </statement>
+                <blocks>
+                    <block order="6">
+                        <cline>impot java.util.*;</cline>
+                        <cline>public class main {</cline>
+                        <cline>   public static void main(String[] args) {</cline>
+                    </block>
+                    <block order="2">
+                        <cline>      Random r = new Random();</cline>
+                        <cline>      int value = r.nextInt(57) + 65;</cline>
+                        <cline>      char ch = (char)value;</cline>
+                        <cline>      System.out.println(ch);</cline>
+                    </block>
+                    <block order="1">
+                        <cline>      if (('a' &lt;= ch&amp;&amp; &lt;= 'z') || ('A' &lt;= ch&amp;&amp; ch &lt;= 'Z')) {</cline>
+                    </block>
+                    <block order="5">
+                        <cline>         if (ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E'</cline>
+                        <cline>               || ch == 'i' || ch == 'I' || ch == 'o' || ch == 'O'</cline>
+                        <cline>               || ch == 'u' || ch == 'U')</cline>
+                    </block>
+                    <block order="7">
+                        <cline>            System.out.println("Vowel");</cline>
+                    </block>
+                    <block order="8">
+                        <cline>         else</cline>
+                        <cline>            System.out.println("Consonant");</cline>
+                    </block>
+                    <block order="9">
+                        <cline>      }</cline>
+                    </block>
+                    <block order="3">
+                        <cline>      else</cline>
+                        <cline>         System.out.println("Error");</cline>
+                    </block>
+                    <block order="4">
+                        <cline>   }</cline>
+                        <cline>}</cline>
+                    </block>
+                </blocks>
+            </exercise>
+</exercises>
+        </subsection>
+
+        <program xml:id="ac-writeselect-we3-p1" interactive="activecode" language="java">
+            <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+            </input>
+        </program>
+    </section>
+

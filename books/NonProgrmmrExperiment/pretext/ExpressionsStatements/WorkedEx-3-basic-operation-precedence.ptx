@@ -1,0 +1,88 @@
+<section xml:id="expressions-statements_worked-example-basic-operation-precedence" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Worked Example: Basic Operation Precedence</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+        <video xml:id="video-express-we3-precedence1" youtube="-LXbqgQf13M" width="auto"/>
+                <p>Given the following code snippet, evaluate the final statement (the last line). If invalid, give the reason. If valid, what value is assigned to the variable? Note any possible side effects.</p>
+            <program language="java"><input>
+                int alpha = 2;
+                int beta = 1;
+                int delta = 4;
+                int eta, gamma;
+                double omega = 2.5;
+                double theta = -1.3;
+                double kappa = 3.0;
+                double lambda, rho;
+                
+                lambda = alpha / kappa + delta;
+    </input></program>
+        </subsection>
+        <subsection>
+            <title>SG1 : Determine resultant data type of expression</title>
+            <p>The <em>expression</em> is the right-hand-side (RHS) of the statement: <c>alpha / kappa + delta</c>.
+                The variables alpha and delta were declared to be the <c>int</c> data type,
+                while kappa was declared to be a <c>double</c> data type.
+                Division has <em>higher precedence</em> than summation,
+                In looking at the division operation, the numberator (top number) is declared to be an integer and the denominator (bottom number) is declared to be a double.
+                Operations with mixed data types will always yield the data type without a loss of precision.
+                Operations with an int and a double will yield a double.
+                The second operation is summation which now involves a double and an integer. The resultant data type of the expression on the RHS is double.
+                <em>promoted</em> for a valid summation with the result of alpha / kappa.</p>
+        </subsection>
+        <subsection>
+            <title>SG2: Update variable for pre-increment or pre-decrement operators (side effect)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>SG3: Evaluate arithmetic expression according to operator precedence</title>
+            <p>In the declarations, alpha was initialized with a value of 2,
+                delta was initialized with a value of 4,
+                and kappa was initilized with a value of 3.0.</p>
+            <p>The RHS of the statement is <c>alpha / kappa + delta</c>,
+                so we replace those variable names with their actual values <c>2 / 3.0 + 4</c>.
+                Division has higher precedence than summation, so we first evaluate 2 / 3.0 as
+                0.6667 (we are rounding to 4 decimals for convenience &#8211; a complete study of
+                floating-point precision in Java is out of the scope of this lesson).
+                After the division, we can now add 0.6667 + 4 for a total of 4.6667.</p>
+        </subsection>
+        <subsection>
+            <title>SG4: Is the Left Hand Side (LHS) of the assignment statement a variable? Check the data type of the value on right hand side (RHS) against data type of LHS variable.</title>
+            <p>The LHS is a variable of type <c>double</c>, and the RHS is type <c>double</c>. This is valid.</p>
+        </subsection>
+        <subsection>
+            <title>SG5: Update variable for post-increment or post-decrement operators (side effect)</title>
+            <p>NOT USED IN THIS EXAMPLE</p>
+        </subsection>
+        <subsection>
+            <title>Questions to check understanding</title>
+            <program language="java"> <input>
+                int alpha = 2;
+                int delta = 4;
+                double kappa = 3.0;
+                double lambda;
+                
+                lambda = alpha / kappa + delta;                
+            </input> </program>    
+            <p>Q1) In line 5 above, is the LHS of the statement a variable? What data type?</p>
+            <p>Q2) What is the resulting data type after evaluating the RHS of line 5?</p>
+            <p>Q3) Can the data type of the RHS result be assigned to the LHS variable in line 5?</p>
+            <answer>
+                <p>Q1-Answer) Yes, lambda is declared as a double</p>
+                <p>Q2-Answer) On the RHS, alpha / kappa + delta is evaluated as int / double + int which is double</p>
+                <p>Q3-Answer) Yes, a double can be assigned to a double</p>
+            </answer>
+        </subsection>
+        <conclusion>
+            <title>Practice Pages</title>
+            <p><ul marker="disc">
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we3-p1" />
+                </li>
+                <li>
+                    <xref text="title" ref="expressions-statements_expressions-we3-p2" />
+                </li>
+            </ul></p>
+        </conclusion>
+    </section>
+

@@ -1,0 +1,55 @@
+<section xml:id="selection_selection-we3-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Selection-WE3-P1</title>
+        <xi:include href='./subgoals-selection.ptx' />
+        <subsection>
+            <p>Use this given setup</p>
+            <program language="java"><input>
+int alpha = 2;
+int beta = 1;
+int delta = 3;
+int eta = 0;
+int gamma = 0;
+</input></program>
+<exercises>
+        <exercise xml:id="fb-WE3-P1-10">
+            <statement>
+    <p>Q10: After executing the following code, the value in variable <c>alpha</c> is <var/> and the value in variable <c>gamma</c> is <var/>.</p>
+    <program language="java"><input>
+if (alpha &gt; beta)
+    alpha = alpha + 2;
+if (alpha &gt; delta)
+    gamma = alpha + 5;
+        </input></program>
+    </statement><setup><var><condition string="4"><feedback><p>Correct</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+        <var><condition string="9"><feedback><p>Correct</p></feedback></condition>
+            <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var></setup></exercise>  
+    
+    <exercise xml:id="fb-WE3-P1-10a">
+        <statement>
+            <p>Q10a: After executing the following code, the value in variable <c>alpha</c> is <var/> and the value in variable <c>gamma</c> is <var/>.</p>
+            <program language="java"><input>
+        if ((alpha * beta) &gt; delta)
+            gamma = alpha * beta;
+        if (eta &gt; (alpha / beta))
+            eta = alpha / beta;
+                </input></program>
+            </statement><setup><var><condition string="2"><feedback><p>Correct</p></feedback></condition>
+                <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var>
+                <var><condition string="0"><feedback><p>Correct</p></feedback></condition>
+                    <condition string=".*"><feedback><p>Incorrect.</p></feedback></condition></var></setup>
+    </exercise>
+</exercises>
+</subsection>
+
+    <program xml:id="ac-select-we3-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

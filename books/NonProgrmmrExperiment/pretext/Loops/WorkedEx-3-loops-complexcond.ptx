@@ -1,0 +1,83 @@
+<section xml:id="loops_worked-example-complex-conditional" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Complex Conditional</title>
+    <xi:include href='./subgoals-loops.ptx' />    
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-loops-we3" youtube="jwZJmEvEBlE" width="auto"/>
+    <p>Problem: Given the following code, what is the output if the user enters 50, 70, 80, 65, 90, 100, 0, 5, 102?</p>
+    <program language="java">
+        <input>
+System.out.println("Enter a value. An invalid value will end input. ");
+int pass = 0;
+int fail = 0;
+int value;
+System.out.print ("Score: ");
+Scanner get = new Scanner(System.in);
+value = get.nextInt();
+
+while (value &gt;= 0 &amp;&amp; value &lt;= 100)
+{
+   if (value &gt;= 70)
+      pass++;
+   else
+      fail++;
+   System.out.print("Score: ");
+   value = get.nextInt();
+}
+
+System.out.println("Total number of scores: " + (pass + fail));
+System.out.println("Pass: " + pass + "    Fail: " + fail);
+        </input>
+    </program>
+</subsection>
+    <subsection>
+        <title>SG1:  Diagram which statements go together.</title>
+        <figure align="">
+            <image source="Loops/Figures/ComplexConditional.png" width="100%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG2: Define and initialize variables</title>
+        <p>
+            <term>Start:</term>
+        </p>
+        <program language="java">
+            <input>
+value = 50
+            </input>
+        </program>
+        <p>
+            <term>End:</term>
+        </p>
+        <program language="java">
+            <input>
+value &lt; 0 OR
+value &gt; 100
+            </input>
+        </program>
+        <figure align="">
+            <image source="Loops/Figures/ComplexConditional.png" width="100%" alt="Counter"/>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace the loop</title>
+        <figure align="">
+            <image source="Loops/Figures/WL1CSlide6.png" width="25%" alt="Counter"/>
+        </figure>
+        <answer>
+            <p>Total number of scores: 8</p>
+            <p>Pass: 4    Fail: 4</p>
+        </answer>
+    </subsection>
+    
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="loops_loops-we3-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

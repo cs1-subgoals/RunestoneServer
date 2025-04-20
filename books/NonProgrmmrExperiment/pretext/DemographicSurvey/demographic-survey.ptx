@@ -1,0 +1,769 @@
+<section xml:id="demographic-survey_demographic-survey" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Demographic Survey</title>
+    <exercises xml:id="demographic-survey-questions" label="demographic-survey-questions" time-limit="20" pause="no"> <!--time-limit="20" pause="no"-->
+        <exercise xml:id="Demo-Surv-1">
+        <statement>
+<p>Q1: What is your age?</p>
+<p> <var/> </p>
+</statement>
+<setup>
+    <var>
+        <condition string=".*">
+            <feedback>
+                <p>Answered</p>
+            </feedback>
+        </condition>
+    </var>
+</setup>
+</exercise>
+    <exercise xml:id="Demo-Surv-2">
+        <statement>
+<p>Q2: With what gender do you identify?</p>
+</statement>
+<choices>
+    <choice>
+        <statement>
+            <p>Male</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+    <choice>
+        <statement>
+            <p>Female</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+    <choice>
+        <statement>
+            <p>Other</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+    <choice>
+        <statement>
+            <p>Prefer not to answer</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+</choices>
+</exercise>
+    <exercise xml:id="Demo-Surv-3">
+        <statement>
+<p>Q3: Are you a full-time or part-time student?</p>
+</statement>
+<choices>
+    <choice>
+        <statement>
+            <p>Full-time</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+    <choice>
+        <statement>
+            <p>Part-time</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+</choices>
+</exercise>
+    <exercise xml:id="Demo-Surv-4">
+        <statement>
+<p>Q4: Please check all ethnicities that you identify with:</p>
+</statement>
+<choices multiple-correct="yes">
+    <choice>
+        <statement>
+            <p>African / Black</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+    <choice>
+        <statement>
+            <p>Asian</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+    <choice>
+        <statement>
+            <p>Caucasian / White</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+    <choice>
+        <statement>
+            <p>Latinx / Hispanic</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+    <choice>
+        <statement>
+            <p>Middle Eastern</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+    <choice>
+        <statement>
+            <p>Pacific Islander</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+    <choice>
+        <statement>
+            <p>Prefer not to answer</p>
+        </statement>
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </choice>
+</choices>
+</exercise>
+    <exercise xml:id="Demo-Surv-5">
+        <statement>
+            <p>Q5: Do you consider English to be your primary language?</p>
+            </statement>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>Yes</p>
+                    </statement>
+                    <feedback>
+                        <p>Answered</p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>No</p>
+                    </statement>
+                    <feedback>
+                        <p>Answered</p>
+                    </feedback>
+                </choice>
+            </choices>
+</exercise>
+<exercise xml:id="Demo-Surv-6">
+    <statement>
+        <p>Q6: What is your family’s total annual income?</p>
+        </statement>
+        <choices>
+            <choice>
+                <statement>
+                    <p>&lt; $25,000</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>$25,000 - $49,999</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>$50,000 - $99,999</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>$100,000 - $199,999</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>     
+                    <p>&gt; $2000,000</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Prefer not to answer</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+        </choices>
+</exercise>
+<exercise xml:id="Demo-Surv-7">
+    <statement>
+<p>Q7: What is your major?</p>
+<p> <var/> </p>
+</statement>
+<setup>
+<var>
+    <condition string=".*">
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </condition>
+</var>
+</setup>
+</exercise>
+<exercise xml:id="Demo-Surv-8">
+    <statement>
+<p>Q8: Please report your high school GPA if you remember it:</p>
+<p> <var/> out of <var/> (e.g., 4.0)</p>
+</statement>
+<setup>
+<var>
+    <condition string=".*">
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </condition>
+</var>
+<var>
+    <condition string=".*">
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </condition>
+</var>
+</setup>
+</exercise>
+<exercise xml:id="Demo-Surv-9">
+    <statement>
+        <p>Q9: Which best describes how many years you have been in college?</p>
+        </statement>
+        <choices>
+            <choice>
+                <statement>
+                    <p>First-year</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Second-year</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Third-year</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Fourth-year</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Fifth-year</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Other<var/></p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+        </choices>
+</exercise>
+<exercise xml:id="Demo-Surv-10">
+    <statement>
+<p>Q10: If you answered “Other” for the previous question, please describe:</p>
+<p> <var/> </p>
+</statement>
+<setup>
+<var>
+    <condition string=".*">
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </condition>
+</var>
+</setup>
+</exercise>
+<exercise xml:id="Demo-Surv-11">
+    <statement>
+<p>Q11: Please report your college GPA if you know it:</p>
+<p> <var/> out of 4.0</p>
+</statement>
+<setup>
+<var>
+    <condition string=".*">
+        <feedback>
+            <p>Answered</p>
+        </feedback>
+    </condition>
+</var>
+</setup>
+</exercise>
+<exercise xml:id="Demo-Surv-12">
+    <statement>
+        <p>Q12: What grade do you anticipate making in this course?</p>
+        </statement>
+        <choices>
+            <choice>
+                <statement>
+                    <p>A</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>B</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>C</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>D</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>F</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>I don’t know / prefer not to answer</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+        </choices>
+</exercise>
+<exercise xml:id="Demo-Surv-13">
+    <statement>
+<p>Q13: Why are you taking this course (please check ALL that apply)?</p>
+</statement>
+<choices multiple-correct="yes">
+<choice>
+    <statement>
+        <p>Advised or encouraged to take the class</p>
+    </statement>
+    <feedback>
+        <p>Answered</p>
+    </feedback>
+</choice>
+<choice>
+    <statement>
+        <p>Required for major or minor</p>
+    </statement>
+    <feedback>
+        <p>Answered</p>
+    </feedback>
+</choice>
+<choice>
+    <statement>
+        <p>Interested in the topic</p>
+    </statement>
+    <feedback>
+        <p>Answered</p>
+    </feedback>
+</choice>
+<choice>
+    <statement>
+        <p>Relevant to my desired career path</p>
+    </statement>
+    <feedback>
+        <p>Answered</p>
+    </feedback>
+</choice>
+</choices>
+</exercise>
+<exercise xml:id="Demo-Surv-14">
+    <statement>
+        <p>Q14: How difficult do you expect this course to be in relation to other courses that you’ve taken?</p>
+        </statement>
+        <choices>
+            <choice>
+                <statement>
+                    <p>Much more difficult</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Slightly more difficult</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>About the same</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Slightly less difficult</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Much less difficult</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+        </choices>
+</exercise>
+<exercise xml:id="Demo-Surv-15">
+    <statement>
+        <p>Q15: How interested are you in the topic of this course?</p>
+        </statement>
+        <choices>
+            <choice>
+                <statement>
+                    <p>Not interested at all</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Slightly interested</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Somewhat interested</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Fairly interested</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Extremely interested</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+        </choices>
+</exercise>
+<exercise xml:id="Demo-Surv-16">
+    <statement>
+        <p>Q16: How anxious are you about succeeding in this course?</p>
+        </statement>
+        <choices>
+            <choice>
+                <statement>
+                    <p>Very anxious, I’m not sure I can succeed</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Somewhat anxious</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Neutral</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Somewhat confident</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>Very confident – I am completely certain I can succeed</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+        </choices>
+</exercise>
+<exercise xml:id="Demo-Surv-17">
+    <statement>
+        <p>Q17: Please indicate which, if any, prior computer programming experiences that you’ve had during grades K-5 (age 5 to 11) – check ALL that apply.</p>
+        </statement>
+        <choices multiple-correct="yes">
+            <choice>
+                <statement>
+                    <p>Less than a day (museum type)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than a day but less than 2 months outside of school (camps)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than a day but less than 2 months inside of school (programming unit)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than a day but less than 2 months outside of school (learning on your own)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than 2 months outside of school (after school program)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than 2 months inside of school (computing course)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than 2 months outside of school (learning on your own)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+        </choices>
+</exercise>
+<exercise xml:id="Demo-Surv-18">
+    <statement>
+        <p>Q18: Please indicate which, if any, prior computer programming experiences that you’ve had during grades 6-8 (age 12 to 14) – check ALL that apply.</p>
+        </statement>
+        <choices multiple-correct="yes">
+            <choice>
+                <statement>
+                    <p>Less than a day (museum type)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than a day but less than 2 months outside of school (camps)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than a day but less than 2 months inside of school (programming unit)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than a day but less than 2 months outside of school (learning on your own)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than 2 months outside of school (after school program)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than 2 months inside of school (computing course)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than 2 months outside of school (learning on your own)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+        </choices>
+</exercise>
+<exercise xml:id="Demo-Surv-19">
+    <statement>
+        <p>Q19: Please indicate which, if any, prior computer programming experiences that you’ve had during grades 9-12 (age 14 to 18) – check ALL that apply.</p>
+        </statement>
+        <choices multiple-correct="yes">
+            <choice>
+                <statement>
+                    <p>Less than a day (museum type)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than a day but less than 2 months outside of school (camps)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than a day but less than 2 months inside of school (programming unit)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than a day but less than 2 months outside of school (learning on your own)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than 2 months outside of school (after school program)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than 2 months inside of school (computing course)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>More than 2 months outside of school (learning on your own)</p>
+                </statement>
+                <feedback>
+                    <p>Answered</p>
+                </feedback>
+            </choice>
+        </choices>
+</exercise>
+</exercises>
+</section>

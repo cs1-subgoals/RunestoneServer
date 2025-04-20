@@ -1,0 +1,4 @@
+<section xml:id="eval-array-lists" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Evaluating Array Lists</title>
+    <xi:include href='./subgoals-eval-array-list.ptx' />
+</section>

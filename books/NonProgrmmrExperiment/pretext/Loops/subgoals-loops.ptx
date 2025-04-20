@@ -1,0 +1,30 @@
+<introduction>
+    <title>Subgoals for Evaluating a Loop</title>
+    <p><ol marker="1">
+        <li>
+            <p>Identify loop parts</p>
+            <p><ol marker="a">
+                <li>
+                    <p>Determine start condition</p>
+                </li>
+                <li>
+                    <p>Determine update condition</p>
+                </li>
+                <li>
+                    <p>Determine termination condition</p>
+                </li>
+                <li>
+                    <p>Determine body that is repeated</p>
+                </li>
+            </ol></p>
+        </li>
+        <li>
+            <p>Trace the loop</p>
+            <p><ol marker="a">
+                <li>
+                    <p>For every iteration of loop, write down values</p>
+                </li>
+            </ol></p>
+        </li>
+    </ol></p>
+</introduction>

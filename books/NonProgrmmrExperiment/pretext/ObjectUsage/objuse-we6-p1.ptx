@@ -1,0 +1,45 @@
+<section xml:id="object-usage_objuse-we6-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>ObjUse-WE6-P1</title>
+        <xi:include href='./subgoals-call-method.ptx' />
+        <subsection>
+            <p>Here are some of the common <c>Math</c> methods, which are all static.</p>
+            <figure align="">
+                <image source="ObjectUsage/Figures/MathClassConstants.png" alt="API docs for Math class constants"/>
+            </figure>
+        </subsection>
+        <subsection>
+            <p>For the following questions, fill in the blanks with NO spaces.</p>
+            <p>For example, use <c>Math.pow(x,y)</c> rather than <c>Math.pow(x, y)</c></p>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q17: Fill in the blank to print the absolute value of the variable theta.</p><p><c>System.out.println(</c><var/><c>);</c></p></statement>
+    <setup><var>
+        <condition string="Math\.abs\(theta\)"><feedback><p>Correct</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q18: Fill in the blank to print the value of 16 raised to the power of 5.</p><p><c>System.out.println(</c><var/><c>);</c></p></statement>
+    <setup><var>
+        <condition string="Math\.pow\(16,\s*5\)"><feedback><p>Correct</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect</p></feedback></condition></var></setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q19: Fill in the blank to print the maximum value of alpha and beta.</p><p><c>System.out.println(</c><var/><c>);</c></p></statement>
+    <setup><var>
+        <condition string="Math\.max\(alpha,\s*beta\)"><feedback><p>Correct</p></feedback></condition>
+        <condition string=".*"><feedback><p>Incorrect</p></feedback></condition></var></setup></exercise>        
+</exercises>
+    </subsection>
+
+    <program xml:id="ac-objuse-we6-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

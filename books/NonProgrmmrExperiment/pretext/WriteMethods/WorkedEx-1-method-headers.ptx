@@ -1,0 +1,146 @@
+<section xml:id="write-methods_worked-example-writing-method-headers" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Writing Method Headers</title>
+    <xi:include href='./subgoals-write-methods.ptx' />
+    <statement>
+        <p>Note: This worked example will only cover subgoal 1.</p>
+    </statement>
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-methods-we1" youtube="O09EXqDElqs"/>
+    </subsection>
+    <subsection>
+    <p>Problem 1: Write a public method header that accepts as parameters 2 integers and a String in this order and calculates the maximum time of something and returns a double value.</p>
+    <transition/>
+    <p>For this Worked Exmaple, we will focus on SG1: Define method header based on problem.</p>
+    <p>
+        <ul>
+            <li>
+                <p>When you pick your method name:</p>
+                <blockquote>
+                    <p>
+                        <ul>
+                            <li>
+                                <p>Make it something related to the use of the method.</p>
+                            </li>
+                            <li>
+                                <p>Recall that method names are never capitalized at the first letter.</p>
+                            </li>
+                            <li>
+                                <p>We will call this method <term>maxTime</term>
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </blockquote>
+            </li>
+            <li>
+                <p>A full method header contains:</p>
+                <blockquote>
+                    <p>
+                        <ul>
+                            <li>
+                                <p>access modifier,</p>
+                            </li>
+                            <li>
+                                <p>return type,</p>
+                            </li>
+                            <li>
+                                <p>method name, and</p>
+                            </li>
+                            <li>
+                                <p>full parameter list (data type parameter_name)</p>
+                            </li>
+                        </ul>
+                    </p>
+                </blockquote>
+            </li>
+        </ul>
+    </p>
+    <figure align="">
+        <image source="WriteMethods/Figures/we1-code-highlight.png" alt="Write a public method"/>
+    </figure>
+    <program language="java">
+        <input>
+public double maxTime (int a, int b, String c) {}
+        </input>
+    </program>
+    <p>A call to this method would look like:</p>
+    <program language="java">
+        <input>
+double x = obj.maxTime(5, 3, "happy");
+        </input>
+    </program>
+    <transition/>
+    <p>Problem 2: Write a public method that does not return anything but accepts as parameters 3 Strings and prints out a cheerful sentence with the input in it.</p>
+    <statement>
+        <p>Note: The video for this problem is on page 9.4.</p>
+    </statement>
+    <p>
+        <ul>
+            <li>
+                <p>When you pick your method name:</p>
+                <blockquote>
+                    <p>
+                        <ul>
+                            <li>
+                                <p>Make it something related to the use of the method.</p>
+                            </li>
+                            <li>
+                                <p>Recall that method names are never capitalized at the first letter.</p>
+                            </li>
+                            <li>
+                                <p>We will call this method <term>cheerful</term>
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </blockquote>
+            </li>
+            <li>
+                <p>A full method header contains:</p>
+                <blockquote>
+                    <p>
+                        <ul>
+                            <li>
+                                <p>access modifier,</p>
+                            </li>
+                            <li>
+                                <p>return type,</p>
+                            </li>
+                            <li>
+                                <p>method name, and</p>
+                            </li>
+                            <li>
+                                <p>full parameter list (data type parameter_name)</p>
+                            </li>
+                        </ul>
+                    </p>
+                </blockquote>
+            </li>
+        </ul>
+    </p>
+    <figure align="">
+        <image source="WriteMethods/Figures/we2-code-highlight.png" alt="Write a private method"/>
+    </figure>
+    <program language="java">
+        <input>
+public void cheerful (String a, String b, String c) {}
+        </input>
+    </program>
+    <p>A call to this method would look like: <c>obj.cheerful("alpha", "beta", "gamma");</c>
+    </p>
+</subsection>
+    <subsection>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="write-methods_wrmethods-we1-p1" />
+            </li>
+            <!-- <li>
+                <xref text="title" ref="write-methods_wrmethods-we1-p2" />
+            </li> -->
+        </ul></p>
+    </subsection>
+</section>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Write Selection Statements</title>
+        <!--<xi:include href='./WorkedEx-1-WriteRelationalExpressions.ptx' />
+        <xi:include href='../ExpressionsStatements/WorkedEx-8-assign-boolean.ptx' />
+        <xi:include href='../ExpressionsStatements/WorkedEx-9-boolean-relations.ptx' />
+        <xi:include href='./select-we1-p1.ptx' />
+        <xi:include href='./select-assess-relational.ptx' />-->
+        <xi:include href='./WorkedEx-1-WriteSelectionStatements.ptx' />
+        <xi:include href='./select-we1-p1.ptx' />
+        <xi:include href='./WorkedEx-2-WriteSwitchStatements.ptx' />
+        <xi:include href='./WorkedEx-3-RangesOfValues.ptx' />
+        <xi:include href='./select-we2-p1.ptx' />
+    </chapter>

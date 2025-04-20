@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3<span class="period">.</span></span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="assess-wrclasses-2-3" data-multipleanswers="false">
+<div class="para" id="p-4357">Q3: Considering the following class declaration:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">public class SomeClass {
+   private int num;
+
+   SomeClass (int n) {
+      num = n;
+   }
+
+   public void increment (int more) {
+      num = num + more;
+   }
+
+   public int getNum() {
+      return num;
+   }
+}
+</code></pre></div> <div class="para" id="p-4358">The following code segment appears in another class. What is the resulting output?</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">SomeClass one = new SomeClass(100);
+SomeClass two = new SomeClass(100);
+SomeClass three = one;
+
+one.increment(200);
+System.out.printf("d d d", one.getNum(), two.getNum(), three.getNum());
+</code></pre></div>
+<li data-component="answer" id="assess-wrclasses-2-3_opt_a"><div class="para" id="p-4359">100 100 100</div></li>
+<li data-component="feedback" id="assess-wrclasses-2-3_opt_a"><div class="para" id="p-4360"></div></li>
+<li data-component="answer" id="assess-wrclasses-2-3_opt_b"><div class="para" id="p-4361">300 100 100</div></li>
+<li data-component="feedback" id="assess-wrclasses-2-3_opt_b"><div class="para" id="p-4362"></div></li>
+<li data-component="answer" id="assess-wrclasses-2-3_opt_c" data-correct=""><div class="para" id="p-4363">300 100 300</div></li>
+<li data-component="feedback" id="assess-wrclasses-2-3_opt_c"><div class="para" id="p-4364"></div></li>
+<li data-component="answer" id="assess-wrclasses-2-3_opt_d"><div class="para" id="p-4365">300 300 100</div></li>
+<li data-component="feedback" id="assess-wrclasses-2-3_opt_d"><div class="para" id="p-4366"></div></li>
+<li data-component="answer" id="assess-wrclasses-2-3_opt_e"><div class="para" id="p-4367">300 300 300</div></li>
+<li data-component="feedback" id="assess-wrclasses-2-3_opt_e"><div class="para" id="p-4368"></div></li>
+</ul></div></div></article><span class="incontext"><a href="write-classes_assessment-writing-classes-2.html#assess-wrclasses-2-3" class="internal">in-context</a></span>
+</body>
+</html>

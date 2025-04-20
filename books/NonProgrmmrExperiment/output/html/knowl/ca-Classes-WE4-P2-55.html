@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone"><div data-component="clickablearea" data-question_label="" style="visibility: hidden;" id="ca-Classes-WE4-P2-55">
+<span data-question=""><div class="para" id="p-4277">Q55: Identify the helper or auxiliary methods.</div></span><span data-feedback=""></span><pre><span data-incorrect="">/* Coins Class */</span>
+<span data-incorrect="">public class Coins</span> {
+    <span data-incorrect="">private int quarters;</span>
+    <span data-incorrect="">private int dimes;</span>
+    <span data-incorrect="">private int nickels;</span>
+    <span data-incorrect="">private int pennies;</span>
+
+    public <span data-incorrect="">Coins</span>(<span data-incorrect="">int newQuarters, int newDimes, int newNickels, int newPennies</span>) {
+        setQuarters( newQuarters );
+        setDimes( newDimes );
+        setNickels( newNickels );
+        setPennies( newPennies );
+    }
+
+    public <span data-incorrect="">Coins</span>( ) {
+        setQuarters( 0 );
+        setDimes( 0 );
+        setNickels( 0 );
+        setPennies( 0 );
+    }
+
+    public int <span data-incorrect="">getQuarters</span>( ) {
+        <span data-incorrect="">return quarters;</span>
+    }
+
+    public void <span data-incorrect="">setQuarters</span>(<span data-incorrect="">int newQuarters</span>) {
+        if ( newQuarters &gt;= 0 )
+            quarters = newQuarters;
+        else {
+            System.out.println( "The number of quarters cannot be negative." );
+            System.out.println( "Value not changed." );
+      }
+    }
+
+    public int <span data-incorrect="">getDimes</span>( )  {
+        <span data-incorrect="">return dimes;</span>
+    }
+
+    public void <span data-incorrect="">setDimes</span>(<span data-incorrect="">int newDimes</span>) {
+        if ( newDimes &gt;= 0 )
+            dimes = newDimes;
+        else {
+            System.out.println( "The number of dimes cannot be negative." );
+            System.out.println( "Value not changed." );
+        }
+    }
+
+    public int <span data-incorrect="">getNickels</span>( ) {
+        <span data-incorrect="">return nickels;</span>
+    }
+
+    public void <span data-incorrect="">setNickels</span>(<span data-incorrect="">int newNickels</span>) {
+        if ( newNickels &gt;= 0 )
+            nickels = newNickels;
+        else {
+            System.out.println( "The number of nickels cannot be negative." );
+            System.out.println( "Value not changed." );
+        }
+    }
+
+    public int <span data-incorrect="">getPennies</span>( ) {
+        <span data-incorrect="">return pennies;</span>
+    }
+
+    public void <span data-incorrect="">setPennies</span>(<span data-incorrect="">int newPennies</span>) {
+        if ( newPennies &gt;= 0 )
+            pennies = newPennies;
+        else {
+            System.out.println( "The number of pennies cannot be negative." );
+            System.out.println( "Value not changed." );
+        }
+    }
+
+    public String toString( ) {
+        return( "quarters: " + quarters + "; dimes: " + dimes
+        + "; nickels: " + nickels + "; pennies:" + pennies );
+    }
+
+    public boolean equals( Coins c )  {
+        return ( quarters == c.quarters&amp;&amp; dimes == c.dimes
+        &amp;&amp; nickels == c.nickels&amp;&amp; pennies == c.pennies );
+    }
+
+    private double moneyFromQuarters( )  {
+        <span data-incorrect="">return ( quarters * .25 );</span>
+    }
+
+    private double moneyFromDimes( )  {
+        <span data-incorrect="">return ( dimes * .1 );</span>
+    }
+
+    private double moneyFromNickels( )  {
+        <span data-incorrect="">return ( nickels * .05 );</span>
+    }
+
+    private double moneyFromPennies( ) {
+        <span data-incorrect="">return ( pennies * .01 );</span>
+    }
+
+    public double <span data-correct="">total</span>( ) {
+        return moneyFromQuarters +
+        moneyFromDimes +
+        moneyFromNickels +
+        moneyFromPennies;
+    }
+
+    public double <span data-correct="">convert</span>(<span data-incorrect="">double rate</span>) {
+        <span data-incorrect="">return total * rate;</span>
+    }
+}
+</pre>
+</div></div></div></article><span class="incontext"><a href="write-classes_wrclasses-we4-p2.html#ca-Classes-WE4-P2-55" class="internal">in-context</a></span>
+</body>
+</html>

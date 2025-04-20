@@ -1,0 +1,49 @@
+<section xml:id="loops_loops-we3-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Loops-WE3-P1</title>
+        <xi:include href='./subgoals-loops.ptx' />
+        <subsection>
+<exercises>
+            <exercise xml:id="parsons-Loops-WE3-P1-10" indent="show" language="python">
+                <statement>
+                    <p>Q10: Put the code in the right order to create a program that will continue to generate integers between 1 and 100 (inclusive) until the value generated is less than 6 or greater than 95. Print the numbers generated.</p>
+                </statement>
+                <blocks>
+                    <block order="6">
+                        <cline>import java.util.*;</cline>
+                        <cline>public class main{</cline>
+                        <cline>   public static void main(String[] args){</cline>
+                    </block>
+                    <block order="2">
+                        <cline>      Random r = new Random();</cline>
+                        <cline>      int x;</cline>
+                    </block>
+                    <block order="1">
+                        <cline>      while (x &gt;= 6 &amp;&amp; x &lt;= 95) {</cline>
+                    </block>
+                    <block order="5">
+                        <cline>         x = r.nextInt(100) + 1;</cline>
+                    </block>
+                    <block order="3">
+                        <cline>         System.out.println("value is " + x);</cline>
+                    </block>
+                    <block order="4">
+                        <cline>      }</cline>
+                        <cline>   }</cline>
+                        <cline>}</cline>
+                    </block>
+                </blocks>
+            </exercise>
+</exercises>
+        </subsection>
+
+        <program xml:id="ac-loops-we3-p1" interactive="activecode" language="java">
+            <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+            </input>
+        </program>
+    </section>
+

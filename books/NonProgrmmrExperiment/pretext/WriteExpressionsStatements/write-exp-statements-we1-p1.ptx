@@ -1,0 +1,147 @@
+<section xml:id="write-expressions-statements_write-exp-statements-we1-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Writing Expression Statements - WE1</title>
+    <xi:include href='./subgoals-write-exp-statements.ptx' />
+    <subsection>
+        <p>Select the correct Java assignment statement for each of the following problems.</p>
+<exercises>
+<exercise>
+    <statement>
+        <p>Determine the number of cans of paint required to paint a room that is 12 feet wide and 15 feet long and 10 feet tall and each can of paint can cover 250 square feet of wall. The result should be stored in the variable <c>numCansPaint</c>.</p>
+    </statement>
+<choices>
+        <choice>
+            <statement>
+                <p><c>numCansPaint = 2 * 12 * 10 + 2 * 15 * 10 / 250 + 1;</c></p>
+            </statement>
+            <feedback>
+                <p>Incorrect. There are two walls that are 12 feet wide and 10 feet tall and 2 walls that are 15 feet wide and 10 feet tall, so multiply the sizes of the walls and add them together. Then divide by the amount of wall one can of paint will cover. Because all values are integers, it will be integer division. There will likely be some leftover so we need to add one more can of paint. <c>numCansPaint</c> is an integer because you can’t buy partial cans of paint.</p>
+            </feedback>
+        </choice>
+
+        <choice correct="yes">
+            <statement>
+                <p><c>int numCansPaint = ((2 * 12 * 10) + (2 * 15 * 10)) / 250 + 1;</c></p>
+            </statement>
+            <feedback>
+                <p>Correct. There are two walls that are 12 feet wide and 10 feet tall and 2 walls that are 15 feet wide and 10 feet tall, so multiply the sizes of the walls and add them together. Then divide by the amount of wall one can of paint will cover. Because all values are integers, it will be integer division. There will likely be some leftover so we need to add one more can of paint. <c>numCansPaint</c> is an integer because you can’t buy partial cans of paint.</p>
+            </feedback>
+        </choice>
+
+        <choice>
+            <statement>
+                <p><c>int numCansPaint = (4 * 12 * 10 * 15) / 250 + 1;</c></p>
+            </statement>
+            <feedback>
+                <p>Incorrect. There are two walls that are 12 feet wide and 10 feet tall and 2 walls that are 15 feet wide and 10 feet tall, so multiply the sizes of the walls and add them together. Then divide by the amount of wall one can of paint will cover. Because all values are integers, it will be integer division. There will likely be some leftover so we need to add one more can of paint. <c>numCansPaint</c> is an integer because you can’t buy partial cans of paint.</p>
+            </feedback>
+        </choice>
+
+        <choice>
+            <statement>
+                <p><c>int numCansPaint = 4 * 12 * 10 * 15 / 250;</c></p>
+            </statement>
+            <feedback>
+                <p>Incorrect. There are two walls that are 12 feet wide and 10 feet tall and 2 walls that are 15 feet wide and 10 feet tall, so multiply the sizes of the walls and add them together. Then divide by the amount of wall one can of paint will cover. Because all values are integers, it will be integer division. There will likely be some leftover so we need to add one more can of paint. <c>numCansPaint</c> is an integer because you can’t buy partial cans of paint.</p>
+            </feedback>
+        </choice>
+
+        <choice>
+            <statement>
+                <p><c>int numCansPaint = 2 * 12 * 15 * 10 / 250 + 1;</c></p>
+            </statement>
+            <feedback>
+                <p>Incorrect. There are two walls that are 12 feet wide and 10 feet tall and 2 walls that are 15 feet wide and 10 feet tall, so multiply the sizes of the walls and add them together. Then divide by the amount of wall one can of paint will cover. Because all values are integers, it will be integer division. There will likely be some leftover so we need to add one more can of paint. <c>numCansPaint</c> is an integer because you can’t buy partial cans of paint.</p>
+            </feedback>
+        </choice>
+</choices>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>Jamal is on a strict diet and needs to know whether or not he can eat a salad from the local fast food company. If Jamal’s total caloric intake for the day should be no more than 3600 calories and he wants to split up the calories evenly across 3 meals, indicate if the salad is a good choice by storing the result in a variable named <c>allowableMeal</c>. The plain salad that he wants to eat is 800 calories. He wants to add cheese (200 calories) and bacon bits (300 calories) and really wants 2 ranch dressing packs (each pack is 150 calories).</p>
+    </statement>
+<choices>
+        <choice>
+            <statement>
+                <p><c>int allowableMeal = (800 + 200 + 300 + 2 * 150) &lt;= (3600 / 3);</c></p>
+            </statement>
+            <feedback>
+                <p>Incorrect. We want a yes/no answer as to whether Jamal should eat the meal, so the result variable is a boolean. The total calories in the salad is all the pieces added up (800 plus 200 plus 300 plus 2 packets of ranch). We need to compare this to the total number of calories per day divided by 3 and see if it’s less than or equal to that amount. Here we divide by 3.0 to ensure that we’ll do double arithmetic, though in this case it is unnecessary.</p>
+            </feedback>
+        </choice>
+
+        <choice>
+            <statement>
+                <p><c>boolean allowableMeal = (800 + 200 + 300 + 2) * 150 &lt;= 3600 / 3;</c></p>
+            </statement>
+            <feedback>
+                <p>Incorrect. We want a yes/no answer as to whether Jamal should eat the meal, so the result variable is a boolean. The total calories in the salad is all the pieces added up (800 plus 200 plus 300 plus 2 packets of ranch). We need to compare this to the total number of calories per day divided by 3 and see if it’s less than or equal to that amount. Here we divide by 3.0 to ensure that we’ll do double arithmetic, though in this case it is unnecessary.</p>
+            </feedback>
+        </choice>
+
+        <choice>
+            <statement>
+                <p><c>boolean allowableMeal = (800 + 200 + 300 + 2 * 150) &lt;= 3600;</c></p>
+            </statement>
+            <feedback>
+                <p>Incorrect. We want a yes/no answer as to whether Jamal should eat the meal, so the result variable is a boolean. The total calories in the salad is all the pieces added up (800 plus 200 plus 300 plus 2 packets of ranch). We need to compare this to the total number of calories per day divided by 3 and see if it’s less than or equal to that amount. Here we divide by 3.0 to ensure that we’ll do double arithmetic, though in this case it is unnecessary.</p>
+            </feedback>
+        </choice>
+
+        <choice correct="yes">
+            <statement>
+                <p><c>boolean allowableMeal = (800 + 200 + 300 + 2 * 150) &lt;= (3600 / 3.0);</c></p>
+            </statement>
+            <feedback>
+                <p>Correct. We want a yes/no answer as to whether Jamal should eat the meal, so the result variable is a boolean. The total calories in the salad is all the pieces added up (800 plus 200 plus 300 plus 2 packets of ranch). We need to compare this to the total number of calories per day divided by 3 and see if it’s less than or equal to that amount. Here we divide by 3.0 to ensure that we’ll do double arithmetic, though in this case it is unnecessary.</p>
+            </feedback>
+        </choice>
+
+        <choice>
+            <statement>
+                <p><c>boolean allowableMeal = 800 + 200 + 300 + 2 * 150 &lt;= 3600 * 3;</c></p>
+            </statement>
+            <feedback>
+                <p>Incorrect. We want a yes/no answer as to whether Jamal should eat the meal, so the result variable is a boolean. The total calories in the salad is all the pieces added up (800 plus 200 plus 300 plus 2 packets of ranch). We need to compare this to the total number of calories per day divided by 3 and see if it’s less than or equal to that amount. Here we divide by 3.0 to ensure that we’ll do double arithmetic, though in this case it is unnecessary.</p>
+            </feedback>
+        </choice>
+</choices>
+</exercise>
+
+<statement>
+    <p>Write a correct Java assignment statement for each of the following problems. Be sure to declare the data type of the variable you are assigning the result of the expression to.</p>
+</statement>
+
+<exercise>
+    <statement>
+        <p>Calculate and store the cost to ship a package at ShippersRUs that needs to go all the way across the country and must arrive within 2 days. There is a flat fee for all shipping that is $20.00. If the package is going to a different state, there is an additional $10 charge. If the package must arrive within a specified number of days, there is an additional charge based on the number of days. If it is an overnight shipment, add $49.95. For each additional day that it takes for delivery you can subtract $4.25. Store the total cost in a variable named <c>cost</c>.</p>
+        <p><var/></p>
+    </statement>
+    <setup><var>
+        <condition string="^double cost\s*=\s*20\s*\+\s*10\s*\+\s*\(\s*49\.95\s*-\s*4\.25\s*\);$">
+            <feedback><p>Correct. The total cost calculation involves double variables, so <c>cost</c> must be declared as a double. The amount is 20 (flat fee) plus 10 (another state) plus the overnight fee minus 1 day (49.95 – 4.25).</p></feedback>
+        </condition>
+        <condition string=".*">
+            <feedback><p>Incorrect. The total cost calculation involves double variables, so <c>cost</c> must be declared as a double. The amount is 20 (flat fee) plus 10 (another state) plus the overnight fee minus 1 day (49.95 – 4.25).</p></feedback>
+        </condition>
+    </var></setup>
+</exercise>
+
+<exercise>
+    <statement>
+        <p>Calculate the amount of fence needed for a back yard that is 150 feet across and 275 long. The back of the house is 100 feet across and the fence should come out on either side of the house in equal amounts. (In other words, you need fence to go down one side, across the back and back up the other side, and then just enough fence to attach to the house on either side.) Store the result in a variable called <c>fenceFeetNeeded</c>.</p>
+        <p><var/></p>
+    </statement>
+    <setup><var>
+        <condition string="^int fenceFeetNeeded\s*=\s*\(2\s*\*\s*275\)\s*\+\s*150\s*\+\s*\(\s*150\s*-\s*100\s*\);$">
+            <feedback><p>Correct. All variables are integers, so fenceFeetNeeded can be an integer. There are 2 sides that are 275 feet long and one side that is 150 feet long.  The final side has 100 feet taken up by the house, so we only need fence for the other portion.</p></feedback>
+        </condition>
+        <condition string=".*">
+            <feedback><p>Incorrect. All variables are integers, so fenceFeetNeeded can be an integer. There are 2 sides that are 275 feet long and one side that is 150 feet long.  The final side has 100 feet taken up by the house, so we only need fence for the other portion.</p></feedback>
+        </condition>
+    </var></setup>
+</exercise>
+
+</exercises>
+    </subsection>
+</section>

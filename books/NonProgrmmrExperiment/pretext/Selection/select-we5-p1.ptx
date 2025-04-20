@@ -1,0 +1,123 @@
+<section xml:id="selection_selection-we5-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Selection-WE5-P1</title>
+        <xi:include href='./subgoals-selection.ptx' />
+        <subsection>
+            <p>Use this given setup for each of the questions below.</p>
+            <program language="java"><input>
+int alpha = 2, beta = 1, delta = 3, eta = 0, gamma = 0;
+</input></program>
+<exercises>
+            <exercise xml:id="fb-WE4-P1-14">
+                <statement>
+                    <p>Q14: After executing the following code, the value in variable <c>gamma</c> is <var/>
+, the value in variable <c>eta</c> is <var/>, and the value in the variable <c>beta</c> is <var/>.</p>
+<program language="java"><input>
+if (alpha &gt; delta)
+{
+    gamma = alpha - 2;
+    if (gamma == eta)
+        eta = beta++;
+    eta = beta + 2;
+}
+</input></program>
+    </statement>
+    <setup>
+        <var>
+            <condition string="0">
+                <feedback>
+                    <p>Correct</p>
+                </feedback>
+            </condition>
+            <condition string=".*">
+                <feedback>
+                    <p>Incorrect.</p>
+                </feedback>
+            </condition>
+        </var>
+        <var>
+            <condition string="0">
+                <feedback>
+                    <p>Correct</p>
+                </feedback>
+            </condition>
+            <condition string=".*">
+                <feedback>
+                    <p>Incorrect.</p>
+                </feedback>
+            </condition>
+        </var>
+        <var>
+            <condition string="1">
+                <feedback>
+                    <p>Correct</p>
+                </feedback>
+            </condition>
+            <condition string=".*">
+                <feedback>
+                    <p>Incorrect.</p>
+                </feedback>
+            </condition>
+        </var>
+    </setup>
+</exercise>
+<exercise xml:id="fb-WE4-P1-15">
+    <statement>
+        <p>Q15: After executing the following code, the value in variable <c>gamma</c> is <var/>
+ and the value in variable <c>eta</c> is <var/>.
+</p>
+<program language="java"><input>
+if (alpha &gt; beta)
+{
+    if (delta &gt; eta)
+    {
+        eta = alpha + 2;
+    }
+    gamma = alpha + 5;
+    if (gamma == eta)
+    {
+        eta = beta + 2;
+    }
+}
+</input></program>
+</statement>
+<setup>
+<var>
+    <condition string="7">
+        <feedback>
+            <p>Correct</p>
+        </feedback>
+    </condition>
+    <condition string=".*">
+        <feedback>
+            <p>Incorrect.</p>
+        </feedback>
+    </condition>
+</var>
+<var>
+    <condition string="4">
+        <feedback>
+            <p>Correct</p>
+        </feedback>
+    </condition>
+    <condition string=".*">
+        <feedback>
+            <p>Incorrect.</p>
+        </feedback>
+    </condition>
+</var>
+</setup>
+</exercise>
+</exercises>
+</subsection>
+
+<program xml:id="ac-select-we5-p1" interactive="activecode" language="java">
+<input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+</input>
+</program>
+</section>
+

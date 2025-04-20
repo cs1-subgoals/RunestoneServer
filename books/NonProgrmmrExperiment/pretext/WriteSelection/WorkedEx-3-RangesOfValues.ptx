@@ -1,0 +1,110 @@
+<section xml:id="write-selection_worked-example-ranges-of-values" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Ranges of Values</title>
+    <xi:include href='./subgoals-write-selection.ptx' />
+
+<subsection>
+    <title>Problem Statement</title>
+    <p>Write the Java selection statements to solve the following specifications:</p>
+    <blockquote>
+        <p>Write the statements to print out the letter grade equivalent of your quiz grade.
+            90 &#8211; 100 (inclusive) is an A,
+            80 - 89 (inclusive) is a B,
+            70 - 79 (inclusive) is a C,
+            60 - 69 (inclusive) is a D,
+            and below 60 is an F.</p>
+    </blockquote>
+</subsection>
+    
+    <subsection>
+        <title>SG1: Define how many mutually exclusive paths are needed</title>
+        <p>In this case, there are 5 mutually exclusive paths (one for each letter grade).</p>
+        <p>You may use a switch statement, but note that you will have to give each numeric grade as a case since relational (&lt;, &gt;, ==) are not allowed in case statements.</p>
+        <p>Or you can use nested if statements. We will do that first, or you can skip to the alternative solution below.</p>
+    </subsection>
+    <subsection>
+        <title>SG2: Order from most restrictive/selective group to least restrictive</title>
+        <p>In this case most restrictive is for an A (90+), then B, then C, etc.</p>
+    </subsection>
+    <subsection>
+        <title>SG3: Write if statement with Boolean expression</title>
+        <program language="java"><input>
+if (quizGrade &gt;= 90)
+</input></program>
+    </subsection>
+    <subsection>
+        <title>SG4: Follow with true bracket including action</title>
+        <program language="java"><input>
+if (quizGrade &gt;= 90) {
+System.out.println("A");
+}
+</input></program>
+    </subsection>
+    <subsection>
+        <title>SG5: Follow with else bracket</title>
+        <p>Note: For a &#8220;B&#8221; grade, we do not need to check that the quizGrade is within the upper bound (&lt;90). We know it is, because if it wasn&#8217;t, execution would have selected the first true branch. We only need to check the lower bound (&gt;=80)</p>
+        <program language="java"><input>
+if (quizGrade &gt;= 90) {
+System.out.println("A");
+}
+else if (quizGrade &gt;= 80) {
+   System.out.println("B");
+}
+</input></program>
+    </subsection>
+    <subsection>
+        <title>SG6: Repeat until all groups and actions are accounted for</title>
+        <program language="java"><input>
+if (quizGrade &gt;= 90) {
+System.out.println("A");
+} else if (quizGrade &gt;= 80) {
+System.out.println("B");
+} else if (quizGrade &gt;= 70) {
+System.out.println("C");
+} else if (quizGrade &gt;= 60) {
+System.out.println("D");
+} else {
+System.out.println("F");
+}
+</input></program>
+    </subsection>
+    <subsection>
+        <title>Equivalent Switch Statement:</title>
+        <p>Here is the equivalent solution, written as a switch statement instead of nested if statements.</p>
+        <program language="java"><input>
+switch (quizGrade) {
+case 90: case 91: case 92: case 93: case 94:
+case 95: case 96: case 97: case 98: case 99:
+case 100:
+  System.out.println("A");
+  break;
+
+case 80: case 81: case 82: case 83: case 84:
+case 85: case 86: case 87: case 88: case 89:
+  System.out.println("B");
+  break;
+
+case 70: case 71: case 72: case 73: case 74:
+case 75: case 76: case 77: case 78: case 79:
+  System.out.println("C");
+  break;
+
+case 60: case 61: case 62: case 63: case 64:
+case 65: case 66: case 67: case 68: case 69:
+  System.out.println("D");
+  break;
+
+default:
+  System.out.println("F");
+}
+</input></program>
+    </subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="write-selection_writeselection-we2-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

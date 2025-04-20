@@ -1,0 +1,88 @@
+<section xml:id="arrays_worked-example-arrays-initializer-list-and-reverse-traverse" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Arrays - Initializer List and Reverse Traverse</title>
+    <xi:include href='./subgoals-arrays.ptx' />
+    <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+        <video xml:id="video-arrays-we3" youtube="_IVTHLQLEVA"/>
+        <p>Problem: Evaluate these statements and determine their output</p>
+        <program language="java">
+            <input>
+int [] alpha = {15, 24, 7, 6, -4, 0, 13};
+System.out.println(alpha.length);
+for (int i = alpha.length-1; i &gt;= 0; i--)
+    alpha[i] = alpha[i] + 1;
+for (int i = alpha.length-1; i &gt;= 0; i--)
+    System.out.print(alpha[i]+ " ");
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG1: Set up array from 0 to size-1</title>
+        <program language="java">
+            <input>
+int [] alpha = {15, 24, 7, 6, -4, 0, 13};
+            </input>
+        </program>
+        <figure align="">
+            <image source="Arrays/Figures/we3-init.png" alt="Instantiated Array"/>
+        </figure>
+        <p>
+            <ul>
+                <li>
+                    <p>alpha is declared as an array of ints</p>
+                </li>
+                <li>
+                    <p>This statement allocates 7 slots for integers because there are 7 literal values given in the initialization list.</p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection>
+        <title>SG2: Evaluate data type of statements against array</title>
+        <p>The statement <c>System.out.println(alpha.length);</c> will print an output String. Then,</p>
+        <program language="java">
+            <input>
+for (int i = alpha.length-1; i &gt;= 0; i--)
+     alpha[i] = alpha[i] + 1;
+            </input>
+        </program>
+        <p>
+            <ul>
+                <li>
+                    <p>This loop has index i go from 6 to 0 by decrements of 1.</p>
+                </li>
+                <li>
+                    <p>All of the array indexes are within the bounds of the array (6 &#8211; 0) and the value of 1 is added to the current value at position i in the array.</p>
+                </li>
+                <li>
+                    <p>All values being assigned are valid integers and can be stored in an integer array.</p>
+                </li>
+            </ul>
+        </p>
+        <p>The final for-loop will also print output strings.</p>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace statements, updating slots as you go</title>
+        <p>The statement <c>System.out.println(alpha.length);</c> will print the value 7 and then a newline return, so that the next output will begin on a new line. Then, the first for-loop will update the array values (without printing them quite yet!)</p>
+        <program language="java">
+            <input>
+for (int i = alpha.length-1; i &gt;= 0; i--)
+     alpha[i] = alpha[i] + 1;
+            </input>
+        </program>
+        <p>The resulting array is:</p>
+        <figure align="">
+            <image source="Arrays/Figures/we3-result.png" alt="Resulting Array"/>
+        </figure>
+        <p>The final for-loop will print: 14    1    -3    7    8    25    16</p>
+    </subsection>
+    <subsection>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="arrays_arrays-we3-p1" />
+            </li>
+        </ul></p>
+    </subsection>
+</section>
+

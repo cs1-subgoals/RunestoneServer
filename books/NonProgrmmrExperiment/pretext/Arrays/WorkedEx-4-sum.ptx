@@ -1,0 +1,82 @@
+<section xml:id="arrays_worked-example-arrays-sum" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Arrays - Sum</title>
+    <xi:include href='./subgoals-arrays.ptx' />
+    <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+        <video xml:id="video-arrays-we4" youtube="BvaGtz2pQV8"/>
+        <p>Problem: Assume that the integer array <c>alpha</c> has been properly declared and is full of data values. Evaluate these statements and determine the value of <c>sum</c>. If any error occurs, give the reason.</p>
+        <program language="java">
+            <input>
+int sum = 0;
+
+for (int i = 0; i &lt; alpha.length; i++) {
+sum += alpha[i];
+}
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG1: Set up array from 0 to size-1</title>
+        <figure align="">
+            <image source="Arrays/Figures/we4-init.png" alt="Instantiated Array"/>
+        </figure>
+        <p>
+            <ul>
+                <li>
+                    <p>alpha is an array of ints and has values, but we don&#8217;t know what those values are</p>
+                </li>
+                <li>
+                    <p>however, we can still diagram a representation of this array</p>
+                </li>
+                <li>
+                    <p>notice that the largest index is size - 1</p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection>
+        <title>SG2: Evaluate data type of statements against array</title>
+        <program language="java">
+            <input>
+for (int i = 0; i &lt; alpha.length; i++) {
+   sum += alpha[i];
+}
+            </input>
+        </program>
+        <p>
+            <ul>
+                <li>
+                    <p>This loop has index i go from 0 to size - 1 (&lt;length) by increments of 1.</p>
+                </li>
+                <li>
+                    <p>Then the value at alpha[i] is added to sum.</p>
+                </li>
+                <li>
+                    <p>All indexes into the array are valid, and all assignments are valid.</p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection>
+        <title>SG3: Trace statements, updating slots as you go</title>
+        <p>Let us trace with a sample array.</p>
+        <figure align="">
+            <image source="Arrays/Figures/we4-sample.png" alt="Sample Array"/>
+        </figure>
+        <p>The first line of the code sample initializes <c>sum</c> to a have a value of zero, and then a for-loop is used to traverse the array. The chart below uses one line to represent the memory and calculations during each iteration of the loop, starting when i has a value of zero.</p>
+        <figure align="">
+            <image source="Arrays/Figures/we4-trace.png" alt="Trace the loop"/>
+        </figure>
+        <p>The final value of <c>sum</c> is 59, which s the sum of all values in the array.</p>
+        <p>The more general answer to the original question is: &#8220;<c>sum</c> contains the sum of all the values in the array <c>alpha</c>.&#8221;</p>
+    </subsection>
+    <subsection>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="arrays_arrays-we4-p1" />
+            </li>
+        </ul></p>
+    </subsection>
+</section>
+

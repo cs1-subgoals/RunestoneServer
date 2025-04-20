@@ -1,0 +1,63 @@
+<section xml:id="object-usage_worked-example-create-instance-of-random" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Create Instance of Random</title>
+    <xi:include href='./subgoals-object-use.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-useobj-we1-create-random" youtube="vTyjcWWC2Zw" width="auto"/>
+    <statement><p>The following Java code declares and instantiates a variable that will be used to generate random values.</p></statement>
+    </subsection>
+    <subsection>
+        <title>SG1: Declare variable of appropriate class datatype.</title>
+        <p>In the code block below, the variable name <c>randGen</c> was selected to better describe this object&#8217;s purpose as a random number generator.</p>
+        <program language="java">
+            <input>
+Random randGen;
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG2: Assign to variable: &#160;keyword new, followed by class name, followed by ().</title>
+        <program language="java">
+            <input>
+randGen = new Random();
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG3: Determine whether parameter(s) are appropriate (API)</title>
+        <p>The figure below shows the Java documentation, so we can determine what parameter(s) we need. If we wanted a specific seed value, we could use that, but for most purposes, allowing the constructor to select its own seed is ok.</p>
+        <figure align="">
+            <image source="ObjectUsage/Figures/Create-instance-random.png" alt="API docs for Random constructor"/>
+        </figure>
+    <statement>So the final code looks like this:<p></p></statement>
+
+    <program language="java">
+        <input>
+            Random randGen;
+            randGen = new Random();            
+        </input>
+    </program>
+
+    <statement>Notice in the ActiveCode box below, we have added the appropriate import statement for using the Random class.<p></p></statement>
+
+    <program xml:id="ac-objectuse-we2" interactive="activecode" language="java">
+        <input>
+import java.util.Random;
+public class main{
+   public static void main(String args[]){
+   }
+}
+        </input>
+    </program>
+    </subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="object-usage_objuse-we2-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

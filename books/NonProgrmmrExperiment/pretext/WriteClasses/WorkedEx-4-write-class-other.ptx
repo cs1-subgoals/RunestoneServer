@@ -1,0 +1,159 @@
+<section xml:id="write-classes_worked-example-writing-classes-overrides-and-other" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Writing Classes - Overrides and Other</title>
+    <xi:include href='./subgoals-write-classes.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-writeclass-we4" youtube="W1nNm2wVNYA"/>
+    <p>Problem: We will be writing a class to represent an instance of time, like a specific time in the day.</p>
+    <p>Now write toString, equals, and any other methods we need.</p>
+    </subsection>
+    <subsection>
+        <title>SG8: Write toString method</title>
+        <p>
+            <ol marker="A">
+                <li>
+                    <p>public</p>
+                </li>
+                <li>
+                    <p>Returns String</p>
+                </li>
+                <li>
+                    <p>No parameters</p>
+                </li>
+                <li>
+                    <p>Logic - convert needed attributes to a format that can be printed</p>
+                </li>
+            </ol>
+        </p>
+        <program language="java">
+            <input>
+public String toString() {
+   String holder= "";
+   if (hour &lt; 10)
+      holder = "0";
+   holder += hour + ":";
+   if (minute &lt; 10)
+      holder += '0';
+   holder += (minute + ":");
+   if (second &lt; 10)
+      holder += '0';
+   holder += second;
+   return holder;
+}
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG9:  Write equals method</title>
+        <p>
+            <ol marker="A">
+                <li>
+                    <p>public</p>
+                </li>
+                <li>
+                    <p>Returns boolean</p>
+                </li>
+                <li>
+                    <p>Parameter - instance of the class</p>
+                </li>
+                <li>
+                    <p>Logic - compare attributes for equity</p>
+                </li>
+            </ol>
+        </p>
+        <program language="java">
+            <input>
+public boolean equals (TimeType other) {
+
+return (hour == other.hour &amp;&amp;
+   minute == other.minute &amp;&amp;
+   second == other.second);
+
+// alternate logic
+    // return  toString().equals(other.toString());
+
+}
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+        <title>SG10: Write other methods</title>
+        <p>For additional functionality, we will implement two more instance methods.</p>
+        <program language="java">
+            <input>
+public void increment() {
+   second++;
+   if (second &gt; 59) {
+      second = 0;
+      minute++;
+   }
+   if (minute &gt; 59) {
+      minute = 0;
+      hour++;
+   }
+   if (hour &gt; 23) {
+      hour = 0;
+   }
+}
+
+public boolean lessThan (TimeType other) {
+   boolean result = false;
+   if (hour &lt; other.hour)
+      result = true;
+   else if (hour &gt; other.hour)
+      result = false;
+   else {
+      if (minute &lt; other.minute)
+         result = true;
+      else if (minute &gt; other.minute)
+         result = false;
+      else  {
+         if (second &lt; other.second)
+            result = true;
+         else
+            result = false;
+      }
+   }
+   return result;
+}
+            </input>
+        </program>
+    </subsection>
+    <subsection>
+    <p>After writing methods, this is a good time to review the structure of the class and test with a main driver program.</p>
+    <figure align="">
+        <image source="WriteClasses/Figures/WC4-Slide11.PNG" alt="UML"/>
+    </figure>
+    <program language="java">
+        <input>
+public static void main (String [] args) {
+   TimeType noon = new TimeType(12, 0, 0);
+   System.out.println("noon: " + noon); //concat auto-calls toString
+   TimeType dueTime = new TimeType(23, 59, 59);
+   System.out.println("The due time is " + dueTime);
+   for (int i = 0; i &lt; 362; i++) {
+      dueTime.increment();
+      System.out.println("The due time is " + dueTime);
+   }
+   if (dueTime.lessThan(noon))
+      System.out.println("dueTime less");
+   else
+      System.out.println("noon less");
+}
+        </input>
+    </program>
+</subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="write-classes_wrclasses-we4-p1" />
+            </li>
+            <li>
+                <xref text="title" ref="write-classes_wrclasses-we4-p2" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

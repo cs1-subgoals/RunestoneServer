@@ -1,0 +1,146 @@
+<section xml:id="expressions-statements_expressions-we3-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Expressions-WE3-P1</title>
+        <xi:include href='./subgoals-expressions.ptx' />
+        <subsection>
+            <p><term>Given</term></p>
+            <program language="java"><input>
+                int alpha = 2;
+                int beta = 1;
+                int delta = 4;
+                int eta, gamma;
+                double omega = 2.5;
+                double theta = -1.3;
+                double kappa = 3.0;
+                double lambda, rho;
+                
+</input></program>
+<exercises>
+    <exercise xml:id="m-Expr-WE3-P1-17">
+        <statement>
+
+            <p>Q17: lambda = beta * theta;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>valid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>invalid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE3-P1-18">
+        <statement>
+
+            <p>Q18: eta = alpha * kappa;</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>valid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>invalid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE3-P1-19">
+        <statement>
+
+            <p>Q19: alpha = beta + delta;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>valid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>invalid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Expr-WE3-P1-20">
+        <statement>
+
+            <p>Q20: beta = beta * alpha;</p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>valid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>invalid</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+</exercises>
+        </subsection>
+
+    <program xml:id="ac-express-we3-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

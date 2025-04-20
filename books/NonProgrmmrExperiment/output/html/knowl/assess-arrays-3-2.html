@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone"><ul data-component="multiplechoice" id="assess-arrays-3-2" data-multipleanswers="false">
+<div class="para" id="p-5040">Q2: The following method is intended to return the index of the first occurrence of the value <code class="code-inline tex2jax_ignore">val</code> beyond the position <code class="code-inline tex2jax_ignore">start</code> in the array <code class="code-inline tex2jax_ignore">arr</code>.</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">// returns index of first occurrence of val in arr after
+// position start;
+// returns arr.length if val is not found
+public int findNext (int [] arr, int val, int start) {
+   int pos = start + 1;
+   while ( /* condition */)
+      pos++;
+   return pos;
+}
+</code></pre></div> <div class="para" id="p-5041">For example, the execution of the following code segment should result in the value <code class="code-inline tex2jax_ignore">4</code> being printed:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-java">int [] arr = {11, 22, 100, 33, 100, 11, 44, 100};
+System.out.println(findNext(arr, 100, 2));
+</code></pre></div> <div class="para" id="p-5042">Which of the following expressions could be used to replace <code class="code-inline tex2jax_ignore">/* condition */</code> so that <code class="code-inline tex2jax_ignore">findNext</code> will work as intended?</div>
+<li data-component="answer" id="assess-arrays-3-2_opt_a" data-correct=""><div class="para" id="p-5043">(pos &lt; arr.length) &amp;&amp; (arr[pos] != val)</div></li>
+<li data-component="feedback" id="assess-arrays-3-2_opt_a"><div class="para" id="p-5044"></div></li>
+<li data-component="answer" id="assess-arrays-3-2_opt_b"><div class="para" id="p-5045">(arr[pos] != val) &amp;&amp; (pos&lt;arr.length)</div></li>
+<li data-component="feedback" id="assess-arrays-3-2_opt_b"><div class="para" id="p-5046"></div></li>
+<li data-component="answer" id="assess-arrays-3-2_opt_c"><div class="para" id="p-5047">(pos&lt;arr.length) || (arr[pos] != val)</div></li>
+<li data-component="feedback" id="assess-arrays-3-2_opt_c"><div class="para" id="p-5048"></div></li>
+<li data-component="answer" id="assess-arrays-3-2_opt_d"><div class="para" id="p-5049">(arr[pos] == val)&amp;&amp; (pos&lt;arr.length)</div></li>
+<li data-component="feedback" id="assess-arrays-3-2_opt_d"><div class="para" id="p-5050"></div></li>
+<li data-component="answer" id="assess-arrays-3-2_opt_e"><div class="para" id="p-5051">(pos&lt;arr.length) || (arr[pos] == val)</div></li>
+<li data-component="feedback" id="assess-arrays-3-2_opt_e"><div class="para" id="p-5052"></div></li>
+</ul></div></div></article><span class="incontext"><a href="arrays_assessment-arrays-3.html#assess-arrays-3-2" class="internal">in-context</a></span>
+</body>
+</html>

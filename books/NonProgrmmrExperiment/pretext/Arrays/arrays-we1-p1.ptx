@@ -1,0 +1,159 @@
+<section xml:id="arrays_arrays-we1-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Arrays-WE1-P1</title>
+        <xi:include href='./subgoals-arrays.ptx' />
+        <subsection>
+<exercises>
+        <exercise>
+            <statement>
+    <p>Q1: Assume the following declarations: <program language="java"><input>
+        String [] alpha;
+        alpha = new String[4];
+        </input></program></p>
+        <p>Evaluate these statements:<program language="java"><input>
+            alpha[0] = "apple";
+            alpha[1] = "Banana";
+            alpha[2] = alpha[0].substring(2);
+            alpha[3] = alpha[alpha[1].indexOf('n')];
+            </input></program></p>
+        <p>Give the contents of array <c>alpha</c> after the execution of the above statements:</p>
+        <p><c>alpha[0] = </c>&#8220;<var/>&#8221;</p>
+        <p><c>alpha[1] = </c>&#8220;<var/>&#8221;</p>
+        <p><c>alpha[2] = </c>&#8220;<var/>&#8221;</p>
+        <p><c>alpha[3] = </c>&#8220;<var/>&#8221;</p>
+        </statement><setup>
+            <var>
+                <condition string="apple"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+                    <feedback>
+                        <p>Incorrect</p>
+                    </feedback>
+                </condition>
+            </var>
+            <var>
+                <condition string="Banana"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+                    <feedback>
+                        <p>Incorrect</p>
+                    </feedback>
+                </condition>
+            </var>
+            <var>
+                <condition string="ple"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+                    <feedback>
+                        <p>Incorrect</p>
+                    </feedback>
+                </condition>
+            </var>
+            <var>
+                <condition string="ple"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+                    <feedback>
+                        <p>Incorrect</p>
+                    </feedback>
+                </condition>
+            </var>
+        </setup></exercise>
+        <exercise>
+            <statement>
+    <p>Q2: Assume the following declarations:</p>
+    <program language="java"><input>
+        int [] beta;
+        beta = new int[3];
+        </input></program>
+        <p>Evaluate these statements:</p>
+        <program language="java"><input>
+            beta[1] = 22;
+            beta[0] = beta[1] - 11;
+            beta[2] = beta[0] + beta[1];
+            </input></program>
+        <p>Give the contents of array <c>beta</c> after the execution of the above statements:</p>
+        <p><c>beta[0] = </c><var/></p>
+        <p><c>beta[1] = </c><var/></p>
+        <p><c>beta[2] = </c><var/></p>
+    </statement><setup>
+        <var>
+            <condition string="11"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+                <feedback>
+                    <p>Incorrect</p>
+                </feedback>
+            </condition>
+        </var>
+        <var>
+            <condition string="22"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+                <feedback>
+                    <p>Incorrect</p>
+                </feedback>
+            </condition>
+        </var>
+        <var>
+            <condition string="33"><feedback><p>Correct</p></feedback></condition><condition string='.*'>
+                <feedback>
+                    <p>Incorrect</p>
+                </feedback>
+            </condition>
+        </var>
+    </setup></exercise>
+    <exercise xml:id="m-Arrays-WE1-P1-3">
+        <statement>
+            <p>Q3: Which line produces the <em>first</em> compiler error?</p>
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>double [] gamma = new double[5];</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>gamma[0] = 14;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>gamma[1] = gamma[0];</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>gamma[gamma[0]] = 42;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>gamma[5] = 22;</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+</exercises>
+        </subsection>
+
+    <program xml:id="ac-arrays-we1-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

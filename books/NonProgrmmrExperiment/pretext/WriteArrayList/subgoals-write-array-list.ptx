@@ -1,0 +1,23 @@
+<introduction>
+    <title>Subgoals for Writing Array Lists</title>
+    <p>
+        <ol marker="1">
+            <li>
+                <p><c>import java.util.*</c></p>
+            </li>
+            <li>
+                <p><c>ArrayList</c> &lt;data type as generic class&gt;</p>
+            </li>
+            <li>
+                <p>Variable name <c>= new ArrayList</c> &lt;data type as generic class&gt; <c>()</c></p>
+                <p>
+                    <ol marker="a">
+                        <li>
+                            <p>to use various methods associated with ArrayList (e.g., .add, .set, .clear), see subgoals for calling methods</p>
+                        </li>
+                    </ol>
+                </p>
+            </li>
+        </ol>
+    </p>
+</introduction>

@@ -1,0 +1,44 @@
+<section xml:id="arrays_worked-example-arrays-write-a-reversing-algorithm" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Arrays - Write a Reversing Algorithm</title>
+    <xi:include href='./subgoals-arrays.ptx' />
+    <subsection>
+        <p>You can watch this video or read through the content below it.</p>
+        <video xml:id="video-arrays-we9" youtube="wHVH8KlibvI"/>
+        <p>Problem: Write the code to &#8220;reverse&#8221; the elements of an array.</p>
+        <p>There are several different approaches you might take. We will examine two options here.</p>
+    </subsection>
+    <subsection>
+        <title>Solution 1 &#8211; copy to new array with reverse traverse</title>
+        <p>We will begin with a sample array called <c>original</c>, and another array of the same size called <c>copy</c>.</p>
+        <program language="java"><input>
+int [] original = {2, 4, 6, 8, 10};
+int [] copy = new int [original.length];
+</input></program>
+        <p>Then we loop in reverse for the original array, copying the elements in order and placing them starting at the beginning of the new array. The variable <c>place</c> helps us with traversing the new array in the opposite direction of our reversed traversal of the original.</p>
+        <program language="java"><input>
+int place = 0;
+for (int i = original.length - 1; i &gt;= 0; i++)
+copy[place++] = original[i];
+</input></program>
+    </subsection>
+    <subsection>
+        <title>Solution 2 &#8211; same array with swaps</title>
+        <p>In this solution, we do not need the whole extra array in memory. The loop only traverses <term>half</term> of the array, swapping the value at <c>i</c> with the value at the mirrored/reflected position <c>array.length - i - 1</c>.</p>
+        <program language="java"><input>
+for (int i=0; i&lt;array.length/2; i++)  {
+int temp = array[i];
+array[i] = array[array.length - i - 1];
+array[array.length - i - 1] = temp;
+}
+</input></program>
+    </subsection>
+    <subsection>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="arrays_arrays-we9-p1" />
+            </li>
+        </ul></p>
+    </subsection>
+</section>
+

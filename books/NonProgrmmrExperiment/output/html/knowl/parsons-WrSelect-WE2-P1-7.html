@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3<span class="period">.</span></span>
+</h5>
+<div class="ptx-runestone-container"><div class="runestone parsons_section" style="max-width: none;"><div data-component="parsons" class="parsons" id="parsons-WrSelect-WE2-P1-7">
+<div class="parsons_question parsons-text"><div class="para" id="p-2045">Q7: Put the code in the right order to create a program that will generate the value for a year (1500 to 3000 inclusive) and print the value. Then it will print <em class="emphasis">true</em> if the year is a leap year, otherwise the program prints <em class="emphasis">false</em>. A leap year is a multiple of 4, with one exception: if the year is a multiple of 100 but <em class="emphasis">not</em> 400, then it is <em class="emphasis">not</em> a leap year. For example, the year 1900 was not a leap year, but the year 2000 was indeed a leap year.</div></div>
+<pre class="parsonsblocks" data-question_label="" style="visibility: hidden;" data-language="java" data-noindent="true">import java.util.*;
+public class main {
+   public static void main(String[] args){
+---
+      Random r = new Random();
+      int x = 1500 + r.nextInt(1501);
+      boolean result = false;
+---
+      System.out.println(x);
+---
+      if (x % 4 == 0)
+---
+         if (x % 100 == 0)
+---
+            if (x % 400 == 0)
+               result = true;
+            else
+               result = false;
+---
+         else
+            result = true;
+---
+      else
+         result = false;
+---
+      System.out.println(result);
+---
+   }
+}</pre>
+</div></div></div></article><span class="incontext"><a href="write-selection_writeselection-we1-p1.html#parsons-WrSelect-WE2-P1-7" class="internal">in-context</a></span>
+</body>
+</html>

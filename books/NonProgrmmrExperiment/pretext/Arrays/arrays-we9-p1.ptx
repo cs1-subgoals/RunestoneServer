@@ -1,0 +1,343 @@
+<section xml:id="arrays_arrays-we9-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Arrays-WE9-P1</title>
+        <xi:include href='./subgoals-arrays.ptx' />
+        <subsection>
+<exercises>
+    <exercise xml:id="m-Arrays-WE9-P1-48">
+        <statement>
+
+            <p>Q48: What does the following code do?</p>
+            <program language="java"><input>
+int [] alpha = {10, 20, 30, 40, 50};
+int [] beta = new int[alpha.length+1];
+for (int i = 0; i &lt; alpha.length; i++)
+   beta[i] = alpha[i];
+beta[beta.length-1] = 42;
+alpha = beta;
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the first position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the middle position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Inserts a new value into the last position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>deletes a value from a specific position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>finds and deletes a value from the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Arrays-WE9-P1-49">
+        <statement>
+
+            <p>Q49: What does the following code do?</p>
+            <program language="java"><input>
+int target = /*  some value */ ;
+int [] delta = {10, 20, 30, 40, 50, 60, 70, 80, 90};
+boolean found = false;
+int i, j;
+for (i = 0; i &lt; delta.length &amp;&amp; !found; i++)
+   if (delta[i] == target)
+      found = true;
+if (found) {
+   for (j = i-1; j &lt; delta.length-1; j++)
+      delta[j] = delta[j+1];
+   delta[delta.length-1] = -999;
+}
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the first position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the middle position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the last position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>deletes a value from a specific position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>finds and deletes a value from the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Arrays-WE9-P1-50">
+        <statement>
+
+            <p>Q50: What does the following code do?</p>
+            <program language="java"><input>
+int [] alpha = {10, 20, 30, 40, 50};
+int [] beta = new int[alpha.length+1];
+for (int i = 0; i &lt; alpha.length; i++)
+   beta[i] = alpha[i];
+beta[0] = 99;
+alpha = beta;
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Inserts a new value into the first position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the middle position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the last position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>deletes a value from a specific position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>finds and deletes a value from the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Arrays-WE9-P1-51">
+        <statement>
+
+            <p>Q51: What does the following code do?</p>
+            <program language="java"><input>
+int pos = /* some value */;
+int [] rho = {10, 20, 30, 40, 50, 60, 70, 80, 90};
+for (int m = pos; m &lt; rho.length-1; m++)
+   rho[m] = rho[m+1];
+rho[rho.length-1] = -999;
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the first position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the middle position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the last position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>deletes a value from a specific position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>finds and deletes a value from the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Arrays-WE9-P1-52">
+        <statement>
+
+            <p>Q52: What does the following code do?</p>
+            <program language="java"><input>
+int [] alpha = {10, 20, 30, 40, 50};
+int [] gamma = new int[alpha.length+1];
+for (int i = 0; i &lt; alpha.length; i++)
+   gamma[i] = alpha[i];
+gamma[gamma.length/2] = 11;
+alpha = gamma;
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the first position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Inserts a new value into the middle position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Inserts a new value into the last position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>deletes a value from a specific position of the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>finds and deletes a value from the array</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+</exercises>
+        </subsection>
+
+    <program xml:id="ac-Arrays-WE9-P1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

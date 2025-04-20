@@ -1,0 +1,222 @@
+<section xml:id="selection_assessment-sequential-if-statements" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Assessment: Sequential If-Statements</title>
+        <xi:include href='./subgoals-selection.ptx' />
+<exercises time-limit="10" pause="no">
+        <TimedNode line="19" runestone_options="{'nofeedback': None, 'subchapter': 'select-assess-seqif', 'chapter': 'Selection', 'basecourse': 'Subgoals', 'optional': '', 'optclass': '', 'divid': 'assess-select-seqif', 'qnumber': '', 'question_marker': '3.5.1'}" source="/Users/bmiller/Runestone/books/thinkcspy/Subgoals/_sources/Selection/select-assess-seqif.rst">
+
+    <exercise xml:id="assess-select-seqif-1">
+        <statement>
+
+            <p>Q1: A game has a series of three levels, but you only get the bonus points if you pass all three levels on the first try. Assume the following declarations:</p>
+            <p><c>boolean level1, level2, level3;</c></p>
+            <p>The variables indicate whether the level was passed on the first try (<c>true</c> indicates yes, <c>false</c> indicates no).</p>
+            <p>Which of the following code segments will properly update the <c>points</c> variable?</p>
+            <p><ol marker="I">
+                <li>
+                    <program language="java"><input>
+if (level1 &amp;&amp; level2 &amp;&amp; level3)
+   points += 5;
+</input></program>
+                </li>
+                <li>
+                    <program language="java"><input>
+if (level1 || level2 || level3)
+   points += 5;
+</input></program>
+                </li>
+                <li>
+                    <program language="java"><input>
+if (level1)
+   points += 5;
+if (level2)
+   points += 5;
+if (level3)
+   points += 5;
+</input></program>
+                </li>
+            </ol></p>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>I only</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>II only</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>III only</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>I and III</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>II and III</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="assess-select-seqif-2">
+        <statement>
+
+            <p>Q2: A company offers a discount depending on the number of units of the product that are ordered:</p>
+            <table><tabular>                  
+                    <col width="65%" right="minor" top="minor"/>
+                    <col width="35%" right="minor" top="minor"/>
+                        <row header="yes" bottom="minor" left="minor">
+                            <cell>
+                                <p>Number of Units</p>
+                            </cell>
+                            <cell>
+                                <p>Discount</p>
+                            </cell>
+                        </row>
+                    
+                    
+                        <row bottom="minor" left="minor">
+                            <cell>
+                                <p>1 up to but not including 10</p>
+                            </cell>
+                            <cell>
+                                <p>0</p>
+                            </cell>
+                        </row>
+                        <row bottom="minor" left="minor">
+                            <cell>
+                                <p>10 up to but not including 50</p>
+                            </cell>
+                            <cell>
+                                <p>10%</p>
+                            </cell>
+                        </row>
+                        <row bottom="minor" left="minor">
+                            <cell>
+                                <p>50 or more</p>
+                            </cell>
+                            <cell>
+                                <p>20%</p>
+                            </cell>
+                        </row>
+                    
+                
+            </tabular></table>
+            <p>Assume that the variables <c>numUnits, discount</c> have been declared and have values.</p>
+            <p>Which of the following code segments will work as intended?</p>
+            <p><ol marker="I">
+                <li>
+                    <program language="java"><input>
+if (numUnits &gt;= 50)
+   discount = 0.2;
+if (numUnits &gt;= 10)
+   discount = 0.1;
+if (numUnits &gt; 0)
+   discount = 0;
+</input></program>
+                </li>
+                <li>
+                    <program language="java"><input>
+if (numUnits &gt;= 50)
+   discount = 0.2;
+else if (numUnits &gt;=10)
+   discount = 0.1;
+else
+   discount = 0;
+</input></program>
+                </li>
+                <li>
+                    <program language="java"><input>
+if (numUnits &gt; 0)
+   discount = 0;
+if (numUnits &gt; 10)
+   discount = 0.1;
+if (numUnits &gt; 50)
+   discount = 0.2;
+</input></program>
+                </li>
+            </ol></p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>I only</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>II only</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>III only</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>I and III</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>II and III</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        </TimedNode>
+</exercises>
+    </section>
+

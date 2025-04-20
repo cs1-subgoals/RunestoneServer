@@ -1,0 +1,231 @@
+<section xml:id="loops_loops-we4-p1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Loops-WE4-P1</title>
+        <xi:include href='./subgoals-loops.ptx' />
+        <subsection>
+<exercises>
+    <exercise xml:id="m-Loops-WE4-P1-11">
+        <statement>
+
+            <p>Q11: What is the output of the following loop if the user input is: 10, 20, 30, 35, 40, -1</p>
+            <program language="java"><input>
+System.out.println("Enter a negative score to signal the end of the input.");
+int total = 0, count = 0;
+int score;
+System.out.println("Score: ");
+Scanner get = new Scanner(System.in);
+score= get.nextInt();
+while (score &gt;= 0) {
+   count++;
+   total += score;
+   System.out.print("Score: ");
+   score = get.nextInt();
+}
+System.out.println( (total * 1.0) / count);
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>27.0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>27</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>22.5</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>22</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Compilation error</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Loops-WE4-P1-12">
+        <statement>
+
+            <p>Q12: What is the output of the following loop if the user input is: 10, 20, 30, 35, 40, -1</p>
+            <program language="java"><input>
+System.out.println("Enter a negative score to signal the end of the input.");
+int total = 0, count = 0;
+int score;
+System.out.println("Score: ");
+Scanner get = new Scanner(System.in);
+score= get.nextInt();
+while (score &gt;= 0) {
+   System.out.print("Score: ");
+   score = get.nextInt();
+   count++;
+   total += score;
+}
+System.out.println( (total * 1.0) / count);
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>27.0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>22.5</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>24.8</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>20.666667</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Compilation error</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise xml:id="m-Loops-WE4-P1-13">
+        <statement>
+
+            <p>Q13: What is the output of the following loop if the user input is: 10, 20, 30, 35, 40, -1</p>
+            <program language="java"><input>
+System.out.println("Enter a negative score to signal the end of the input.");
+int total = 0, count = 0;
+int score;
+System.out.println("Score: ");
+Scanner get = new Scanner(System.in);
+score= get.nextInt();
+while (score &gt;= 0) {
+   total += score;
+   System.out.print("Score: ");
+   score = get.nextInt();
+   count++;
+}
+System.out.println( (total * 1.0) / count);
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>27.0</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>27</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>22.5</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>22</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Compilation error</p>
+                </statement>
+                <feedback>
+                    <p/>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+</exercises>
+        </subsection>
+
+    <program xml:id="ac-loops-we4-p1" interactive="activecode" language="java">
+        <input>
+public class main{
+   public static void main(String args[]){
+
+   }
+}
+        </input>
+    </program>
+    </section>
+

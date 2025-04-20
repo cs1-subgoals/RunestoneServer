@@ -1,0 +1,69 @@
+<section xml:id="write-classes_worked-example-writing-classes-attributes" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <title>Worked Example: Writing Classes - Attributes</title>
+    <xi:include href='./subgoals-write-classes.ptx' />
+    <subsection>
+    <p>You can watch this video or read through the content below it.</p>
+
+    <video xml:id="video-writeclass-we1" youtube="MvulT_WEK4E"/>
+    <p>Problem: We will be writing a class to represent an instance of time, like a specific time in the day.</p>
+    <p>For the first part, determine the appropriate attributes (data) to be stored and declare them</p>
+    </subsection>
+    <subsection>
+        <title>SG1: Name it</title>
+        <p>We will call the class TimeType</p>
+    </subsection>
+    <subsection>
+        <title>SG2: Differentiate class-level (static) vs. instance/object-level variables</title>
+        <p>class-level (static) data:  one value shared between ALL instances
+                instance-level data: each instance has its own copy</p>
+        <p>For time, we want all time instances to be in the same format so
+                static data for format, everything else instance</p>
+    </subsection>
+    <subsection>
+        <title>SG3: Differentiate class-level (static) vs. instance/object behaviors/methods</title>
+        <p>All methods will be instance level as the format will be fixed an unchangeable</p>
+    </subsection>
+    <subsection>
+        <title>SG4: Define class variables (static) as needed</title>
+        <program language="java">
+            <input>
+public class TimeType {
+
+   public static final boolean FORMAT24 = true;
+
+}
+            </input>
+        </program>
+        <p>Note the use of the <c>final</c> keyword to define <c>FORMAT24</c> as a constant, which makes it safe to expose as <c>public</c>. An alternate implementation might choose to make this value mutable, but private, using static methods to ssssssssaccess and alter it.</p>
+    </subsection>
+    <subsection>
+        <title>SG5: Define instance variables (that you want to be interrelated)</title>
+        <program language="java">
+            <input>
+public class TimeType {
+
+   //static var
+   public static final boolean FORMAT24 = true;
+
+   //instance vars
+   private int hour;
+   private int minute;
+   private int second;
+
+}
+            </input>
+        </program>
+        <figure align="">
+            <image source="WriteClasses/Figures/WC1-Slide8.PNG" alt="UML Diagram"/>
+        </figure>
+    </subsection>
+    <conclusion>
+        <title>Practice Pages</title>
+        <p><ul marker="disc">
+            <li>
+                <xref text="title" ref="write-classes_wrclasses-we1-p1" />
+            </li>
+        </ul></p>
+    </conclusion>
+</section>
+

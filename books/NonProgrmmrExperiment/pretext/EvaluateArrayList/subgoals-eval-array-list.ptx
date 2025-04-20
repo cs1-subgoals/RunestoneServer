@@ -1,0 +1,28 @@
+<introduction>
+    <title>Subgoals for Evaluating Array Lists</title>
+    <p>
+        <ol marker="1">
+            <li>
+                <p>Set up array from 0 to size-1</p>
+            </li>
+            <li>
+                <p>Evaluate data type of statements against array</p>
+            </li>
+            <li>
+                <p>Trace statements, updating slots as you go</p>
+                <p>
+                    <ol marker="a">
+                        <li>
+                            <p>Remember assignment subgoals</p>
+                        </li>
+                        <li>
+                            <p>
+                                Remember tracing method subgoals
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </li>
+        </ol>
+    </p>
+</introduction>

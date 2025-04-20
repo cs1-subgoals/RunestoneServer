@@ -1,0 +1,13 @@
+<introduction>
+    <title>Subgoals for Writing 2D Array</title>
+    <p>
+        <ol marker="1">
+            <li>
+                <p>Data type plus [ ] [ ]</p>
+            </li>
+            <li>
+                <p>Variable name <c>= {initializer list}</c>, or <c>new datatype [size] [size]</c></p>
+            </li>
+        </ol>
+    </p>
+</introduction>
