@@ -4,20 +4,6 @@
     <book xml:id="xml_table-of-contents">
         <title>Subgoals</title>
         <xi:include href="DemographicSurvey/toctree.ptx"/>
-        <xi:include href="ExpressionsStatements/toctree.ptx"/>
-        <xi:include href="WriteExpressionsStatements/toctree.ptx"/>
-        <xi:include href="ObjectUsage/toctree.ptx"/>
-        <xi:include href="Selection/toctree.ptx"/>
-        <xi:include href="WriteSelection/toctree.ptx"/>
-        <xi:include href="Loops/toctree.ptx"/> <!--images checked up to and including loops-->
-        <xi:include href="WriteLoops/toctree.ptx"/>
-        <xi:include href="WriteMethods/toctree.ptx"/>
-        <xi:include href="WriteClasses/toctree.ptx"/>
-        <xi:include href="Arrays/toctree.ptx"/>
-        <xi:include href="WriteArrays/toctree.ptx"/>
-        <xi:include href="Evaluate2DArrays/toctree.ptx"/>
-        <xi:include href="Write2DArrays/toctree.ptx"/>
-        <xi:include href="EvaluateArrayList/toctree.ptx"/>
-        <xi:include href="WriteArrayList/toctree.ptx"/>
+        
     </book>
 </pretext>
